@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Systems</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Operating Systems</h1>
+<h2>File Systems</h2>
+<p>A file system is a fundamental component of an operating system (OS) responsible for managing files and directories on storage devices such as hard drives, SSDs, and USB drives. Here are the key aspects of file systems in operating systems:</p>
+<h3>1. <strong>Organization of Data</strong></h3>
+<p>File systems provide a structured way to store and organize data so that it can be easily retrieved, updated, or deleted. This organization includes:</p>
+<ul>
+<li><strong>Files:</strong> Individual units of data stored on the storage device.</li>
+<li><strong>Directories (or Folders):</strong> Organizational units that contain files and other directories.</li>
+</ul>
+<h3>2. <strong>File System Hierarchy</strong></h3>
+<p>Most file systems have a hierarchical structure where directories can contain other directories, forming a tree-like structure. This helps in organizing files in a systematic way.</p>
+<h3>3. <strong>File Naming</strong></h3>
+<p>File systems allow each file to have a name, which includes an extension to denote the file type (e.g., <code>.txt</code> for text files, <code>.jpg</code> for images). Naming conventions may vary between file systems.</p>
+<h3>4. <strong>Metadata</strong></h3>
+<p>File systems maintain metadata for each file and directory, which typically includes:</p>
+<ul>
+<li><strong>File Name</strong></li>
+<li><strong>File Size</strong></li>
+<li><strong>File Type</strong></li>
+<li><strong>Creation Date</strong></li>
+<li><strong>Modification Date</strong></li>
+<li><strong>Permissions</strong></li>
+<li><strong>Owner Information</strong></li>
+</ul>
+<h3>5. <strong>Storage Management</strong></h3>
+<p>File systems handle the allocation and deallocation of space on the storage device. This includes:</p>
+<ul>
+<li><strong>Block Allocation:</strong> Files are broken down into fixed-size blocks. The file system keeps track of which blocks are allocated and which are free.</li>
+<li><strong>Fragmentation Management:</strong> Over time, files may become fragmented (scattered across non-contiguous blocks), causing performance degradation. Some file systems include methods to defragment files.</li>
+</ul>
+<h3>6. <strong>File Access Methods</strong></h3>
+<p>File systems provide various access methods for reading and writing data:</p>
+<ul>
+<li><strong>Sequential Access:</strong> Data is accessed in a specific order.</li>
+<li><strong>Random Access:</strong> Data can be accessed at any random location within the file.</li>
+</ul>
+<h3>7. <strong>File Permissions and Security</strong></h3>
+<p>File systems enforce access control by setting permissions for files and directories. For example:</p>
+<ul>
+<li><strong>Read (r):</strong> Permission to read the content of the file.</li>
+<li><strong>Write (w):</strong> Permission to modify the content of the file.</li>
+<li><strong>Execute (x):</strong> Permission to execute the file (typically for scripts or binary files).</li>
+</ul>
+<h3>8. <strong>File System Types</strong></h3>
+<p>There are various types of file systems with different features, designed to meet different needs:</p>
+<ul>
+<li><strong>FAT (File Allocation Table):</strong> Simple and widely supported, used in USB drives, memory cards.</li>
+<li><strong>NTFS (New Technology File System):</strong> Used by Windows OS, supports file permissions, encryption, larger file sizes.</li>
+<li><strong>ext (Extended File System):</strong> Common in Linux distributions (e.g., ext3, ext4).</li>
+<li><strong>HFS+ (Hierarchical File System Plus):</strong> Used by older Mac OS.</li>
+<li><strong>APFS (Apple File System):</strong> Used by newer versions of macOS and iOS.</li>
+</ul>
+<h3>9. <strong>Journaling</strong></h3>
+<p>Some file systems, like NTFS and ext4, include journaling, which helps prevent corruption by keeping a journal of changes that will be made. This is crucial for system reliability, especially in case of sudden power loss.</p>
+<h3>10. <strong>Mounting</strong></h3>
+<p>To use a file system, it must be mounted by the operating system. Mounting makes the file system accessible at a designated point in the directory tree.</p>
+<h3>11. <strong>Path Names</strong></h3>
+<p>File systems allow access to files via path names:</p>
+<ul>
+<li><strong>Absolute Path:</strong> Specifies the full path from the root directory.</li>
+<li><strong>Relative Path:</strong> Specifies the path relative to the current directory.</li>
+</ul>
+<p>Understanding file systems is crucial for effective data management, reliable storage access, and maintaining data integrity and security in computing environments.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

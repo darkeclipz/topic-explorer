@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Tables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Data Structures</h1>
+<h2>Hash Tables</h2>
+<p>Certainly! Hash tables, also known as hash maps, are a fundamental data structure used in many programming languages because of their efficiency in storing and retrieving data. Here is an explanation of what hash tables are and how they work:</p>
+<h3>What is a Hash Table?</h3>
+<p>A hash table is a collection of key-value pairs, where each key is mapped to a value. The main advantage of using a hash table over other data structures is that it provides very efficient average-case time complexity for lookups, insertions, and deletions, typically O(1).</p>
+<h3>Key Concepts</h3>
+<ol>
+<li><p><strong>Hash Function</strong>:</p>
+<ul>
+<li>A hash function transforms a key into an index in an array (also called a hash table).</li>
+<li>It takes an input (or key) and returns an integer (hash code), which represents the index in the array where the value associated with the key should be stored.</li>
+<li>A good hash function evenly distributes the keys across the array to minimize collisions.</li>
+</ul>
+</li>
+<li><p><strong>Buckets</strong>:</p>
+<ul>
+<li>Each slot in the array of a hash table is called a bucket.</li>
+<li>A bucket can store one or more key-value pairs.</li>
+</ul>
+</li>
+<li><p><strong>Collisions</strong>:</p>
+<ul>
+<li>A collision occurs when two different keys hash to the same index.</li>
+<li>Collisions are managed through various techniques like chaining and open addressing.</li>
+</ul>
+</li>
+</ol>
+<h3>Collision Resolution Techniques</h3>
+<ol>
+<li><p><strong>Chaining</strong>:</p>
+<ul>
+<li>Each bucket contains a linked list or another data structure that holds all elements hashed to the same index.</li>
+<li>When a collision occurs, the new key-value pair is appended to the list existing at that bucket.</li>
+</ul>
+<pre><code class="language-plaintext">Hash Table with Chaining
+
+Index 0: [ (key1, value1) ] -&gt; [ (key5, value5) ]
+Index 1: [ (key2, value2) ]
+Index 2: [ (key3, value3) ] -&gt; [ (key4, value4) ]
+</code></pre>
+</li>
+<li><p><strong>Open Addressing</strong>:</p>
+<ul>
+<li><p>Instead of maintaining separate chains, open addressing tries to keep all elements within the hash table array.</p>
+</li>
+<li><p>When a collision occurs, the algorithm probes or searches for the next available slot in the array.</p>
+</li>
+<li><p>Common probing methods include:</p>
+<ul>
+<li><strong>Linear Probing</strong>: Check the next subsequent cells sequentially.</li>
+<li><strong>Quadratic Probing</strong>: Check cells at intervals of quadratic values (1, 4, 9, etc.).</li>
+<li><strong>Double Hashing</strong>: Use a second hash function to determine the step size for probing.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-plaintext">Hash Table with Linear Probing
+
+Index 0: (key1, value1)
+Index 1: (key2, value2)
+Index 2: (key5, value5)   // This spot was found after checking index 0 and 1
+</code></pre>
+</li>
+</ol>
+<h3>Advantages of Using Hash Tables</h3>
+<ul>
+<li><strong>Fast Lookups</strong>: Average-case O(1) time complexity.</li>
+<li><strong>Efficient Insertions and Deletions</strong>: Average-case O(1) operations.</li>
+<li><strong>Flexible Keys</strong>: Keys can be of various types, as long as they can be hashed.</li>
+</ul>
+<h3>Disadvantages of Using Hash Tables</h3>
+<ul>
+<li><strong>Worse-Case Performance</strong>: In the worst case, operations can degrade to O(n), typically due to poor hash function or excessive collisions.</li>
+<li><strong>Memory Usage</strong>: May use more memory compared to other data structures due to the extra space required for the array and linked lists in chaining.</li>
+<li><strong>Complexity</strong>: Implementation can be more complex compared to simpler data structures like arrays or linked lists.</li>
+</ul>
+<h3>Example Usage</h3>
+<p>In Python, hash tables are implemented as dictionaries (<code>dict</code>):</p>
+<pre><code class="language-python"># Example of a hash table in Python using a dictionary
+hash_table = {}
+
+# Insert key-value pairs
+hash_table[&quot;name&quot;] = &quot;Alice&quot;
+hash_table[&quot;age&quot;] = 30
+
+# Retrieve values
+print(hash_table[&quot;name&quot;])  # Output: Alice
+print(hash_table[&quot;age&quot;])   # Output: 30
+
+# Update value
+hash_table[&quot;age&quot;] = 31
+
+# Delete a key-value pair
+del hash_table[&quot;name&quot;]
+</code></pre>
+<p>In summary, hash tables are a powerful and efficient way to manage key-value pairs, making them a crucial topic in data structures. Understanding their workings, advantages, disadvantages, and how to handle collisions will greatly enhance your programming and problem-solving skills.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

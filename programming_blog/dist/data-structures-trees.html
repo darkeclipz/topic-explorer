@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trees</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Data Structures</h1>
+<h2>Trees</h2>
+<p>Trees are a fundamental data structure in computer science used to represent hierarchical relationships. Here are some key points to understand about trees:</p>
+<h3>Basic Concepts</h3>
+<ol>
+<li><strong>Node</strong>: Each point in a tree is called a node. It contains the data and links to its children.</li>
+<li><strong>Root</strong>: The topmost node of a tree. It doesn't have any parent.</li>
+<li><strong>Parent and Child</strong>: If a node directly connects to another node below it, the upper node is called the parent, and the lower node is known as the child.</li>
+<li><strong>Leaf</strong>: A node with no children.</li>
+<li><strong>Siblings</strong>: Nodes that share the same parent.</li>
+<li><strong>Edge</strong>: The connection between a parent and a child.</li>
+<li><strong>Path</strong>: A sequence of nodes and edges connecting a node with a descendant.</li>
+<li><strong>Level</strong>: The level of a node is defined by 1 + the number of connections between the node and the root.</li>
+<li><strong>Height</strong>: The height of a tree is the length of the longest path to a leaf.</li>
+<li><strong>Subtree</strong>: A subtree is a portion of a tree that includes a node and all its descendants.</li>
+</ol>
+<h3>Types of Trees</h3>
+<ol>
+<li><strong>Binary Tree</strong>: Each node has at most two children.</li>
+<li><strong>Binary Search Tree (BST)</strong>: A binary tree where for each node, all elements in the left subtree are less, and all elements in the right subtree are greater.</li>
+<li><strong>Balanced Tree</strong>: A tree where no leaf is much farther away from the root than any other leaf. E.g., AVL Tree, Red-Black Tree.</li>
+<li><strong>N-ary Tree</strong>: A generalization of a binary tree where each node can have up to 'N' children.</li>
+<li><strong>Trie</strong>: A tree used for storing a dynamic set of strings where the keys are usually strings. Often used in autocomplete features.</li>
+<li><strong>Heap</strong>: A specialized tree-based data structure that satisfies the heap property. E.g., Min-Heap, Max-Heap.</li>
+<li><strong>B-tree</strong>: A self-balancing tree data structure that maintains sorted data and allows for efficient insertion, deletion, and search operations. Commonly used in databases and filesystems.</li>
+</ol>
+<h3>Common Operations</h3>
+<ol>
+<li><p><strong>Traversal</strong>:</p>
+<ul>
+<li><strong>In-Order</strong>: Left, Root, Right (commonly used in BSTs to retrieve sorted data)</li>
+<li><strong>Pre-Order</strong>: Root, Left, Right (useful for copying the tree)</li>
+<li><strong>Post-Order</strong>: Left, Right, Root (useful for deleting the tree)</li>
+<li><strong>Level-Order (Breadth-First)</strong>: Traversing nodes level by level.</li>
+</ul>
+</li>
+<li><p><strong>Insertion</strong>: Adding a node to a tree while maintaining the tree's properties.</p>
+</li>
+<li><p><strong>Deletion</strong>: Removing a node from a tree and reorganizing it to maintain properties.</p>
+</li>
+<li><p><strong>Searching</strong>: Finding a node in the tree.</p>
+</li>
+<li><p><strong>Balancing</strong>: Ensuring the tree remains balanced to maintain efficient operations (specific to AVL, Red-Black Trees).</p>
+</li>
+</ol>
+<h3>Applications</h3>
+<ul>
+<li><strong>Hierarchical Data Representation</strong>: Filesystems, organizational structures.</li>
+<li><strong>Searching</strong>: Quick lookup, insertion, and deletion (Binary Search Trees).</li>
+<li><strong>Prefix Searches</strong>: Auto-completion and spell checking (Tries).</li>
+<li><strong>Networking</strong>: Representing network topologies.</li>
+<li><strong>Game Development</strong>: AI, decision-making trees.</li>
+<li><strong>Balancing Loads</strong>: In databases for indexing (B-trees).</li>
+</ul>
+<p>Overall, understanding trees is crucial for efficient data manipulation, storage, and retrieval in various computer applications.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

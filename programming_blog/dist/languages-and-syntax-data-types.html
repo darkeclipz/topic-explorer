@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Languages and Syntax</h1>
+<h2>Data Types</h2>
+<h3>Data Types</h3>
+<p>Data types are fundamental to any programming language. They define the kind of data that can be stored and manipulated within a program. Understanding data types is crucial because they help allocate the correct amount of memory and determine what operations can be performed on the data. Below are some of the most common data types you'll encounter:</p>
+<ol>
+<li><p><strong>Primitive Data Types</strong></p>
+<ul>
+<li><strong>Integer</strong> (int): Represents whole numbers. Example: <code>int age = 25;</code></li>
+<li><strong>Floating-point</strong> (float, double): Represents numbers with a fractional part. Example: <code>float price = 19.99;</code></li>
+<li><strong>Character</strong> (char): Represents single characters. Example: <code>char initial = 'A';</code></li>
+<li><strong>Boolean</strong> (bool): Represents true or false values. Example: <code>bool isAvailable = true;</code></li>
+</ul>
+</li>
+<li><p><strong>Composite Data Types</strong></p>
+<ul>
+<li><strong>Array</strong>: A collection of elements of the same type. Example in C: <code>int numbers[5] = {1, 2, 3, 4, 5};</code></li>
+<li><strong>String</strong>: Typically a sequence of characters. Strings can be implemented as arrays of characters or objects depending on the language. Example: <code>string name = &quot;Alice&quot;;</code></li>
+<li><strong>Enumerations</strong> (enum): A user-defined data type consisting of a set of named values. Example in C++: <code>enum Color { RED, GREEN, BLUE };</code></li>
+</ul>
+</li>
+<li><p><strong>Abstract Data Types</strong></p>
+<ul>
+<li><strong>Class</strong>: Used in object-oriented programming to define a blueprint for objects. Example in C++:</li>
+</ul>
+<pre><code class="language-cpp">class Car {
+    public:
+        string brand;
+        string model;
+        int year;
+};
+</code></pre>
+<ul>
+<li><strong>Structure</strong> (struct): Used to group different types of data under a single name in languages like C and C++. Example:</li>
+</ul>
+<pre><code class="language-cpp">struct Person {
+    string name;
+    int age;
+    float height;
+};
+</code></pre>
+</li>
+<li><p><strong>Reference Data Types</strong></p>
+<ul>
+<li><strong>Pointers</strong>: Variables that store memory addresses. Example in C++: <code>int* ptr;</code></li>
+<li><strong>Reference</strong>: An alias for another variable. Example in C++: <code>int&amp; ref = someVariable;</code></li>
+</ul>
+</li>
+<li><p><strong>Collection Data Types</strong></p>
+<ul>
+<li><strong>List</strong>: An ordered collection of elements. Example in Python: <code>my_list = [1, 2, 3, 4, 5]</code></li>
+<li><strong>Dictionary</strong>: A collection of key-value pairs. Example in Python: <code>my_dict = {&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 25}</code></li>
+<li><strong>Set</strong>: A collection of unique elements. Example in Python: <code>my_set = {1, 2, 3, 4, 5}</code></li>
+</ul>
+</li>
+</ol>
+<h3>Key Concepts</h3>
+<ol>
+<li><p><strong>Type Inference</strong>: Some languages like Python use type inference to automatically deduce the data type of a variable.
+Example:</p>
+<pre><code class="language-python">num = 10  # num is inferred to be of type int
+</code></pre>
+</li>
+<li><p><strong>Type Casting</strong>: Converting one data type to another. This can be explicit or implicit.</p>
+<ul>
+<li><strong>Explicit Casting</strong>: Manually casting types. Example in Python: <code>num = float(9)</code></li>
+<li><strong>Implicit Casting</strong>: Automatically casting types when needed. Example:</li>
+</ul>
+<pre><code class="language-python">num = 9
+result = num + 5.5 # num is implicitly converted to float
+</code></pre>
+</li>
+<li><p><strong>Immutability</strong>: Some data types like strings in Python are immutable, meaning their values cannot be changed after they are created. Instead, any operation that changes the string results in a new string.</p>
+</li>
+<li><p><strong>Memory Management</strong>: Different data types require different amounts of memory. Understanding this is crucial for efficient coding, especially in languages like C and C++ where manual memory management is common.</p>
+</li>
+</ol>
+<h3>Examples in Different Languages</h3>
+<ul>
+<li><p><strong>Python</strong>:</p>
+<pre><code class="language-python">x = 5          # int
+y = 3.14       # float
+name = &quot;Alice&quot; # string
+flag = True    # bool
+</code></pre>
+</li>
+<li><p><strong>Java</strong>:</p>
+<pre><code class="language-java">int age = 25;
+double price = 19.99;
+char initial = 'A';
+boolean isAvailable = true;
+</code></pre>
+</li>
+<li><p><strong>C++</strong>:</p>
+<pre><code class="language-cpp">int age = 25;
+float price = 19.99f;
+char initial = 'A';
+bool isAvailable = true;
+</code></pre>
+</li>
+</ul>
+<p>Understanding data types in depth helps you write efficient and error-free code, making it easier to manage memory and design better data structures and algorithms.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Operating Systems</h1>
+<h2>Process Management</h2>
+<p>Process management is a fundamental aspect of operating system design that deals with the creation, scheduling, and termination of processes. It ensures that system resources are allocated efficiently and that multiple processes can execute concurrently without interfering with each other. Here are some key components of process management:</p>
+<h3>1. <strong>Process Creation and Termination</strong></h3>
+<ul>
+<li><strong>Process Creation:</strong>
+<ul>
+<li>When a new process is created, the operating system typically assigns it a unique identifier called a process ID (PID).</li>
+<li>The new process may be created as a duplicate of an existing process (using system calls such as <code>fork()</code> in Unix-based systems) or from scratch.</li>
+</ul>
+</li>
+<li><strong>Process Termination:</strong>
+<ul>
+<li>Processes can terminate naturally when they complete their execution or be terminated by the operating system or other processes.</li>
+<li>Termination involves releasing resources such as memory and file handles that were allocated to the process.</li>
+</ul>
+</li>
+</ul>
+<h3>2. <strong>Process States</strong></h3>
+<p>Processes typically transition through several states:</p>
+<ul>
+<li><strong>New:</strong> The process is being created.</li>
+<li><strong>Ready:</strong> The process is waiting to be assigned to a CPU.</li>
+<li><strong>Running:</strong> The process is currently being executed by the CPU.</li>
+<li><strong>Waiting (Blocked):</strong> The process is waiting for an event such as I/O completion.</li>
+<li><strong>Terminated:</strong> The process has finished execution.</li>
+</ul>
+<h3>3. <strong>Process Control Block (PCB)</strong></h3>
+<p>A PCB is a data structure used by the operating system to store information about a process. It typically includes:</p>
+<ul>
+<li>Process ID (PID)</li>
+<li>Process state</li>
+<li>Program counter (address of the next instruction to be executed)</li>
+<li>CPU registers</li>
+<li>Memory management information</li>
+<li>Accounting information (e.g., CPU usage, execution times)</li>
+<li>I/O status information</li>
+</ul>
+<h3>4. <strong>Process Scheduling</strong></h3>
+<ul>
+<li><strong>Scheduling Algorithms:</strong>
+<ul>
+<li>Different algorithms are used to determine which process runs at any given time. Common algorithms include First-Come, First-Serve (FCFS), Shortest Job Next (SJN), Round Robin (RR), and Priority Scheduling.</li>
+</ul>
+</li>
+<li><strong>Context Switching:</strong>
+<ul>
+<li>When the CPU switches from executing one process to another, it performs a context switch. This involves saving the state of the current process and loading the state of the next process to be executed.</li>
+</ul>
+</li>
+</ul>
+<h3>5. <strong>Inter-Process Communication (IPC)</strong></h3>
+<p>Processes often need to communicate with each other, which can be achieved through:</p>
+<ul>
+<li><strong>Pipes:</strong> Allow one process to send data to another process.</li>
+<li><strong>Message Queues:</strong> Enable processes to send and receive messages.</li>
+<li><strong>Shared Memory:</strong> Allows multiple processes to access the same memory space.</li>
+<li><strong>Semaphores and Mutexes:</strong> Used to prevent race conditions and ensure proper synchronization between processes.</li>
+</ul>
+<h3>6. <strong>Process Synchronization</strong></h3>
+<ul>
+<li><strong>Race Conditions:</strong> Occur when multiple processes access shared resources concurrently, leading to unpredictable results.</li>
+<li><strong>Synchronization Mechanisms:</strong> Include semaphores, mutexes, and monitors to ensure processes work together correctly without conflicts.</li>
+</ul>
+<h3>7. <strong>Deadlock</strong></h3>
+<ul>
+<li><strong>Deadlock Conditions:</strong> Occur when a set of processes are blocked, each waiting for a resource held by another process.</li>
+<li><strong>Deadlock Prevention and Avoidance:</strong> Techniques are used to ensure that the system never enters a deadlock state or can recover from it.</li>
+</ul>
+<h3>8. <strong>Multi-threading</strong></h3>
+<ul>
+<li><strong>Threads:</strong> Lightweight processes within a single process that share the same memory but can execute independently.</li>
+<li><strong>Thread Management:</strong> Managing multiple threads involves context switching, synchronization, and scheduling.</li>
+</ul>
+<p>Process management is crucial for maintaining system stability and efficiency, especially in multi-user and multi-tasking environments. Understanding these concepts helps in optimizing the performance and reliability of operating systems.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

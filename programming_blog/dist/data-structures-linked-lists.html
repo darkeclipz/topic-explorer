@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked Lists</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Data Structures</h1>
+<h2>Linked Lists</h2>
+<h3>Linked Lists</h3>
+<p>A Linked List is a linear data structure where elements, called nodes, are not stored in contiguous memory locations. Instead, each node contains a reference (or link) to the next node in the sequence. This allows for efficient insertion and deletion of elements, as it eliminates the need for shifting elements (which is necessary in arrays).</p>
+<h4>Key Components</h4>
+<ol>
+<li><p><strong>Node</strong>: The basic unit of a linked list, comprising:</p>
+<ul>
+<li><code>Data</code>: The value or data stored in the node.</li>
+<li><code>Next</code>: A reference (or pointer) to the next node in the list.</li>
+</ul>
+</li>
+<li><p><strong>Head</strong>: A reference to the first node in the linked list. It is used to traverse and access other nodes in the list.</p>
+</li>
+</ol>
+<h4>Types of Linked Lists</h4>
+<ol>
+<li><strong>Singly Linked List</strong>: Each node contains one reference to the next node.</li>
+<li><strong>Doubly Linked List</strong>: Each node contains two references - one to the next node and one to the previous node.</li>
+<li><strong>Circular Linked List</strong>: Similar to a singly or doubly linked list, except the last node points back to the first node, forming a circle.</li>
+</ol>
+<h4>Basic Operations</h4>
+<ul>
+<li><strong>Traversal</strong>: Visiting each node in the linked list.</li>
+<li><strong>Insertion</strong>:
+<ul>
+<li>At the beginning</li>
+<li>At the end</li>
+<li>After a given node</li>
+</ul>
+</li>
+<li><strong>Deletion</strong>:
+<ul>
+<li>At the beginning</li>
+<li>At the end</li>
+<li>A specific node (by value or position)</li>
+</ul>
+</li>
+<li><strong>Search</strong>: Finding an element in the list.</li>
+<li><strong>Update</strong>: Modifying the value of an existing node.</li>
+</ul>
+<h4>Example of Singly Linked List</h4>
+<p>Here's a simple representation and some basic operations on a singly linked list in Python:</p>
+<pre><code class="language-python">class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class SinglyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert_at_beginning(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+
+    def insert_at_end(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        last_node = self.head
+        while last_node.next:
+            last_node = last_node.next
+        last_node.next = new_node
+
+    def delete_node(self, key):
+        temp = self.head
+        if temp is not None:
+            if temp.data == key:
+                self.head = temp.next
+                temp = None
+                return
+        while temp is not None:
+            if temp.data == key:
+                break
+            prev = temp
+            temp = temp.next
+        if temp == None:
+            return
+        prev.next = temp.next
+        temp = None
+
+    def search(self, data):
+        current = self.head
+        while current:
+            if current.data == data:
+                return True
+            current = current.next
+        return False
+
+    def print_list(self):
+        current = self.head
+        while current:
+            print(current.data, end=&quot; -&gt; &quot;)
+            current = current.next
+        print(&quot;None&quot;)
+
+# Example usage:
+linked_list = SinglyLinkedList()
+linked_list.insert_at_end(1)
+linked_list.insert_at_end(2)
+linked_list.insert_at_end(3)
+linked_list.insert_at_beginning(0)
+linked_list.print_list()  # Output: 0 -&gt; 1 -&gt; 2 -&gt; 3 -&gt; None
+</code></pre>
+<h3>Advantages</h3>
+<ul>
+<li><strong>Dynamic Size</strong>: A linked list can grow and shrink in size dynamically as elements are added or removed.</li>
+<li><strong>Ease of Insertions/Deletions</strong>: Elements can be easily inserted or deleted without reorganizing the entire structure.</li>
+</ul>
+<h3>Disadvantages</h3>
+<ul>
+<li><strong>Memory Usage</strong>: Linked lists use extra memory for storing pointers (references) in addition to the data.</li>
+<li><strong>Traversal Time</strong>: Accessing elements in a linked list requires traversing from the head node, making it slower compared to direct array indexing.</li>
+</ul>
+<h3>Applications</h3>
+<ul>
+<li>Implementing dynamic memory management</li>
+<li>Constructing other data structures like stacks, queues, graphs, etc.</li>
+<li>Managing ordered data in databases and file systems</li>
+</ul>
+<p>Linked lists are fundamental structures in computer science and are the foundation for more complex data structures. Understanding their properties and operations is crucial for effective programming and optimization.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

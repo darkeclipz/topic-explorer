@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Rules</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Languages and Syntax</h1>
+<h2>Syntax Rules</h2>
+<p>Syntax rules in programming refer to the set of guidelines that dictate how code must be written and structured for it to be interpreted correctly by a compiler or interpreter. These rules vary from one programming language to another, but they serve the same purpose: ensuring that the code is readable, executable, and produces the desired outcome.</p>
+<h3>Key Concepts of Syntax Rules:</h3>
+<ol>
+<li><p><strong>Keywords</strong></p>
+<ul>
+<li>Reserved words that have special meaning in the language.</li>
+<li>Examples: <code>if</code>, <code>else</code>, <code>while</code>, <code>for</code>, <code>return</code>.</li>
+</ul>
+</li>
+<li><p><strong>Identifiers</strong></p>
+<ul>
+<li>Names given to variables, functions, classes, and other entities.</li>
+<li>Rules: Must usually start with a letter or an underscore (<code>_</code>), followed by letters, digits, or underscores.</li>
+<li>Example: <code>myVariable</code>, <code>_myFunction</code>.</li>
+</ul>
+</li>
+<li><p><strong>Operators</strong></p>
+<ul>
+<li>Symbols that perform operations on variables and values.</li>
+<li>Examples: <code>+</code> (addition), <code>-</code> (subtraction), <code>*</code> (multiplication), <code>/</code> (division), <code>=</code> (assignment).</li>
+</ul>
+</li>
+<li><p><strong>Literals</strong></p>
+<ul>
+<li>Fixed values assigned to variables.</li>
+<li>Examples: Numbers (<code>5</code>, <code>3.14</code>), strings (<code>&quot;hello&quot;</code>), characters (<code>'a'</code>).</li>
+</ul>
+</li>
+<li><p><strong>Punctuation</strong></p>
+<ul>
+<li>Characters that serve as delimiters in the code.</li>
+<li>Examples: Semicolons (<code>;</code>), commas (<code>,</code>), parentheses (<code>()</code>), curly braces (<code>{}</code>), square brackets (<code>[]</code>).</li>
+</ul>
+</li>
+<li><p><strong>Comments</strong></p>
+<ul>
+<li>Non-executable text that helps in documenting the code.</li>
+<li>Single-line comment: <code>// This is a comment</code></li>
+<li>Multi-line comment: <code>/* This is a comment */</code></li>
+</ul>
+</li>
+<li><p><strong>Code Blocks</strong></p>
+<ul>
+<li>Sections of code that are grouped together.</li>
+<li>Usually enclosed within curly braces <code>{}</code>.</li>
+<li>Example:
+<pre><code class="language-c">if (condition) {
+    // Code block here
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>Control Structures</strong></p>
+<ul>
+<li>Constructs that control the flow of the program.</li>
+<li>Examples: <code>if</code> statements, <code>for</code> loops, <code>while</code> loops.</li>
+</ul>
+</li>
+<li><p><strong>Function and Method Definitions</strong></p>
+<ul>
+<li>Blocks of code designed to perform specific tasks.</li>
+<li>Example in Python:
+<pre><code class="language-python">def my_function(param):
+    print(param)
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h3>Examples in Different Languages:</h3>
+<h4>Python</h4>
+<pre><code class="language-python"># Function definition
+def greet(name):
+    print(f&quot;Hello, {name}!&quot;)
+
+# Variable assignment
+age = 25
+
+# Conditional statement
+if age &gt; 18:
+    print(&quot;Adult&quot;)
+else:
+    print(&quot;Minor&quot;)
+</code></pre>
+<h4>JavaScript</h4>
+<pre><code class="language-javascript">// Function definition
+function greet(name) {
+    console.log(`Hello, ${name}!`);
+}
+
+// Variable assignment
+let age = 25;
+
+// Conditional statement
+if (age &gt; 18) {
+    console.log(&quot;Adult&quot;);
+} else {
+    console.log(&quot;Minor&quot;);
+}
+</code></pre>
+<h4>Java</h4>
+<pre><code class="language-java">// Import statement
+import java.util.Scanner;
+
+// Class definition
+public class Main {
+    // Main method
+    public static void main(String[] args) {
+        // Variable assignment
+        int age = 25;
+
+        // Conditional statement
+        if (age &gt; 18) {
+            System.out.println(&quot;Adult&quot;);
+        } else {
+            System.out.println(&quot;Minor&quot;);
+        }
+    }
+}
+</code></pre>
+<p>Understanding syntax rules is crucial because:</p>
+<ul>
+<li>It ensures that code is parsed and executed correctly.</li>
+<li>It enforces consistency and readability in the codebase.</li>
+<li>It helps in avoiding common programming errors.</li>
+</ul>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

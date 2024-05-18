@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Web Development</h1>
+<h2>CSS</h2>
+<h3>CSS (Cascading Style Sheets)</h3>
+<p><strong>Overview:</strong>
+CSS is a cornerstone technology in web development that describes how HTML elements are to be displayed on screen, paper, or in other media. It enables the separation of document content from document presentation, including layout, colors, and fonts.</p>
+<p><strong>Key Concepts in CSS:</strong></p>
+<ol>
+<li><p><strong>Selectors:</strong></p>
+<ul>
+<li><strong>Element Selector:</strong> Targets HTML elements directly.
+<pre><code class="language-css">p {
+  color: blue;
+}
+</code></pre>
+</li>
+<li><strong>Class Selector:</strong> Targets elements with a specific class attribute.
+<pre><code class="language-css">.classname {
+  color: red;
+}
+</code></pre>
+</li>
+<li><strong>ID Selector:</strong> Targets elements with a specific id attribute.
+<pre><code class="language-css">#idname {
+  color: green;
+}
+</code></pre>
+</li>
+<li><strong>Attribute Selectors:</strong> Target elements based on attributes.
+<pre><code class="language-css">a[target=&quot;_blank&quot;] {
+  color: orange;
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>Box Model:</strong></p>
+<ul>
+<li>Consists of four components: content, padding, border, and margin.</li>
+<li>Example CSS properties: <code>width</code>, <code>height</code>, <code>padding</code>, <code>border</code>, <code>margin</code></li>
+</ul>
+<pre><code class="language-css">div {
+  width: 200px;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+}
+</code></pre>
+</li>
+<li><p><strong>Flexbox:</strong></p>
+<ul>
+<li>A layout model that provides an easy way to align and distribute space among items in a container.</li>
+<li>Example CSS properties: <code>display: flex;</code>, <code>justify-content</code>, <code>align-items</code></li>
+</ul>
+<pre><code class="language-css">.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</code></pre>
+</li>
+<li><p><strong>Grid Layout:</strong></p>
+<ul>
+<li>A 2-dimensional layout system.</li>
+<li>Example CSS properties: <code>display: grid;</code>, <code>grid-template-columns</code>, <code>grid-gap</code></li>
+</ul>
+<pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+</code></pre>
+</li>
+<li><p><strong>Responsive Design:</strong></p>
+<ul>
+<li>Ensures that web pages look good on all devices, including desktops, tablets, and mobile phones.</li>
+<li>Example CSS properties: <code>media queries</code>, <code>flexbox</code>, and <code>grid layout</code></li>
+</ul>
+<pre><code class="language-css">@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+</code></pre>
+</li>
+<li><p><strong>Typography:</strong></p>
+<ul>
+<li>Involves setting text-related properties like font-family, font-size, text-align, and line-height.</li>
+</ul>
+<pre><code class="language-css">h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.5;
+}
+</code></pre>
+</li>
+<li><p><strong>Colors:</strong></p>
+<ul>
+<li>Can be defined using names, HEX, RGB, RGBA, HSL, and HSLA values.</li>
+</ul>
+<pre><code class="language-css">.text-primary {
+  color: #3498db;
+}
+.background-highlight {
+  background-color: rgba(255, 99, 71, 0.5);
+}
+</code></pre>
+</li>
+<li><p><strong>Pseudo-Classes and Pseudo-Elements:</strong></p>
+<ul>
+<li><strong>Pseudo-Classes:</strong> Define special states of an element (e.g., <code>:hover</code>, <code>:active</code>).
+<pre><code class="language-css">a:hover {
+  color: blue;
+}
+</code></pre>
+</li>
+<li><strong>Pseudo-Elements:</strong> Style specific parts of an element (e.g., <code>::before</code>, <code>::after</code>).
+<pre><code class="language-css">p::before {
+  content: &quot;Note: &quot;;
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>Transitions and Animations:</strong></p>
+<ul>
+<li>Add dynamic content effects.</li>
+<li>Transitions allow smooth changes from one state to another.
+<pre><code class="language-css">.box {
+  transition: transform 0.3s;
+}
+.box:hover {
+  transform: scale(1.2);
+}
+</code></pre>
+</li>
+<li>Animations allow you to define keyframes and animate elements over time.
+<pre><code class="language-css">@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+.animated-box {
+  animation: example 5s infinite;
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Benefits of CSS:</strong></p>
+<ul>
+<li><strong>Separation of Concerns:</strong> Keeps the content (HTML) separate from the presentation (CSS).</li>
+<li><strong>Consistency:</strong> Applying styles consistently across multiple pages.</li>
+<li><strong>Maintainability:</strong> Easier updates to the presentation without touching the HTML markup.</li>
+<li><strong>Performance:</strong> Modern browsers cache CSS files, which can improve load times.</li>
+<li><strong>Accessibility:</strong> Enhanced control over how content is rendered, which can help improve accessibility.</li>
+</ul>
+<p>By mastering CSS, you can create visually appealing, responsive, and accessible web designs.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

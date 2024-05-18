@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Database Management</h1>
+<h2>SQL</h2>
+<p>Certainly! SQL (Structured Query Language) is a powerful language used for managing and manipulating relational databases. It is the standard language for relational database management systems (RDBMS), like MySQL, PostgreSQL, SQL Server, and Oracle Database.</p>
+<h3>Key Concepts in SQL:</h3>
+<ol>
+<li><p><strong>Database</strong>:</p>
+<ul>
+<li>A collection of organized data. In the context of SQL, a database stores data in tables.</li>
+</ul>
+</li>
+<li><p><strong>Table</strong>:</p>
+<ul>
+<li>A structured set of data elements (values) organized in rows and columns. Each table has a unique name in the database.</li>
+</ul>
+</li>
+<li><p><strong>Schema</strong>:</p>
+<ul>
+<li>Defines the structure and organization of the database, including tables, columns, and their data types.</li>
+</ul>
+</li>
+<li><p><strong>SQL Commands</strong>:
+SQL commands can be categorized into five main groups:</p>
+<ul>
+<li><p><strong>DDL (Data Definition Language)</strong>:</p>
+<ul>
+<li><strong>CREATE</strong>: Creates a new table, view, index, or database.</li>
+<li><strong>ALTER</strong>: Modifies an existing database object, such as adding or removing a column.</li>
+<li><strong>DROP</strong>: Deletes an existing database object like a table or a database.</li>
+<li><strong>TRUNCATE</strong>: Removes all records from a table but maintains the table structure.</li>
+</ul>
+</li>
+<li><p><strong>DML (Data Manipulation Language)</strong>:</p>
+<ul>
+<li><strong>SELECT</strong>: Retrieves data from one or more tables.</li>
+<li><strong>INSERT</strong>: Adds new rows of data to a table.</li>
+<li><strong>UPDATE</strong>: Modifies existing data within a table.</li>
+<li><strong>DELETE</strong>: Removes data from a table.</li>
+</ul>
+</li>
+<li><p><strong>DCL (Data Control Language)</strong>:</p>
+<ul>
+<li><strong>GRANT</strong>: Gives a user permission to perform specific tasks.</li>
+<li><strong>REVOKE</strong>: Removes previously granted permissions.</li>
+</ul>
+</li>
+<li><p><strong>TCL (Transaction Control Language)</strong>:</p>
+<ul>
+<li><strong>COMMIT</strong>: Saves all changes made in the transaction.</li>
+<li><strong>ROLLBACK</strong>: Reverts changes made in the current transaction.</li>
+<li><strong>SAVEPOINT</strong>: Sets a savepoint within a transaction to which you can later roll back.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3>Basic SQL Statements:</h3>
+<ol>
+<li><strong>CREATE TABLE</strong>:</li>
+</ol>
+<pre><code class="language-sql">CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    hire_date DATE,
+    salary DECIMAL(10, 2)
+);
+</code></pre>
+<ol start="2">
+<li><strong>INSERT INTO</strong>:</li>
+</ol>
+<pre><code class="language-sql">INSERT INTO employees (employee_id, first_name, last_name, hire_date, salary)
+VALUES (1, 'John', 'Doe', '2021-01-15', 60000.00);
+</code></pre>
+<ol start="3">
+<li><strong>SELECT</strong>:</li>
+</ol>
+<pre><code class="language-sql">SELECT first_name, last_name, salary
+FROM employees
+WHERE salary &gt; 50000;
+</code></pre>
+<ol start="4">
+<li><strong>UPDATE</strong>:</li>
+</ol>
+<pre><code class="language-sql">UPDATE employees
+SET salary = 65000.00
+WHERE employee_id = 1;
+</code></pre>
+<ol start="5">
+<li><strong>DELETE</strong>:</li>
+</ol>
+<pre><code class="language-sql">DELETE FROM employees
+WHERE employee_id = 1;
+</code></pre>
+<h3>Advanced Concepts:</h3>
+<ol>
+<li><p><strong>Joins</strong>:</p>
+<ul>
+<li><strong>INNER JOIN</strong>: Returns rows that have matching values in both tables.</li>
+<li><strong>LEFT JOIN</strong>: Returns all rows from the left table, and the matched rows from the right table.</li>
+<li><strong>RIGHT JOIN</strong>: Returns all rows from the right table, and the matched rows from the left table.</li>
+<li><strong>FULL OUTER JOIN</strong>: Returns rows when there is a match in one of the tables.</li>
+</ul>
+<p>Example of an INNER JOIN:</p>
+<pre><code class="language-sql">SELECT employees.first_name, employees.last_name, departments.department_name
+FROM employees
+INNER JOIN departments ON employees.department_id = departments.department_id;
+</code></pre>
+</li>
+<li><p><strong>Indexes</strong>:</p>
+<ul>
+<li>Improve the speed of data retrieval operations but can slow down data modification operations.</li>
+</ul>
+<p>Example of creating an index:</p>
+<pre><code class="language-sql">CREATE INDEX idx_last_name 
+ON employees(last_name);
+</code></pre>
+</li>
+<li><p><strong>Views</strong>:</p>
+<ul>
+<li>A virtual table based on the result set of an SQL query.</li>
+</ul>
+<p>Example of creating a view:</p>
+<pre><code class="language-sql">CREATE VIEW high_salary_employees AS
+SELECT first_name, last_name, salary
+FROM employees
+WHERE salary &gt; 70000;
+</code></pre>
+</li>
+<li><p><strong>Stored Procedures and Functions</strong>:</p>
+<ul>
+<li>Stored procedures: Reusable SQL code that you can call to perform operations.</li>
+<li>Functions: Similar to stored procedures but return a value and can be used in SQL statements.</li>
+</ul>
+<p>Example of a stored procedure:</p>
+<pre><code class="language-sql">CREATE PROCEDURE raise_salary(IN employee_id INT, IN increase_amount DECIMAL(10, 2))
+BEGIN
+    UPDATE employees
+    SET salary = salary + increase_amount
+    WHERE employee_id = employee_id;
+END;
+</code></pre>
+</li>
+</ol>
+<p>SQL is fundamental to working with relational databases, and mastering it is essential for database management and data analysis.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

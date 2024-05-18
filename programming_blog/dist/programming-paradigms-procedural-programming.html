@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedural Programming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Programming Paradigms</h1>
+<h2>Procedural Programming</h2>
+<p>Procedural programming is a programming paradigm that is derived from structured programming. It emphasizes a logical sequence of steps, or procedures, to perform a task. Here's an in-depth look at various aspects of procedural programming:</p>
+<h3>1. <strong>Core Concepts of Procedural Programming</strong></h3>
+<ul>
+<li><strong>Functions/Procedures</strong>: The basic building blocks in procedural programming are functions or procedures. These are self-contained blocks of code that accomplish a specific task. Functions are reusable and can be called from other parts of the program.</li>
+<li><strong>Sequential Execution</strong>: Code in procedural programming is executed in a strict top-down order, from one line to the next, unless control structures dictate otherwise.</li>
+<li><strong>Modularity</strong>: Programs are divided into smaller, manageable sections or modules, each responsible for a specific part of the program's functionality.</li>
+<li><strong>Variables and Data</strong>: Variables are used to store data and state that are manipulated within procedures. Data can be passed to and from procedures using parameters.</li>
+</ul>
+<h3>2. <strong>Key Elements</strong></h3>
+<ul>
+<li><strong>Functions</strong>: Defined with keywords such as <code>function</code> or <code>def</code>, depending on the language.
+<pre><code class="language-python">def add(a, b):
+    return a + b
+</code></pre>
+</li>
+<li><strong>Structured Programming Constructs</strong>: Includes loops (<code>for</code>, <code>while</code>), conditionals (<code>if</code>, <code>else</code>, <code>switch</code>), and logical operators.
+<pre><code class="language-c">int main() {
+    int sum = 0;
+    for(int i = 0; i &lt; 10; i++) {
+        sum += i;
+    }
+    return sum;
+}
+</code></pre>
+</li>
+<li><strong>Scoping and Lifetime</strong>: Variables have a scope and lifetime, which defines where a variable can be used and how long it persists.</li>
+</ul>
+<h3>3. <strong>Advantages</strong></h3>
+<ul>
+<li><strong>Simplicity</strong>: Straightforward and easier to understand because it follows a linear top-down approach.</li>
+<li><strong>Reusability</strong>: Functions can be reused across different programs or within the same program.</li>
+<li><strong>Maintainability</strong>: Modular approach makes it easier to maintain and update code.</li>
+</ul>
+<h3>4. <strong>Disadvantages</strong></h3>
+<ul>
+<li><strong>Limited Scalability</strong>: As the program grows, managing procedures and data can become cumbersome.</li>
+<li><strong>Global State</strong>: Frequent use of global variables can lead to potential conflicts and bugs.</li>
+<li><strong>Tight Coupling</strong>: Procedures can become tightly coupled, making changes more complex and error-prone.</li>
+</ul>
+<h3>5. <strong>Popular Procedural Programming Languages</strong></h3>
+<ul>
+<li><strong>C</strong>: One of the most widely used procedural languages.</li>
+<li><strong>Pascal</strong>: Known for its strong typing and suitability for educational purposes.</li>
+<li><strong>BASIC</strong>: Simple and easy to learn, originally designed for beginners.</li>
+<li><strong>Fortran</strong>: Used primarily in scientific and engineering applications.</li>
+</ul>
+<h3>6. <strong>Example</strong>:</h3>
+<p>In the following example, a procedural approach to calculating the factorial of a number is demonstrated:</p>
+<pre><code class="language-python">def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# Main procedure
+number = 5
+result = factorial(number)
+print(f&quot;The factorial of {number} is {result}&quot;)
+</code></pre>
+<h3>7. <strong>Best Practices</strong></h3>
+<ul>
+<li><strong>Avoid Global Variables</strong>: Limit the use of global variables to reduce dependencies.</li>
+<li><strong>Break Down Complex Tasks</strong>: Divide complex problems into smaller units/modules.</li>
+<li><strong>Consistent Naming Conventions</strong>: Use consistent and meaningful names for procedures and variables.</li>
+<li><strong>Documentation</strong>: Document procedures clearly to explain their purpose and usage.</li>
+</ul>
+<p>Procedural programming remains a foundational concept that underpins many other programming paradigms, offering a clear and structured way to solve problems.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

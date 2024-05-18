@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queues</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Data Structures</h1>
+<h2>Queues</h2>
+<p>A queue is a linear data structure that follows a particular order for operations. The order is commonly referred to as First In, First Out (FIFO). This means the first element added to the queue will be the first one to be removed, similar to people standing in a line waiting for service.</p>
+<h3>Key Concepts of Queues</h3>
+<ol>
+<li><strong>Enqueue</strong>: The operation of adding an element to the back of the queue.</li>
+<li><strong>Dequeue</strong>: The operation of removing an element from the front of the queue.</li>
+<li><strong>Front</strong>: The first element of the queue.</li>
+<li><strong>Rear</strong>: The last element of the queue.</li>
+<li><strong>IsEmpty</strong>: A method to check if the queue is empty.</li>
+<li><strong>IsFull</strong>: A method to check if the queue is full (relevant in static queues).</li>
+</ol>
+<h3>Types of Queues</h3>
+<ol>
+<li><p><strong>Simple Queue (Linear Queue)</strong>:</p>
+<ul>
+<li>Follows the FIFO principle strictly.</li>
+<li>Elements are added to the rear and removed from the front.</li>
+<li>When the queue is full (in a fixed-size implementation), no other elements can be enqueued until space is freed.</li>
+</ul>
+</li>
+<li><p><strong>Circular Queue</strong>:</p>
+<ul>
+<li>The rear end connects back to the front end, making the queue circular.</li>
+<li>Helps in efficiently utilizing space as it can reuse the empty spaces left after dequeuing in the beginning.</li>
+</ul>
+</li>
+<li><p><strong>Priority Queue</strong>:</p>
+<ul>
+<li>Each element in the queue has a certain priority level.</li>
+<li>Elements with higher priority are dequeued before elements with lower priority, regardless of their position in the queue.</li>
+</ul>
+</li>
+<li><p><strong>Double-Ended Queue (Deque)</strong>:</p>
+<ul>
+<li>Allows insertion and deletion at both the front and the rear ends.</li>
+<li>Can be used both as a queue (FIFO) or as a stack (LIFO: Last In, First Out).</li>
+</ul>
+</li>
+</ol>
+<h3>Operations</h3>
+<ul>
+<li><p><strong>Enqueue()</strong>: Adds an element to the end of the queue.</p>
+<pre><code class="language-python">def enqueue(self, item):
+    if self.is_full():
+        raise Exception(&quot;Queue is full&quot;)
+    self.queue.append(item)
+</code></pre>
+</li>
+<li><p><strong>Dequeue()</strong>: Removes and returns the front element of the queue.</p>
+<pre><code class="language-python">def dequeue(self):
+    if self.is_empty():
+        raise Exception(&quot;Queue is empty&quot;)
+    return self.queue.pop(0)
+</code></pre>
+</li>
+<li><p><strong>Peek()</strong>: Returns the front element without removing it.</p>
+<pre><code class="language-python">def peek(self):
+    if self.is_empty():
+        raise Exception(&quot;Queue is empty&quot;)
+    return self.queue[0]
+</code></pre>
+</li>
+</ul>
+<h3>Implementation in Python</h3>
+<p>Using a list to implement a simple queue:</p>
+<pre><code class="language-python">class Queue:
+    def __init__(self):
+        self.queue = []
+
+    def is_empty(self):
+        return len(self.queue) == 0
+
+    def is_full(self, size):
+        return len(self.queue) == size
+
+    def enqueue(self, item):
+        self.queue.append(item)
+
+    def dequeue(self):
+        if self.is_empty():
+            raise Exception(&quot;Queue is empty&quot;)
+        return self.queue.pop(0)
+
+    def peek(self):
+        if self.is_empty():
+            raise Exception(&quot;Queue is empty&quot;)
+        return self.queue[0]
+
+    def size(self):
+        return len(self.queue)
+</code></pre>
+<h3>Applications of Queues</h3>
+<ul>
+<li><strong>Resource scheduling</strong>: Queues are widely used in operating systems for scheduling processes.</li>
+<li><strong>Breadth-First Search (BFS)</strong>: BFS algorithm uses a queue to explore nodes level by level.</li>
+<li><strong>Print Spooling</strong>: Printer spooling services use queues to hold print jobs.</li>
+<li><strong>Handling requests</strong>: Web servers use a queue to manage requests in the order they are received.</li>
+</ul>
+<p>Queues are fundamental data structures useful in various fields including operating systems, networking, and real-time systems for managing tasks in a controlled and structured way.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

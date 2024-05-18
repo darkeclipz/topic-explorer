@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Structures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Languages and Syntax</h1>
+<h2>Control Structures</h2>
+<p>Control structures are fundamental components of programming languages that dictate the flow of execution and control the sequence in which statements and instructions are executed. They enable programmers to specify logic paths based on conditions and loops. Here are the primary types of control structures:</p>
+<h3>1. <strong>Conditional Statements:</strong></h3>
+<p>These structures perform operations based on whether a condition is true or false.</p>
+<ul>
+<li><p><strong><code>if</code> Statement:</strong>
+Executes a block of code if a specified condition is true.</p>
+<pre><code class="language-python">if condition:
+    # Code to execute if condition is true
+</code></pre>
+</li>
+<li><p><strong><code>else</code> Statement:</strong>
+Executes a block of code if the <code>if</code> condition is false.</p>
+<pre><code class="language-python">if condition:
+    # Code to execute if condition is true
+else:
+    # Code to execute if condition is false
+</code></pre>
+</li>
+<li><p><strong><code>elif</code> / <code>else if</code> Statement:</strong>
+Provides an additional condition to check if the initial <code>if</code> condition is false.</p>
+<pre><code class="language-python">if condition1:
+    # Code to execute if condition1 is true
+elif condition2:
+    # Code to execute if condition2 is true
+else:
+    # Code to execute if none of the above conditions is true
+</code></pre>
+</li>
+</ul>
+<h3>2. <strong>Looping Structures:</strong></h3>
+<p>These structures allow repeated execution of a block of code while a condition is true or for a specific number of iterations.</p>
+<ul>
+<li><p><strong><code>for</code> Loop:</strong>
+Iterates over a sequence (such as a list, tuple, dictionary, set, or range).</p>
+<pre><code class="language-python">for item in sequence:
+    # Code to execute for each item in sequence
+</code></pre>
+</li>
+<li><p><strong><code>while</code> Loop:</strong>
+Repeats a block of code as long as a condition is true.</p>
+<pre><code class="language-python">while condition:
+    # Code to execute as long as condition is true
+</code></pre>
+</li>
+<li><p><strong><code>do-while</code> Loop:</strong>
+Executes a block of code at least once and then repeats the execution as long as the condition is true (not present in certain languages like Python but widely used in C/C++ and Java).</p>
+<pre><code class="language-java">do {
+    // Code to execute
+} while (condition);
+</code></pre>
+</li>
+</ul>
+<h3>3. <strong>Jump Statements:</strong></h3>
+<p>These statements transfer control to another part of the program.</p>
+<ul>
+<li><p><strong><code>break</code> Statement:</strong>
+Exits the nearest enclosing loop or switch statement.</p>
+<pre><code class="language-python">for item in sequence:
+    if condition:
+        break  # Exits the loop
+</code></pre>
+</li>
+<li><p><strong><code>continue</code> Statement:</strong>
+Skips the current iteration of the loop and moves to the next iteration.</p>
+<pre><code class="language-python">for item in sequence:
+    if condition:
+        continue  # Skips the rest of the code in this iteration
+    # More code to execute
+</code></pre>
+</li>
+<li><p><strong><code>return</code> Statement:</strong>
+Exits a function and optionally returns a value to the function caller.</p>
+<pre><code class="language-python">def function_name():
+    return value  # Exits the function and returns value
+</code></pre>
+</li>
+<li><p><strong><code>goto</code> Statement:</strong>
+Transfers control to the labeled statement (not recommended and considered harmful as it leads to unmanageable code).</p>
+<pre><code class="language-c">goto label;
+// More code
+label:
+// Code to execute after the jump
+</code></pre>
+</li>
+</ul>
+<h3>4. <strong>Switch Case Statements:</strong></h3>
+<p>Allows a variable to be tested for equality against a list of values (cases).</p>
+<pre><code class="language-java">switch (expression) {
+    case value1:
+        // Code to execute if expression == value1
+        break;
+    case value2:
+        // Code to execute if expression == value2
+        break;
+    default:
+        // Code to execute if expression doesn't match any case
+}
+</code></pre>
+<p>These control structures, when combined, provide a robust framework for defining the logical flow and operations in a program. Understanding and effectively utilizing control structures is foundational in writing efficient, readable, and maintainable code.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

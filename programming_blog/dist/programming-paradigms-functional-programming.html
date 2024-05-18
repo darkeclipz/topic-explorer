@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Programming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Programming Paradigms</h1>
+<h2>Functional Programming</h2>
+<p>Functional programming (FP) is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. It emphasizes the use of immutable data structures and pure functions, which are functions that do not produce side effects and always return the same result given the same input. Below are some key concepts and principles of functional programming:</p>
+<h3>Key Concepts and Principles</h3>
+<ol>
+<li><p><strong>Pure Functions</strong></p>
+<ul>
+<li><strong>Definition</strong>: Functions that always produce the same output for the same input and do not have side effects (i.e., they do not alter any state or perform I/O operations).</li>
+<li><strong>Benefits</strong>: Easier to reason about, test, and debug.</li>
+</ul>
+</li>
+<li><p><strong>Immutability</strong></p>
+<ul>
+<li><strong>Definition</strong>: Once data is created, it cannot be changed. Instead, new data structures are created when transformations are needed.</li>
+<li><strong>Benefits</strong>: Helps avoid a class of bugs that arise from mutable state, facilitates concurrent programming.</li>
+</ul>
+</li>
+<li><p><strong>First-Class and Higher-Order Functions</strong></p>
+<ul>
+<li><strong>First-Class Functions</strong>: Functions are treated as first-class citizens, meaning they can be passed as arguments to other functions, returned as values from other functions, and assigned to variables.</li>
+<li><strong>Higher-Order Functions</strong>: Functions that take other functions as arguments or return them as results.</li>
+</ul>
+</li>
+<li><p><strong>Function Composition</strong></p>
+<ul>
+<li><strong>Definition</strong>: The process of combining two or more functions to produce a new function. In mathematics, if you have functions <code>f</code> and <code>g</code>, function composition is <code>f(g(x))</code>.</li>
+<li><strong>Benefits</strong>: Encourages modular design, where small, simple functions can be combined to create more complex functionality.</li>
+</ul>
+</li>
+<li><p><strong>Recursion</strong></p>
+<ul>
+<li><strong>Definition</strong>: The process in which a function calls itself as a subroutine. Functional programming often uses recursion instead of loops for iteration.</li>
+<li><strong>Benefits</strong>: Helps maintain immutability and can make certain algorithms more concise and elegant.</li>
+</ul>
+</li>
+<li><p><strong>Referential Transparency</strong></p>
+<ul>
+<li><strong>Definition</strong>: An expression is referentially transparent if it can be replaced with its value without changing the program's behavior.</li>
+<li><strong>Benefits</strong>: Enhances the predictability and testability of code.</li>
+</ul>
+</li>
+</ol>
+<h3>Common Functional Programming Languages</h3>
+<ul>
+<li><strong>Haskell</strong>: A purely functional programming language known for its strong type system and lazy evaluation.</li>
+<li><strong>Erlang</strong>: Designed for concurrent programming, commonly used in telecoms and highly reliable systems.</li>
+<li><strong>Scala</strong>: A language that integrates both functional and object-oriented programming paradigms, runs on the JVM.</li>
+<li><strong>Clojure</strong>: A modern, functional Lisp dialect for the JVM.</li>
+<li><strong>F#</strong>: A functional-first language on the .NET platform.</li>
+<li><strong>Elixir</strong>: Runs on the Erlang VM, designed for scalability and maintainability.</li>
+</ul>
+<h3>Advantages of Functional Programming</h3>
+<ul>
+<li><strong>Modularity</strong>: Encourages the creation of small, reusable functions.</li>
+<li><strong>Ease of Testing</strong>: Pure functions and immutability make unit tests easier to write and reason about.</li>
+<li><strong>Concurrency</strong>: Immutability and the avoidance of side effects make concurrent and parallel programming safer and more straightforward.</li>
+<li><strong>Maintenance</strong>: The code is often more predictable and less prone to bugs related to state changes.</li>
+</ul>
+<h3>Challenges of Functional Programming</h3>
+<ul>
+<li><strong>Learning Curve</strong>: For programmers accustomed to imperative or object-oriented paradigms, FP concepts may initially be challenging to grasp.</li>
+<li><strong>Performance</strong>: Immutable data structures and recursion can be less efficient compared to mutable state and loops, although advanced techniques (e.g., tail-call optimization) mitigate some of these issues.</li>
+<li><strong>Tools and Libraries</strong>: While the ecosystem for FP is growing, it may not be as mature or extensive as that for imperative or OO languages in some domains.</li>
+</ul>
+<h3>Functional Programming in Practice</h3>
+<ul>
+<li>In practice, many popular languages incorporate functional programming features even if they are not purely functional (e.g., JavaScript, Python, Java, C#).</li>
+<li>Understanding and applying functional programming principles can improve code quality even in non-functional paradigms.</li>
+</ul>
+<p>By embracing functional programming principles, developers can create software that is both robust and maintainable, leveraging the mathematical foundations of the paradigm to write clear, concise, and reliable code.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Coding Practices</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Security</h1>
+<h2>Secure Coding Practices</h2>
+<p>Secure coding practices are essential methodologies and guidelines aimed at creating robust, secure software that minimizes vulnerabilities and protects against potential attacks. Here’s an in-depth look at key aspects of secure coding practices:</p>
+<h3>1. <strong>Input Validation and Sanitization</strong></h3>
+<ul>
+<li><strong>Description:</strong> Ensure that all input (whether from users, APIs, files, etc.) is valid and properly sanitized to prevent injection attacks like SQL Injection, Cross-Site Scripting (XSS), and Command Injection.</li>
+<li><strong>Practices:</strong>
+<ul>
+<li>Whitelist permitted inputs and reject everything else.</li>
+<li>Use built-in functions and frameworks for sanitizing inputs.</li>
+<li>Validate data length, type, and format before processing.</li>
+</ul>
+</li>
+</ul>
+<h3>2. <strong>Authentication and Authorization</strong></h3>
+<ul>
+<li><strong>Description:</strong> Implement robust mechanisms to ensure that users are who they claim to be (authentication) and control their access to resources based on their permissions (authorization).</li>
+<li><strong>Practices:</strong>
+<ul>
+<li>Use strong, unique passwords and secure password storage (e.g., hashing with salts).</li>
+<li>Employ multi-factor authentication (MFA).</li>
+<li>Use security frameworks for managing user sessions and roles.</li>
+<li>Implement principle of least privilege, granting minimum permissions necessary.</li>
+</ul>
+</li>
+</ul>
+<h3>3. <strong>Error Handling and Logging</strong></h3>
+<ul>
+<li><strong>Description:</strong> Properly manage errors and log relevant information while avoiding leakage of sensitive details that could aid attackers.</li>
+<li><strong>Practices:</strong>
+<ul>
+<li>Use generic error messages for users to avoid revealing system details.</li>
+<li>Log critical events such as authentication attempts, data access, and configuration changes.</li>
+<li>Ensure logs are protected against tampering and accessible only to authorized personnel.</li>
+<li>Regularly review and analyze logs for suspicious activities.</li>
+</ul>
+</li>
+</ul>
+<h3>4. <strong>Secure Data Storage and Transmission</strong></h3>
+<ul>
+<li><strong>Description:</strong> Protect data both at rest and in transit to avoid unauthorized access, tampering, and leaks.</li>
+<li><strong>Practices:</strong>
+<ul>
+<li>Encrypt sensitive data stored in databases or files.</li>
+<li>Use HTTPS/TLS for secure data transmission over networks.</li>
+<li>Avoid storing sensitive information such as passwords or cryptographic keys in source code or configuration files.</li>
+</ul>
+</li>
+</ul>
+<h3>5. <strong>Code Reviews and Audits</strong></h3>
+<ul>
+<li><strong>Description:</strong> Regularly review and audit code to detect and remediate security vulnerabilities early in the development cycle.</li>
+<li><strong>Practices:</strong>
+<ul>
+<li>Conduct peer reviews and automated static code analysis.</li>
+<li>Integrate security tests into Continuous Integration/Continuous Deployment (CI/CD) pipelines.</li>
+<li>Use security-focused linting tools to enforce secure coding standards.</li>
+</ul>
+</li>
+</ul>
+<h3>6. <strong>Secure Development Lifecycle (SDL)</strong></h3>
+<ul>
+<li><strong>Description:</strong> Integrate security practices throughout the software development lifecycle, from design to deployment.</li>
+<li><strong>Practices:</strong>
+<ul>
+<li>Conduct threat modeling and security risk assessments during design.</li>
+<li>Include security requirements as part of functional requirements.</li>
+<li>Implement security testing stages, such as penetration testing, before release.</li>
+<li>Employ post-deployment monitoring for security threats and timely patching.</li>
+</ul>
+</li>
+</ul>
+<h3>7. <strong>Dependency Management</strong></h3>
+<ul>
+<li><strong>Description:</strong> Manage third-party libraries and dependencies to ensure they do not introduce vulnerabilities.</li>
+<li><strong>Practices:</strong>
+<ul>
+<li>Use dependency checkers to identify known vulnerabilities.</li>
+<li>Regularly update dependencies to their latest secure versions.</li>
+<li>Prefer libraries with active maintenance and good security track records.</li>
+</ul>
+</li>
+</ul>
+<h3>8. <strong>Security Awareness and Training</strong></h3>
+<ul>
+<li><strong>Description:</strong> Equip developers and other stakeholders with the knowledge and tools to follow secure coding practices.</li>
+<li><strong>Practices:</strong>
+<ul>
+<li>Provide regular security training and updates.</li>
+<li>Establish a security champions program within development teams.</li>
+<li>Encourage a culture of security best practices and continuous learning.</li>
+</ul>
+</li>
+</ul>
+<h3>Summary</h3>
+<p>Secure coding practices are a fundamental part of building resilient and trustworthy software. Adhering to these guidelines helps mitigate risks, protects sensitive data, and ensures compliance with security standards and regulations. Developers should continuously update their knowledge of emerging threats and incorporate the latest best practices to stay ahead of potential security challenges.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

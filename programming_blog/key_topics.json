@@ -1,0 +1,52 @@
+{
+    "key_topics": [
+      {
+        "topic": "Data Structures",
+        "subtopics": ["Arrays", "Linked Lists", "Stacks", "Queues", "Trees", "Graphs", "Hash Tables"]
+      },
+      {
+        "topic": "Algorithms",
+        "subtopics": ["Sorting", "Searching", "Dynamic Programming", "Greedy Algorithms", "Graph Algorithms", "Backtracking"]
+      },
+      {
+        "topic": "Programming Paradigms",
+        "subtopics": ["Procedural Programming", "Object-Oriented Programming", "Functional Programming", "Event-Driven Programming", "Logic Programming"]
+      },
+      {
+        "topic": "Languages and Syntax",
+        "subtopics": ["Syntax Rules", "Data Types", "Control Structures", "Standard Libraries"]
+      },
+      {
+        "topic": "Software Development",
+        "subtopics": ["Version Control", "Debugging", "Testing", "Documentation", "Code Reviews", "Agile Methodologies", "DevOps"]
+      },
+      {
+        "topic": "Web Development",
+        "subtopics": ["HTML", "CSS", "JavaScript", "Front-End Frameworks", "Back-End Development", "APIs", "Database Integration"]
+      },
+      {
+        "topic": "Mobile Development",
+        "subtopics": ["iOS Development", "Android Development", "Cross-Platform Development", "Mobile UI/UX Design"]
+      },
+      {
+        "topic": "Database Management",
+        "subtopics": ["SQL", "NoSQL", "Database Design", "Data Modeling", "Database Optimization"]
+      },
+      {
+        "topic": "Operating Systems",
+        "subtopics": ["Process Management", "Memory Management", "File Systems", "Concurrency", "Security"]
+      },
+      {
+        "topic": "Networking",
+        "subtopics": ["OSI Model", "TCP/IP", "Network Protocols", "Web Sockets", "Network Security"]
+      },
+      {
+        "topic": "Security",
+        "subtopics": ["Cryptography", "Authentication", "Authorization", "Secure Coding Practices", "Vulnerabilities and Mitigation"]
+      },
+      {
+        "topic": "Artificial Intelligence",
+        "subtopics": ["Machine Learning", "Deep Learning", "Natural Language Processing", "Computer Vision", "AI Ethics"]
+      }
+    ]
+  }

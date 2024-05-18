@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Web Development</h1>
+<h2>HTML</h2>
+<p>HTML, or HyperText Markup Language, is the standard markup language used to create and design the structure of web pages. It forms the backbone of web content and is a critical component of web development. Here are some key topics and concepts related to HTML:</p>
+<h3>Key Concepts of HTML</h3>
+<ol>
+<li><p><strong>Basic Syntax and Structure</strong>:</p>
+<ul>
+<li>HTML documents start with a <code>&lt;!DOCTYPE html&gt;</code> declaration.</li>
+<li>The root element is <code>&lt;html&gt;</code>.</li>
+<li>Key sections include <code>&lt;head&gt;</code> (containing meta-information) and <code>&lt;body&gt;</code> (containing the content to be displayed).</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+<li><p><strong>Elements and Tags</strong>:</p>
+<ul>
+<li>HTML uses tags to create elements. Tags are enclosed in angle brackets; for example, <code>&lt;p&gt;</code> for a paragraph.</li>
+<li>Tags often come in pairs: a start tag <code>&lt;p&gt;</code> and an end tag <code>&lt;/p&gt;</code>.</li>
+</ul>
+</li>
+<li><p><strong>Attributes</strong>:</p>
+<ul>
+<li>HTML elements can have attributes providing additional information.</li>
+<li>Attributes are included in the opening tag and consist of a name and value pair: <code>&lt;a href=&quot;https://example.com&quot;&gt;Link&lt;/a&gt;</code>.</li>
+</ul>
+</li>
+<li><p><strong>Common HTML Tags</strong>:</p>
+<ul>
+<li>Headings: <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></li>
+<li>Paragraphs: <code>&lt;p&gt;</code></li>
+<li>Links: <code>&lt;a&gt;</code></li>
+<li>Images: <code>&lt;img&gt;</code></li>
+<li>Lists: <code>&lt;ul&gt;</code> (unordered list), <code>&lt;ol&gt;</code> (ordered list), <code>&lt;li&gt;</code> (list item)</li>
+<li>Divisions and Spans: <code>&lt;div&gt;</code> (block-level), <code>&lt;span&gt;</code> (inline)</li>
+<li>Forms: <code>&lt;form&gt;</code>, with inputs like <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code>, etc.</li>
+</ul>
+</li>
+<li><p><strong>Forms and Input</strong>:</p>
+<ul>
+<li>Creating user input forms using <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;button&gt;</code>.</li>
+<li>Attributes like <code>type</code>, <code>name</code>, <code>value</code>, <code>placeholder</code>, <code>required</code> for input elements.</li>
+</ul>
+<pre><code class="language-html">&lt;form action=&quot;/submit-form&quot; method=&quot;post&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+</li>
+<li><p><strong>Semantic HTML</strong>:</p>
+<ul>
+<li>Using semantic elements to improve the readability of the HTML code and the accessibility of the page.</li>
+<li>Examples include <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;nav&gt;</code>.</li>
+</ul>
+<pre><code class="language-html">&lt;header&gt;
+    &lt;nav&gt;
+        &lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;
+        &lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h1&gt;Main Content&lt;/h1&gt;
+        &lt;p&gt;This is the main content section.&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;aside&gt;
+        &lt;p&gt;This is an aside section.&lt;/p&gt;
+    &lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2023 Example.com&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+</li>
+<li><p><strong>Multimedia</strong>:</p>
+<ul>
+<li>Embedding images, audio, and video.</li>
+<li>Tags include <code>&lt;img&gt;</code> for images, <code>&lt;audio&gt;</code> for sound files, and <code>&lt;video&gt;</code> for video content.</li>
+</ul>
+<pre><code class="language-html">&lt;img src=&quot;image.jpg&quot; alt=&quot;A description of the image&quot;&gt;
+&lt;audio controls&gt;
+    &lt;source src=&quot;audio.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+&lt;video controls&gt;
+    &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+</code></pre>
+</li>
+<li><p><strong>Linking and Navigation</strong>:</p>
+<ul>
+<li>Creating hyperlinks using <code>&lt;a href=&quot;URL&quot;&gt;</code>.</li>
+<li>Attribute <code>href</code> specifies the URL, and the link text goes between the opening and closing tags.</li>
+<li>Navigation can be internal (within the same page using fragments like <code>#section</code>) or external (to other pages or websites).</li>
+</ul>
+</li>
+<li><p><strong>Responsive Web Design</strong>:</p>
+<ul>
+<li>Using meta tags like <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code>.</li>
+<li>Ensuring the web page is mobile-friendly and scales properly on different devices.</li>
+</ul>
+</li>
+<li><p><strong>Performance</strong>:</p>
+<ul>
+<li>Writing clean, well-structured code.</li>
+<li>Minimizing the use of unnecessary elements and attributes.</li>
+<li>Ensuring fast load times by optimizing images and other media.</li>
+</ul>
+</li>
+</ol>
+<h3>Essential HTML Practices</h3>
+<ul>
+<li><strong>Validate Your HTML</strong>: Use tools like the W3C Markup Validation Service to ensure your HTML is error-free and follows standards.</li>
+<li><strong>Accessibility</strong>: Use semantic HTML and ARIA (Accessible Rich Internet Applications) roles to improve accessibility for users with disabilities.</li>
+<li><strong>SEO</strong>: Utilize proper tags (e.g., headers, anchor texts) to improve search engine optimization.</li>
+</ul>
+<p>By understanding and effectively utilizing these key HTML concepts, you can build robust and user-friendly web pages. HTML is often used in conjunction with CSS (Cascading Style Sheets) for styling and JavaScript for interactivity, which together form the cornerstone technologies for building modern web applications.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

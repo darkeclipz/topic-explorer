@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Security</h1>
+<h2>Authentication</h2>
+<p>Authentication is a fundamental aspect of security in information systems, focusing on verifying the identity of individuals or entities accessing a system. Here are key components and concepts related to authentication:</p>
+<h3>1. <strong>Basics of Authentication</strong></h3>
+<ul>
+<li><strong>Definition</strong>: Authentication is the process of determining whether someone or something is, in fact, who or what it is declared to be.</li>
+<li><strong>Purpose</strong>: Ensures that only legitimate users or systems can access resources or data.</li>
+</ul>
+<h3>2. <strong>Types of Authentication</strong></h3>
+<ul>
+<li><strong>Single-Factor Authentication (SFA)</strong>: Uses one type of credential, typically a password.</li>
+<li><strong>Two-Factor Authentication (2FA)</strong>: Combines two different factors, such as a password and a text message code.</li>
+<li><strong>Multi-Factor Authentication (MFA)</strong>: Utilizes two or more of the following factors:
+<ul>
+<li><strong>Something you know</strong>: Passwords, PINs.</li>
+<li><strong>Something you have</strong>: Security tokens, smartphones.</li>
+<li><strong>Something you are</strong>: Biometrics like fingerprints or facial recognition.</li>
+</ul>
+</li>
+</ul>
+<h3>3. <strong>Authentication Methods</strong></h3>
+<ul>
+<li><strong>Passwords</strong>: The most common method, though prone to weaknesses like brute force attacks and phishing.</li>
+<li><strong>Biometrics</strong>: Uses physical characteristics (fingerprints, retina scans, facial recognition) for identification. More secure but raises privacy concerns.</li>
+<li><strong>Tokens</strong>: Physical or digital devices or objects such as smart cards or smartphone apps that generate time-sensitive codes.</li>
+<li><strong>Public Key Infrastructure (PKI)</strong>: Uses a pair of cryptographic keys (public and private) to establish a secure connection and verify identities.</li>
+</ul>
+<h3>4. <strong>Authentication Protocols</strong></h3>
+<ul>
+<li><strong>OAuth</strong>: An open-standard authorization protocol or framework that provides applications the ability to secure designated access.</li>
+<li><strong>OpenID Connect</strong>: An identity layer on top of OAuth 2.0, used for single sign-on (SSO).</li>
+<li><strong>Kerberos</strong>: A network authentication protocol using secret-key cryptography for secure identity verification over non-secure networks.</li>
+<li><strong>SAML (Security Assertion Markup Language)</strong>: An XML-based framework for exchanging authentication and authorization data between parties, particularly in SSO systems.</li>
+</ul>
+<h3>5. <strong>Authentication Challenges</strong></h3>
+<ul>
+<li><strong>Man-in-the-Middle Attacks (MitM)</strong>: Intercepting communication between two parties to steal or alter data.</li>
+<li><strong>Phishing</strong>: Fraudulent attempts to obtain sensitive information by pretending to be a trustworthy entity.</li>
+<li><strong>Password Weakness</strong>: Simple or reused passwords can be easily guessed or cracked.</li>
+<li><strong>Insider Threats</strong>: Authorized individuals misuse their access.</li>
+</ul>
+<h3>6. <strong>Best Practices for Authentication</strong></h3>
+<ul>
+<li><strong>Strong Password Policies</strong>: Use of complex, lengthy passwords, and regular updates.</li>
+<li><strong>Use of MFA</strong>: Implementing multi-factor authentication to add extra layers of security.</li>
+<li><strong>Encryption</strong>: Ensuring that all authentication data is encrypted in transit and at rest.</li>
+<li><strong>Regular Audits and Monitoring</strong>: Continuous monitoring for unusual activities and regular audits of access controls and policies.</li>
+<li><strong>User Education</strong>: Training users about the importance of security practices and potential threats.</li>
+</ul>
+<p>By incorporating these elements, systems can significantly enhance their security posture, ensuring that access is limited to genuine users and minimizing the risk of unauthorized access.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Operating Systems</h1>
+<h2>Memory Management</h2>
+<p>Memory management in operating systems is a crucial area of computer science that deals with managing primary memory (RAM). The goal is to ensure that memory is efficiently and effectively allocated, managed, and recycled. Here are some key concepts and practices involved in memory management:</p>
+<ol>
+<li><p><strong>Memory Allocation:</strong></p>
+<ul>
+<li><strong>Static Allocation:</strong> Memory is allocated at compile time; its size and address are fixed.</li>
+<li><strong>Dynamic Allocation:</strong> Memory is allocated at runtime, allowing for flexibility but requiring mechanisms to track allocated and free memory.</li>
+</ul>
+</li>
+<li><p><strong>Memory Partitioning:</strong></p>
+<ul>
+<li><strong>Fixed Partitioning:</strong> The memory is divided into fixed-sized partitions. Each partition can hold exactly one process, leading to internal fragmentation.</li>
+<li><strong>Dynamic Partitioning:</strong> Partitions are created dynamically, fitting the size of the process, which can lead to external fragmentation.</li>
+</ul>
+</li>
+<li><p><strong>Paging:</strong></p>
+<ul>
+<li>The memory is divided into fixed-sized blocks called pages. The physical memory (RAM) is divided into blocks of the same size called frames.</li>
+<li>A page table is used to map virtual addresses to physical addresses, which helps eliminate external fragmentation.</li>
+</ul>
+</li>
+<li><p><strong>Segmentation:</strong></p>
+<ul>
+<li>Memory is divided into variable-sized segments based on the logical divisions within a program, such as functions, objects, or data structures.</li>
+<li>Each segment has a base address and a length. Segmentation allows for better logical organization but can lead to external fragmentation.</li>
+</ul>
+</li>
+<li><p><strong>Virtual Memory:</strong></p>
+<ul>
+<li>Allows the execution of processes that may not be completely in the physical memory (RAM). It uses both the RAM and the disk storage to give an illusion of a large memory space.</li>
+<li>Common techniques include paging and segmentation.</li>
+<li>It helps in running large applications and improves the system's multitasking capabilities.</li>
+</ul>
+</li>
+<li><p><strong>Swapping:</strong></p>
+<ul>
+<li>Entire processes are swapped in and out of the main memory to the disk. When a process is swapped out, its state (including its memory contents) is saved to disk, and this memory can be used by other processes.</li>
+</ul>
+</li>
+<li><p><strong>Page Replacement Algorithms:</strong></p>
+<ul>
+<li>When a page needs to be swapped in but there are no free frames, a page replacement algorithm decides which page to swap out. Common algorithms include:
+<ul>
+<li><strong>FIFO (First-In-First-Out):</strong> The oldest page in memory is replaced.</li>
+<li><strong>LRU (Least Recently Used):</strong> The page that has not been used for the longest time is replaced.</li>
+<li><strong>Optimal:</strong> Replaces the page that will not be used for the longest time in the future (theoretical, used for benchmarking).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Memory Protection:</strong></p>
+<ul>
+<li>Ensures that processes do not interfere with each other’s memory. Techniques include:
+<ul>
+<li><strong>Base and Limit Registers:</strong> Each process has a base register (starting address) and a limit register (length), ensuring it can only address its own memory.</li>
+<li><strong>Page-level Protection:</strong> Page tables include protection bits to enforce access rights for each page.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Memory Fragmentation:</strong></p>
+<ul>
+<li><strong>Internal Fragmentation:</strong> Unused memory within allocated regions (e.g., a process not fully using its allocated partition).</li>
+<li><strong>External Fragmentation:</strong> Free memory scattered in small blocks throughout the system. Compaction and other techniques are used to mitigate this.</li>
+</ul>
+</li>
+<li><p><strong>Garbage Collection:</strong></p>
+<ul>
+<li>Automatic memory reclamation for languages that support dynamic memory allocation (e.g., Java). It tracks and collects memory that is no longer in use by the application.</li>
+</ul>
+</li>
+</ol>
+<h3>Challenges:</h3>
+<ul>
+<li><strong>Balancing Performance:</strong> Efficient memory management must balance between speed and space (e.g., minimizing the overhead of memory management operations while maximizing memory utilization).</li>
+<li><strong>Concurrency:</strong> Managing memory in a system where multiple processes or threads are executing concurrently.</li>
+<li><strong>Security:</strong> Ensuring that malicious or erroneous processes cannot access memory allocated to other processes.</li>
+</ul>
+<p>Memory management is a fundamental part of operating systems, affecting the overall performance and reliability of a computer system. Proper techniques and strategies are essential for optimizing the use of memory and ensuring smooth and efficient application execution.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

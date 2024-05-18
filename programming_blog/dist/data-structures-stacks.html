@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Data Structures</h1>
+<h2>Stacks</h2>
+<p>A stack is a fundamental data structure used in programming and computer science, which follows the Last In, First Out (LIFO) principle. Here is a detailed explanation of stacks:</p>
+<h3>Core Concepts</h3>
+<ol>
+<li><p><strong>LIFO Principle</strong>:</p>
+<ul>
+<li>The last element added to the stack is the first one to be removed. This is similar to stacking plates; the last plate placed on top is the first to be removed.</li>
+</ul>
+</li>
+<li><p><strong>Basic Operations</strong>:</p>
+<ul>
+<li><strong>Push</strong>: Adds an element to the top of the stack.</li>
+<li><strong>Pop</strong>: Removes and returns the top element from the stack.</li>
+<li><strong>Peek/Top</strong>: Returns the top element without removing it.</li>
+<li><strong>isEmpty</strong>: Checks if the stack is empty.</li>
+<li><strong>isFull</strong>: Checks if the stack is full (relevant for stacks with a maximum capacity).</li>
+</ul>
+</li>
+</ol>
+<h3>Implementation Details</h3>
+<p>Stacks can be implemented using arrays or linked lists. Here’s a brief overview of both:</p>
+<ul>
+<li><p><strong>Array-Based Implementation</strong>:</p>
+<ul>
+<li>An array is used to store stack elements.</li>
+<li>An integer variable (<code>top</code>) is used to keep track of the index of the top element.</li>
+<li>Efficient for push and pop operations with O(1) time complexity.</li>
+<li>Limitation: Fixed size; if not dynamic, the maximum size of the stack needs to be defined.</li>
+</ul>
+</li>
+<li><p><strong>Linked List-Based Implementation</strong>:</p>
+<ul>
+<li>A linked list is used, where each node points to the next node.</li>
+<li>The top of the stack is typically the head of the linked list.</li>
+<li>Dynamic size; can grow and shrink as needed.</li>
+<li>Push and pop operations have O(1) time complexity, but there may be a slight overhead due to pointer manipulation.</li>
+</ul>
+</li>
+</ul>
+<h3>Applications</h3>
+<p>Stacks are used in various scenarios and algorithms:</p>
+<ul>
+<li><strong>Function Call Management</strong>: The call stack in programming languages.</li>
+<li><strong>Expression Evaluation</strong>: For converting infix expressions to postfix or prefix using stacks, and for evaluating postfix expressions.</li>
+<li><strong>Backtracking Algorithms</strong>: Such as those used in solving puzzles (e.g., Mazes, Sudoku).</li>
+<li><strong>Undo Mechanisms</strong>: Found in text editors, where the last action can be reverted.</li>
+<li><strong>Syntax Parsing</strong>: For parsing expressions, particularly in compilers and interpreters.</li>
+</ul>
+<h3>Example in Code (Array-Based Implementation in Python)</h3>
+<p>Here’s a simple implementation of a stack using an array in Python:</p>
+<pre><code class="language-python">class Stack:
+    def __init__(self, size):
+        self.stack = [None] * size  # Fixed-size stack
+        self.top = -1
+        self.size = size
+
+    def push(self, item):
+        if self.isFull():
+            raise Exception(&quot;Stack Overflow&quot;)
+        self.top += 1
+        self.stack[self.top] = item
+
+    def pop(self):
+        if self.isEmpty():
+            raise Exception(&quot;Stack Underflow&quot;)
+        item = self.stack[self.top]
+        self.stack[self.top] = None
+        self.top -= 1
+        return item
+
+    def peek(self):
+        if self.isEmpty():
+            raise Exception(&quot;Stack is empty&quot;)
+        return self.stack[self.top]
+
+    def isEmpty(self):
+        return self.top == -1
+
+    def isFull(self):
+        return self.top == self.size - 1
+
+# Usage
+s = Stack(5)
+s.push(1)
+s.push(2)
+print(s.pop())  # Output: 2
+print(s.peek()) # Output: 1
+</code></pre>
+<h3>Considerations</h3>
+<ul>
+<li><strong>Size Constraints</strong>: When using an array-based stack, be conscious of the stack size limit.</li>
+<li><strong>Overflow and Underflow</strong>: Proper error handling for when the stack is full (overflow) or empty (underflow) is essential.</li>
+</ul>
+<p>Understanding how stacks operate and their implementations helps in solving various computational problems efficiently.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

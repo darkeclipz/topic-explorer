@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Trading Strategies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Introduction to Algorithmic Trading</h1>
+<h2>Types of Trading Strategies</h2>
+<p>Certainly! In the context of algorithmic trading, various types of trading strategies are employed to capitalize on different market conditions, data patterns, and trading opportunities. Here’s an overview:</p>
+<ol>
+<li><p><strong>Trend Following:</strong></p>
+<ul>
+<li><strong>Objective:</strong> To identify and join a market trend, either upward or downward.</li>
+<li><strong>Techniques:</strong>
+<ul>
+<li>Moving Averages: Using indicators like Simple Moving Average (SMA) or Exponential Moving Average (EMA) to spot trends.</li>
+<li>Momentum Indicators: Tools like the Relative Strength Index (RSI) or Moving Average Convergence Divergence (MACD) to gauge the strength and direction of a trend.</li>
+</ul>
+</li>
+<li><strong>Example:</strong> A simple crossover strategy where a shorter-term moving average crosses above a longer-term moving average as a buy signal and vice versa for a sell signal.</li>
+</ul>
+</li>
+<li><p><strong>Mean Reversion:</strong></p>
+<ul>
+<li><strong>Objective:</strong> To exploit the tendency of asset prices to revert to a mean or average value over time.</li>
+<li><strong>Techniques:</strong>
+<ul>
+<li>Statistical Analysis: Using historical price data to identify deviations from the mean.</li>
+<li>Bollinger Bands: Using standard deviations around a moving average to identify overbought or oversold conditions.</li>
+</ul>
+</li>
+<li><strong>Example:</strong> Buying an asset that has dropped below its historical average and selling it when it reverts back to the mean.</li>
+</ul>
+</li>
+<li><p><strong>Statistical Arbitrage:</strong></p>
+<ul>
+<li><strong>Objective:</strong> To identify and exploit price inefficiencies between related instruments.</li>
+<li><strong>Techniques:</strong>
+<ul>
+<li>Pair Trading: Simultaneously buying and selling two correlated assets to profit from their convergence or divergence.</li>
+<li>Market Neutral Strategies: Balancing long and short positions to mitigate market risk.</li>
+</ul>
+</li>
+<li><strong>Example:</strong> If two historically correlated stocks deviate from their typical price relationship, entering into offsetting long and short positions to profit from the expected correction.</li>
+</ul>
+</li>
+<li><p><strong>Market Making:</strong></p>
+<ul>
+<li><strong>Objective:</strong> To provide liquidity to the market and profit from the bid-ask spread.</li>
+<li><strong>Techniques:</strong>
+<ul>
+<li>Continuous Price Quoting: Placing buy and sell orders simultaneously for the same asset.</li>
+<li>Spread Management: Adjusting the spread based on market conditions, volatility, and order flow.</li>
+</ul>
+</li>
+<li><strong>Example:</strong> A market maker might quote both buy and sell prices for a stock and profit from the small difference between the prices as other traders buy and sell through their quotes.</li>
+</ul>
+</li>
+</ol>
+<p>These strategies can be further enhanced and tailored using advanced techniques such as machine learning, high-frequency trading algorithms, and complex mathematical models. Each has its own set of risks and requires thorough backtesting and risk management to be effectively deployed in live trading.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:40:05 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

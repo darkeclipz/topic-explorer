@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Algorithms</h1>
+<h2>Graph Algorithms</h2>
+<p>Graph algorithms deal with the study of graphs—mathematical structures used to model pairwise relations between objects. Graphs are composed of nodes, also called vertices, and edges, which connect pairs of nodes. Here are some key graph algorithms and concepts:</p>
+<h3>1. <strong>Traversal Algorithms</strong></h3>
+<p>Traversal algorithms are used to visit all the nodes in a graph systematically.</p>
+<ul>
+<li><p><strong>Breadth-First Search (BFS)</strong>: This algorithm starts at a root node and explores all its neighboring nodes at the present depth before moving on to nodes at the next depth level. It uses a queue to keep track of the nodes to be explored.</p>
+<p><strong>Application</strong>: Finding the shortest path in an unweighted graph.</p>
+</li>
+<li><p><strong>Depth-First Search (DFS)</strong>: This algorithm starts at a root node and explores as far as possible along each branch before backtracking. It uses a stack (often the system's call stack via recursion) to keep track of the nodes.</p>
+<p><strong>Application</strong>: Detecting cycles in a graph, solving puzzles with a unique solution (e.g., mazes).</p>
+</li>
+</ul>
+<h3>2. <strong>Shortest Path Algorithms</strong></h3>
+<p>These algorithms find the shortest path between nodes in a graph.</p>
+<ul>
+<li><p><strong>Dijkstra's Algorithm</strong>: This algorithm finds the shortest paths from a single source node to all other nodes in a weighted graph with non-negative weights. It uses a priority queue to repeatedly select the minimum-weight node.</p>
+<p><strong>Application</strong>: GPS navigation systems to find the shortest route.</p>
+</li>
+<li><p><strong>Bellman-Ford Algorithm</strong>: This algorithm computes the shortest paths from a single source node to all other nodes in a weighted graph. Unlike Dijkstra's algorithm, it can handle graphs with negative weights.</p>
+<p><strong>Application</strong>: Network routing protocols like RIP (Routing Information Protocol).</p>
+</li>
+<li><p><strong>A* Algorithm</strong>: An extension of Dijkstra's algorithm that uses heuristics to guide the search for the shortest path. It’s commonly used in pathfinding and graph traversal.</p>
+<p><strong>Application</strong>: AI pathfinding in games.</p>
+</li>
+</ul>
+<h3>3. <strong>Minimum Spanning Tree (MST) Algorithms</strong></h3>
+<p>These algorithms find the subset of edges that connect all the vertices in the graph with the minimum possible total edge weight.</p>
+<ul>
+<li><p><strong>Kruskal's Algorithm</strong>: This algorithm builds the MST by sorting all the edges in the graph by increasing weight and adding them one by one to the MST, using a disjoint-set data structure to detect cycles.</p>
+<p><strong>Application</strong>: Network design, such as laying out electrical wiring or network cables.</p>
+</li>
+<li><p><strong>Prim's Algorithm</strong>: This algorithm builds the MST by starting from an arbitrary node and repeatedly adding the lowest-weight edge that connects a vertex in the tree to a vertex outside the tree.</p>
+<p><strong>Application</strong>: Similar to Kruskal's algorithm, often used for network design.</p>
+</li>
+</ul>
+<h3>4. <strong>Topological Sorting</strong></h3>
+<p>Topological sorting of a directed acyclic graph (DAG) is a linear ordering of its vertices such that for every directed edge (u \rightarrow v), vertex (u) comes before (v).</p>
+<ul>
+<li><p><strong>Kahn's Algorithm</strong>: Utilizes a queue to manage nodes with no incoming edges and iteratively removes them, ensuring a topological order.</p>
+</li>
+<li><p><strong>DFS-based Approach</strong>: Perform DFS and keep track of the finish times of nodes, then sort nodes in decreasing order of finish time.</p>
+<p><strong>Application</strong>: Task scheduling, course prerequisite structures.</p>
+</li>
+</ul>
+<h3>5. <strong>Network Flow Algorithms</strong></h3>
+<p>These algorithms find the maximum flow in a flow network, where each edge has a capacity and each node can handle a certain amount of flow.</p>
+<ul>
+<li><p><strong>Ford-Fulkerson Algorithm</strong>: Computes the maximum flow in a flow network by repeatedly finding augmenting paths and adding their flow to the existing flow until no such paths exist.</p>
+<p><strong>Application</strong>: Bipartite matching, circulation issues in networks.</p>
+</li>
+</ul>
+<h3>6. <strong>Graph Coloring Algorithms</strong></h3>
+<p>These algorithms aim to color the nodes of a graph such that no two adjacent nodes share the same color, using the minimum number of colors.</p>
+<ul>
+<li><p><strong>Greedy Coloring</strong>: A heuristic-based approach where each vertex is assigned the smallest possible color.</p>
+<p><strong>Application</strong>: Register allocation in compilers, timetable scheduling.</p>
+</li>
+</ul>
+<h3>7. <strong>Connectivity Algorithms</strong></h3>
+<ul>
+<li><p><strong>Union-Find Algorithm</strong>: Also known as Disjoint Set Union (DSU), it's used to determine the connected components in an undirected graph.</p>
+<p><strong>Application</strong>: Kruskal's algorithm for finding MST, dynamic connectivity queries.</p>
+</li>
+</ul>
+<h3>8. <strong>Cycle Detection Algorithms</strong></h3>
+<ul>
+<li><p><strong>DFS-based Cycle Detection</strong>: Uses DFS to detect cycles in both directed and undirected graphs.</p>
+<p><strong>Application</strong>: Deadlock detection, detecting infinite loops or dependencies.</p>
+</li>
+</ul>
+<h3>Implementing and understanding these algorithms is essential for solving complex problems in computer science and related fields. They not only provide the methodology for traversing and analyzing graphs but are also crucial for optimization and efficient system designs.</h3>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

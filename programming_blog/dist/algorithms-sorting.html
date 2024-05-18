@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Algorithms</h1>
+<h2>Sorting</h2>
+<p>Sorting is a fundamental concept in algorithms and computer science. It involves arranging the elements of a list or collection in a certain order, typically in ascending or descending order. Sorting algorithms are essential for optimizing the efficiency of other algorithms (like search algorithms) that require sorted data. Here are a few notable sorting algorithms, along with brief explanations:</p>
+<h3>1. Bubble Sort</h3>
+<ul>
+<li><strong>Description:</strong> This is the simplest sorting algorithm. It repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.</li>
+<li><strong>Complexity:</strong> O(n^2) in the worst and average case.</li>
+<li><strong>Use Case:</strong> Suitable for small datasets or when teaching sorting concepts.</li>
+</ul>
+<h3>2. Selection Sort</h3>
+<ul>
+<li><strong>Description:</strong> This algorithm divides the input list into two parts: the sublist of items already sorted, and the sublist of items remaining to be sorted. It repeatedly selects the smallest (or largest) element from the unsorted sublist, swaps it with the leftmost unsorted element, and moves the sublist boundaries one element to the right.</li>
+<li><strong>Complexity:</strong> O(n^2) in the worst and average case.</li>
+<li><strong>Use Case:</strong> Good for understanding basic sorting principles, not for large datasets.</li>
+</ul>
+<h3>3. Insertion Sort</h3>
+<ul>
+<li><strong>Description:</strong> Builds the final sorted array one item at a time. It takes each element from the input and finds the position it should go in the sorted list and inserts it there.</li>
+<li><strong>Complexity:</strong> O(n^2) in the worst case, but O(n) in the best case (when the array is already sorted).</li>
+<li><strong>Use Case:</strong> Efficient for small or nearly sorted datasets.</li>
+</ul>
+<h3>4. Merge Sort</h3>
+<ul>
+<li><strong>Description:</strong> This is a divide-and-conquer algorithm. It divides the input array into two halves, calls itself recursively for the two halves, and then merges the two sorted halves.</li>
+<li><strong>Complexity:</strong> O(n log n) in the worst, average, and best case.</li>
+<li><strong>Use Case:</strong> Efficient for large datasets and guarantees stable sorting.</li>
+</ul>
+<h3>5. Quick Sort</h3>
+<ul>
+<li><strong>Description:</strong> Another divide-and-conquer algorithm. It selects a 'pivot' element and partitions the array into elements less than the pivot and elements greater than the pivot. It then recursively sorts the sub-arrays.</li>
+<li><strong>Complexity:</strong> O(n log n) on average; O(n^2) in the worst case, but can be optimized with good pivot selection strategies.</li>
+<li><strong>Use Case:</strong> Highly efficient and commonly used for large datasets.</li>
+</ul>
+<h3>6. Heap Sort</h3>
+<ul>
+<li><strong>Description:</strong> Utilizes a binary heap data structure. It builds a max-heap from the input data, and then repeatedly extracts the maximum element from the heap and reconstructs the heap until all elements are sorted.</li>
+<li><strong>Complexity:</strong> O(n log n) in the worst and average case.</li>
+<li><strong>Use Case:</strong> Useful in cases where auxiliary space is limited, as it is an in-place sorting algorithm.</li>
+</ul>
+<h3>7. Radix Sort</h3>
+<ul>
+<li><strong>Description:</strong> Non-comparative integer sorting algorithm. It processes the input integers one digit at a time, using counting sort as a subroutine to sort by each digit.</li>
+<li><strong>Complexity:</strong> O(d(n+k)), where d is the number of digits, n is the number of elements, and k is the range of the input.</li>
+<li><strong>Use Case:</strong> Efficient for sorting numbers or strings with a fixed length.</li>
+</ul>
+<h3>Choosing a Sorting Algorithm</h3>
+<p>The choice of a sorting algorithm typically depends on the specific requirements of the dataset and application:</p>
+<ul>
+<li><strong>Data Size:</strong> Algorithms like Merge Sort and Quick Sort are better for larger datasets.</li>
+<li><strong>Memory Constraints:</strong> In-place sorting algorithms like Quick Sort and Heap Sort may be preferable.</li>
+<li><strong>Stability Requirements:</strong> Stable sorting algorithms like Merge Sort are necessary when the order of equal elements must be preserved.</li>
+<li><strong>Nearly Sorted Data:</strong> Insertion Sort can be very efficient for nearly sorted datasets.</li>
+</ul>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

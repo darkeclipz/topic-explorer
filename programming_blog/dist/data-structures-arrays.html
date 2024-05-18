@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Data Structures</h1>
+<h2>Arrays</h2>
+<p>Sure, here's an explanation of arrays in data structures:</p>
+<h3>Arrays</h3>
+<p><strong>Definition:</strong>
+An array is a data structure that holds a fixed number of elements of the same data type in a contiguous block of memory. It's one of the simplest and most commonly used data structures.</p>
+<p><strong>Key Characteristics:</strong></p>
+<ol>
+<li><strong>Fixed Size:</strong> The size of an array is defined at the time of its declaration and cannot be changed dynamically.</li>
+<li><strong>Indexed Access:</strong> Each element in the array is identified by an index, typically starting from 0 up to ( n-1 ) (where ( n ) is the size of the array).</li>
+<li><strong>Homogeneous Elements:</strong> All elements in an array are of the same data type (e.g., all integers, all floating-point numbers, etc.).</li>
+<li><strong>Contiguous Memory Allocation:</strong> Elements of the array are stored in contiguous memory locations.</li>
+</ol>
+<p><strong>Advantages:</strong></p>
+<ol>
+<li><strong>Fast Access:</strong> Accessing an element by its index takes constant time, ( O(1) ).</li>
+<li><strong>Efficient Iteration:</strong> It is easy to iterate through the array elements.</li>
+<li><strong>Memory Efficiency:</strong> Arrays provide a compact structure to store similar elements, with minimal memory overhead.</li>
+</ol>
+<p><strong>Disadvantages:</strong></p>
+<ol>
+<li><strong>Fixed Size:</strong> Once an array is created, its size cannot be changed.</li>
+<li><strong>Costly Insertions and Deletions:</strong> Adding or removing elements (except at the end) requires shifting other elements, which can be time-consuming, taking ( O(n) ) time.</li>
+<li><strong>Wasted Space:</strong> If the array is not fully utilized, there can be wasted memory.</li>
+</ol>
+<p><strong>Common Operations:</strong></p>
+<ol>
+<li><strong>Accessing Elements:</strong> Accessing an element by index is direct and takes constant time.
+<pre><code class="language-python">element = array[index]
+</code></pre>
+</li>
+<li><strong>Modifying Elements:</strong> You can modify an element at a specific index.
+<pre><code class="language-python">array[index] = new_value
+</code></pre>
+</li>
+<li><strong>Iterating Over Elements:</strong> You can loop through the array elements.
+<pre><code class="language-python">for element in array:
+    print(element)
+</code></pre>
+</li>
+<li><strong>Inserting Elements:</strong> Inserting elements can be costly as it may require shifting elements.
+<pre><code class="language-python"># Pseudo-code example
+for i from n-1 to index:
+    array[i+1] = array[i]
+array[index] = new_value
+</code></pre>
+</li>
+<li><strong>Deleting Elements:</strong> Similarly, deleting elements requires shifting.
+<pre><code class="language-python"># Pseudo-code example
+for i from index to n-1:
+    array[i] = array[i+1]
+</code></pre>
+</li>
+</ol>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><strong>Declaring an Array in Python:</strong>
+<pre><code class="language-python">array = [1, 2, 3, 4, 5]
+</code></pre>
+</li>
+<li><strong>Accessing Elements:</strong>
+<pre><code class="language-python">first_element = array[0]  # 1
+last_element = array[4]   # 5
+</code></pre>
+</li>
+<li><strong>Modifying Elements:</strong>
+<pre><code class="language-python">array[2] = 10  # Now array becomes [1, 2, 10, 4, 5]
+</code></pre>
+</li>
+</ul>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Arrays are used where data elements have a fixed size and need to be stored contiguously.</li>
+<li>They are the basis for other data structures such as strings, heaps, and hash tables.</li>
+<li>Used in algorithms and various applications like sorting, searching, and dynamic programming.</li>
+</ul>
+<p>By understanding arrays, you gain a foundational tool for structuring data in an organized manner, which is essential for efficient algorithm design and implementation.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

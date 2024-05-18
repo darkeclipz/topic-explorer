@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Protocols</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Networking</h1>
+<h2>Network Protocols</h2>
+<p>Network protocols are fundamental to the functionality of computer networks. They establish rules and conventions for communication between network devices, enabling successful data exchange over a network. Here are some key concepts and types of network protocols:</p>
+<h3>Key Concepts</h3>
+<ol>
+<li><p><strong>Protocol Stack</strong>: Protocols are often layered in a stack, with each layer responsible for a specific aspect of communication. The most commonly referenced stack is the OSI (Open Systems Interconnection) model, which has seven layers, and the simpler TCP/IP model, which has four layers.</p>
+</li>
+<li><p><strong>Encapsulation</strong>: Data is wrapped with protocol information at each layer of the stack as it is sent down the layers on the sending side and unwrapped in reverse order on the receiving side.</p>
+</li>
+</ol>
+<h3>Protocols by Layer (OSI Model)</h3>
+<ol>
+<li><p><strong>Physical Layer</strong></p>
+<ul>
+<li><strong>Protocol Examples</strong>: Ethernet, Wi-Fi (IEEE 802.11)</li>
+<li><strong>Responsibilities</strong>: Transmitting raw bits over a physical medium.</li>
+</ul>
+</li>
+<li><p><strong>Data Link Layer</strong></p>
+<ul>
+<li><strong>Protocol Examples</strong>: Ethernet (MAC layer), PPP (Point-to-Point Protocol)</li>
+<li><strong>Responsibilities</strong>: Node-to-node data transfer, error detection and correction, MAC addressing.</li>
+</ul>
+</li>
+<li><p><strong>Network Layer</strong></p>
+<ul>
+<li><strong>Protocol Examples</strong>: IP (Internet Protocol), ICMP (Internet Control Message Protocol)</li>
+<li><strong>Responsibilities</strong>: Routing, logical addressing (IP addresses), path determination.</li>
+</ul>
+</li>
+<li><p><strong>Transport Layer</strong></p>
+<ul>
+<li><strong>Protocol Examples</strong>: TCP (Transmission Control Protocol), UDP (User Datagram Protocol)</li>
+<li><strong>Responsibilities</strong>: End-to-end communication, flow control, error recovery, data segmentation/reassembly.</li>
+</ul>
+</li>
+<li><p><strong>Session Layer</strong></p>
+<ul>
+<li><strong>Protocol Examples</strong>: NetBIOS, PPTP (Point-to-Point Tunneling Protocol)</li>
+<li><strong>Responsibilities</strong>: Managing sessions, synchronization, dialog control.</li>
+</ul>
+</li>
+<li><p><strong>Presentation Layer</strong></p>
+<ul>
+<li><strong>Protocol Examples</strong>: SSL/TLS (Secure Sockets Layer/Transport Layer Security), MIME (Multipurpose Internet Mail Extensions)</li>
+<li><strong>Responsibilities</strong>: Data translation, encryption/decryption, compression.</li>
+</ul>
+</li>
+<li><p><strong>Application Layer</strong></p>
+<ul>
+<li><strong>Protocol Examples</strong>: HTTP (HyperText Transfer Protocol), FTP (File Transfer Protocol), SMTP (Simple Mail Transfer Protocol), DNS (Domain Name System)</li>
+<li><strong>Responsibilities</strong>: Network services, end-user applications.</li>
+</ul>
+</li>
+</ol>
+<h3>Common Networking Protocols</h3>
+<ul>
+<li><strong>HTTP/HTTPS</strong>: Used for transferring web pages over the Internet. HTTPS adds a security layer via SSL/TLS.</li>
+<li><strong>FTP/SFTP</strong>: File Transfer Protocols used for transfer of files. SFTP (Secure File Transfer Protocol) adds a security layer.</li>
+<li><strong>SMTP/IMAP/POP3</strong>: Protocols for sending and receiving email. SMTP (Simple Mail Transfer Protocol) is used for sending; IMAP and POP3 are used for receiving.</li>
+<li><strong>DNS</strong>: Translates human-readable domain names to IP addresses.</li>
+<li><strong>DHCP</strong>: Dynamic Host Configuration Protocol, used for dynamically assigning IP addresses to devices on a network.</li>
+<li><strong>SNMP</strong>: Simple Network Management Protocol, used for network management and monitoring.</li>
+</ul>
+<h3>Security Protocols</h3>
+<ul>
+<li><strong>SSL/TLS</strong>: Secure data transfer protocols that provide encryption and authentication for private communications over the Internet.</li>
+<li><strong>SSH</strong>: Secure Shell, used for secure remote login and command execution.</li>
+</ul>
+<h3>Conclusion</h3>
+<p>Understanding these protocols and their functionalities is crucial for network design, troubleshooting, and security. Each protocol plays a vital role in ensuring that data is accurately and securely transmitted from one device to another across a network.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

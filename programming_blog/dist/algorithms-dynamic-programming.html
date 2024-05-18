@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Programming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Algorithms</h1>
+<h2>Dynamic Programming</h2>
+<p>Dynamic programming (DP) is a method for solving complex problems by breaking them down into simpler subproblems. It is particularly useful for optimization problems, where the goal is to find the best solution among many possible options. The main concept behind dynamic programming is to store the solutions to subproblems so that they do not need to be recomputed when needed later. This helps to reduce the overall computation time.</p>
+<p>Here are the key concepts and steps involved in dynamic programming:</p>
+<h3>Key Concepts:</h3>
+<ol>
+<li><p><strong>Overlapping Subproblems</strong>: DP is effective when the problem can be broken down into subproblems that overlap, meaning that the same subproblems are solved multiple times.</p>
+</li>
+<li><p><strong>Optimal Substructure</strong>: The optimal solution to the problem can be constructed from the optimal solutions of its subproblems.</p>
+</li>
+<li><p><strong>Memoization</strong>: This technique involves storing the results of expensive function calls and reusing them when the same inputs occur again. This is typically implemented using a hash table or an array.</p>
+</li>
+<li><p><strong>Tabulation</strong>: This is a bottom-up approach where solutions to all subproblems are computed iteratively and stored in a table (array) before the overall solution is computed.</p>
+</li>
+</ol>
+<h3>Steps to Solve a Problem Using Dynamic Programming:</h3>
+<ol>
+<li><p><strong>Define the Structure of the Optimal Solution</strong>: Break down the original problem into smaller subproblems. Define how the optimal solution of the original problem can be composed from the solutions of these subproblems.</p>
+</li>
+<li><p><strong>Recursively Define the Optimal Solution</strong>: Develop a recursive formulation for the problem, expressing the solution of the original problem in terms of the solutions of its subproblems.</p>
+</li>
+<li><p><strong>Compute the Values of Subproblems</strong>: Use memoization (top-down approach) or tabulation (bottom-up approach) to compute the value of each subproblem.</p>
+</li>
+<li><p><strong>Construct the Optimal Solution</strong>: If needed, reconstruct the solution to the original problem from the computed values of subproblems.</p>
+</li>
+</ol>
+<h3>Example: Fibonacci Number Calculation</h3>
+<p>One classic example to illustrate dynamic programming is computing the nth Fibonacci number.</p>
+<h4>Recursive Approach (Without DP):</h4>
+<pre><code class="language-python">def fib(n):
+    if n &lt;= 1:
+        return n
+    return fib(n-1) + fib(n-2)
+</code></pre>
+<p>This approach has an exponential time complexity because it solves the same subproblems multiple times.</p>
+<h4>Dynamic Programming Approach:</h4>
+<p><strong>Memoization (Top-Down Approach):</strong></p>
+<pre><code class="language-python">def fib_memo(n, memo={}):
+    if n in memo:
+        return memo[n]
+    if n &lt;= 1:
+        return n
+    memo[n] = fib_memo(n-1, memo) + fib_memo(n-2, memo)
+    return memo[n]
+</code></pre>
+<p><strong>Tabulation (Bottom-Up Approach):</strong></p>
+<pre><code class="language-python">def fib_tab(n):
+    if n &lt;= 1:
+        return n
+    dp = [0] * (n + 1)
+    dp[1] = 1
+    for i in range(2, n + 1):
+        dp[i] = dp[i-1] + dp[i-2]
+    return dp[n]
+</code></pre>
+<p>Both the memoization and tabulation approaches greatly reduce the time complexity to O(n) by storing the results of subproblems.</p>
+<h3>Applications of Dynamic Programming:</h3>
+<ol>
+<li><strong>Knapsack Problem</strong>: Select items to maximize the total value without exceeding the weight limit.</li>
+<li><strong>Longest Common Subsequence</strong>: Find the longest subsequence common to two sequences.</li>
+<li><strong>Edit Distance</strong>: Measure the similarity between two strings by counting the minimum number of operations needed to transform one string into another.</li>
+<li><strong>Matrix Chain Multiplication</strong>: Determine the most efficient way to multiply matrices.</li>
+<li><strong>Shortest Path Problems</strong>: Such as the Floyd-Warshall algorithm used in finding shortest paths in a weighted graph.</li>
+</ol>
+<p>Dynamic programming is a powerful tool that can be applied to a wide range of problems, making it an essential part of the toolkit for any software developer or computer scientist.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

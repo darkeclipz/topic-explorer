@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Web Development</h1>
+<h2>JavaScript</h2>
+<p>JavaScript is a high-level, interpreted programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. It enables interactive web pages and is an essential part of web applications. Here are some key points and concepts about JavaScript in the context of web development:</p>
+<h3>Features of JavaScript:</h3>
+<ol>
+<li><strong>Dynamic Typing</strong>: JavaScript variables can hold different types of data without specifying their data type.</li>
+<li><strong>Object-Oriented</strong>: JavaScript supports object-oriented programming concepts such as inheritance, encapsulation, and polymorphism.</li>
+<li><strong>Event-Driven</strong>: JavaScript can handle user events (like clicks, form submissions) very effectively.</li>
+<li><strong>Prototypal Inheritance</strong>: Unlike classical inheritance in other OO languages, JavaScript uses prototypes.</li>
+<li><strong>Functional Programming</strong>: JavaScript supports first-class functions, allowing functions to be assigned to variables, passed to other functions, and returned from functions.</li>
+</ol>
+<h3>Key Concepts:</h3>
+<ol>
+<li><p><strong>Variables and Data Types</strong>:</p>
+<ul>
+<li>Declaring variables using <code>var</code>, <code>let</code>, and <code>const</code>.</li>
+<li>Basic data types: <code>Number</code>, <code>String</code>, <code>Boolean</code>, <code>Object</code>, <code>Array</code>, <code>Function</code>, <code>Undefined</code>, <code>Null</code>.</li>
+</ul>
+</li>
+<li><p><strong>Control Structures</strong>:</p>
+<ul>
+<li>Conditional statements: <code>if</code>, <code>else if</code>, <code>else</code>, <code>switch</code>.</li>
+<li>Loops: <code>for</code>, <code>while</code>, <code>do...while</code>, <code>for...of</code>, <code>for...in</code>.</li>
+</ul>
+</li>
+<li><p><strong>Functions</strong>:</p>
+<ul>
+<li>Function declaration and expression.</li>
+<li>Arrow functions.</li>
+<li>Higher-order functions.</li>
+</ul>
+</li>
+<li><p><strong>Objects and Arrays</strong>:</p>
+<ul>
+<li>Creating and manipulating objects and arrays.</li>
+<li>Important methods: map, filter, reduce for arrays.</li>
+</ul>
+</li>
+<li><p><strong>DOM Manipulation</strong>:</p>
+<ul>
+<li>Accessing and modifying HTML elements using methods like <code>getElementById</code>, <code>querySelector</code>, <code>innerHTML</code>, <code>style</code>.</li>
+<li>Adding, removing, and modifying elements dynamically.</li>
+</ul>
+</li>
+<li><p><strong>Event Handling</strong>:</p>
+<ul>
+<li>Responding to user events using event listeners: <code>addEventListener</code>.</li>
+</ul>
+</li>
+<li><p><strong>Asynchronous JavaScript</strong>:</p>
+<ul>
+<li>Callbacks, Promises, and async/await for handling asynchronous operations.</li>
+<li><code>setTimeout</code>, <code>setInterval</code>.</li>
+</ul>
+</li>
+<li><p><strong>AJAX and Fetch API</strong>:</p>
+<ul>
+<li>Fetching data asynchronously from a server without refreshing the page.</li>
+<li>Using the <code>XMLHttpRequest</code> object and the modern <code>fetch</code> API.</li>
+</ul>
+</li>
+<li><p><strong>JavaScript Libraries and Frameworks</strong>:</p>
+<ul>
+<li>Libraries: jQuery, Lodash.</li>
+<li>Front-End Frameworks: React, Angular, Vue.</li>
+</ul>
+</li>
+</ol>
+<h3>Example Code:</h3>
+<p>Here's a simple example of JavaScript that interacts with the DOM and handles an event:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;JavaScript Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 id=&quot;greeting&quot;&gt;Hello, World!&lt;/h1&gt;
+    &lt;button id=&quot;changeText&quot;&gt;Change Text&lt;/button&gt;
+
+    &lt;script&gt;
+        // Selecting elements
+        const greetingElement = document.getElementById('greeting');
+        const buttonElement = document.getElementById('changeText');
+
+        // Adding event listener
+        buttonElement.addEventListener('click', () =&gt; {
+            greetingElement.textContent = 'Hello, JavaScript!';
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3>Popular Use-Cases:</h3>
+<ol>
+<li><strong>Interactive Websites</strong>: Adding interactivity to the UI, manipulating the DOM, and handling user inputs.</li>
+<li><strong>Single Page Applications (SPAs)</strong>: Using frameworks like React, Angular, or Vue to build dynamic, responsive web applications.</li>
+<li><strong>Server-Side Development</strong>: Using Node.js to build server-side applications with JavaScript.</li>
+<li><strong>Asynchronous Programming</strong>: Fetching data from APIs without reloading the page, creating a smoother user experience.</li>
+</ol>
+<h3>Conclusion:</h3>
+<p>JavaScript is a versatile and powerful scripting language that plays a crucial role in modern web development. It allows developers to create dynamic, interactive, and responsive web applications. Mastering JavaScript opens up opportunities not only in front-end development but also in full-stack and back-end development with Node.js.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

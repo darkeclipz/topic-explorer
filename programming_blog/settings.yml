@@ -1,0 +1,6 @@
+blogName: Programming
+inputDirectory: src
+outputDirectory: dist
+theme: default
+defaultAuthor: gpt-4o
+generateTableOfContents: false

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptography</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Security</h1>
+<h2>Cryptography</h2>
+<h3>Cryptography (Security)</h3>
+<p>Cryptography is a crucial aspect of computer security that involves the practice and study of techniques for securing communication and information from adversaries. It ensures that data sent from one party to another remains confidential and integral. Below are key concepts and components of cryptography:</p>
+<h4>Key Concepts</h4>
+<ol>
+<li><p><strong>Encryption and Decryption:</strong></p>
+<ul>
+<li><strong>Encryption:</strong> The process of converting plaintext (readable data) into ciphertext (unreadable, encrypted data) using an algorithm and an encryption key.</li>
+<li><strong>Decryption:</strong> The reverse process where the ciphertext is converted back to plaintext using a decryption key.</li>
+</ul>
+</li>
+<li><p><strong>Cryptographic Keys:</strong></p>
+<ul>
+<li><strong>Symmetric Key Encryption:</strong> A type of encryption where the same key is used for both encryption and decryption. Examples include AES (Advanced Encryption Standard) and DES (Data Encryption Standard).</li>
+<li><strong>Asymmetric Key Encryption:</strong> A type of encryption that uses a pair of keys: a public key (used for encryption) and a private key (used for decryption). Examples include RSA (Rivest-Shamir-Adleman) and ECC (Elliptic Curve Cryptography).</li>
+</ul>
+</li>
+<li><p><strong>Hash Functions:</strong></p>
+<ul>
+<li>A hash function takes an input (or message) and returns a fixed-size string of bytes. It is a one-way function, meaning it is computationally infeasible to reverse it. Examples include SHA-256 (Secure Hash Algorithm) and MD5 (Message Digest Algorithm).</li>
+</ul>
+</li>
+<li><p><strong>Digital Signatures:</strong></p>
+<ul>
+<li>A digital signature is a mathematical scheme for verifying the authenticity and integrity of a message, software, or digital document. It involves a private key to sign and a public key to verify.</li>
+</ul>
+</li>
+<li><p><strong>Public Key Infrastructure (PKI):</strong></p>
+<ul>
+<li>PKI is a framework for managing digital keys and certificates. It enables secure data exchange over networks using principles of asymmetric cryptography. Certificates issued by Certificate Authorities (CAs) help bind public keys to entities (such as individuals or organizations).</li>
+</ul>
+</li>
+<li><p><strong>Cryptographic Protocols:</strong></p>
+<ul>
+<li>Protocols that use cryptographic methods to secure communication. Examples include SSL/TLS (Secure Sockets Layer / Transport Layer Security) for securing web traffic and HTTPS (Hypertext Transfer Protocol Secure).</li>
+</ul>
+</li>
+</ol>
+<h4>Applications of Cryptography</h4>
+<ol>
+<li><p><strong>Securing Communications:</strong></p>
+<ul>
+<li>Encryption protocols like SSL/TLS are used to secure emails, messaging apps, and VoIP calls, ensuring that data is protected from eavesdropping.</li>
+</ul>
+</li>
+<li><p><strong>Protecting Data:</strong></p>
+<ul>
+<li>Encryption is used to secure sensitive data at rest (stored on devices) and in transit (moving across networks) against unauthorized access.</li>
+</ul>
+</li>
+<li><p><strong>Authentication:</strong></p>
+<ul>
+<li>Cryptographic methods ensure that the parties involved in communication are genuine. Digital certificates and signatures help in authenticating identities.</li>
+</ul>
+</li>
+<li><p><strong>Secure Transactions:</strong></p>
+<ul>
+<li>Cryptography enables secure transactions in e-commerce and online banking by ensuring data confidentiality, integrity, and authenticity.</li>
+</ul>
+</li>
+<li><p><strong>Integrity Verification:</strong></p>
+<ul>
+<li>Hash functions help verify data integrity by generating unique hashes for files or messages. If even a single byte changes, the hash will be completely different, signaling potential tampering.</li>
+</ul>
+</li>
+</ol>
+<h4>Challenges in Cryptography</h4>
+<ol>
+<li><p><strong>Key Management:</strong></p>
+<ul>
+<li>Properly generating, distributing, storing, and rotating cryptographic keys are complex tasks that, if mishandled, can compromise security.</li>
+</ul>
+</li>
+<li><p><strong>Performance:</strong></p>
+<ul>
+<li>Cryptographic operations can be computationally intensive, potentially impacting performance, particularly in systems with limited resources.</li>
+</ul>
+</li>
+<li><p><strong>Quantum Computing:</strong></p>
+<ul>
+<li>Emerging quantum computing technologies pose a future threat to current cryptographic algorithms, necessitating the development of quantum-resistant cryptographic methods.</li>
+</ul>
+</li>
+<li><p><strong>Implementation Errors:</strong></p>
+<ul>
+<li>Poorly implemented cryptographic protocols can introduce vulnerabilities, making secure practices in software development and regular security audits essential.</li>
+</ul>
+</li>
+</ol>
+<p>Cryptography remains a multi-faceted field, continuously evolving to combat new threats and challenges. It is foundational to maintaining the privacy, integrity, and authenticity of data in our increasingly digital world.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

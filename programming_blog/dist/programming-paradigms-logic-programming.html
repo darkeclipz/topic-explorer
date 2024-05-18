@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Programming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Programming Paradigms</h1>
+<h2>Logic Programming</h2>
+<h3>Logic Programming (Programming Paradigms)</h3>
+<p><strong>Logic Programming</strong> is a type of programming paradigm which is largely based on formal logic. Unlike procedural or object-oriented paradigms, logic programming uses logic formulas to express computation. The primary language associated with logic programming is Prolog (Programming in Logic).</p>
+<h4>Key Concepts:</h4>
+<ol>
+<li><p><strong>Declarative Nature</strong>:</p>
+<ul>
+<li>In logic programming, you describe <em>what</em> the program should accomplish rather than <em>how</em> to accomplish it.</li>
+<li>You declare facts and rules about problems in the form of logical statements.</li>
+</ul>
+</li>
+<li><p><strong>Facts and Rules</strong>:</p>
+<ul>
+<li><strong>Facts</strong>: Basic assertions about objects or relationships. For example, <code>sibling(jane, john).</code> asserts that Jane and John are siblings.</li>
+<li><strong>Rules</strong>: Conditional statements that define relationships between facts. For example, <code>parent(X, Y) :- mother(X, Y).</code> asserts that X is a parent of Y if X is the mother of Y.</li>
+</ul>
+</li>
+<li><p><strong>Query</strong>:</p>
+<ul>
+<li>The program computes by evaluating queries against the declared facts and rules.</li>
+<li>For example, you can query <code>?- sibling(jane, Who).</code> and the program will return all individuals that are siblings of Jane.</li>
+</ul>
+</li>
+<li><p><strong>Resolution and Unification</strong>:</p>
+<ul>
+<li><strong>Resolution</strong>: The process used by the logic programming engine to infer conclusions from known facts and rules.</li>
+<li><strong>Unification</strong>: The process of determining variable bindings which make different logical expressions identical.</li>
+</ul>
+</li>
+<li><p><strong>Backtracking</strong>:</p>
+<ul>
+<li>Logic programming systems often use backtracking to search for solutions by trying different possibilities and undoing choices (backtracking) when they lead to dead ends.</li>
+</ul>
+</li>
+</ol>
+<h4>Advantages:</h4>
+<ol>
+<li><p><strong>Clarity and Expressiveness</strong>:</p>
+<ul>
+<li>Programs are closer to human logical reasoning and can be more intuitive for expressing certain types of problems.</li>
+</ul>
+</li>
+<li><p><strong>Automatic Inference</strong>:</p>
+<ul>
+<li>The system can automatically infer new facts from existing ones using the provided rules, reducing the need for explicit instructions.</li>
+</ul>
+</li>
+<li><p><strong>Flexibility</strong>:</p>
+<ul>
+<li>Suitable for complex problem-solving tasks like theorem proving, natural language processing, and expert systems.</li>
+</ul>
+</li>
+</ol>
+<h4>Criticisms:</h4>
+<ol>
+<li><p><strong>Performance</strong>:</p>
+<ul>
+<li>Logic programming can be less efficient than procedural programming for certain tasks due to the overhead associated with logical inference and backtracking.</li>
+</ul>
+</li>
+<li><p><strong>Scalability</strong>:</p>
+<ul>
+<li>Programs can become difficult to manage and scale as the number of facts and rules grows.</li>
+</ul>
+</li>
+<li><p><strong>Specialized Use</strong>:</p>
+<ul>
+<li>It's more suited for specific areas like artificial intelligence rather than general-purpose application development.</li>
+</ul>
+</li>
+</ol>
+<h4>Languages:</h4>
+<ul>
+<li><strong>Prolog</strong>: The most well-known logic programming language.</li>
+<li><strong>Datalog</strong>: A subset of Prolog, often used for database queries.</li>
+<li><strong>Answer Set Programming (ASP)</strong>: A form of logic programming oriented towards difficult search problems.</li>
+</ul>
+<p>Example in Prolog:</p>
+<pre><code class="language-prolog">% Facts
+parent(john, mary).
+parent(mary, ann).
+
+% Rules
+grandparent(X, Y) :- parent(X, Z), parent(Z, Y).
+
+% Query
+% ?- grandparent(john, ann).
+% The Prolog interpreter will return 'true'.
+</code></pre>
+<p>In this example, the fact <code>parent(john, mary)</code> states that John is Mary's parent, and the fact <code>parent(mary, ann)</code> states that Mary is Ann's parent. The rule <code>grandparent(X, Y)</code> states that X is a grandparent of Y if X is a parent of Z and Z is a parent of Y. When querying <code>?- grandparent(john, ann).</code>, the system will deduce that John is Ann's grandparent based on the given facts and rules.</p>
+<p>Logic programming offers a unique way to handle problems that involve complex relationships and rule-based reasoning, making it a powerful tool in the realm of artificial intelligence and beyond.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

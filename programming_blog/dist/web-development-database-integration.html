@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Integration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Web Development</h1>
+<h2>Database Integration</h2>
+<h3>Database Integration (Web Development)</h3>
+<p>Database integration in web development refers to the process of connecting a web application to a database to store, retrieve, update, and manage data efficiently. This integration is crucial for dynamic applications that require persistent data, such as user information, transaction records, and product inventories. Here’s an overview of key concepts and tasks involved in database integration for web development:</p>
+<h4>Key Concepts:</h4>
+<ol>
+<li><p><strong>Database Management Systems (DBMS):</strong> Software used to create and manage databases. Common DBMSs include:</p>
+<ul>
+<li><strong>Relational Databases:</strong> MySQL, PostgreSQL, SQLite</li>
+<li><strong>NoSQL Databases:</strong> MongoDB, Cassandra, Redis</li>
+</ul>
+</li>
+<li><p><strong>Database Models:</strong></p>
+<ul>
+<li><strong>Relational:</strong> Uses tables to represent data and relationships. Structured Query Language (SQL) is used for querying.</li>
+<li><strong>NoSQL:</strong> Uses various models like document, key-value, column-family, and graph to handle unstructured or semi-structured data.</li>
+</ul>
+</li>
+<li><p><strong>CRUD Operations:</strong></p>
+<ul>
+<li><strong>Create:</strong> Adding new data</li>
+<li><strong>Read:</strong> Retrieving data</li>
+<li><strong>Update:</strong> Modifying existing data</li>
+<li><strong>Delete:</strong> Removing data</li>
+</ul>
+</li>
+<li><p><strong>ORM (Object-Relational Mapping):</strong> A technique that allows developers to interact with the database using the programming language’s objects rather than direct SQL queries. Popular ORM libraries:</p>
+<ul>
+<li><strong>For Python:</strong> SQLAlchemy, Django ORM</li>
+<li><strong>For JavaScript:</strong> Sequelize (Node.js), Mongoose (MongoDB)</li>
+<li><strong>For Java:</strong> Hibernate</li>
+</ul>
+</li>
+<li><p><strong>APIs (Application Programming Interfaces):</strong> Used to create endpoints that define how the web application will interact with the database. RESTful APIs and GraphQL are common standards.</p>
+</li>
+<li><p><strong>Connection Middleware:</strong> Middleware simplifies the communication between the web server and the database. For instance:</p>
+<ul>
+<li><strong>For Node.js:</strong> <code>express</code> with <code>mongoose</code> for MongoDB</li>
+<li><strong>For Python:</strong> <code>Flask</code> with <code>SQLAlchemy</code></li>
+</ul>
+</li>
+</ol>
+<h4>Database Integration Steps:</h4>
+<ol>
+<li><p><strong>Database Design:</strong></p>
+<ul>
+<li><strong>Schema Design:</strong> Define tables, fields, data types, and relationships (for relational databases).</li>
+<li><strong>Indexing:</strong> Optimize for faster query performance.</li>
+<li><strong>Normalization:</strong> Ensure data integrity and minimize redundancy.</li>
+</ul>
+</li>
+<li><p><strong>Connect to Database:</strong></p>
+<ul>
+<li>Use DBMS-specific drivers or libraries to establish a connection.</li>
+<li>Configuration typically involves specifying the database host, port, username, and password.</li>
+</ul>
+</li>
+<li><p><strong>Perform CRUD Operations:</strong></p>
+<ul>
+<li>Implement functionality to create, read, update, and delete data.</li>
+<li>Use ORM libraries or write raw SQL queries as needed.</li>
+</ul>
+</li>
+<li><p><strong>API Development:</strong></p>
+<ul>
+<li>Design endpoint routes (e.g., <code>/users</code>, <code>/products</code>).</li>
+<li>Implement API methods (GET, POST, PUT, DELETE) to handle CRUD operations.</li>
+</ul>
+</li>
+<li><p><strong>Secure the Database:</strong></p>
+<ul>
+<li>Implement authentication and authorization mechanisms.</li>
+<li>Sanitize inputs to prevent SQL injection attacks.</li>
+<li>Use encrypted connections (e.g., TLS/SSL) for data transmission.</li>
+</ul>
+</li>
+<li><p><strong>Testing and Optimization:</strong></p>
+<ul>
+<li>Perform unit and integration testing to ensure functionality.</li>
+<li>Monitor performance and optimize queries and indexes.</li>
+</ul>
+</li>
+</ol>
+<h4>Example Workflow:</h4>
+<ol>
+<li><p><strong>Design Database Schema:</strong></p>
+<pre><code class="language-sql">CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
+</code></pre>
+</li>
+<li><p><strong>Establish Database Connection (e.g., Node.js with MySQL):</strong></p>
+<pre><code class="language-js">const mysql = require('mysql');
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
+    database: 'mydatabase'
+});
+
+connection.connect((err) =&gt; {
+    if (err) {
+        console.error('Error connecting: ' + err.stack);
+        return;
+    }
+    console.log('Connected as id ' + connection.threadId);
+});
+</code></pre>
+</li>
+<li><p><strong>Create an API Endpoint (e.g., Express.js for Node.js):</strong></p>
+<pre><code class="language-js">const express = require('express');
+const app = express();
+
+app.get('/users', (req, res) =&gt; {
+    connection.query('SELECT * FROM users', (error, results, fields) =&gt; {
+        if (error) throw error;
+        res.json(results);
+    });
+});
+
+app.listen(3000, () =&gt; {
+    console.log('Server is running on port 3000');
+});
+</code></pre>
+</li>
+</ol>
+<h4>Summary</h4>
+<p>Database integration in web development is essential for creating dynamic and data-driven applications. It involves connecting a web application to a DBMS, performing operations to manage data, ensuring security, and optimizing performance. Understanding these key concepts and steps will help developers effectively integrate databases into their web projects.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

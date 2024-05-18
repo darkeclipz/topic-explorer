@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSI Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Networking</h1>
+<h2>OSI Model</h2>
+<p>The OSI (Open Systems Interconnection) Model is a conceptual framework used to understand and implement network communications by dividing the networking process into seven distinct layers. This model helps standardize network functions to enable interoperability between different systems and technologies. Each layer has specific responsibilities and communicates with the layers directly above and below it.</p>
+<p>Here’s a brief overview of each layer:</p>
+<h3>Layer 1: Physical Layer</h3>
+<ul>
+<li><strong>Function</strong>: Deals with the physical connection between devices and the transmission and reception of raw bit streams over a physical medium.</li>
+<li><strong>Components</strong>: Cables, switches, NICs (Network Interface Cards), repeaters, hubs, modems.</li>
+<li><strong>Responsibilities</strong>: Data encoding, transmission, reception, voltage levels, and data rates.</li>
+</ul>
+<h3>Layer 2: Data Link Layer</h3>
+<ul>
+<li><strong>Function</strong>: Provides node-to-node data transfer and handles error detection and correction from the physical layer.</li>
+<li><strong>Components</strong>: Switches, bridges.</li>
+<li><strong>Sub-layers</strong>:
+<ul>
+<li><strong>MAC (Media Access Control)</strong>: Manages protocol access to the physical network medium.</li>
+<li><strong>LLC (Logical Link Control)</strong>: Manages frame synchronization, flow control, and error checking.</li>
+</ul>
+</li>
+<li><strong>Responsibilities</strong>: Frame formatting, MAC addressing, error detection and correction.</li>
+</ul>
+<h3>Layer 3: Network Layer</h3>
+<ul>
+<li><strong>Function</strong>: Manages device addressing, tracks the location of devices on the network, and determines the best way to move data.</li>
+<li><strong>Components</strong>: Routers.</li>
+<li><strong>Protocols</strong>: IP (Internet Protocol), ICMP (Internet Control Message Protocol), ARP (Address Resolution Protocol).</li>
+<li><strong>Responsibilities</strong>: Logical addressing, routing, and packet forwarding.</li>
+</ul>
+<h3>Layer 4: Transport Layer</h3>
+<ul>
+<li><strong>Function</strong>: Ensures the complete data transfer between devices, providing error detection and recovery.</li>
+<li><strong>Components</strong>: Gateways, firewalls.</li>
+<li><strong>Protocols</strong>: TCP (Transmission Control Protocol), UDP (User Datagram Protocol).</li>
+<li><strong>Responsibilities</strong>: Segmentation, flow control, error correction, and data integrity.</li>
+</ul>
+<h3>Layer 5: Session Layer</h3>
+<ul>
+<li><strong>Function</strong>: Manages sessions or connections between applications. It establishes, maintains, and terminates connections.</li>
+<li><strong>Components</strong>: N/A (It is more of a software layer).</li>
+<li><strong>Protocols</strong>: NetBIOS, PPTP (Point-to-Point Tunneling Protocol).</li>
+<li><strong>Responsibilities</strong>: Session setup, coordination, and termination.</li>
+</ul>
+<h3>Layer 6: Presentation Layer</h3>
+<ul>
+<li><strong>Function</strong>: Translates data between the application layer and the network. Handles data encryption, compression, and translation.</li>
+<li><strong>Components</strong>: N/A (Primarily software-based).</li>
+<li><strong>Protocols</strong>: SSL (Secure Sockets Layer), TLS (Transport Layer Security).</li>
+<li><strong>Responsibilities</strong>: Data translation, encryption, compression, and formatting.</li>
+</ul>
+<h3>Layer 7: Application Layer</h3>
+<ul>
+<li><strong>Function</strong>: Provides network services directly to end-users or applications.</li>
+<li><strong>Components</strong>: Application software.</li>
+<li><strong>Protocols</strong>: HTTP (Hypertext Transfer Protocol), FTP (File Transfer Protocol), SMTP (Simple Mail Transfer Protocol), DNS (Domain Name System).</li>
+<li><strong>Responsibilities</strong>: Network process to application, identifying communication partners, and ensuring resource availability.</li>
+</ul>
+<h3>Summary</h3>
+<p>The OSI Model serves as a guide that helps in understanding the complex nature of networking. By breaking down network communications into manageable layers, it aids in troubleshooting and designing interoperable network systems. Each layer has a distinct role, and understanding these roles is crucial for network professionals.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

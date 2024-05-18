@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Data Structures</h1>
+<h2>Graphs</h2>
+<p>Graphs are a fundamental data structure in computer science and mathematics, widely used to model pairwise relations between objects. Here's a detailed explanation:</p>
+<h3>Components of a Graph</h3>
+<ol>
+<li><strong>Vertex (Node)</strong>: Represents an entity or a point in the graph. Vertices are often named or labeled.</li>
+<li><strong>Edge (Link)</strong>: Represents the connection or relationship between two vertices. Edges can be directed or undirected.</li>
+</ol>
+<h3>Types of Graphs</h3>
+<ul>
+<li><strong>Undirected Graph</strong>: Edges have no direction. The connection between two vertices is bidirectional.</li>
+<li><strong>Directed Graph (Digraph)</strong>: Edges have a direction, indicated by an arrow. The connection between vertices is unidirectional.</li>
+<li><strong>Weighted Graph</strong>: Edges have weights or costs associated with them, useful in finding the shortest path or optimal route.</li>
+<li><strong>Unweighted Graph</strong>: Edges have no weights; they simply represent connections.</li>
+<li><strong>Cyclic Graph</strong>: Contains at least one cycle, a path that starts and ends at the same vertex.</li>
+<li><strong>Acyclic Graph</strong>: Does not contain any cycles.</li>
+<li><strong>Connected Graph</strong>: There’s a path between any pair of vertices.</li>
+<li><strong>Disconnected Graph</strong>: At least one pair of vertices is not connected by a path.</li>
+</ul>
+<h3>Representations of Graphs</h3>
+<ol>
+<li><p><strong>Adjacency Matrix</strong>: A 2D array where a cell (i, j) is true (or contains the edge weight) if there's an edge from vertex i to vertex j.</p>
+<ul>
+<li><strong>Pros</strong>: Quick edge lookup (O(1) time complexity).</li>
+<li><strong>Cons</strong>: Space-inefficient for sparse graphs.</li>
+</ul>
+</li>
+<li><p><strong>Adjacency List</strong>: An array of lists/linked lists, where each list contains the neighbors of a specific vertex.</p>
+<ul>
+<li><strong>Pros</strong>: Space-efficient for sparse graphs and easier to iterate over neighbors.</li>
+<li><strong>Cons</strong>: Edge lookup can take longer (O(V) in the worst case).</li>
+</ul>
+</li>
+<li><p><strong>Edge List</strong>: A list of all the edges in the graph, where each edge is a pair (or tuple) of vertices.</p>
+<ul>
+<li><strong>Pros</strong>: Simple to implement and space-efficient.</li>
+<li><strong>Cons</strong>: Edge lookup and neighbor iteration are less efficient.</li>
+</ul>
+</li>
+</ol>
+<h3>Common Operations</h3>
+<ol>
+<li><strong>Add Vertex</strong>: Add a node to the graph.</li>
+<li><strong>Add Edge</strong>: Create a connection between two vertices.</li>
+<li><strong>Remove Vertex</strong>: Remove a node and its associated edges.</li>
+<li><strong>Remove Edge</strong>: Remove the connection between two vertices.</li>
+<li><strong>Search</strong>: Traverse the graph using algorithms like Depth-First Search (DFS) or Breadth-First Search (BFS).</li>
+<li><strong>Find Shortest Path</strong>: Use algorithms like Dijkstra's, Bellman-Ford, or A* to find the shortest path in weighted graphs.</li>
+</ol>
+<h3>Graph Algorithms</h3>
+<ul>
+<li><strong>Depth-First Search (DFS)</strong>: Explores as far along a branch as possible before backtracking. Uses a stack (recursively or explicitly).</li>
+<li><strong>Breadth-First Search (BFS)</strong>: Explores all neighbors at the present depth before moving on to nodes at the next depth level. Uses a queue.</li>
+<li><strong>Dijkstra's Algorithm</strong>: Finds the shortest paths between vertices in a weighted graph with non-negative weights.</li>
+<li><strong>Bellman-Ford Algorithm</strong>: Computes shortest paths from a single source vertex to all other vertices, even if there are negative weights (detects negative cycles).</li>
+<li><strong>Floyd-Warshall Algorithm</strong>: Finds shortest paths between all pairs of vertices.</li>
+<li><strong>Kruskal's Algorithm</strong>: Finds the minimum spanning tree for a connected, undirected graph.</li>
+<li><strong>Prim's Algorithm</strong>: Also finds the minimum spanning tree, but starts from a specific vertex.</li>
+</ul>
+<h3>Use Cases</h3>
+<ul>
+<li><strong>Social Networks</strong>: Vertices can represent users, edges represent friendships or follows.</li>
+<li><strong>Web Crawling</strong>: Vertices are web pages, edges are hyperlinks.</li>
+<li><strong>Routing</strong>: Find paths in networks like road maps, communication networks.</li>
+<li><strong>Scheduling</strong>: Tasks represented as vertices, dependencies as edges.</li>
+</ul>
+<p>Understanding graphs, their representations, and various algorithms is crucial in solving complex problems in computer science effectively.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

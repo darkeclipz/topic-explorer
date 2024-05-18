@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoSQL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Database Management</h1>
+<h2>NoSQL</h2>
+<p>NoSQL, which stands for &quot;Not Only SQL,&quot; refers to a broad category of database management systems that are designed to handle large volumes of data and diverse data types. Unlike traditional relational databases (SQL databases), which use structured query language (SQL) and rely on structured tables and predefined schemas, NoSQL databases provide a more flexible data model. Here are some key characteristics and types of NoSQL databases:</p>
+<h3>Key Characteristics:</h3>
+<ol>
+<li><p><strong>Schema Flexibility</strong>:</p>
+<ul>
+<li>NoSQL databases allow for dynamic schema design. Data can be inserted without having to conform to a predefined schema, which makes them ideal for applications where the data model may evolve over time.</li>
+</ul>
+</li>
+<li><p><strong>Horizontal Scalability</strong>:</p>
+<ul>
+<li>NoSQL databases are designed to scale out by adding more servers or nodes, rather than scaling up by adding more capacity to existing servers. This distribution of data across multiple nodes is known as sharding.</li>
+</ul>
+</li>
+<li><p><strong>High Performance</strong>:</p>
+<ul>
+<li>NoSQL databases are optimized for high performance, particularly for read and write operations. They are designed to handle large volumes of data at high speed.</li>
+</ul>
+</li>
+<li><p><strong>Handling of Unstructured Data</strong>:</p>
+<ul>
+<li>NoSQL databases can manage a variety of data types, including unstructured, semi-structured, and structured data, making them suitable for applications like big data analytics, real-time web applications, and IoT.</li>
+</ul>
+</li>
+</ol>
+<h3>Types of NoSQL Databases:</h3>
+<ol>
+<li><p><strong>Document Stores</strong>:</p>
+<ul>
+<li>They store data in documents, typically in JSON, BSON, or XML format. Each document is a self-contained unit that may include hierarchical, nested data structures.</li>
+<li>Example: MongoDB, CouchDB</li>
+</ul>
+</li>
+<li><p><strong>Key-Value Stores</strong>:</p>
+<ul>
+<li>These databases store data as a collection of key-value pairs, where a key serves as a unique identifier for the associated value.</li>
+<li>Example: Redis, DynamoDB</li>
+</ul>
+</li>
+<li><p><strong>Column Family Stores</strong>:</p>
+<ul>
+<li>They store data in columns rather than rows, making them suitable for read and write-heavy applications. Columns of related data are grouped together in column families.</li>
+<li>Example: Apache Cassandra, HBase</li>
+</ul>
+</li>
+<li><p><strong>Graph Databases</strong>:</p>
+<ul>
+<li>These databases are designed to represent and store data as graphs, with nodes, edges, and properties, making them ideal for applications involving complex relationships.</li>
+<li>Example: Neo4j, ArangoDB</li>
+</ul>
+</li>
+<li><p><strong>Time Series Databases</strong>:</p>
+<ul>
+<li>Optimized for handling time-series data, these databases are useful for applications that involve time-stamped data such as monitoring data, financial data, and IoT sensor data.</li>
+<li>Example: InfluxDB, TimescaleDB</li>
+</ul>
+</li>
+</ol>
+<h3>Use Cases:</h3>
+<ol>
+<li><p><strong>Content Management Systems (CMS)</strong>:</p>
+<ul>
+<li>NoSQL databases are suitable for CMS due to their flexibility in handling diverse content types and structures.</li>
+</ul>
+</li>
+<li><p><strong>Real-time Big Data Analytics</strong>:</p>
+<ul>
+<li>The ability to handle large volumes of rapidly changing data makes NoSQL databases ideal for real-time analytics.</li>
+</ul>
+</li>
+<li><p><strong>IoT Applications</strong>:</p>
+<ul>
+<li>They can efficiently handle the massive influx of sensor data from IoT devices.</li>
+</ul>
+</li>
+<li><p><strong>Social Networks</strong>:</p>
+<ul>
+<li>Graph databases are particularly useful for social networks where relationships between entities (e.g., friends, followers) are complex.</li>
+</ul>
+</li>
+<li><p><strong>E-commerce</strong>:</p>
+<ul>
+<li>NoSQL databases can manage diverse product catalogs and high-speed transaction processing.</li>
+</ul>
+</li>
+</ol>
+<h3>Pros and Cons:</h3>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>High scalability and performance.</li>
+<li>Flexibility in data modeling.</li>
+<li>Ability to handle a variety of data types.</li>
+<li>Generally easier to scale horizontally.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Lack of mature tools and standards compared to SQL databases.</li>
+<li>Learning curve for new methodologies and query languages.</li>
+<li>Potentially less robust ACID (Atomicity, Consistency, Isolation, Durability) guarantees, although some NoSQL databases offer tunable consistency models.</li>
+</ul>
+<p>In summary, NoSQL databases provide a modern, flexible approach to data management, capable of handling large volumes of diverse data types, particularly for applications that require high performance and scalability.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

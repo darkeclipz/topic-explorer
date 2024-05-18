@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sockets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Networking</h1>
+<h2>Web Sockets</h2>
+<p>WebSockets are a protocol that provides full-duplex communication channels over a single TCP connection. They enable the server to send real-time updates to clients and facilitate two-way communication between a client (typically a web browser) and a server, which is different from the request-response model used in traditional HTTP connections.</p>
+<h3>Key Features:</h3>
+<ol>
+<li><p><strong>Full-Duplex Communication</strong>: Both the client and the server can send messages to each other independently. This is unlike HTTP, where communication is typically initiated by the client in the form of requests, and the server responds to these requests.</p>
+</li>
+<li><p><strong>Single Connection</strong>: WebSockets maintain a single connection that remains open for the duration of the communication session, significantly reducing overhead compared to repeatedly opening and closing HTTP connections.</p>
+</li>
+<li><p><strong>Real-Time Data Transfer</strong>: WebSockets are ideal for applications that require real-time data updates, such as chat applications, live sports scores, or stock market updates.</p>
+</li>
+</ol>
+<h3>How WebSockets Work:</h3>
+<ol>
+<li><p><strong>Handshake</strong>: The communication starts with an HTTP request known as the WebSocket handshake. During this handshake, the client requests an upgrade to the WebSocket protocol.</p>
+</li>
+<li><p><strong>Upgrade to WebSocket</strong>: If the server supports WebSockets, it agrees to the upgrade by responding with an HTTP 101 status code, switching protocols from HTTP to WebSockets.</p>
+</li>
+<li><p><strong>Persistent Connection</strong>: After the handshake, a persistent connection is established. The client and server can now exchange messages independently of each other without the need to re-establish connections.</p>
+</li>
+<li><p><strong>Data Frames</strong>: Communication occurs through data frames that can be sent by either the client or the server. WebSockets support text frames and binary frames, providing flexibility in the type of data that can be transmitted.</p>
+</li>
+</ol>
+<h3>Example Use Cases:</h3>
+<ul>
+<li><strong>Real-Time Applications</strong>: Chat apps, online gaming, and collaborative tools.</li>
+<li><strong>Live Updates</strong>: News feeds, live sports scores, stock tickers.</li>
+<li><strong>Interactive Services</strong>: Customer support platforms, online auctions.</li>
+</ul>
+<h3>Advantages:</h3>
+<ul>
+<li><strong>Low Latency</strong>: Because the connection remains open, WebSockets can send data as soon as it is available, reducing latency.</li>
+<li><strong>Efficient Resource Usage</strong>: Unlike HTTP polling, which regularly polls the server for updates, WebSockets maintain an open line, leading to less CPU and memory usage on both the client and server sides.</li>
+<li><strong>Scalability</strong>: Applications can scale more effectively, as the overhead associated with establishing and tearing down multiple HTTP connections is avoided.</li>
+</ul>
+<h3>Example Code:</h3>
+<p>Here’s a simple example of how a WebSocket connection might be established and used in JavaScript on the client side:</p>
+<pre><code class="language-javascript">// Create a new WebSocket connection to the server
+let socket = new WebSocket(&quot;ws://example.com/socket&quot;);
+
+// When the connection is established
+socket.onopen = function(event) {
+    console.log(&quot;WebSocket is open now.&quot;);
+    // Send a message to the server
+    socket.send(&quot;Hello Server!&quot;);
+};
+
+// When a message is received from the server
+socket.onmessage = function(event) {
+    console.log(&quot;Message from server: &quot;, event.data);
+};
+
+// When the connection is closed
+socket.onclose = function(event) {
+    console.log(&quot;WebSocket is closed now.&quot;);
+};
+
+// Handle any errors
+socket.onerror = function(error) {
+    console.log(&quot;WebSocket error: &quot;, error);
+};
+</code></pre>
+<h3>Server-Side (Node.js Example Using ws library):</h3>
+<pre><code class="language-javascript">const WebSocket = require('ws');
+const server = new WebSocket.Server({ port: 8080 });
+
+server.on('connection', socket =&gt; {
+    console.log('New client connected');
+    
+    // When a message is received from a client
+    socket.on('message', message =&gt; {
+        console.log('Received:', message);
+        // Send a message to the client
+        socket.send('Hello Client!');
+    });
+
+    // When the client disconnects
+    socket.on('close', () =&gt; {
+        console.log('Client disconnected');
+    });
+});
+</code></pre>
+<p>WebSockets provide a powerful means to facilitate interactive and real-time communication between clients and servers, enhancing the user experience for dynamic applications.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

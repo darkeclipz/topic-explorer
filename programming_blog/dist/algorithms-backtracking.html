@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backtracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Algorithms</h1>
+<h2>Backtracking</h2>
+<p>Backtracking is a general algorithmic technique that is used to solve problems incrementally, by building up candidates to the solutions piece by piece, and abandoning a candidate (&quot;backtracking&quot;) as soon as it determines that the candidate cannot possibly be completed to form a valid solution.</p>
+<p>Here are the key concepts and steps involved in backtracking:</p>
+<h3>Key Concepts:</h3>
+<ol>
+<li><p><strong>Candidate Solution</strong>: An incremental solution to the problem that can be built piece by piece. The candidate solution is tested at each step to see if it should be completed or abandoned.</p>
+</li>
+<li><p><strong>Partial Solution</strong>: A candidate solution that has been built up to a certain point but is not yet complete.</p>
+</li>
+<li><p><strong>Feasibility</strong>: A function that checks whether a given partial solution is still valid and can possibly lead to a complete and correct solution.</p>
+</li>
+<li><p><strong>Solution Completion</strong>: A function or condition that checks whether a given partial solution is complete and satisfies all the problem’s requirements.</p>
+</li>
+<li><p><strong>Backtracking</strong>: The process of abandoning a partial solution and returning (backtracking) to the previous state to try out a different path of the solution space.</p>
+</li>
+</ol>
+<h3>Typical Steps in Backtracking:</h3>
+<ol>
+<li><strong>Start with an empty candidate solution.</strong></li>
+<li><strong>Extend the candidate solution by adding a new piece:</strong>
+<ul>
+<li>If the candidate solution is now complete and valid, report it as a solution (or perform the desired action).</li>
+<li>If the candidate solution is not yet complete but is still valid, recursively attempt to extend it further.</li>
+<li>If the candidate solution is invalid, abandon it (backtrack) and remove the last added piece.</li>
+</ul>
+</li>
+<li><strong>Repeat the above steps until all possible candidates are generated and tested.</strong></li>
+</ol>
+<h3>Example Problems:</h3>
+<ol>
+<li><p><strong>N-Queens Problem</strong>: Place N queens on an N×N chessboard so that no two queens threaten each other. The algorithm tries to place a queen in each row, one by one, and backtracks if placing the queen leads to a conflict.</p>
+</li>
+<li><p><strong>Maze Solving</strong>: Find a path from the start to the end of a maze. The algorithm tries moving in all possible directions (up, down, left, right) from the current position and backtracks if it hits a wall or a previously visited cell.</p>
+</li>
+<li><p><strong>Sudoku Solver</strong>: Fill a 9×9 grid so that each row, each column, and each of the nine 3×3 boxes contain the numbers 1 to 9. The algorithm tries placing each number in a cell and backtracks if it leads to an invalid Sudoku state.</p>
+</li>
+</ol>
+<h3>Pseudocode Example:</h3>
+<p>Here’s a general pseudocode for a backtracking algorithm:</p>
+<pre><code class="language-pseudocode">function backtrack(candidate):
+    if candidate is a complete solution:
+        report candidate as a solution
+        return
+
+    for next in all possible choices for the next step:
+        if candidate is still valid after adding next:
+            choose next
+            backtrack(candidate + next)
+            unchoose next  // remove the last added step to try another one
+</code></pre>
+<h3>Tips for Implementing Backtracking:</h3>
+<ol>
+<li><strong>Pruning Early</strong>: Implement feasibility checks early to prune invalid partial solutions as soon as possible.</li>
+<li><strong>Memoization</strong>: Cache results of expensive feasibility checks to avoid redundant computations.</li>
+<li><strong>Efficient Data Structures</strong>: Use data structures that allow quick modifications and checks, such as sets or bitmasks.</li>
+</ol>
+<p>Backtracking is a brute-force approach but can be optimized significantly with smart pruning and efficient feasibility checks. It is a powerful technique used in various combinatorial and constraint satisfaction problems.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

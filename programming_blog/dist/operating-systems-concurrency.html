@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurrency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Operating Systems</h1>
+<h2>Concurrency</h2>
+<p>Concurrency in the context of operating systems is a concept where multiple processes or threads are executed seemingly simultaneously, potentially interacting with each other. The primary goal of concurrency is to ensure efficient use of the system resources and to improve the system's performance by keeping the CPU as busy as possible.</p>
+<h3>Key Concepts of Concurrency:</h3>
+<ol>
+<li><p><strong>Processes and Threads</strong>:</p>
+<ul>
+<li><strong>Processes</strong>: An instance of a program in execution. Each process has its own address space and resources.</li>
+<li><strong>Threads</strong>: Lightweight processes. Threads within the same process share the same memory space but can be scheduled independently.</li>
+</ul>
+</li>
+<li><p><strong>Context Switching</strong>:</p>
+<ul>
+<li>The operating system enables switching between different processes or threads. Context switching involves saving the state of the currently running process/thread and loading the state of the next one to be run.</li>
+</ul>
+</li>
+<li><p><strong>Synchronization</strong>:</p>
+<ul>
+<li>Mechanisms are required to manage the access to shared resources and ensure the correct sequence of operations. These include:
+<ul>
+<li><strong>Mutexes</strong>: Mutual exclusion locks that prevent multiple threads from accessing a resource simultaneously.</li>
+<li><strong>Semaphores</strong>: General synchronization tools that can be used to control access to resources.</li>
+<li><strong>Monitors</strong>: High-level synchronization constructs that manage the locking and unlocking of resources.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Inter-process Communication (IPC)</strong>:</p>
+<ul>
+<li>Methods that allow processes to communicate and synchronize their actions. Common IPC techniques include:
+<ul>
+<li>Pipes and named pipes</li>
+<li>Message queues</li>
+<li>Shared memory</li>
+<li>Sockets</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Deadlock</strong>:</p>
+<ul>
+<li>A situation where two or more processes are unable to progress because each is waiting for a resource held by the other. Deadlock prevention, avoidance, detection, and recovery strategies are essential for managing concurrency.</li>
+</ul>
+</li>
+<li><p><strong>Race Conditions</strong>:</p>
+<ul>
+<li>Occur when two or more processes/threads access shared data and try to change it concurrently. The final outcome depends on the sequence of access, which can lead to unpredictable results. Proper synchronization is necessary to avoid race conditions.</li>
+</ul>
+</li>
+<li><p><strong>Scheduling</strong>:</p>
+<ul>
+<li>The operating system employs scheduling algorithms to determine the order in which processes/threads are executed. Common scheduling algorithms include:
+<ul>
+<li>First-Come-First-Served (FCFS)</li>
+<li>Shortest Job Next (SJN)</li>
+<li>Round-Robin (RR)</li>
+<li>Priority Scheduling</li>
+<li>Multi-Level Queue Scheduling</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3>Benefits of Concurrency:</h3>
+<ul>
+<li><strong>Resource Utilization</strong>: Maximizes CPU usage by allowing multiple processes to make use of idle CPU cycles.</li>
+<li><strong>Responsiveness</strong>: Enhances the responsiveness of systems, especially in interactive applications where users expect quick reactions.</li>
+<li><strong>Scalability</strong>: Supports scaling applications to handle more tasks by breaking down processes into smaller concurrent tasks.</li>
+</ul>
+<h3>Challenges of Concurrency:</h3>
+<ul>
+<li><strong>Complexity</strong>: Writing concurrent programs is more complex than single-threaded ones due to potential issues like race conditions and deadlocks.</li>
+<li><strong>Resource Sharing</strong>: Proper management of shared resources is critical to ensure the correctness of concurrent tasks.</li>
+<li><strong>Performance Overhead</strong>: Context switching and synchronization mechanisms can introduce overhead, potentially impacting performance.</li>
+</ul>
+<h3>Conclusion:</h3>
+<p>Concurrency is a fundamental concept in operating systems, providing a way to execute multiple tasks in overlapping time periods to improve efficiency and performance. Proper understanding and handling of concurrency are crucial for developing robust and efficient software.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

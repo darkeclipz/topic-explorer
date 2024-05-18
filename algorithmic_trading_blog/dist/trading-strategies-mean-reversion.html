@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mean Reversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Trading Strategies</h1>
+<h2>Mean Reversion</h2>
+<p>Mean reversion is a popular trading strategy based on the concept that asset prices and returns eventually move back towards the mean or average level after reaching either a high or low. This could be the historical average price of an asset or another relevant average such as the average return. Here are some key points to understand about mean reversion:</p>
+<h3>Concept</h3>
+<ul>
+<li><strong>Theory:</strong> The underlying theory is that security prices tend to revert to a long-term mean. For instance, if a stock price deviates significantly from its historical average price, it will likely revert to that average over time.</li>
+<li><strong>Assumptions:</strong> It assumes that the asset's historical price data provides valuable insights into its future movements and that deviations from the mean are temporary.</li>
+</ul>
+<h3>Mechanism</h3>
+<ul>
+<li><strong>Identification:</strong> Traders identify assets that are currently trading significantly above or below their historical mean or average. Various statistical measures like moving averages, standard deviation bands, or Z-scores can help in this identification.</li>
+<li><strong>Entry:</strong> A trader might enter a long position when the price is significantly below the mean, expecting it to rise, or a short position when the price is much above the mean, expecting it to fall.</li>
+<li><strong>Exit:</strong> The position is typically closed when the price reverts to the mean or another predetermined level.</li>
+</ul>
+<h3>Implementation</h3>
+<ul>
+<li><strong>Technical Indicators:</strong> Common technical indicators used in mean reversion strategies include Moving Averages (Simple and Exponential), Bollinger Bands, and Relative Strength Index (RSI).</li>
+<li><strong>Mean Reversion Bands:</strong> Bollinger Bands, for example, create a range above and below a simple moving average. Prices that move outside the bands are considered to be overextended and likely to revert.</li>
+</ul>
+<h3>Example Strategy</h3>
+<ol>
+<li><strong>Simple Moving Average (SMA) Mean Reversion:</strong> Identify the stock's historical mean (e.g., 50-day SMA).
+<ul>
+<li>If the stock price deviates significantly below the 50-day SMA, open a long position.</li>
+<li>If it deviates significantly above the 50-day SMA, open a short position.</li>
+<li>Close the position when the price approaches the SMA.</li>
+</ul>
+</li>
+</ol>
+<h3>Risks and Challenges</h3>
+<ul>
+<li><strong>False Signals:</strong> Not all deviations from the mean result in reversion, especially in the presence of strong trends.</li>
+<li><strong>Transaction Costs:</strong> Frequent trading to capture small deviations can incur high transaction costs.</li>
+<li><strong>Market Context:</strong> It may not work well in trending markets where prices continue to move in one direction for prolonged periods without mean reversion.</li>
+<li><strong>Model Assumptions:</strong> It relies on historical data, which may not always predict future movements accurately.</li>
+</ul>
+<h3>Tools and Techniques</h3>
+<ul>
+<li><strong>Backtesting:</strong> To evaluate the effectiveness of a mean reversion strategy, extensive backtesting with historical data is essential.</li>
+<li><strong>Statistical Tools:</strong> Use statistical software or programming languages like Python and R to perform quantitative analysis and develop models.</li>
+</ul>
+<h3>Popular Applications</h3>
+<ul>
+<li><strong>Equity Trading:</strong> Stocks that have shown historical stability in mean can be good candidates.</li>
+<li><strong>Options Trading:</strong> Mean reversion strategies can be applied in options trading, especially in strategies like calendar spreads.</li>
+<li><strong>Forex Trading:</strong> Currency pairs often exhibit mean reversion behavior over certain time frames due to cyclical economic factors.</li>
+</ul>
+<p>In summary, mean reversion is a well-regarded strategy in algorithmic trading that relies on the statistical tendency of prices to revert to an average level. While potentially profitable, it requires careful consideration of model assumptions, risk management, and market conditions.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:40:05 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Web Development</h1>
+<h2>APIs</h2>
+<p>An API (Application Programming Interface) is a set of rules and protocols that allow different software applications to communicate with each other. In the context of web development, APIs are commonly used to enable the interaction between the client (typically a web browser) and the server (where the backend logic resides).</p>
+<h3>Key Concepts of APIs in Web Development:</h3>
+<ol>
+<li><p><strong>REST (Representational State Transfer)</strong>:</p>
+<ul>
+<li>REST is an architectural style for designing networked applications.</li>
+<li>It relies on a stateless, client-server communication protocol—usually HTTP.</li>
+<li>RESTful APIs use standard HTTP methods (GET, POST, PUT, DELETE) to perform CRUD (Create, Read, Update, Delete) operations.</li>
+</ul>
+</li>
+<li><p><strong>Endpoints</strong>:</p>
+<ul>
+<li>An endpoint is a specific URL where an API can be accessed by a client application.</li>
+<li>Each endpoint corresponds to a specific path and HTTP method that represents a particular functionality.</li>
+</ul>
+</li>
+<li><p><strong>HTTP Methods</strong>:</p>
+<ul>
+<li><strong>GET</strong>: Retrieve data from the server.</li>
+<li><strong>POST</strong>: Submit data to be processed by the server.</li>
+<li><strong>PUT</strong>: Update existing data on the server.</li>
+<li><strong>DELETE</strong>: Remove data from the server.</li>
+</ul>
+</li>
+<li><p><strong>Status Codes</strong>:</p>
+<ul>
+<li>APIs use HTTP status codes to indicate the result of an API request.</li>
+<li>Common status codes include:
+<ul>
+<li>200 (OK): The request was successful.</li>
+<li>201 (Created): The request was successful, and a resource was created.</li>
+<li>400 (Bad Request): The server could not understand the request due to invalid syntax.</li>
+<li>401 (Unauthorized): Authentication is required and has failed or has not been provided.</li>
+<li>404 (Not Found): The server could not find the requested resource.</li>
+<li>500 (Internal Server Error): An error occurred on the server side.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Authentication and Authorization</strong>:</p>
+<ul>
+<li><strong>Authentication</strong> is the process of verifying the identity of a user or application.</li>
+<li><strong>Authorization</strong> determines what an authenticated user or application has permission to do.</li>
+<li>Common methods include API keys, OAuth, JWT (JSON Web Tokens), and Basic Auth.</li>
+</ul>
+</li>
+<li><p><strong>Data Formats</strong>:</p>
+<ul>
+<li>APIs commonly use JSON (JavaScript Object Notation) or XML (eXtensible Markup Language) to structure the data being sent between the client and the server.</li>
+</ul>
+</li>
+<li><p><strong>Versioning</strong>:</p>
+<ul>
+<li>API versioning is the practice of managing changes to ensure backward compatibility and smooth upgrades.</li>
+<li>Common strategies include using version numbers in the URL (e.g., <code>/v1/users</code>) or in request headers.</li>
+</ul>
+</li>
+<li><p><strong>Rate Limiting</strong>:</p>
+<ul>
+<li>APIs often implement rate limiting to control the number of requests a client is allowed to make in a given time period.</li>
+<li>This prevents abuse, ensures fair usage, and protects server resources.</li>
+</ul>
+</li>
+</ol>
+<h3>Example Scenario:</h3>
+<p>Imagine you have a web application that displays a list of books. You might use a RESTful API to:</p>
+<ul>
+<li><strong>GET</strong> <code>/books</code>: Retrieve a list of all books.</li>
+<li><strong>POST</strong> <code>/books</code>: Add a new book.</li>
+<li><strong>GET</strong> <code>/books/{id}</code>: Retrieve details of a specific book by its ID.</li>
+<li><strong>PUT</strong> <code>/books/{id}</code>: Update information about a specific book.</li>
+<li><strong>DELETE</strong> <code>/books/{id}</code>: Remove a specific book.</li>
+</ul>
+<p>Here's a simple example of a GET request in JavaScript using the <code>fetch</code> API:</p>
+<pre><code class="language-javascript">fetch('https://api.example.com/books')
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error('Error:', error));
+</code></pre>
+<p>In summary, APIs are essential building blocks in web development, serving as the glue that connects different parts of an application, facilitates data exchange, and enables the integration with external services and systems.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

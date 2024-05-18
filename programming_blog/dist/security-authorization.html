@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Security</h1>
+<h2>Authorization</h2>
+<p>Authorization is a key concept in the field of information security and access control. It determines what an authenticated user is or isn’t allowed to do within a system. While authentication verifies the identity of a user or system, authorization verifies their permissions.</p>
+<h3>Key Concepts in Authorization:</h3>
+<ol>
+<li><p><strong>Roles and Permissions:</strong></p>
+<ul>
+<li><strong>Roles:</strong> Roles are assigned to users based on job responsibilities or functions. For example, roles like 'admin,' 'editor,' and 'viewer' might be created to group similar levels of access.</li>
+<li><strong>Permissions:</strong> Permissions are specific rights or privileges assigned to roles or directly to users. For example, 'read,' 'write,' 'delete,' and 'execute' permissions specify the level of access.</li>
+</ul>
+</li>
+<li><p><strong>Access Control Models:</strong></p>
+<ul>
+<li><strong>Discretionary Access Control (DAC):</strong> In this model, the data owner decides who gets access to specific resources. It's flexible but less secure.</li>
+<li><strong>Mandatory Access Control (MAC):</strong> Access rights are regulated by a central authority based on multiple classifications (e.g., top secret, secret). This model is more rigid and secure.</li>
+<li><strong>Role-Based Access Control (RBAC):</strong> Access permissions are assigned to predefined roles rather than individual users. Users are then assigned roles, making this method scalable and easier to manage.</li>
+<li><strong>Attribute-Based Access Control (ABAC):</strong> This model considers various attributes (user attributes, resource attributes, environment conditions) to make access decisions.</li>
+</ul>
+</li>
+<li><p><strong>Principle of Least Privilege:</strong></p>
+<ul>
+<li>This principle states that users should be given the minimum levels of access – or permissions – needed to perform their job functions. It reduces the risk of accidental misuse or malicious exploitation of system permissions.</li>
+</ul>
+</li>
+<li><p><strong>Access Control Lists (ACLs):</strong></p>
+<ul>
+<li>ACLs are used to define what actions (read, write, execute) users or system processes can perform on a given resource. Each resource will have an ACL associated with it, specifying which users or system entities can act upon it and in what way.</li>
+</ul>
+</li>
+<li><p><strong>Policy-Based Management:</strong></p>
+<ul>
+<li>Policies are sets of rules that govern who can access what resources under which conditions. Policies can be organization-wide or specific to certain departments, applications, or data types.</li>
+</ul>
+</li>
+<li><p><strong>OAuth and Token-Based Authorization:</strong></p>
+<ul>
+<li>OAuth is an open standard for access delegation commonly used as a way to grant websites or applications limited access to user information without exposing credentials. Token-based authorization (like JWT - JSON Web Token) is often used in APIs and web services for this purpose.</li>
+</ul>
+</li>
+<li><p><strong>Logging and Auditing:</strong></p>
+<ul>
+<li>For better security and regulatory compliance, it’s important to log access attempts and activities. Auditing helps in tracking unauthorized access attempts and understanding security breaches.</li>
+</ul>
+</li>
+</ol>
+<h3>Best Practices for Authorization:</h3>
+<ul>
+<li><strong>Regularly review and update access controls:</strong> Ensure permissions are up to date and still relevant.</li>
+<li><strong>Implement multi-factor authentication (MFA):</strong> Adds an additional layer of security beyond just passwords.</li>
+<li><strong>Conduct periodic access reviews and audits:</strong> Helps in identifying and removing unnecessary permissions.</li>
+<li><strong>Educate employees about security policies:</strong> Awareness can prevent many security issues related to misuse of permissions.</li>
+<li><strong>Use encryption:</strong> Protect data at rest and in transit to prevent unauthorized access.</li>
+</ul>
+<p>Understanding these concepts and best practices ensures that systems are securely managing who has access to what, reducing the risks associated with unauthorized access.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

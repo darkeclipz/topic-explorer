@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Software Development</h1>
+<h2>Version Control</h2>
+<p>Version control, also known as source control, is a system that records changes to files over time so that you can recall specific versions later. Here's a detailed explanation of key concepts and functionalities associated with version control in software development:</p>
+<h3>Key Concepts</h3>
+<ol>
+<li><p><strong>Repository (Repo):</strong></p>
+<ul>
+<li>A repository is a storage location where your code resides. It can be local (on your computer) or remote (on a server).</li>
+</ul>
+</li>
+<li><p><strong>Commit:</strong></p>
+<ul>
+<li>A commit is a snapshot of your project at a specific point in time. It includes all the changes made to the files in the repository since the last commit.</li>
+</ul>
+</li>
+<li><p><strong>Branch:</strong></p>
+<ul>
+<li>A branch is a parallel version of your repository. You can create a branch to work on a new feature or bug fix independently from the main codebase (often referred to as the 'main' or 'master' branch).</li>
+</ul>
+</li>
+<li><p><strong>Merge:</strong></p>
+<ul>
+<li>Merging is the process of combining changes from one branch into another. This is often done to integrate new features or fixes into the main codebase.</li>
+</ul>
+</li>
+<li><p><strong>Conflict:</strong></p>
+<ul>
+<li>A conflict occurs when the same part of a file has been edited in different ways in separate branches. Conflicts need to be resolved manually.</li>
+</ul>
+</li>
+<li><p><strong>Pull Request (PR) / Merge Request (MR):</strong></p>
+<ul>
+<li>A PR or MR is a request to merge changes from one branch into another. It's often used in collaborative environments to review code before it becomes part of the main codebase.</li>
+</ul>
+</li>
+</ol>
+<h3>Types of Version Control Systems</h3>
+<ol>
+<li><p><strong>Centralized Version Control Systems (CVCS):</strong></p>
+<ul>
+<li>Examples: Subversion (SVN), Perforce</li>
+<li>Characteristics:
+<ul>
+<li>A single central repository.</li>
+<li>All developers commit to and update from this central repository.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Distributed Version Control Systems (DVCS):</strong></p>
+<ul>
+<li>Examples: Git, Mercurial</li>
+<li>Characteristics:
+<ul>
+<li>Every developer has a local copy of the repository, including its full history.</li>
+<li>Changes can be shared and merged between repositories.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3>Benefits of Version Control</h3>
+<ol>
+<li><p><strong>Collaboration:</strong></p>
+<ul>
+<li>Multiple developers can work on the same project simultaneously without overwriting each other’s work.</li>
+</ul>
+</li>
+<li><p><strong>Backup:</strong></p>
+<ul>
+<li>Every version of your project is saved. If something goes wrong, you can revert to a previous state.</li>
+</ul>
+</li>
+<li><p><strong>History:</strong></p>
+<ul>
+<li>The entire history of the project is saved. You can see who made what changes and when.</li>
+</ul>
+</li>
+<li><p><strong>Branching and Merging:</strong></p>
+<ul>
+<li>Allows for the development of features or fixes in isolation, reducing the risk of introducing bugs into the main codebase.</li>
+</ul>
+</li>
+<li><p><strong>Code Review:</strong></p>
+<ul>
+<li>Facilitates code reviews by allowing team members to comment on changes before they are integrated.</li>
+</ul>
+</li>
+<li><p><strong>Track Changes:</strong></p>
+<ul>
+<li>Helps in understanding the evolution of the project by providing a detailed log of changes.</li>
+</ul>
+</li>
+</ol>
+<h3>Common Version Control Commands (Git)</h3>
+<ol>
+<li><p><strong>Cloning a Repository:</strong></p>
+<pre><code class="language-sh">git clone &lt;repository_url&gt;
+</code></pre>
+</li>
+<li><p><strong>Checking the Status:</strong></p>
+<pre><code class="language-sh">git status
+</code></pre>
+</li>
+<li><p><strong>Adding Changes:</strong></p>
+<pre><code class="language-sh">git add &lt;file_or_directory&gt;
+</code></pre>
+</li>
+<li><p><strong>Committing Changes:</strong></p>
+<pre><code class="language-sh">git commit -m &quot;Commit message&quot;
+</code></pre>
+</li>
+<li><p><strong>Creating a Branch:</strong></p>
+<pre><code class="language-sh">git branch &lt;branch_name&gt;
+</code></pre>
+</li>
+<li><p><strong>Switching Branches:</strong></p>
+<pre><code class="language-sh">git checkout &lt;branch_name&gt;
+</code></pre>
+</li>
+<li><p><strong>Merging Branches:</strong></p>
+<pre><code class="language-sh">git merge &lt;branch_name&gt;
+</code></pre>
+</li>
+<li><p><strong>Pushing Changes to a Remote Repository:</strong></p>
+<pre><code class="language-sh">git push origin &lt;branch_name&gt;
+</code></pre>
+</li>
+<li><p><strong>Pulling Changes from a Remote Repository:</strong></p>
+<pre><code class="language-sh">git pull
+</code></pre>
+</li>
+</ol>
+<p>By familiarizing yourself with these concepts and tools, you can effectively manage changes to your codebase, collaborate with others, and maintain a high-quality software project.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

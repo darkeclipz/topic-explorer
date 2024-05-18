@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greedy Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Algorithms</h1>
+<h2>Greedy Algorithms</h2>
+<p>Greedy algorithms are a class of algorithms that build up a solution piece by piece, always choosing the next piece that offers the most immediate benefit or profit. The key characteristic of a greedy algorithm is that it makes a locally optimal choice at each stage with the hope that these local optimizations will lead to a globally optimal solution.</p>
+<p>Here's a more detailed breakdown of greedy algorithms:</p>
+<h3>Key Characteristics</h3>
+<ol>
+<li><strong>Local Optimality:</strong> At each step, the algorithm selects the best option available without considering the bigger picture. This choice is made based on a certain criterion or rule.</li>
+<li><strong>Greedy Choice Property:</strong> This property ensures that a global optimum can be reached by selecting local optima. In other words, an optimal solution to the problem can be built from optimal solutions to its sub-problems.</li>
+<li><strong>Optimal Substructure:</strong> A problem exhibits an optimal substructure if an optimal solution to the problem contains optimal solutions to the subproblems.</li>
+</ol>
+<h3>Steps in a Greedy Algorithm</h3>
+<ol>
+<li><strong>Initialize:</strong> Begin with an empty solution set.</li>
+<li><strong>Choose:</strong> Select the next element that offers the most apparent immediate benefit.</li>
+<li><strong>Check:</strong> Verify whether adding the chosen element leads to a feasible solution (if this criterion is required by the problem).</li>
+<li><strong>Repeat:</strong> Continue the process until the entire solution is constructed.</li>
+</ol>
+<h3>Examples of Greedy Algorithms</h3>
+<ol>
+<li><strong>Activity Selection Problem:</strong> Given a set of activities each with a start and finish time, select the maximum number of non-overlapping activities. The greedy choice here is to always pick the activity that finishes earliest.</li>
+<li><strong>Huffman Coding:</strong> A method for constructing a binary tree with minimum weighted path length. The greedy choice here involves repeatedly merging the two nodes with the lowest frequency.</li>
+<li><strong>Kruskal's Algorithm for Minimum Spanning Tree:</strong> This algorithm builds the spanning tree by consistently adding the smallest-weight edge that doesn't form a cycle.</li>
+<li><strong>Dijkstra's Algorithm for Shortest Path:</strong> Finds the shortest path from a source node to all other nodes in a graph. The greedy choice here is to continuously select the vertex with the shortest known distance from the source.</li>
+</ol>
+<h3>Advantages and Disadvantages</h3>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li><strong>Efficiency:</strong> Greedy algorithms are generally easy to implement and can be computationally efficient.</li>
+<li><strong>Simplicity:</strong> The logic of greedy algorithms is straightforward and easier to understand.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li><strong>Local Optima:</strong> Greedy algorithms may not always produce the globally optimal solution, particularly in complex problems.</li>
+<li><strong>Problem-Specific:</strong> The effectiveness of a greedy algorithm depends on the specific problem and its properties.</li>
+</ul>
+<h3>When to Use Greedy Algorithms</h3>
+<p>Greedy algorithms are particularly useful when:</p>
+<ul>
+<li>The problem exhibits the greedy choice property and optimal substructure.</li>
+<li>The solution must be built incrementally and the previous choices do not affect future choices.</li>
+<li>An approximate solution is acceptable or optimality can be guaranteed through proof.</li>
+</ul>
+<h3>Conclusion</h3>
+<p>Greedy algorithms are a powerful tool in certain types of problems where making locally optimal choices leads to a globally optimal solution. Understanding the properties of the problem you are dealing with can help determine if a greedy approach is appropriate. When applied correctly, they can yield efficient and effective solutions.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Algorithms</h1>
+<h2>Searching</h2>
+<p>Searching algorithms are a fundamental concept in computer science that deal with finding an element within a data structure. These algorithms can be categorized into two main types: sequential (or linear) searches and interval (or binary) searches. Here's an overview of various searching algorithms:</p>
+<h3>1. Linear Search</h3>
+<p><strong>Description:</strong> Checks each element in the list sequentially until the target element is found or the end of the list is reached.
+<strong>Time Complexity:</strong> O(n), where n is the number of elements in the list.
+<strong>Usage:</strong> Suitable for small or unsorted datasets.</p>
+<h4>Example:</h4>
+<pre><code class="language-python">def linear_search(arr, target):
+    for index, value in enumerate(arr):
+        if value == target:
+            return index
+    return -1
+</code></pre>
+<h3>2. Binary Search</h3>
+<p><strong>Description:</strong> Efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing the list in half and comparing the target value to the middle element.
+<strong>Time Complexity:</strong> O(log n), where n is the number of elements in the list.
+<strong>Usage:</strong> Requires the list to be sorted beforehand.</p>
+<h4>Example:</h4>
+<pre><code class="language-python">def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left &lt;= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] &lt; target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+</code></pre>
+<h3>3. Depth-First Search (DFS)</h3>
+<p><strong>Description:</strong> An algorithm for traversing or searching tree or graph data structures. Starts at the root and explores as far as possible along each branch before backtracking.
+<strong>Usage:</strong> Useful for scenarios like solving puzzles or searching in tree/graph structures.</p>
+<h4>Example:</h4>
+<pre><code class="language-python">def dfs(graph, start):
+    visited, stack = set(), [start]
+    while stack:
+        vertex = stack.pop()
+        if vertex not in visited:
+            visited.add(vertex)
+            stack.extend(set(graph[vertex]) - visited)
+    return visited
+</code></pre>
+<h3>4. Breadth-First Search (BFS)</h3>
+<p><strong>Description:</strong> Another algorithm for traversing or searching tree or graph data structures. It starts at the root and explores all neighbor nodes at the present depth before moving on to nodes at the next depth level.
+<strong>Usage:</strong> Useful for finding the shortest path in unweighted graphs.</p>
+<h4>Example:</h4>
+<pre><code class="language-python">def bfs(graph, start):
+    visited, queue = set(), [start]
+    while queue:
+        vertex = queue.pop(0)
+        if vertex not in visited:
+            visited.add(vertex)
+            queue.extend(set(graph[vertex]) - visited)
+    return visited
+</code></pre>
+<h3>5. Exponential Search</h3>
+<p><strong>Description:</strong> A combination of binary search and iterative doubling. It works by finding the range where the target element must exist and then performing a binary search within that range.
+<strong>Time Complexity:</strong> O(log n), but with an additional cost of O(log n) for finding the range.
+<strong>Usage:</strong> Optimal for unbounded or infinite lists.</p>
+<h4>Example:</h4>
+<pre><code class="language-python">def exponential_search(arr, target):
+    if arr[0] == target:
+        return 0
+    
+    index = 1
+    while index &lt; len(arr) and arr[index] &lt;= target:
+        index *= 2
+    
+    return binary_search(arr[0:min(index, len(arr))], target)
+</code></pre>
+<h3>6. Jump Search</h3>
+<p><strong>Description:</strong> Works on sorted arrays. It checks elements by jumping ahead by fixed steps and when it finds a high enough value, it performs a linear search backward.
+<strong>Time Complexity:</strong> O(√n)
+<strong>Usage:</strong> Offers a balance between linear search and binary search.</p>
+<h4>Example:</h4>
+<pre><code class="language-python">import math
+
+def jump_search(arr, target):
+    n = len(arr)
+    step = int(math.sqrt(n))
+    prev = 0
+    
+    while arr[min(step, n) - 1] &lt; target:
+        prev = step
+        step += int(math.sqrt(n))
+        if prev &gt;= n:
+            return -1
+    
+    for i in range(prev, min(step, n)):
+        if arr[i] == target:
+            return i
+    return -1
+</code></pre>
+<h3>Conclusion</h3>
+<p>Each searching algorithm has its strengths and is suitable for different types of datasets and use cases. Understanding the underlying principles of these algorithms helps in selecting the most efficient algorithm for a given problem.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

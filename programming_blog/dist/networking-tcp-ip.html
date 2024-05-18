@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCP/IP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Networking</h1>
+<h2>TCP/IP</h2>
+<p>Sure! The TCP/IP model (Transmission Control Protocol/Internet Protocol) is a set of protocols that govern networking and data communication on the internet. It provides end-to-end connectivity specifying how data should be formatted, addressed, transmitted, routed, and received. The TCP/IP model consists of four layers, each of which plays a crucial role in ensuring effective communication over networks.</p>
+<h3>1. <strong>Application Layer</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: This is the top-most layer and closest to the end user. It facilitates network processes and communication with applications.</li>
+<li><strong>Protocols</strong>:
+<ul>
+<li><strong>HTTP/HTTPS</strong>: HyperText Transfer Protocol used for transmitting web pages.</li>
+<li><strong>FTP</strong>: File Transfer Protocol used for transferring files.</li>
+<li><strong>SMTP</strong>: Simple Mail Transfer Protocol used for sending emails.</li>
+<li><strong>DNS</strong>: Domain Name System used to resolve domain names to IP addresses.</li>
+</ul>
+</li>
+</ul>
+<h3>2. <strong>Transport Layer</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Provides reliable data transfer services to the upper layers. This layer establishes communication sessions and ensures data integrity.</li>
+<li><strong>Protocols</strong>:
+<ul>
+<li><strong>TCP (Transmission Control Protocol)</strong>:
+<ul>
+<li><strong>Connection-oriented</strong>: Establishes a connection before transmitting data.</li>
+<li><strong>Reliability</strong>: Ensures that data is delivered accurately and in sequence.</li>
+<li><strong>Flow Control</strong>: Manages data flow to prevent congestion.</li>
+<li><strong>Error Detection and Correction</strong>: Retransmits lost or corrupted data.</li>
+</ul>
+</li>
+<li><strong>UDP (User Datagram Protocol)</strong>:
+<ul>
+<li><strong>Connectionless</strong>: Sends data without establishing a connection.</li>
+<li><strong>Fast and Lightweight</strong>: No error correction or sequence guarantees.</li>
+<li><strong>Use Cases</strong>: Real-time applications like streaming, online gaming.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>3. <strong>Internet Layer</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Facilitates data packet selection and routing across networks. It acts as a bridge between the transport layer and the network interface layer.</li>
+<li><strong>Protocols</strong>:
+<ul>
+<li><strong>IP (Internet Protocol)</strong>:
+<ul>
+<li><strong>IP Addressing</strong>: Identifies and locates systems on a network.</li>
+<li><strong>Packet Routing</strong>: Determines the best path for data packets to reach their destination.</li>
+<li><strong>Fragmentation and Reassembly</strong>: Splits data into manageable packets and reassembles them at the destination.</li>
+</ul>
+</li>
+<li><strong>ICMP (Internet Control Message Protocol)</strong>:
+<ul>
+<li><strong>Error Reporting</strong>: Sends error messages regarding network problems (e.g., unreachable hosts).</li>
+<li><strong>Diagnostic Tools</strong>: Utilized by tools like <code>ping</code> and <code>traceroute</code>.</li>
+</ul>
+</li>
+<li><strong>ARP (Address Resolution Protocol)</strong>:
+<ul>
+<li><strong>Mapping</strong>: Matches IP addresses to MAC addresses within a local network.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>4. <strong>Network Interface Layer (Link Layer)</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Deals with the physical transmission of data over network media. It is responsible for interfacing with the physical devices.</li>
+<li><strong>Protocols</strong>:
+<ul>
+<li><strong>Ethernet</strong>: A family of networking technologies for local area networks (LANs).</li>
+<li><strong>Wi-Fi</strong>: Wireless networking protocols for LANs.</li>
+<li><strong>PPP (Point-to-Point Protocol)</strong>: Encapsulates data for communication over point-to-point links.</li>
+</ul>
+</li>
+</ul>
+<h3>How TCP/IP Works:</h3>
+<ol>
+<li><strong>Data Creation</strong>: Application layer protocols create data for transmission.</li>
+<li><strong>Segmentation and Transport</strong>: The transport layer segments data, manages connections, and ensures reliability (TCP/UDP).</li>
+<li><strong>Packet Formatting and Routing</strong>: The Internet layer formats data into packets, assigns IP addresses, and routes packets to their destination.</li>
+<li><strong>Physical Transmission</strong>: The network interface layer handles how bits are physically transmitted over network media.</li>
+</ol>
+<p>TCP/IP is the foundation of internet communication, ensuring that vast amounts of data can travel across the globe reliably and efficiently. Understanding its layers and protocols is essential for anyone involved in networking or computer science.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 16:08:48 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
