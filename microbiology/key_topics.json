@@ -1,0 +1,14 @@
+{
+    "key_topics": [
+        {"topic": "Microbial Physiology", "subtopics": ["Metabolism", "Growth", "Reproduction", "Bioenergetics"]},
+        {"topic": "Microbial Genetics", "subtopics": ["Genetic Variation", "Gene Expression", "Recombination", "Mutations"]},
+        {"topic": "Virology", "subtopics": ["Virus Structure", "Viral Replication", "Viral Pathogenesis", "Antiviral Therapies"]},
+        {"topic": "Bacteriology", "subtopics": ["Bacterial Structure", "Bacterial Pathogenesis", "Antibiotic Resistance", "Bacterial Classification"]},
+        {"topic": "Mycology", "subtopics": ["Fungal Biology", "Fungal Pathogenesis", "Antifungal Therapies", "Fungal Ecology"]},
+        {"topic": "Parasitology", "subtopics": ["Protozoa", "Helminths", "Parasitic Diseases", "Parasite Life Cycles"]},
+        {"topic": "Immunology", "subtopics": ["Innate Immunity", "Adaptive Immunity", "Immunopathology", "Vaccination"]},
+        {"topic": "Clinical Microbiology", "subtopics": ["Diagnostic Microbiology", "Antimicrobial Susceptibility Testing", "Clinical Syndromes", "Infection Control"]},
+        {"topic": "Environmental Microbiology", "subtopics": ["Microbial Ecology", "Bioremediation", "Soil Microbiology", "Aquatic Microbiology"]},
+        {"topic": "Industrial Microbiology", "subtopics": ["Fermentation Technology", "Bioprocessing", "Pharmaceutical Microbiology", "Food and Beverage Microbiology"]}
+    ]
+}
