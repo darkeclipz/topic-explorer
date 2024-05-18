@@ -1,4 +1,4 @@
-# GTP Topic Explorer
+# GPT Topic Explorer
 
 Quicky explore a topic by having GPT generate a mini book about it.
 
