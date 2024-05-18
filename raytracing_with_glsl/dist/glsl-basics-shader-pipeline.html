@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shader Pipeline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>GLSL Basics</h1>
+<h2>Shader Pipeline</h2>
+<p>In the context of OpenGL and GLSL (OpenGL Shading Language), the shader pipeline refers to the stages that a vertex undergoes from the initial data input to the final rendered output on the screen. Here's a breakdown of the key stages in a typical shader pipeline:</p>
+<ol>
+<li><p><strong>Vertex Shader:</strong></p>
+<ul>
+<li><strong>Function</strong>: The vertex shader processes individual vertices. It typically handles tasks such as transforming vertex positions from model space to screen space and passing per-vertex data such as colors, normals, and texture coordinates to the next stage.</li>
+<li><strong>Input</strong>: Vertex attributes such as position, normals, etc.</li>
+<li><strong>Output</strong>: Modified vertex attributes, like transformed positions and interpolated data for the fragment shader.</li>
+</ul>
+</li>
+<li><p><strong>Tessellation (Optional):</strong></p>
+<ul>
+<li><strong>Tessellation Control Shader (TCS)</strong>: This stage takes a patch of vertices and determines how much tessellation (subdivision) should be applied to it.</li>
+<li><strong>Tessellation Evaluation Shader (TES)</strong>: This shader processes the tessellated vertices to generate new vertices and their attributes.</li>
+<li><strong>Function</strong>: Used to increase the complexity of geometry dynamically.</li>
+</ul>
+</li>
+<li><p><strong>Geometry Shader (Optional):</strong></p>
+<ul>
+<li><strong>Function</strong>: The geometry shader can modify geometry by transforming, generating, or discarding primitives (points, lines, or triangles). It can create additional vertex data and generate multiple vertices to form new primitives.</li>
+<li><strong>Input</strong>: Primitives formed by vertices.</li>
+<li><strong>Output</strong>: Modified or new primitives.</li>
+</ul>
+</li>
+<li><p><strong>Fragment Shader:</strong></p>
+<ul>
+<li><strong>Function</strong>: This shader processes fragments (potential pixels). It colors them based on interpolated data from the vertex shader or geometry shader (such as texture coordinates, lighting information, etc.). It is here that most of the visual effects like texturing, lighting, bump mapping, etc., are applied.</li>
+<li><strong>Input</strong>: Interpolated data from the previous stage.</li>
+<li><strong>Output</strong>: Color and depth values for the framebuffer.</li>
+</ul>
+</li>
+<li><p><strong>Clipping and Rasterization:</strong></p>
+<ul>
+<li><strong>Function</strong>: This stage converts the vertex or geometry shader output into fragments. It involves clipping the primitives to the view volume and rasterizing them into a series of fragments for the fragment shader to process.</li>
+</ul>
+</li>
+<li><p><strong>Per-Fragment Operations:</strong></p>
+<ul>
+<li><strong>Function</strong>: After the fragment shader, several operations can be applied, including depth testing, alpha blending, stencil testing, and more, before the final color value is written to the framebuffer.</li>
+</ul>
+</li>
+<li><p><strong>Framebuffer:</strong></p>
+<ul>
+<li><strong>Function</strong>: The final stage where the fully processed fragments are compiled into the final image that appears on the screen. The framebuffer stores this image until it is displayed.</li>
+</ul>
+</li>
+</ol>
+<h3>Summary</h3>
+<ul>
+<li><strong>Vertex Shader</strong>: Transforms vertices and passes data.</li>
+<li><strong>Tessellation</strong>: (If used) Subdivides and processes patches of vertices.</li>
+<li><strong>Geometry Shader</strong>: (If used) Alters or creates geometry.</li>
+<li><strong>Fragment Shader</strong>: Processes fragments to determine their color.</li>
+<li><strong>Per-Fragment Operations</strong>: Tests and blending operations.</li>
+<li><strong>Framebuffer</strong>: Stores the final image data for display.</li>
+</ul>
+<p>Understanding each of these stages is crucial for effectively writing and optimizing GLSL shaders as they directly impact the rendering pipeline and how efficiently graphics are processed and rendered by the GPU.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

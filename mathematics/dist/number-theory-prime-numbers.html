@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Number Theory</h1>
+<h2>Prime Numbers</h2>
+<p>Prime numbers are a fundamental concept in number theory, and they possess several interesting properties and applications. Here's an overview:</p>
+<h3>Definition:</h3>
+<p>A <strong>prime number</strong> is a natural number greater than 1 that has no positive divisors other than 1 and itself. In other words, a prime number ( p ) can only be divided evenly (without a remainder) by 1 and ( p ).</p>
+<h3>Examples:</h3>
+<ul>
+<li>The first few prime numbers are: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, and so on.</li>
+<li>Note that 2 is the only even prime number. Every other even number can be divided by 2, so no other even number can be prime.</li>
+</ul>
+<h3>Properties:</h3>
+<ol>
+<li><p><strong>Infinitude</strong>:</p>
+<ul>
+<li>There are infinitely many prime numbers. This was first proven by the ancient Greek mathematician Euclid. The proof is by contradiction: assuming a largest prime and then constructing a number that is not divisible by any known prime, leading to a contradiction.</li>
+</ul>
+</li>
+<li><p><strong>Fundamental Theorem of Arithmetic</strong>:</p>
+<ul>
+<li>Every natural number greater than 1 can be uniquely factored into prime numbers. For example, 20 can be factored into (2^2 \times 5).</li>
+</ul>
+</li>
+<li><p><strong>Prime Testing</strong>:</p>
+<ul>
+<li>To check if a number ( n ) is prime, you only need to check divisibility by primes up to ( \sqrt{n} ). If ( n ) is not divisible by any of these, then it is prime.</li>
+</ul>
+</li>
+<li><p><strong>Distribution</strong>:</p>
+<ul>
+<li>Primes become less frequent as numbers get larger, but there is no largest prime. There are various functions and theorems (such as the Prime Number Theorem) that describe the asymptotic distribution of primes.</li>
+</ul>
+</li>
+</ol>
+<h3>Applications:</h3>
+<ol>
+<li><p><strong>Cryptography</strong>:</p>
+<ul>
+<li>Primes are heavily used in modern cryptographic algorithms, such as RSA encryption. The security of these algorithms relies on the computational difficulty of factoring large composite numbers back into primes.</li>
+</ul>
+</li>
+<li><p><strong>Random Number Generation</strong>:</p>
+<ul>
+<li>Primes play a role in generating pseudo-random numbers for algorithms and simulations.</li>
+</ul>
+</li>
+<li><p><strong>Number Theory and Mathematics</strong>:</p>
+<ul>
+<li>Primes are used in various proofs and theorems in number theory and have applications in fields such as algebra, analysis, and combinatorics.</li>
+</ul>
+</li>
+<li><p><strong>Digital Information</strong>:</p>
+<ul>
+<li>Error correction codes, hash functions, and digital signatures all utilize properties of prime numbers.</li>
+</ul>
+</li>
+</ol>
+<h3>Special Types of Primes:</h3>
+<ol>
+<li><p><strong>Mersenne Primes</strong>:</p>
+<ul>
+<li>Primes of the form ( 2^p - 1 ), where ( p ) itself is a prime. For example, (2^3 - 1 = 7).</li>
+</ul>
+</li>
+<li><p><strong>Twin Primes</strong>:</p>
+<ul>
+<li>Pairs of primes that differ by 2, such as (11, 13) or (17, 19).</li>
+</ul>
+</li>
+<li><p><strong>Fermat Primes</strong>:</p>
+<ul>
+<li>Primes of the form (2^{2^n} + 1). For example, (2^{2^2} + 1 = 17).</li>
+</ul>
+</li>
+</ol>
+<h3>Fun Fact:</h3>
+<ul>
+<li>The largest known prime as of 2023 has millions of digits. It is found using computational methods and is typically a Mersenne prime.</li>
+</ul>
+<p>Prime numbers continue to be a central topic in mathematics, fostering ongoing research and exploration.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

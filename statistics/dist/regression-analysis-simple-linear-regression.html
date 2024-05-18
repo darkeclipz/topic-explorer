@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Linear Regression</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Regression Analysis</h1>
+<h2>Simple Linear Regression</h2>
+<p>Certainly! Simple Linear Regression is one of the foundational techniques in regression analysis and predictive modeling. Here's an overview:</p>
+<h3>Simple Linear Regression</h3>
+<h4>Definition</h4>
+<p>Simple Linear Regression is a statistical method used to understand the relationship between two continuous variables: one independent variable (predictor) and one dependent variable (response). The goal is to model the linear relationship between them.</p>
+<h4>Model Equation</h4>
+<p>The equation for simple linear regression takes the form:
+[ Y = \beta_0 + \beta_1X + \epsilon ]</p>
+<ul>
+<li>( Y ): Dependent variable (response/outcome)</li>
+<li>( X ): Independent variable (predictor)</li>
+<li>( \beta_0 ): Intercept (the value of Y when X is 0)</li>
+<li>( \beta_1 ): Slope (change in Y for a one-unit change in X)</li>
+<li>( \epsilon ): Error term (difference between observed and predicted values)</li>
+</ul>
+<h4>Assumptions</h4>
+<p>Several key assumptions are made in simple linear regression:</p>
+<ol>
+<li><strong>Linearity</strong>: The relationship between the independent and dependent variables is linear.</li>
+<li><strong>Independence</strong>: Observations are independent of each other.</li>
+<li><strong>Homoscedasticity</strong>: The variance of error terms is constant across all levels of the independent variable.</li>
+<li><strong>Normality of Errors</strong>: The error terms are normally distributed.</li>
+</ol>
+<h4>Steps in Simple Linear Regression</h4>
+<ol>
+<li><strong>Data Collection</strong>: Gather data for the independent and dependent variables.</li>
+<li><strong>Model Fitting</strong>: Use statistical software to fit the simple linear regression model to the data.</li>
+<li><strong>Parameter Estimation</strong>: Estimate the coefficients ((\beta_0) and (\beta_1)) that minimize the sum of squared errors between observed and predicted values.</li>
+<li><strong>Model Evaluation</strong>: Evaluate the model's adequacy using statistical metrics like ( R^2 ), p-values, and residual analysis.</li>
+<li><strong>Interpretation</strong>: Interpret the coefficients to understand the relationship between the variables.</li>
+</ol>
+<h4>Interpretation</h4>
+<ul>
+<li><strong>Intercept ((\beta_0))</strong>: This represents the expected value of ( Y ) when ( X ) is 0.</li>
+<li><strong>Slope ((\beta_1))</strong>: This represents the expected change in ( Y ) for a one-unit increase in ( X ). A positive slope indicates a positive relationship, while a negative slope indicates a negative relationship.</li>
+</ul>
+<h4>Example</h4>
+<p>Suppose we want to predict the weight of a person based on their height:</p>
+<ul>
+<li><strong>Independent Variable (X)</strong>: Height</li>
+<li><strong>Dependent Variable (Y)</strong>: Weight</li>
+</ul>
+<p>After fitting a simple linear regression model, we might get the equation:
+[ \text{Weight} = 50 + 0.5 \times \text{Height} ]</p>
+<p>Here, ( \beta_0 ) is 50, meaning if a person's height is 0, their weight would be 50 units (though this interpretation is not always practical). ( \beta_1 ) is 0.5, suggesting that for every additional unit of height, the weight increases by 0.5 units.</p>
+<h4>Applications</h4>
+<p>Simple Linear Regression is widely used in various fields such as economics, biology, engineering, and social sciences, among others. It's a fundamental tool for predictive modeling and understanding relationships between variables.</p>
+<p>Understanding the principles and assumptions of simple linear regression helps in properly applying the technique and interpreting the results accurately.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

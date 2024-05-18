@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Averages</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Time Series Analysis</h1>
+<h2>Moving Averages</h2>
+<p>Moving Averages (MA) is a technique used in time series analysis to smooth out fluctuations in data and highlight underlying trends by averaging data points within a specified period.</p>
+<h3>Types of Moving Averages</h3>
+<ol>
+<li><p><strong>Simple Moving Average (SMA)</strong>:</p>
+<ul>
+<li>Calculated by averaging a set number of past data points.</li>
+<li>Formula: (SMA_t = \frac{1}{N} \sum_{i=0}^{N-1} Y_{t-i}), where (Y_t) is the data point at time (t) and (N) is the number of points to average.</li>
+</ul>
+</li>
+<li><p><strong>Weighted Moving Average (WMA)</strong>:</p>
+<ul>
+<li>Assigns different weights to each data point, usually giving more weight to recent observations.</li>
+<li>Formula: (WMA_t = \frac{\sum_{i=0}^{N-1} w_i Y_{t-i}}{\sum_{i=0}^{N-1} w_i}), where (w_i) is the weight for the (i)-th point.</li>
+</ul>
+</li>
+<li><p><strong>Exponential Moving Average (EMA)</strong>:</p>
+<ul>
+<li>Applies more weight to recent data points exponentially.</li>
+<li>Formula: (EMA_t = \alpha \cdot Y_t + (1 - \alpha) \cdot EMA_{t-1}), where (\alpha) is the smoothing factor.</li>
+</ul>
+</li>
+</ol>
+<h3>Uses of Moving Averages</h3>
+<ol>
+<li><p><strong>Trend Identification</strong>:</p>
+<ul>
+<li>Helps to identify the direction of the trend (upward, downward, or sideways) by smoothing short-term fluctuations.</li>
+</ul>
+</li>
+<li><p><strong>Support and Resistance Levels</strong>:</p>
+<ul>
+<li>Used in technical analysis to identify support and resistance levels. For example, when prices fall and hit the moving average line, the line can act as support.</li>
+</ul>
+</li>
+<li><p><strong>Signal Generation</strong>:</p>
+<ul>
+<li>EMA is often used in trading algorithms for generating buy/sell signals. When a short-term EMA crosses above a long-term EMA, it might be a buy signal, and vice versa.</li>
+</ul>
+</li>
+</ol>
+<h3>Example Calculation (Simple Moving Average)</h3>
+<p>Suppose we have a time series of the past 5 days of stock prices: [100, 102, 104, 103, 105].</p>
+<p>To calculate the 3-day SMA:</p>
+<ul>
+<li>For Day 3 (average of Day 1, 2, 3): (SMA_3 = \frac{100 + 102 + 104}{3} = 102)</li>
+<li>For Day 4 (average of Day 2, 3, 4): (SMA_4 = \frac{102 + 104 + 103}{3} = 103)</li>
+<li>For Day 5 (average of Day 3, 4, 5): (SMA_5 = \frac{104 + 103 + 105}{3} = 104)</li>
+</ul>
+<p>So, the 3-day SMA for days 3, 4, 5 are [102, 103, 104].</p>
+<h3>Advantages and Disadvantages</h3>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Easy to calculate and understand.</li>
+<li>Works well to smooth out short-term fluctuations and highlight longer-term trends.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Lags behind the true data trend since it’s based on past data.</li>
+<li>May not react quickly to changes in the trend, causing a delay in signal generation.</li>
+<li>Same weight to all data points can cause issues in SMA; whereas WMA and EMA can be more responsive but complex to calculate.</li>
+</ul>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

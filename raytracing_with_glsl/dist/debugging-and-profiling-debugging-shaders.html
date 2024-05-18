@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging Shaders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Debugging and Profiling</h1>
+<h2>Debugging Shaders</h2>
+<p>Debugging shaders, particularly in the context of ray tracing with GLSL, can be challenging due to the highly parallel and often non-visual nature of shader execution. Here are some key methods and practices to help debug shaders effectively:</p>
+<h3>1. <strong>Understand the GLSL Debugging Environment</strong></h3>
+<ul>
+<li><strong>Shader Compilation Errors</strong>: These are the first hurdles. Understand the error messages and which parts of the code they point to. Use tools integrated into your development environment like Shader Compilation &amp; Linkage logs.</li>
+<li><strong>OpenGL Debug Output</strong>: Utilize the OpenGL debug output to catch errors and warnings that happen at runtime.</li>
+</ul>
+<h3>2. <strong>Use Debugging Tools</strong></h3>
+<ul>
+<li><strong>RenderDoc</strong>: A powerful graphics debugger that allows you to capture frames and inspect GPU resources and operations.</li>
+<li><strong>Nsight Graphics</strong>: Another comprehensive tool provided by NVIDIA, useful for debugging and profiling shaders.</li>
+<li><strong>API-Specific Tools</strong>: Tools such as AMD's Radeon GPU Profiler or Intel Graphics Performance Analyzers can also be useful.</li>
+</ul>
+<h3>3. <strong>Debugging Techniques</strong></h3>
+<ul>
+<li><strong>Simplify the Shader</strong>: Comment out portions of the shader code to isolate sections that may be causing issues. Test smaller parts of the code incrementally.</li>
+<li><strong>Color-Coding</strong>: Use color-coding to visualize intermediate values or states:
+<pre><code class="language-glsl">vec3 colorDebug = vec3(0.0);
+if (rayIntersectsSphere) {
+    colorDebug = vec3(1.0, 0.0, 0.0); // Red means intersection occurred
+}
+else {
+    colorDebug = vec3(0.0, 1.0, 0.0); // Green means no intersection
+}
+fragColor = vec4(colorDebug, 1.0);
+</code></pre>
+</li>
+<li><strong>Write Out to Buffers</strong>: Write intermediate values to textures or buffers and inspect these values by rendering them to the screen or reading them back to the CPU.</li>
+</ul>
+<h3>4. <strong>Logging Mechanisms</strong></h3>
+<ul>
+<li><strong>Simulated Logging</strong>: GLSL does not natively support printing like CPU debugging; simulate logging by writing values to an output buffer and inspect the contents after execution.</li>
+<li><strong>Conditional Rendering</strong>: Use conditions to only render specific rays or pixels that meet certain criteria for easier inspection.</li>
+</ul>
+<h3>5. <strong>Check for Common Issues</strong></h3>
+<ul>
+<li><strong>Floating Point Precision</strong>: Be aware of precision issues, especially across different hardware. Use high precision (<code>highp</code>) where needed.</li>
+<li><strong>Coordinate Systems</strong>: Ensure you are consistent with your coordinate systems (e.g., world vs. local space).</li>
+<li><strong>Texture Coordinate Errors</strong>: Verify that texture coordinates are correctly calculated and mapped.</li>
+</ul>
+<h3>6. <strong>Profile for Performance</strong></h3>
+<ul>
+<li><strong>Shader Performance Counters</strong>: Use tools like Intel GPA, NVIDIA Nsight, or RenderDoc to measure and understand shader performance.</li>
+<li><strong>Optimize Hotspots</strong>: Identify and optimize the sections of your code that consume the most time/resources.</li>
+<li><strong>Simplify Complex Calculations</strong>: Look for mathematical simplifications and algorithmic improvements, such as using bounding volume hierarchies (BVH) for faster ray intersection tests.</li>
+</ul>
+<h3>7. <strong>Version Control and Incremental Changes</strong></h3>
+<ul>
+<li><strong>Use Source Control Systems</strong>: Systems like Git allow you to track changes and revert to previous shader versions if debugging goes astray.</li>
+<li><strong>Incremental Development</strong>: Make small changes and test frequently to isolate bugs as they are introduced.</li>
+</ul>
+<p>By systematically applying these techniques, you can effectively debug and profile your GLSL shaders, making incremental improvements and ensuring your ray tracing application runs correctly and efficiently.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Probability</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Probability Theory</h1>
+<h2>Basic Probability</h2>
+<p>Sure, basic probability is a fundamental concept in statistics and mathematics that deals with the likelihood or chance of different outcomes. Here are some key aspects of basic probability:</p>
+<h3>1. <strong>Definition of Probability:</strong></h3>
+<ul>
+<li><strong>Probability (P):</strong> A measure of how likely an event is to occur, ranging from 0 (impossible event) to 1 (certain event).</li>
+</ul>
+<h3>2. <strong>Sample Space (S):</strong></h3>
+<ul>
+<li>The set of all possible outcomes of a random experiment.
+<ul>
+<li>Example: For a coin toss, the sample space is ( S = { \text{Heads}, \text{Tails} } ).</li>
+</ul>
+</li>
+</ul>
+<h3>3. <strong>Event (E):</strong></h3>
+<ul>
+<li>A subset of the sample space. It represents one or more outcomes.
+<ul>
+<li>Example: In rolling a die, the event of rolling an even number is ( E = {2, 4, 6} ).</li>
+</ul>
+</li>
+</ul>
+<h3>4. <strong>Types of Events:</strong></h3>
+<ul>
+<li><strong>Independent Events:</strong> Two events are independent if the occurrence of one does not affect the occurrence of the other.
+<ul>
+<li>Example: Tossing a coin and rolling a die.</li>
+</ul>
+</li>
+<li><strong>Mutually Exclusive Events:</strong> Two events are mutually exclusive if they cannot occur at the same time.
+<ul>
+<li>Example: Drawing an Ace and drawing a King from a standard deck of cards.</li>
+</ul>
+</li>
+</ul>
+<h3>5. <strong>Basic Probability Formulas:</strong></h3>
+<ul>
+<li><p><strong>Probability of an event ( E ):</strong>
+[
+P(E) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}
+]</p>
+</li>
+<li><p><strong>Complementary Events:</strong>
+[
+P(E') = 1 - P(E)
+]
+where ( E' ) is the complement of event ( E ), which means ( E' ) is the event that ( E ) does not occur.</p>
+</li>
+<li><p><strong>Addition Rule for Mutually Exclusive Events:</strong>
+[
+P(A \cup B) = P(A) + P(B)
+]
+where ( A \cup B ) is the event that either ( A ) or ( B ) or both occur.</p>
+</li>
+<li><p><strong>General Addition Rule:</strong>
+[
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+]
+where ( A \cap B ) is the event that both ( A ) and ( B ) occur.</p>
+</li>
+<li><p><strong>Multiplication Rule for Independent Events:</strong>
+[
+P(A \cap B) = P(A) \times P(B)
+]</p>
+</li>
+</ul>
+<h3>6. <strong>Conditional Probability:</strong></h3>
+<ul>
+<li>The probability of an event occurring given that another event has occurred is called conditional probability.
+[
+P(A | B) = \frac{P(A \cap B)}{P(B)}
+]
+where ( P(A | B) ) is the probability of event ( A ) occurring given that ( B ) has occurred.</li>
+</ul>
+<h3>7. <strong>Bayes’ Theorem:</strong></h3>
+<ul>
+<li>A powerful formula for finding probabilities that incorporates conditional probabilities.
+[
+P(A | B) = \frac{P(B | A) \times P(A)}{P(B)}
+]</li>
+</ul>
+<h3>8. <strong>Law of Total Probability:</strong></h3>
+<ul>
+<li>If ( B_1, B_2, \dots, B_n ) are mutually exclusive events that cover the entire sample space, i.e., ( P(B_1 \cup B_2 \cup \dots \cup B_n) = 1 ), then for any event ( A ),
+[
+P(A) = P(A \cap B_1) + P(A \cap B_2) + \cdots + P(A \cap B_n)
+]</li>
+<li>In a simpler form:
+[
+P(A) = \sum_{i=1}^{n} P(A | B_i) P(B_i)
+]</li>
+</ul>
+<p>By understanding these fundamental principles, you can analyze random experiments and make informed predictions about the likelihood of various outcomes.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

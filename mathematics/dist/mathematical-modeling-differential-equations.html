@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differential Equations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Mathematical Modeling</h1>
+<h2>Differential Equations</h2>
+<p>Differential equations are a fundamental tool in mathematical modeling, used to describe a variety of physical, biological, and engineering systems. Here's an overview:</p>
+<h3>What are Differential Equations?</h3>
+<p>Differential equations involve equations that relate a function with its derivatives. These equations are used to model the rate of change of physical quantities.</p>
+<h3>Types of Differential Equations</h3>
+<ol>
+<li><p><strong>Ordinary Differential Equations (ODEs)</strong>: Involves functions of a single variable and their derivatives.</p>
+<ul>
+<li><strong>First-order ODEs</strong>: Includes only the first derivative.</li>
+<li><strong>Higher-order ODEs</strong>: Includes second or higher-order derivatives.</li>
+</ul>
+</li>
+<li><p><strong>Partial Differential Equations (PDEs)</strong>: Involves functions of multiple variables and their partial derivatives. Common in fields like physics and engineering.</p>
+</li>
+</ol>
+<h3>Applications in Mathematical Modeling:</h3>
+<ol>
+<li><p><strong>Physical Systems</strong>:</p>
+<ul>
+<li><strong>Newton's Laws</strong>: Describes motion of particles and rigid bodies.</li>
+<li><strong>Electromagnetism</strong>: Maxwell's equations for electric and magnetic fields.</li>
+<li><strong>Heat Transfer</strong>: Fourier's law for heat conduction.</li>
+</ul>
+</li>
+<li><p><strong>Engineering</strong>:</p>
+<ul>
+<li><strong>Control Systems</strong>: Modeling dynamic systems with feedback.</li>
+<li><strong>Circuit Analysis</strong>: Kirchhoff’s laws for electrical circuits.</li>
+</ul>
+</li>
+<li><p><strong>Biological Systems</strong>:</p>
+<ul>
+<li><strong>Population Dynamics</strong>: Modeling growth rates of species using logistic equations.</li>
+<li><strong>Epidemiology</strong>: Spread of diseases using SIR models.</li>
+</ul>
+</li>
+<li><p><strong>Economics</strong>:</p>
+<ul>
+<li><strong>Growth Models</strong>: Describing economic growth using differential equations.</li>
+</ul>
+</li>
+</ol>
+<h3>Solution Methods</h3>
+<ol>
+<li><p><strong>Analytical Methods</strong>: Finding exact solutions.</p>
+<ul>
+<li><strong>Separation of Variables</strong>: Useful for simple ODEs.</li>
+<li><strong>Integrating Factor</strong>: For first-order linear ODEs.</li>
+<li><strong>Characteristic Equation</strong>: For solving linear differential equations with constant coefficients.</li>
+</ul>
+</li>
+<li><p><strong>Numerical Methods</strong>: Approximating solutions when analytical solutions are not feasible.</p>
+<ul>
+<li><strong>Euler’s Method</strong>: Simple numeric approach.</li>
+<li><strong>Runge-Kutta Methods</strong>: Higher-order accuracy methods.</li>
+<li><strong>Finite Difference Methods</strong>: For solving PDEs.</li>
+</ul>
+</li>
+</ol>
+<h3>Example Problems</h3>
+<ol>
+<li><p><strong>Newton’s Law of Cooling</strong>: Describes the cooling process of an object.</p>
+<ul>
+<li>Differential Equation: (\frac{dT}{dt} = -k(T - T_{\text{env}}))</li>
+<li>Solution: (T(t) = T_{\text{env}} + (T_0 - T_{\text{env}})e^{-kt})</li>
+</ul>
+</li>
+<li><p><strong>Logistic Growth Model</strong>: Models population growth with limiting factors.</p>
+<ul>
+<li>Differential Equation: (\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right))</li>
+<li>Solution: (P(t) = \frac{KP_0e^{rt}}{K + P_0(e^{rt} - 1)})</li>
+</ul>
+</li>
+</ol>
+<h3>Important Concepts</h3>
+<ul>
+<li><strong>Initial Value Problem (IVP)</strong>: Solving differential equations with given initial conditions.</li>
+<li><strong>Boundary Value Problem (BVP)</strong>: Solving differential equations with conditions specified at the boundaries of the domain.</li>
+<li><strong>Stability and Equilibrium</strong>: Analyzing the behavior of solutions over time, especially whether they converge to a steady state.</li>
+</ul>
+<h3>Conclusion</h3>
+<p>Differential equations are powerful tools in mathematical modeling, essential for describing and predicting the behavior of complex systems across various scientific and engineering disciplines. Mastery of both analytical and numerical techniques for solving these equations is crucial for effective modeling and problem-solving.</p>
+<p>Would you like to delve deeper into any of the specific methods or applications?</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

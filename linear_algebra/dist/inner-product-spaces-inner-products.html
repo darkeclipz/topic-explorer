@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Inner Product Spaces</h1>
+<h2>Inner Products</h2>
+<p>Inner products are a fundamental concept in linear algebra that generalize the notion of the dot product to more abstract vector spaces. They provide a way to define geometric concepts such as length, angle, and orthogonality in these spaces. Here's a detailed explanation of inner products and inner product spaces:</p>
+<h3>Inner Product</h3>
+<p>An inner product on a vector space ( V ) over a field (typically the real numbers ( \mathbb{R} ) or the complex numbers ( \mathbb{C} )) is a binary operation (\langle \cdot, \cdot \rangle: V \times V \rightarrow \mathbb{R} ) or (\mathbb{C} ) that satisfies the following properties for all vectors ( \mathbf{u}, \mathbf{v}, \mathbf{w} \in V ) and scalars ( \alpha \in \mathbb{R} ) or ( \mathbb{C} ):</p>
+<ol>
+<li><p><strong>Conjugate Symmetry</strong> (or Symmetry for real numbers):
+[
+\langle \mathbf{u}, \mathbf{v} \rangle = \overline{\langle \mathbf{v}, \mathbf{u} \rangle}
+]
+For real vector spaces, this simplifies to:
+[
+\langle \mathbf{u}, \mathbf{v} \rangle = \langle \mathbf{v}, \mathbf{u} \rangle
+]</p>
+</li>
+<li><p><strong>Linearity in the first argument</strong> (Linearity):
+[
+\langle \alpha \mathbf{u} + \mathbf{v}, \mathbf{w} \rangle = \alpha \langle \mathbf{u}, \mathbf{w} \rangle + \langle \mathbf{v}, \mathbf{w} \rangle
+]</p>
+</li>
+<li><p><strong>Positive Definiteness</strong>:
+[
+\langle \mathbf{v}, \mathbf{v} \rangle \geq 0
+]
+and
+[
+\langle \mathbf{v}, \mathbf{v} \rangle = 0 \text{ if and only if } \mathbf{v} = \mathbf{0}
+]</p>
+</li>
+</ol>
+<h3>Inner Product Spaces</h3>
+<p>A vector space ( V ) equipped with an inner product is called an <strong>inner product space</strong>. The inner product introduces several important concepts:</p>
+<ol>
+<li><p><strong>Norm</strong>: The norm (or length) of a vector ( \mathbf{v} \in V ) is defined using the inner product:
+[
+| \mathbf{v} | = \sqrt{\langle \mathbf{v}, \mathbf{v} \rangle}
+]</p>
+</li>
+<li><p><strong>Distance</strong>: The distance between two vectors ( \mathbf{u}, \mathbf{v} \in V ) is given by:
+[
+d(\mathbf{u}, \mathbf{v}) = | \mathbf{u} - \mathbf{v} |
+]</p>
+</li>
+<li><p><strong>Angle</strong>: The angle ( \theta ) between two vectors ( \mathbf{u} ) and ( \mathbf{v} ) can be determined using the inner product:
+[
+\cos(\theta) = \frac{\langle \mathbf{u}, \mathbf{v} \rangle}{| \mathbf{u} | | \mathbf{v} |}
+]</p>
+</li>
+<li><p><strong>Orthogonality</strong>: Two vectors ( \mathbf{u} ) and ( \mathbf{v} ) are orthogonal (perpendicular) if:
+[
+\langle \mathbf{u}, \mathbf{v} \rangle = 0
+]</p>
+</li>
+</ol>
+<h3>Examples</h3>
+<ul>
+<li><p><strong>Euclidean Space</strong> ( \mathbb{R}^n ): The standard inner product (dot product) in ( \mathbb{R}^n ) is given by:
+[
+\langle \mathbf{u}, \mathbf{v} \rangle = \sum_{i=1}^n u_i v_i
+]</p>
+</li>
+<li><p><strong>Complex Space</strong> ( \mathbb{C}^n ): The standard inner product in ( \mathbb{C}^n ) is:
+[
+\langle \mathbf{u}, \mathbf{v} \rangle = \sum_{i=1}^n u_i \overline{v_i}
+]
+where ( \overline{v_i} ) denotes the complex conjugate of ( v_i ).</p>
+</li>
+<li><p><strong>Function Spaces</strong>: For continuous functions ( f ) and ( g ) on an interval ( [a, b] ), an inner product can be defined as:
+[
+\langle f, g \rangle = \int_a^b f(x) \overline{g(x)} , dx
+]</p>
+</li>
+</ul>
+<h3>Summary</h3>
+<p>Inner products and inner product spaces generalize the geometric intuition of angle, length, and orthogonality into more abstract settings, providing a rich framework for analyzing and understanding vector spaces. These concepts underpin many applications in mathematics, physics, engineering, and computer science, including the study of Fourier series, quantum mechanics, and optimization algorithms.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

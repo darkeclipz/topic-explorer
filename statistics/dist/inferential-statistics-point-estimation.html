@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point Estimation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Inferential Statistics</h1>
+<h2>Point Estimation</h2>
+<p>Point estimation is a key concept in inferential statistics. It involves providing a single value, known as a point estimate, as an approximation of an unknown population parameter. Here are the main aspects of point estimation:</p>
+<h3>1. <strong>Concept and Purpose</strong></h3>
+<ul>
+<li><strong>Objective</strong>: The goal is to use sample data to provide an estimate of a population parameter (e.g., population mean, population proportion).</li>
+<li><strong>Example</strong>: If you want to estimate the average height of all students in a school, you could measure the height of a sample of students and then use the average height of this sample as the point estimate for the entire school.</li>
+</ul>
+<h3>2. <strong>Methods of Point Estimation</strong></h3>
+<ul>
+<li><strong>Maximum Likelihood Estimation (MLE)</strong>: A method that finds the parameter value that maximizes the likelihood function, given the observed data.</li>
+<li><strong>Method of Moments</strong>: A method that involves equating sample moments (like means or variances) to population moments and solving for the parameters.</li>
+<li><strong>Least Squares Estimation (LSE)</strong>: Often used in regression analysis, this method minimizes the sum of the squared differences between observed and predicted values.</li>
+</ul>
+<h3>3. <strong>Properties of Good Estimators</strong></h3>
+<ul>
+<li><strong>Unbiasedness</strong>: An estimator is unbiased if its expected value is equal to the true parameter value. For example, the sample mean is an unbiased estimator of the population mean.</li>
+<li><strong>Efficiency</strong>: An efficient estimator has the smallest possible variance among all unbiased estimators. This means it tends to be closer to the true parameter value.</li>
+<li><strong>Consistency</strong>: An estimator is consistent if it converges in probability to the true parameter value as the sample size increases.</li>
+<li><strong>Sufficiency</strong>: An estimator is sufficient if it captures all the relevant information in the data pertaining to the parameter.</li>
+</ul>
+<h3>4. <strong>Common Point Estimators</strong></h3>
+<ul>
+<li><strong>Sample Mean ((\bar{x}))</strong>: Used to estimate the population mean ((\mu)).</li>
+<li><strong>Sample Proportion ((\hat{p}))</strong>: Used to estimate the population proportion (p).</li>
+<li><strong>Sample Variance (S²)</strong>: Used to estimate the population variance (σ²).</li>
+<li><strong>Sample Standard Deviation (S)</strong>: Used to estimate the population standard deviation (σ).</li>
+</ul>
+<h3>5. <strong>Example</strong></h3>
+<p>Suppose you want to estimate the average lifespan of light bulbs produced by a factory. You take a random sample of 100 light bulbs and find their average lifespan to be 800 hours. Here, the sample mean of 800 hours is your point estimate for the population mean lifespan of the light bulbs.</p>
+<h3>6. <strong>Limitations</strong></h3>
+<ul>
+<li>A point estimate does not provide any information about the uncertainty or variability of the estimate. This is why point estimation is often complemented with interval estimation (confidence intervals) to provide a range of plausible values for the parameter.</li>
+</ul>
+<h3>Conclusion</h3>
+<p>Point estimation is a fundamental tool in statistics for making inferences about population parameters based on sample data. It provides a specific value that represents a best guess, given the observed data, and is used extensively in various fields of study and practical applications.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

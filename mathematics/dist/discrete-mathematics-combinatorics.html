@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinatorics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Discrete Mathematics</h1>
+<h2>Combinatorics</h2>
+<p>Combinatorics is a branch of mathematics that deals with counting, arranging, and combination of objects according to specified rules. It is a fundamental area of discrete mathematics and has applications in various fields, including computer science, probability, and optimization. Below are key concepts and topics within combinatorics:</p>
+<ol>
+<li><p><strong>Counting Principles:</strong></p>
+<ul>
+<li><strong>Rule of Sum (Addition Principle):</strong> If there are (a) ways to do something and (b) ways to do another thing, and these two actions cannot be done simultaneously, there are (a + b) ways to choose one of the actions.</li>
+<li><strong>Rule of Product (Multiplication Principle):</strong> If there are (a) ways to do something and (b) ways to do another thing afterward, there are (a \times b) ways to do both actions in sequence.</li>
+</ul>
+</li>
+<li><p><strong>Permutations:</strong></p>
+<ul>
+<li><strong>Basic Permutations:</strong> The arrangement of (n) distinct objects in a specific order. They are calculated as (n!) (n factorial).</li>
+<li><strong>Permutations with Repetition:</strong> Arrangements of (n) objects where some objects may repeat. Formula: (\frac{n!}{n_1!n_2! \cdots n_k!}) where (n_1, n_2, \ldots, n_k) are the frequencies of the repeated objects.</li>
+</ul>
+</li>
+<li><p><strong>Combinations:</strong></p>
+<ul>
+<li><strong>Basic Combinations:</strong> The selection of (r) objects from a set of (n) objects without considering the order. They are calculated using the binomial coefficient (\binom{n}{r} = \frac{n!}{r!(n-r)!}).</li>
+<li><strong>Combinations with Repetition:</strong> Selections where each item can be chosen more than once. The formula is given by (\binom{n+r-1}{r}).</li>
+</ul>
+</li>
+<li><p><strong>Pigeonhole Principle:</strong></p>
+<ul>
+<li>States that if (n) items are put into (m) containers, with (n &gt; m), then at least one container must contain more than one item. It is a fundamental principle in proving the existence of certain configurations.</li>
+</ul>
+</li>
+<li><p><strong>Inclusion-Exclusion Principle:</strong></p>
+<ul>
+<li>A formula to find the number of elements in the union of multiple sets. For two sets (A) and (B), it is given by (|A \cup B| = |A| + |B| - |A \cap B|).</li>
+<li>This principle can be extended to more sets for complex problems.</li>
+</ul>
+</li>
+<li><p><strong>Generating Functions:</strong></p>
+<ul>
+<li>A powerful tool for solving combinatorial problems, particularly those involving recurrence relations and counting structured sets. Generating functions encode sequences of numbers by treating them as coefficients in a formal power series.</li>
+</ul>
+</li>
+<li><p><strong>Recurrence Relations:</strong></p>
+<ul>
+<li>Equations that recursively define sequences: each term of the sequence is defined as a function of the preceding terms. Solving these relations helps establish closed-form expressions for the terms of the sequence.</li>
+</ul>
+</li>
+<li><p><strong>Graph Theory:</strong></p>
+<ul>
+<li>A study of graphs, which are mathematical structures used to model pairwise relations between objects. Core topics include graph traversal, trees, graph coloring, and network flows.</li>
+</ul>
+</li>
+<li><p><strong>Partitions:</strong></p>
+<ul>
+<li>The ways in which a set or number can be broken down into parts. For example, partitions of a number refer to writing it as the sum of other numbers, and partitions of a set involve dividing its elements into non-overlapping subsets.</li>
+</ul>
+</li>
+</ol>
+<p>Combinatorics is vast and interacts with many different areas of mathematics, offering insights and solutions to problems that can range from simple puzzles to complex theoretical issues in various applied domains.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -7,7 +7,7 @@ client = OpenAI(api_key=get_key())
 def to_filename(filename):
     return filename.replace(' ', '-').replace('/', '-').replace('(', '').replace(')', '').replace(',', '').replace('.', '').replace('?', '').replace('\'', '').lower()
 
-subject = "trade journaling"
+subject = "statistics"
 
 if not os.path.exists(subject):
     os.mkdir(subject)
@@ -156,5 +156,5 @@ for topic, chapter in table_of_contents:
     
     index.append("\n")
 
-with open(f"{subject}/src/index.md", "w") as index_file:
+with open(f"{subject}/src/index.md", "w", encoding="utf-8") as index_file:
     index_file.writelines(index)

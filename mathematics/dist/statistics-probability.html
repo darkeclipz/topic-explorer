@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Statistics</h1>
+<h2>Probability</h2>
+<p>Probability is a branch of mathematics that deals with the likelihood or chance of different outcomes occurring. It forms the foundation for statistics and is critical in various fields such as finance, science, engineering, and risk management. Here are some key concepts and principles related to probability:</p>
+<h3>1. <strong>Basic Concepts:</strong></h3>
+<ul>
+<li><p><strong>Experiment:</strong>
+An action or process that leads to one or several possible outcomes. For example, rolling a die or flipping a coin.</p>
+</li>
+<li><p><strong>Outcome:</strong>
+A possible result of an experiment. For instance, getting a &quot;3&quot; when rolling a die.</p>
+</li>
+<li><p><strong>Sample Space (S):</strong>
+The set of all possible outcomes of an experiment. For example, the sample space for rolling a 6-sided die is {1, 2, 3, 4, 5, 6}.</p>
+</li>
+<li><p><strong>Event:</strong>
+A subset of the sample space. An event might consist of one or more outcomes. For example, getting an even number when rolling a die corresponds to the event {2, 4, 6}.</p>
+</li>
+</ul>
+<h3>2. <strong>Probability of Events:</strong></h3>
+<ul>
+<li>The probability of an event A, denoted P(A), is a measure ranging from 0 to 1, where P(A) = 0 means the event will not occur, and P(A) = 1 means the event will certainly occur.</li>
+<li>The probability of event A is calculated as the number of favorable outcomes divided by the total number of possible outcomes in the sample space:
+[
+P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}
+]</li>
+</ul>
+<h3>3. <strong>Types of Probability:</strong></h3>
+<ul>
+<li><p><strong>Theoretical Probability:</strong>
+Based on the known possible outcomes of the experiment. For example, the probability of rolling a 3 on a 6-sided die is (\frac{1}{6}).</p>
+</li>
+<li><p><strong>Experimental (Empirical) Probability:</strong>
+Based on observing experiments and recording outcomes. It is calculated as:
+[
+P(A) = \frac{\text{Number of times event A occurred}}{\text{Total number of trials}}
+]</p>
+</li>
+</ul>
+<h3>4. <strong>Probability Rules:</strong></h3>
+<ul>
+<li><p><strong>Complement Rule:</strong>
+The probability that an event does not happen is 1 minus the probability that it does happen:
+[
+P(A') = 1 - P(A)
+]
+where A' is the complement of A.</p>
+</li>
+<li><p><strong>Addition Rule:</strong>
+For any two mutually exclusive events A and B (events that cannot occur simultaneously):
+[
+P(A \cup B) = P(A) + P(B)
+]</p>
+</li>
+<li><p><strong>Multiplication Rule:</strong>
+For independent events A and B (occurrence of one does not affect the occurrence of the other):
+[
+P(A \cap B) = P(A) \cdot P(B)
+]</p>
+</li>
+</ul>
+<h3>5. <strong>Conditional Probability:</strong></h3>
+<ul>
+<li>The probability of an event A given that another event B has occurred is called conditional probability and is denoted as ( P(A|B) ):
+[
+P(A|B) = \frac{P(A \cap B)}{P(B)}
+]
+provided ( P(B) &gt; 0 ).</li>
+</ul>
+<h3>6. <strong>Bayes' Theorem:</strong></h3>
+<ul>
+<li>A formula that describes the probability of an event based on prior knowledge of conditions related to the event:
+[
+P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+]
+Bayes' Theorem is extensively used in various areas including machine learning, medical testing, and finance.</li>
+</ul>
+<h3>Applications of Probability:</h3>
+<ul>
+<li><strong>Risk Assessment:</strong>
+Used in fields like insurance and finance to assess and manage risk.</li>
+<li><strong>Quality Control:</strong>
+Help in making decisions based on sample data to ensure product quality.</li>
+<li><strong>Decision Making:</strong>
+Aids in making decisions under uncertainty by quantifying risks and benefits.</li>
+<li><strong>Game Theory:</strong>
+Analyzes strategies in competitive situations where the outcome depends on the actions of multiple agents.</li>
+</ul>
+<p>Understanding probability is essential for analyzing and interpreting statistical data, making predictions, and informed decision-making in uncertain situations.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

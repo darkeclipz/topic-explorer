@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limits</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Calculus</h1>
+<h2>Limits</h2>
+<p>In calculus, the concept of a limit is fundamental and serves as the foundation for defining derivatives and integrals.</p>
+<h3>What is a Limit?</h3>
+<p>A limit describes the value that a function (or sequence) approaches as the input (or index) approaches some value. In more intuitive terms, it’s about figuring out what value a function gets close to as the inputs get close to a certain point.</p>
+<h3>Formal Definition</h3>
+<p>For a function ( f(x) ), the limit of ( f(x) ) as ( x ) approaches some value ( c ) is ( L ), written as:</p>
+<p>[ \lim_{{x \to c}} f(x) = L ]</p>
+<p>This means that as ( x ) gets closer and closer to ( c ), ( f(x) ) gets closer and closer to ( L ).</p>
+<h3>Left-Hand and Right-Hand Limits</h3>
+<ul>
+<li><strong>Left-Hand Limit</strong>: The value that ( f(x) ) approaches as ( x ) approaches ( c ) from the left (denoted as ( x \to c^- )).</li>
+<li><strong>Right-Hand Limit</strong>: The value that ( f(x) ) approaches as ( x ) approaches ( c ) from the right (denoted as ( x \to c^+ )).</li>
+</ul>
+<p>For a limit to exist, both the left-hand limit and the right-hand limit must exist and be equal.</p>
+<h3>Properties of Limits</h3>
+<ol>
+<li><p><strong>Sum Rule</strong>:
+[ \lim_{{x \to c}} [f(x) + g(x)] = \lim_{{x \to c}} f(x) + \lim_{{x \to c}} g(x) ]</p>
+</li>
+<li><p><strong>Difference Rule</strong>:
+[ \lim_{{x \to c}} [f(x) - g(x)] = \lim_{{x \to c}} f(x) - \lim_{{x \to c}} g(x) ]</p>
+</li>
+<li><p><strong>Product Rule</strong>:
+[ \lim_{{x \to c}} [f(x) \cdot g(x)] = \lim_{{x \to c}} f(x) \cdot \lim_{{x \to c}} g(x) ]</p>
+</li>
+<li><p><strong>Quotient Rule</strong>:
+[ \lim_{{x \to c}} \left( \frac{{f(x)}}{g(x)} \right) = \frac{{\lim_{{x \to c}} f(x)}}{{\lim_{{x \to c}} g(x)}} \quad \text{(provided } \lim_{{x \to c}} g(x) \ne 0) ]</p>
+</li>
+<li><p><strong>Constant Multiple Rule</strong>:
+[ \lim_{{x \to c}} [k \cdot f(x)] = k \cdot \lim_{{x \to c}} f(x) ]</p>
+</li>
+</ol>
+<h3>Techniques for Evaluating Limits</h3>
+<ol>
+<li><p><strong>Direct Substitution</strong>: Substitute ( x = c ) into the function.</p>
+</li>
+<li><p><strong>Factoring</strong>: Factor the function and simplify before taking the limit.</p>
+</li>
+<li><p><strong>Rationalization</strong>: Multiply by a conjugate if dealing with limits involving square roots.</p>
+</li>
+<li><p><strong>L'Hôpital's Rule</strong>: When limits result in indeterminate forms like ( \frac{0}{0} ) or ( \frac{\infty}{\infty} ), L'Hôpital's Rule can be used:
+[ \lim_{{x \to c}} \frac{f(x)}{g(x)} = \lim_{{x \to c}} \frac{f'(x)}{g'(x)} ]
+(provided certain conditions are met).</p>
+</li>
+</ol>
+<h3>Understanding Limits Graphically</h3>
+<p>You can often understand limits by looking at the graph of the function and seeing what value the function approaches as you get closer to ( c ). For example, if the function values get closer to ( 2 ) as ( x ) approaches ( 1 ), then the limit is ( 2 ).</p>
+<h3>Examples</h3>
+<ol>
+<li><p><strong>Simple Polynomial</strong>:
+[ \lim_{{x \to 3}} (2x + 1) = 2(3) + 1 = 7 ]</p>
+</li>
+<li><p><strong>Indeterminate Form</strong>:
+Evaluate ( \lim_{{x \to 2}} \frac{x^2 - 4}{x - 2} ):
+[ \frac{x^2 - 4}{x - 2} = \frac{(x - 2)(x + 2)}{x - 2} = x + 2 ]
+So, ( \lim_{{x \to 2}} (x + 2) = 4 ).</p>
+</li>
+</ol>
+<p>Understanding limits is crucial for advanced calculus topics, including differentiation and integration.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

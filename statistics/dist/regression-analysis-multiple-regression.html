@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Regression</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Regression Analysis</h1>
+<h2>Multiple Regression</h2>
+<p>Multiple regression is a statistical technique used to examine the relationship between one dependent variable and two or more independent variables. It extends the concept of linear regression to accommodate models involving multiple predictors. Here are the key aspects of multiple regression:</p>
+<h3>1. Purpose and Use Cases:</h3>
+<p>Multiple regression is used to:</p>
+<ul>
+<li>Predict the value of a dependent variable based on the values of multiple independent variables.</li>
+<li>Understand the relationships and contributions of each independent variable to the dependent variable.</li>
+<li>Adjust for confounding variables that might affect the outcome.</li>
+</ul>
+<h3>2. The Model:</h3>
+<p>The general form of a multiple regression model is:
+[ Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + ... + \beta_kX_k + \epsilon ]
+where:</p>
+<ul>
+<li>( Y ) is the dependent variable.</li>
+<li>( \beta_0 ) is the intercept.</li>
+<li>( \beta_1, \beta_2, ... , \beta_k ) are the coefficients of the independent variables ( X_1, X_2, ... , X_k ).</li>
+<li>( \epsilon ) is the error term which accounts for the variability in ( Y ) not explained by the predictors.</li>
+</ul>
+<h3>3. Assumptions:</h3>
+<p>To produce valid results, multiple regression analysis relies on several key assumptions:</p>
+<ul>
+<li><strong>Linearity</strong>: The relationship between independent and dependent variables is linear.</li>
+<li><strong>Independence</strong>: Observations are independent of each other.</li>
+<li><strong>Homoscedasticity</strong>: The variance of the residuals (errors) is constant across all levels of the independent variables.</li>
+<li><strong>Normality</strong>: The residuals should be approximately normally distributed.</li>
+<li><strong>No multicollinearity</strong>: Independent variables should not be too highly correlated with each other.</li>
+</ul>
+<h3>4. Interpretation of Coefficients:</h3>
+<p>Each coefficient (( \beta_i )) represents the expected change in the dependent variable for a one-unit change in the corresponding independent variable (( X_i )), holding all other variables constant. For example:</p>
+<ul>
+<li>If ( \beta_1 = 2 ), a one-unit increase in ( X_1 ) is associated with a 2-unit increase in ( Y ), assuming other variables remain unchanged.</li>
+</ul>
+<h3>5. Model Fitting and Evaluation:</h3>
+<p>The steps involved in fitting a multiple regression model typically include:</p>
+<ul>
+<li><strong>Data Collection</strong>: Gather relevant data for the dependent and independent variables.</li>
+<li><strong>Estimation of Coefficients</strong>: Use methods like Ordinary Least Squares (OLS) to estimate the coefficients.</li>
+<li><strong>Checking Assumptions</strong>: Validate that model assumptions are met using residual plots, multicollinearity diagnostics, and tests for normality.</li>
+<li><strong>Model Evaluation</strong>: Assess the model's performance using metrics such as ( R^2 ) (coefficient of determination), Adjusted ( R^2 ), F-statistics, and p-values.</li>
+<li><strong>Variable Selection</strong>: Use stepwise regression, backward elimination, or other techniques to select the most relevant predictors.</li>
+</ul>
+<h3>6. Example:</h3>
+<p>Suppose a researcher wants to predict a person's income (( Y )) based on their education level (( X_1 )), years of experience (( X_2 )), and age (( X_3 )). The multiple regression equation might look like this:
+[ \text{Income} = \beta_0 + \beta_1 \times \text{Education} + \beta_2 \times \text{Experience} + \beta_3 \times \text{Age} + \epsilon ]
+The coefficients (( \beta_1, \beta_2, \beta_3 )) will quantify the specific effect of each predictor on income.</p>
+<h3>7. Potential Challenges:</h3>
+<ul>
+<li><strong>Multicollinearity</strong>: When predictors are highly correlated, it can make it difficult to assess the individual effect of each predictor.</li>
+<li><strong>Overfitting</strong>: Including too many predictors can lead to a model that performs well on training data but poorly on unseen data.</li>
+<li><strong>Bias and Variance Tradeoff</strong>: Balancing complexity and predictive power is crucial for building a robust model.</li>
+</ul>
+<p>By addressing these elements, multiple regression analysis can provide valuable insights into complex relationships between variables and offer robust predictive capabilities.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectral Theorem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Eigenvalues and Eigenvectors</h1>
+<h2>Spectral Theorem</h2>
+<p>The Spectral Theorem is a fundamental result in linear algebra that applies to certain classes of matrices. It provides a structure for understanding how these matrices can be simplified using their eigenvalues and eigenvectors. Here's an explanation of the Spectral Theorem:</p>
+<h3>The Spectral Theorem</h3>
+<p><strong>Statement</strong>: The Spectral Theorem states that for any normal matrix (A) (i.e., (A) such that (A A^* = A^* A), where (A^<em>) is the conjugate transpose of (A)), there exists a unitary matrix (U) (a matrix (U) such that (U U^</em> = U^* U = I)) and a diagonal matrix (D) such that:</p>
+<p>[ A = U D U^* ]</p>
+<p>In the special case when (A) is a real symmetric matrix (i.e., (A = A^T)), the matrix (U) can be chosen to be an orthogonal matrix ((U^T U = U U^T = I)) and the diagonal entries of (D) are real eigenvalues of (A).</p>
+<h3>Key Points</h3>
+<ol>
+<li><p><strong>Normal Matrices</strong>: A matrix (A) is normal if it commutes with its conjugate transpose, i.e., (A A^* = A^* A).</p>
+<ul>
+<li><strong>Examples</strong>: Hermitian (or self-adjoint) matrices ((A = A^<em>)), unitary matrices ((U U^</em> = I)), and real symmetric matrices ((A = A^T)) are all normal.</li>
+</ul>
+</li>
+<li><p><strong>Unitary and Orthogonal Matrices</strong>:</p>
+<ul>
+<li>A unitary matrix (U) satisfies (U U^* = I).</li>
+<li>An orthogonal matrix is a special case of a unitary matrix where all entries are real and satisfies (U^T U = I).</li>
+</ul>
+</li>
+<li><p><strong>Diagonalization</strong>: The theorem tells us that a normal matrix (A) can be diagonalized by a unitary matrix. This means that it can be written in the form (A = U D U^*), where (D) is a diagonal matrix containing the eigenvalues of (A) and the columns of (U) are the eigenvectors of (A).</p>
+</li>
+</ol>
+<h3>Implications</h3>
+<ul>
+<li><p><strong>Simplifies Computation</strong>: The Spectral Theorem is particularly useful because diagonal matrices are much easier to work with. For instance, powers of (A) or functions of (A) (like the matrix exponential) can be easily computed when (A) is diagonalized.</p>
+</li>
+<li><p><strong>Positive Definite Matrices</strong>: For a symmetric positive definite matrix (A), all eigenvalues are positive, which can be derived from the Spectral Theorem.</p>
+</li>
+<li><p><strong>Quantum Mechanics</strong>: The Spectral Theorem is a cornerstone in quantum mechanics, where Hermitian operators (representing physical observables) are diagonalized to find their eigenvalues (possible measurement outcomes).</p>
+</li>
+</ul>
+<h3>Example</h3>
+<p>Consider a real symmetric matrix:
+[ A = \begin{pmatrix} 4 &amp; 1 \ 1 &amp; 3 \end{pmatrix} ]</p>
+<ol>
+<li><p><strong>Find Eigenvalues and Eigenvectors</strong>: Solve the characteristic equation (\det(A - \lambda I) = 0) to find the eigenvalues.</p>
+</li>
+<li><p><strong>Matrix (U)</strong>: Construct (U) from the normalized eigenvectors.</p>
+</li>
+<li><p><strong>Matrix (D)</strong>: Form (D) with the eigenvalues of (A).</p>
+</li>
+<li><p><strong>Verify</strong>: Confirm that (A = U D U^T).</p>
+</li>
+</ol>
+<p>Thus, the Spectral Theorem provides insight into the structure and properties of normal matrices through their eigenvalues and eigenvectors.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

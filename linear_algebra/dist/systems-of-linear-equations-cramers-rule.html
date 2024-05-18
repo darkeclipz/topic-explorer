@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cramer's Rule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Systems of Linear Equations</h1>
+<h2>Cramer's Rule</h2>
+<p>Cramer's Rule is a mathematical theorem used to solve systems of linear equations with as many equations as unknowns, provided that the system's coefficient matrix is invertible (i.e., it has a non-zero determinant). Here's a detailed explanation:</p>
+<h3>Basic Concept</h3>
+<p>For an ( n \times n ) system of linear equations represented as:
+[ A\mathbf{x} = \mathbf{b} ]
+where:</p>
+<ul>
+<li>( A ) is an ( n \times n ) matrix of coefficients.</li>
+<li>( \mathbf{x} ) is a column vector of ( n ) unknowns.</li>
+<li>( \mathbf{b} ) is a column vector of ( n ) constants.</li>
+</ul>
+<h3>Cramer's Rule</h3>
+<p>Cramer's Rule provides a method to find each unknown ( x_i ) by using determinants. The formula for each variable ( x_i ) is given by:</p>
+<p>[ x_i = \frac{\det(A_i)}{\det(A)} ]</p>
+<p>Here:</p>
+<ul>
+<li>( \det(A) ) is the determinant of the original coefficient matrix ( A ).</li>
+<li>( \det(A_i) ) is the determinant of the matrix ( A ) with its ( i )-th column replaced by the column vector ( \mathbf{b} ).</li>
+</ul>
+<h3>Steps to Apply Cramer's Rule</h3>
+<ol>
+<li><p><strong>Compute ( \det(A) )</strong> - Calculate the determinant of the coefficient matrix ( A ). If ( \det(A) = 0 ), the system either has no unique solution or an infinite number of solutions.</p>
+</li>
+<li><p><strong>Form the Matrices ( A_i )</strong> - For each unknown ( x_i ), create a new matrix ( A_i ) by replacing the ( i )-th column of ( A ) with the vector ( \mathbf{b} ).</p>
+</li>
+<li><p><strong>Compute ( \det(A_i) )</strong> - Calculate the determinant of each matrix ( A_i ).</p>
+</li>
+<li><p><strong>Solve for ( x_i )</strong> - Use the formula ( x_i = \frac{\det(A_i)}{\det(A)} ) to find the value of each unknown.</p>
+</li>
+</ol>
+<h3>Example</h3>
+<p>Consider the system of linear equations:
+[
+\begin{cases}
+a_{11}x_1 + a_{12}x_2 = b_1 \
+a_{21}x_1 + a_{22}x_2 = b_2 \
+\end{cases}
+]</p>
+<p>This can be written in matrix form as:
+[ A\mathbf{x} = \mathbf{b} ]</p>
+<p>Where:
+[ A = \begin{pmatrix}
+a_{11} &amp; a_{12} \
+a_{21} &amp; a_{22}
+\end{pmatrix}, \quad \mathbf{x} = \begin{pmatrix}
+x_1 \
+x_2
+\end{pmatrix}, \quad \mathbf{b} = \begin{pmatrix}
+b_1 \
+b_2
+\end{pmatrix} ]</p>
+<p>To solve for ( x_1 ):</p>
+<ol>
+<li><p>Compute ( \det(A) ):
+[ \det(A) = a_{11}a_{22} - a_{12}a_{21} ]</p>
+</li>
+<li><p>Form ( A_1 ) by replacing the 1st column with ( \mathbf{b} ):
+[ A_1 = \begin{pmatrix}
+b_1 &amp; a_{12} \
+b_2 &amp; a_{22}
+\end{pmatrix} ]</p>
+</li>
+<li><p>Compute ( \det(A_1) ):
+[ \det(A_1) = b_1a_{22} - b_2a_{12} ]</p>
+</li>
+<li><p>Solve for ( x_1 ):
+[ x_1 = \frac{\det(A_1)}{\det(A)} = \frac{b_1a_{22} - b_2a_{12}}{a_{11}a_{22} - a_{12}a_{21}} ]</p>
+</li>
+</ol>
+<p>Similarly, to solve for ( x_2 ):</p>
+<ol>
+<li><p>Form ( A_2 ) by replacing the 2nd column with ( \mathbf{b} ):
+[ A_2 = \begin{pmatrix}
+a_{11} &amp; b_1 \
+a_{21} &amp; b_2
+\end{pmatrix} ]</p>
+</li>
+<li><p>Compute ( \det(A_2) ):
+[ \det(A_2) = a_{11}b_2 - a_{21}b_1 ]</p>
+</li>
+<li><p>Solve for ( x_2 ):
+[ x_2 = \frac{\det(A_2)}{\det(A)} = \frac{a_{11}b_2 - a_{21}b_1}{a_{11}a_{22} - a_{12}a_{21}} ]</p>
+</li>
+</ol>
+<p>Cramer's Rule is particularly useful for small systems and theoretical purposes, but for larger systems, numerical methods such as Gaussian elimination are usually more efficient.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

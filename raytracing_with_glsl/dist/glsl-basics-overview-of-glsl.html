@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview of GLSL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>GLSL Basics</h1>
+<h2>Overview of GLSL</h2>
+<p>GLSL, or OpenGL Shading Language, is a C-like programming language designed specifically for writing shaders, which are programs that run on the GPU. Here's an overview of GLSL:</p>
+<h3>Overview of GLSL</h3>
+<p><strong>1. Purpose of GLSL:</strong></p>
+<ul>
+<li>GLSL is used for writing both vertex and fragment shaders, which are essential for rendering graphics on the GPU.</li>
+<li>It allows for the implementation of complex visual effects by providing more control over the graphics pipeline.</li>
+</ul>
+<p><strong>2. Types of Shaders:</strong></p>
+<ul>
+<li><strong>Vertex Shaders</strong>: These process each vertex's attributes (position, color, texture coordinates) and are responsible for transforming vertex positions from object space to screen space.</li>
+<li><strong>Fragment Shaders</strong>: These calculate the color and other attributes of each pixel. They determine the final color of a pixel based on textures, lighting, and other factors.</li>
+</ul>
+<p><strong>3. Shader Pipeline:</strong></p>
+<ul>
+<li>The graphics pipeline consists of several stages, where shaders are executed at specific points:
+<ul>
+<li><strong>Vertex Shader Stage</strong>: Processes vertices to transform vertex data.</li>
+<li><strong>Fragment Shader Stage</strong>: Computes pixel colors.</li>
+<li>Other stages include Geometry Shaders, Tessellation Shaders, etc., which are used for more advanced rendering techniques.</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. Writing GLSL Code:</strong></p>
+<ul>
+<li>GLSL code follows a C-like syntax, making it familiar to many programmers.</li>
+<li>It includes data types such as float, int, vec2, vec3, vec4 (for vectors), and mat2, mat3, mat4 (for matrices).</li>
+<li>Common operations in GLSL include matrix transformations, texture sampling, and blending.</li>
+</ul>
+<p><strong>5. Compilation and Linking:</strong></p>
+<ul>
+<li>GLSL shaders are compiled and linked at runtime. Each shader type is compiled individually into a shader object.</li>
+<li>Compiled shaders are then linked into a shader program, which can be used to render objects in a scene.</li>
+</ul>
+<p><strong>6. Built-in Variables and Functions:</strong></p>
+<ul>
+<li>GLSL provides a range of built-in variables (e.g., <code>gl_Position</code> for vertex shaders) and functions (e.g., <code>texture()</code> for sampling textures).</li>
+<li>These built-ins simplify common tasks and help interface with the OpenGL state.</li>
+</ul>
+<p><strong>7. Uniforms, Attributes, and Varyings:</strong></p>
+<ul>
+<li><strong>Uniforms</strong>: Read-only variables that are set per frame and remain constant for all vertices and fragments during a draw call. Used for data that doesn’t change per vertex/fragment (e.g., light positions, transformation matrices).</li>
+<li><strong>Attributes</strong>: Variables that provide per-vertex data to the vertex shader (e.g., vertex positions, normals).</li>
+<li><strong>Varyings</strong>: Variables that are interpolated between vertex and fragment shaders. Used to pass data from vertex shaders to fragment shaders (e.g., interpolated colors, texture coordinates).</li>
+</ul>
+<p><strong>8. GLSL Versions and Extensions:</strong></p>
+<ul>
+<li>GLSL has evolved over time with different versions, adding new features and improvements.</li>
+<li>Each version corresponds to a specific OpenGL version, and using the correct version of GLSL is crucial for compatibility.</li>
+<li>Extensions provide additional functionality that may not yet be standardized.</li>
+</ul>
+<h3>Summary:</h3>
+<p>GLSL is a powerful tool for creating custom graphics shaders, offering fine control over the rendering process. Understanding the basics of GLSL, including its types of shaders, data types, compilation process, and built-in functionalities, is essential for anyone looking to delve into advanced graphics programming and rendering techniques.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

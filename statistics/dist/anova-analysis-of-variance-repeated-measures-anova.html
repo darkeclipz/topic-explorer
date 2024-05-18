@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeated Measures ANOVA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>ANOVA (Analysis of Variance)</h1>
+<h2>Repeated Measures ANOVA</h2>
+<p>Repeated Measures ANOVA is a statistical technique used to analyze data where the same subjects are measured multiple times under different conditions or over different time points. This type of ANOVA is particularly useful in situations where you want to determine if there are statistically significant differences in means across multiple conditions or time points within the same group of subjects.</p>
+<h3>Key Concepts</h3>
+<ol>
+<li><p><strong>Within-Subjects Design</strong>: In a repeated measures design, the same subjects participate in every condition of the experiment, allowing researchers to control for inter-subject variability. This design increases statistical power because the variability due to individual differences is removed.</p>
+</li>
+<li><p><strong>Factor and Levels</strong>: The repeated measures factor refers to the different conditions or time points being tested. Each condition or time point is called a level of the factor.</p>
+</li>
+<li><p><strong>Sphericity</strong>: One crucial assumption of Repeated Measures ANOVA is sphericity, which means the variances of the differences between all combinations of conditions (levels) should be the same. If this assumption is violated, it can lead to incorrect conclusions.</p>
+</li>
+<li><p><strong>Subjects as Their Own Control</strong>: Since the same subjects are measured under all conditions, each subject serves as their own control. This reduces the error variance associated with individual differences, enhancing statistical power.</p>
+</li>
+</ol>
+<h3>Steps in Repeated Measures ANOVA</h3>
+<ol>
+<li><p><strong>Formulate the Hypotheses</strong>:</p>
+<ul>
+<li>Null Hypothesis ((H_0)): There are no differences in the means across the different conditions or time points.</li>
+<li>Alternative Hypothesis ((H_A)): There are significant differences in the means across the different conditions or time points.</li>
+</ul>
+</li>
+<li><p><strong>Check Assumptions</strong>:</p>
+<ul>
+<li><strong>Normality</strong>: The data should be approximately normally distributed.</li>
+<li><strong>Sphericity</strong>: This can be tested using Mauchly's test for sphericity. If sphericity is violated, adjustments like Greenhouse-Geisser or Huynh-Feldt corrections can be applied.</li>
+</ul>
+</li>
+<li><p><strong>Calculate the F-Statistic</strong>:</p>
+<ul>
+<li>The F-statistic in Repeated Measures ANOVA compares the variance explained by the conditions to the variance within the conditions (residual variance).</li>
+</ul>
+</li>
+<li><p><strong>Compare to Critical Value</strong>:</p>
+<ul>
+<li>If the calculated F-statistic is greater than the critical value from the F-distribution table, or if the p-value is less than the chosen significance level (commonly 0.05), we reject the null hypothesis.</li>
+</ul>
+</li>
+<li><p><strong>Post-Hoc Tests</strong> (if needed):</p>
+<ul>
+<li>If you find a significant effect, you may need to conduct post-hoc tests to determine which specific conditions are different from each other.</li>
+</ul>
+</li>
+</ol>
+<h3>Example Scenario</h3>
+<p>Imagine a scenario where researchers want to test the effect of different types of diets on weight loss. The same group of participants follows each diet for a specific period, and their weights are measured at the end of each diet period. The repeated measures ANOVA can be used to determine if there are significant weight differences across the different diet conditions.</p>
+<h3>Advantages</h3>
+<ol>
+<li><strong>Increased Statistical Power</strong>: By controlling for individual variability, repeated measures designs often provide more statistical power.</li>
+<li><strong>Efficiency and Economy</strong>: Fewer subjects are needed since the same subjects provide multiple measurements.</li>
+</ol>
+<h3>Disadvantages</h3>
+<ol>
+<li><strong>Carryover Effects</strong>: The effect of a previous condition can carry over to subsequent conditions.</li>
+<li><strong>Sphericity Violation</strong>: Violations of the sphericity assumption can complicate the analysis.</li>
+</ol>
+<h3>Conclusion</h3>
+<p>Repeated Measures ANOVA is a powerful tool for analyzing experiments where the same subjects experience multiple conditions. By controlling for individual variability, it enhances the ability to detect true differences between conditions, provided that the key assumptions are met.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

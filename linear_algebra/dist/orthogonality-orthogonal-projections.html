@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthogonal Projections</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Orthogonality</h1>
+<h2>Orthogonal Projections</h2>
+<p>Orthogonal projections are a fundamental concept in linear algebra, particularly in understanding the structure of vector spaces and subspaces. Here’s a detailed breakdown:</p>
+<h3>Orthogonal Projections</h3>
+<p><strong>Definition:</strong>
+An orthogonal projection of a vector onto a subspace is the &quot;shadow&quot; or &quot;footprint&quot; the vector creates when dropped perpendicularly onto that subspace. Mathematically, if you have a vector ( \mathbf{v} ) and a subspace ( W ), the orthogonal projection of ( \mathbf{v} ) onto ( W ) is denoted as ( \mathbf{proj}_W(\mathbf{v}) ).</p>
+<p><strong>Key Concepts:</strong></p>
+<ol>
+<li><p><strong>Subspace:</strong> A subspace ( W ) is a subset of a vector space that is itself a vector space. Common subspaces include the span of a set of vectors.</p>
+</li>
+<li><p><strong>Orthogonal Complement:</strong> For a given subspace ( W ), the orthogonal complement ( W^\perp ) is the set of all vectors that are orthogonal to every vector in ( W ).</p>
+</li>
+<li><p><strong>Orthogonal Projection Theorem:</strong> Any vector ( \mathbf{v} ) in a vector space ( V ) can be uniquely decomposed as the sum of two components: one that lies in a subspace ( W ) and one that lies in ( W^\perp ). Formally:
+[ \mathbf{v} = \mathbf{v}<em>W + \mathbf{v}</em>{W^\perp} ]
+where ( \mathbf{v}<em>W \in W ) and ( \mathbf{v}</em>{W^\perp} \in W^\perp ).</p>
+</li>
+</ol>
+<h3>Calculation of Orthogonal Projection</h3>
+<p>To calculate the orthogonal projection of a vector ( \mathbf{v} ) onto a subspace ( W ), follow these steps:</p>
+<ol>
+<li><p><strong>Basis of Subspace:</strong> Find an orthogonal (or orthonormal) basis ( {\mathbf{w}_1, \mathbf{w}_2, \dots, \mathbf{w}_k} ) for the subspace ( W ).</p>
+</li>
+<li><p><strong>Using Orthonormal Basis:</strong> If the basis is orthonormal, the projection can be computed easily as:
+[ \mathbf{proj}<em>W(\mathbf{v}) = \sum</em>{i=1}^{k} \langle \mathbf{v}, \mathbf{w}_i \rangle \mathbf{w}_i ]
+where ( \langle \cdot, \cdot \rangle ) denotes the inner product.</p>
+</li>
+<li><p><strong>Using Orthogonal Basis:</strong> If the basis is only orthogonal but not normalized, normalize the basis vectors first or use a modified formula:
+[ \mathbf{proj}<em>W(\mathbf{v}) = \sum</em>{i=1}^{k} \frac{\langle \mathbf{v}, \mathbf{w}_i \rangle}{\langle \mathbf{w}_i, \mathbf{w}_i \rangle} \mathbf{w}_i ]</p>
+</li>
+</ol>
+<h3>Example</h3>
+<p>Suppose we have a vector ( \mathbf{v} ) and we want to project it onto the line spanned by a single vector ( \mathbf{u} ). If ( \mathbf{u} ) is an orthonormal vector, then:
+[ \mathbf{proj}<em>{\text{span}(\mathbf{u})}(\mathbf{v}) = \langle \mathbf{v}, \mathbf{u} \rangle \mathbf{u} ]
+If ( \mathbf{u} ) is not unit length:
+[ \mathbf{proj}</em>{\text{span}(\mathbf{u})}(\mathbf{v}) = \frac{\langle \mathbf{v}, \mathbf{u} \rangle}{\langle \mathbf{u}, \mathbf{u} \rangle} \mathbf{u} ]</p>
+<h3>Properties of Orthogonal Projections</h3>
+<ol>
+<li><p><strong>Idempotence:</strong> Applying the projection operator twice yields the same result as applying it once:
+[ \mathbf{proj}_W(\mathbf{proj}_W(\mathbf{v})) = \mathbf{proj}_W(\mathbf{v}) ]</p>
+</li>
+<li><p><strong>Linearity:</strong> The projection operator is linear:
+[ \mathbf{proj}_W(a \mathbf{v} + b \mathbf{u}) = a \mathbf{proj}_W(\mathbf{v}) + b \mathbf{proj}_W(\mathbf{u}) ]
+for any scalars ( a ) and ( b ).</p>
+</li>
+<li><p><strong>Orthogonality:</strong> The difference between a vector and its projection lies in the orthogonal complement of the subspace:
+[ \mathbf{v} - \mathbf{proj}_W(\mathbf{v}) \perp W ]</p>
+</li>
+</ol>
+<p>Understanding orthogonal projections is crucial in diverse fields such as computer graphics, optimization, signal processing, and statistics, particularly in techniques like Principal Component Analysis (PCA).</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

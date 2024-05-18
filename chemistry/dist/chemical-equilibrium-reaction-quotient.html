@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Quotient</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Chemical Equilibrium</h1>
+<h2>Reaction Quotient</h2>
+<p>The Reaction Quotient, denoted as ( Q ), is a measure used in chemical equilibrium to determine the direction in which a reaction must proceed to reach equilibrium. It is similar to the equilibrium constant (( K )), but it is calculated using the current concentrations (or partial pressures) of the reactants and products at any point in time before the system reaches equilibrium.</p>
+<h3>How to Calculate the Reaction Quotient (Q)</h3>
+<p>For a general reaction:</p>
+<p>[ aA + bB \rightleftharpoons cC + dD ]</p>
+<p>the reaction quotient (( Q )) is given by the expression:</p>
+<p>[ Q = \frac{[C]^c [D]^d}{[A]^a [B]^b} ]</p>
+<p>Here, ( [A] ), ( [B] ), ( [C] ), and ( [D] ) represent the molar concentrations of the reactants (A and B) and products (C and D) at a given time, and ( a ), ( b ), ( c ), and ( d ) are their respective stoichiometric coefficients from the balanced chemical equation.</p>
+<h3>Comparing Q and K</h3>
+<ul>
+<li>When ( Q &lt; K ): The reaction will proceed in the forward direction (towards the products) to reach equilibrium.</li>
+<li>When ( Q &gt; K ): The reaction will proceed in the reverse direction (towards the reactants) to reach equilibrium.</li>
+<li>When ( Q = K ): The reaction is at equilibrium, meaning the rate of the forward reaction equals the rate of the reverse reaction, and the concentrations of the reactants and products remain constant.</li>
+</ul>
+<h3>Example Calculation</h3>
+<p>Let's consider the reaction:</p>
+<p>[ 2SO_2(g) + O_2(g) \rightleftharpoons 2SO_3(g) ]</p>
+<p>Suppose at a certain moment, the concentrations are:</p>
+<ul>
+<li>([SO_2] = 0.1 , M)</li>
+<li>([O_2] = 0.2 , M)</li>
+<li>([SO_3] = 0.4 , M)</li>
+</ul>
+<p>To find ( Q ):</p>
+<p>[ Q = \frac{[SO_3]^2}{[SO_2]^2 [O_2]} = \frac{(0.4)^2}{(0.1)^2 (0.2)} = \frac{0.16}{0.002} = 80 ]</p>
+<p>If the equilibrium constant for this reaction (( K_c )) at the same temperature is 100, then we can compare ( Q ) and ( K ):</p>
+<ul>
+<li>( Q = 80 ) and ( K = 100 )</li>
+<li>Since ( Q &lt; K ), the reaction will proceed in the forward direction to produce more ( SO_3 ) from ( SO_2 ) and ( O_2 ) until equilibrium is reached.</li>
+</ul>
+<p>Understanding ( Q ) is crucial for predicting the behavior of a chemical system and is a fundamental concept in the study of chemical equilibrium.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:38:03 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

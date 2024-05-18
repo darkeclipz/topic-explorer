@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthogonal Vectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Orthogonality</h1>
+<h2>Orthogonal Vectors</h2>
+<p>Orthogonality is a fundamental concept in linear algebra and refers to the idea of vectors being perpendicular (or orthogonal) to each other. Here's a detailed explanation:</p>
+<h3>Orthogonal Vectors:</h3>
+<p><strong>Definition:</strong>
+Two vectors are said to be orthogonal if their dot product is zero. Orthogonality is a generalization of the notion of perpendicular vectors to higher-dimensional spaces.</p>
+<p><strong>Mathematical Representation:</strong>
+For two vectors ( \mathbf{u} ) and ( \mathbf{v} ) in ( \mathbb{R}^n ),
+[ \mathbf{u} \cdot \mathbf{v} = 0 ]
+implies that ( \mathbf{u} ) and ( \mathbf{v} ) are orthogonal.</p>
+<p><strong>Dot Product:</strong>
+The dot product (or inner product) of two vectors ( \mathbf{u} = (u_1, u_2, \ldots, u_n) ) and ( \mathbf{v} = (v_1, v_2, \ldots, v_n) ) is given by:
+[ \mathbf{u} \cdot \mathbf{v} = u_1v_1 + u_2v_2 + \cdots + u_nv_n ]</p>
+<h3>Properties and Implications:</h3>
+<ol>
+<li><p><strong>Zero Vector:</strong></p>
+<ul>
+<li>The zero vector is orthogonal to every vector in the vector space since the dot product of any vector with the zero vector is zero.</li>
+</ul>
+</li>
+<li><p><strong>Euclidean Space:</strong></p>
+<ul>
+<li>In 2D or 3D Euclidean space, the concept of orthogonality aligns with the geometric notion of perpendicularity.</li>
+</ul>
+</li>
+<li><p><strong>Orthogonal Sets:</strong></p>
+<ul>
+<li>A set of vectors in a vector space is called orthogonal if every pair of distinct vectors in the set is orthogonal.</li>
+<li>If these vectors are also unit vectors (i.e., their norm is 1), the set is called an orthonormal set.</li>
+</ul>
+</li>
+</ol>
+<h3>Applications:</h3>
+<ol>
+<li><p><strong>Orthogonal Projections:</strong></p>
+<ul>
+<li>Orthogonality is crucial in projections. The orthogonal projection of a vector onto a subspace minimizes the distance between the vector and the subspace.</li>
+</ul>
+</li>
+<li><p><strong>Linear Independence:</strong></p>
+<ul>
+<li>Orthogonal vectors are linearly independent. Hence, orthogonal sets are linearly independent sets.</li>
+</ul>
+</li>
+<li><p><strong>Gram-Schmidt Process:</strong></p>
+<ul>
+<li>This algorithm orthogonalizes a set of vectors in an inner product space, thereby forming an orthogonal or orthonormal basis.</li>
+</ul>
+</li>
+<li><p><strong>Signal Processing:</strong></p>
+<ul>
+<li>In signal processing, orthogonal functions are used to represent signals without interference.</li>
+</ul>
+</li>
+</ol>
+<h3>Example:</h3>
+<p>Consider two vectors in ( \mathbb{R}^3 ):</p>
+<p>[ \mathbf{a} = (1, 2, -3) ]
+[ \mathbf{b} = (4, -2, 1) ]</p>
+<p>Their dot product is:
+[ \mathbf{a} \cdot \mathbf{b} = 1 \cdot 4 + 2 \cdot (-2) + (-3) \cdot 1 = 4 - 4 - 3 = -3 ]</p>
+<p>Since the dot product is not zero, vectors ( \mathbf{a} ) and ( \mathbf{b} ) are not orthogonal.</p>
+<p>Now, consider:</p>
+<p>[ \mathbf{c} = (1, 2, 2) ]
+[ \mathbf{d} = (2, -1, 1) ]</p>
+<p>Their dot product is:
+[ \mathbf{c} \cdot \mathbf{d} = 1 \cdot 2 + 2 \cdot (-1) + 2 \cdot 1 = 2 - 2 + 2 = 2 ]</p>
+<p>Here also, the dot product is not zero, indicating that the vectors ( \mathbf{c} ) and ( \mathbf{d} ) are not orthogonal.</p>
+<h3>Conclusion:</h3>
+<p>Orthogonality simplifies many problems in linear algebra, making it easier to solve systems of linear equations, perform projections, and understand the structure of vector spaces. Building orthogonal and orthonormal sets from a given set of vectors streamlines various computational processes and provides a robust foundation for higher-dimensional space analysis.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

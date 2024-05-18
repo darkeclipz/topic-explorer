@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Variables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Probability Theory</h1>
+<h2>Random Variables</h2>
+<p>A random variable is a fundamental concept in probability theory that maps the outcomes of a random experiment to numerical values. It essentially allows us to quantify the results of probabilistic events.</p>
+<p><strong>Types of Random Variables:</strong></p>
+<ol>
+<li><p><strong>Discrete Random Variables:</strong> These take on a countable number of distinct values. For example, the number of heads when flipping three coins.</p>
+<ul>
+<li><strong>Probability Mass Function (PMF):</strong> Defines the probability that a discrete random variable is exactly equal to some value. For example, the PMF for rolling a fair six-sided die is ( P(X = x) = \frac{1}{6} ) for ( x = 1, 2, 3, 4, 5, 6 ).</li>
+</ul>
+</li>
+<li><p><strong>Continuous Random Variables:</strong> These take on an infinite number of possible values. For example, the exact height of students in a class.</p>
+<ul>
+<li><strong>Probability Density Function (PDF):</strong> Describes the likelihood of the random variable taking on a range of values, rather than a specific value. For example, the height of students might be modeled by a normal distribution with a specific mean and standard deviation.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Concepts:</strong></p>
+<ol>
+<li><p><strong>Cumulative Distribution Function (CDF):</strong> For both discrete and continuous random variables, the CDF is a function ( F(x) = P(X \leq x) ) that gives the probability that the random variable ( X ) is less than or equal to ( x ). It provides a complete description of the distribution of the random variable.</p>
+</li>
+<li><p><strong>Expected Value:</strong> The long-term average value of the random variable, denoted as ( E(X) ). For a discrete random variable, it is computed as:
+[
+E(X) = \sum_{x} x \cdot P(X = x)
+]
+For a continuous random variable, it is computed as:
+[
+E(X) = \int_{-\infty}^{\infty} x \cdot f(x) , dx
+]
+where ( f(x) ) is the PDF of ( X ).</p>
+</li>
+<li><p><strong>Variance and Standard Deviation:</strong> These measure the spread or dispersion of the random variable around its mean. The variance is denoted as ( \text{Var}(X) ) and is given by:
+[
+\text{Var}(X) = E[(X - E(X))^2]
+]
+The standard deviation is the square root of the variance.</p>
+</li>
+<li><p><strong>Moments:</strong> Moments are quantitative measures related to the shape of the distribution's graph. The ( n )-th moment of a random variable about the origin is ( E(X^n) ), and the ( n )-th moment about the mean (central moment) is ( E[(X - E(X))^n] ).</p>
+</li>
+</ol>
+<p><strong>Examples of Random Variables:</strong></p>
+<ol>
+<li><p><strong>Bernoulli Random Variable:</strong> This is a simple type with only two outcomes, usually denoted as 1 (success) and 0 (failure) with a single probability parameter ( p ).</p>
+</li>
+<li><p><strong>Binomial Random Variable:</strong> Represents the number of successes in a fixed number of ( n ) independent Bernoulli trials.</p>
+</li>
+<li><p><strong>Normal (Gaussian) Random Variable:</strong> A continuous random variable with a bell-shaped probability density function, defined by its mean ( \mu ) and standard deviation ( \sigma ).</p>
+</li>
+<li><p><strong>Exponential Random Variable:</strong> Used to model the time between events in a Poisson process, typically defined by its rate parameter ( \lambda ).</p>
+</li>
+</ol>
+<p>Understanding random variables is crucial for modeling and analyzing real-world scenarios in fields such as finance, engineering, and natural sciences. They provide the foundation for both theoretical and applied statistics.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

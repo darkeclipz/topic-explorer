@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistic Regression</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Regression Analysis</h1>
+<h2>Logistic Regression</h2>
+<p>Logistic regression is a statistical method used for binary classification problems, where the goal is to predict the probability that an observation belongs to one of two classes. Unlike linear regression, which predicts a continuous outcome, logistic regression predicts a binary outcome, often coded as 0 and 1.</p>
+<p>Here's a detailed explanation of logistic regression:</p>
+<h3>Basics of Logistic Regression:</h3>
+<ol>
+<li><p><strong>Binary Dependent Variable:</strong></p>
+<ul>
+<li>The dependent variable in logistic regression is binary, meaning it has two possible outcomes (e.g., success/failure, yes/no, 1/0).</li>
+</ul>
+</li>
+<li><p><strong>Logistic Function (Sigmoid Function):</strong></p>
+<ul>
+<li>Logistic regression uses the logistic function (also known as the sigmoid function) to model the probability of the dependent variable. The logistic function is defined as:
+[
+\sigma(z) = \frac{1}{1 + e^{-z}}
+]
+where ( z ) is the linear combination of the predictors.</li>
+</ul>
+</li>
+<li><p><strong>Model Equation:</strong></p>
+<ul>
+<li>The model equation for logistic regression is similar to that of linear regression but transformed via the logistic function:
+[
+P(Y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2 + ... + \beta_kX_k)}}
+]
+Here:</li>
+<li>( P(Y=1|X) ) is the probability that the dependent variable ( Y ) equals 1 given the predictors ( X ).</li>
+<li>( \beta_0 ) is the intercept.</li>
+<li>( \beta_1, \beta_2, ..., \beta_k ) are the coefficients of the predictors ( X_1, X_2, ..., X_k ).</li>
+</ul>
+</li>
+<li><p><strong>Odds and Log-Odds:</strong></p>
+<ul>
+<li>The odds of an event occurring is the ratio of the probability that the event occurs to the probability that it does not occur:
+[
+\text{Odds} = \frac{P(Y=1|X)}{1 - P(Y=1|X)}
+]</li>
+<li>Logistic regression models the log-odds (also called logit):
+[
+\log\left(\frac{P(Y=1|X)}{1 - P(Y=1|X)}\right) = \beta_0 + \beta_1X_1 + \beta_2X_2 + ... + \beta_kX_k
+]</li>
+</ul>
+</li>
+</ol>
+<h3>Key Steps in Logistic Regression:</h3>
+<ol>
+<li><p><strong>Collect Data:</strong></p>
+<ul>
+<li>Gather a dataset containing the binary dependent variable and independent variables (predictors).</li>
+</ul>
+</li>
+<li><p><strong>Fit the Model:</strong></p>
+<ul>
+<li>Estimate the coefficients ( \beta_0, \beta_1, ..., \beta_k ) using techniques like maximum likelihood estimation (MLE).</li>
+</ul>
+</li>
+<li><p><strong>Evaluate the Model:</strong></p>
+<ul>
+<li>Assess the model's performance using metrics such as the confusion matrix, accuracy, precision, recall, F1-score, and the area under the ROC curve (AUC).</li>
+</ul>
+</li>
+<li><p><strong>Interpret the Coefficients:</strong></p>
+<ul>
+<li>Coefficients indicate the change in the log-odds of the dependent variable for a one-unit change in the predictor variable, holding other variables constant.</li>
+</ul>
+</li>
+</ol>
+<h3>Assumptions of Logistic Regression:</h3>
+<ol>
+<li><p><strong>Linearity:</strong></p>
+<ul>
+<li>Assumes a linear relationship between the log-odds of the dependent variable and the independent variables.</li>
+</ul>
+</li>
+<li><p><strong>Independence:</strong></p>
+<ul>
+<li>Observations should be independent of each other.</li>
+</ul>
+</li>
+<li><p><strong>No Multicollinearity:</strong></p>
+<ul>
+<li>Predictors should not be highly correlated with each other.</li>
+</ul>
+</li>
+<li><p><strong>Large Sample Size:</strong></p>
+<ul>
+<li>Logistic regression generally requires a large sample size to provide reliable results, especially when the event of interest is rare.</li>
+</ul>
+</li>
+</ol>
+<h3>Applications of Logistic Regression:</h3>
+<ul>
+<li>Medical Diagnosis: Predicting the presence or absence of a disease.</li>
+<li>Marketing: Customer churn prediction.</li>
+<li>Finance: Predicting loan default.</li>
+</ul>
+<p>Logistic regression is a powerful and widely used tool for binary classification problems, providing interpretable results that can guide decision-making in various fields.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum States</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Quantum Mechanics</h1>
+<h2>Quantum States</h2>
+<p>In quantum mechanics, a <strong>quantum state</strong> is a mathematical object that fully describes the quantum system. It encapsulates all the information needed to predict the outcomes of any measurement performed on the system. Here are some key concepts related to quantum states:</p>
+<h3>1. <strong>Wave Functions</strong></h3>
+<ul>
+<li>A quantum state is often represented by a wave function, denoted as ψ (psi), which is a complex-valued function of position (and possibly time). It provides the probability amplitude of finding a particle in a particular region of space.</li>
+<li>The probability density of finding the particle at a given position is given by |ψ(x,t)|², which is the modulus squared of the wave function.</li>
+</ul>
+<h3>2. <strong>State Vectors</strong></h3>
+<ul>
+<li>In a more abstract sense, quantum states can be described by state vectors in a complex vector space called Hilbert space. These vectors are usually denoted by a ket |ψ⟩ in Dirac notation.</li>
+<li>The state vector contains all the possible information about the system.</li>
+</ul>
+<h3>3. <strong>Superposition Principle</strong></h3>
+<ul>
+<li>One of the fundamental principles of quantum mechanics is that if a system can be in state |ψ₁⟩ and |ψ₂⟩, then it can also be in any linear superposition of these states, a|ψ₁⟩ + b|ψ₂⟩, where a and b are complex numbers.</li>
+</ul>
+<h3>4. <strong>Quantization and Discrete States</strong></h3>
+<ul>
+<li>Certain properties, like energy levels in an atom, are quantized. This means that they can take on only discrete, specific values. This leads to the concept of discrete quantum states with specific energies.</li>
+</ul>
+<h3>5. <strong>Eigenstates and Observables</strong></h3>
+<ul>
+<li>Observables in quantum mechanics, such as position, momentum, and energy, can be represented by operators. When an operator acts on a quantum state and the state itself is not changed apart from a multiplicative constant (the eigenvalue), the state is called an eigenstate of that operator.</li>
+<li>For example, if Ĥ|ψ⟩ = E|ψ⟩, then |ψ⟩ is an eigenstate of the Hamiltonian operator Ĥ with eigenvalue E, representing the energy of the system.</li>
+</ul>
+<h3>6. <strong>Mixed vs. Pure States</strong></h3>
+<ul>
+<li>A <strong>pure quantum state</strong> is described by a single state vector |ψ⟩. In contrast, a <strong>mixed state</strong> is a statistical mixture of different quantum states, described by a density matrix rather than a single wave function.</li>
+<li>Mixed states represent situations where there is some classical uncertainty about the actual state of the system.</li>
+</ul>
+<h3>7. <strong>Collapse of the Wave Function</strong></h3>
+<ul>
+<li>Measurement in quantum mechanics leads to the <strong>collapse of the wave function</strong>. Before measurement, a system exists in a superposition of states. Upon measurement, it collapses to one of the eigenstates of the observable being measured.</li>
+</ul>
+<h3>8. <strong>Entanglement</strong></h3>
+<ul>
+<li>Quantum states can be entangled, meaning the state of one particle is dependent on the state of another, no matter the distance separating them. This non-classical correlation is one of the most intriguing features of quantum mechanics.</li>
+</ul>
+<h3>9. <strong>Basis and Representation</strong></h3>
+<ul>
+<li>Quantum states can often be expressed in different bases, such as the position basis (ψ(x)) or the momentum basis (ψ(p)). The transformation between these representations is usually done via Fourier transforms.</li>
+</ul>
+<h3>10. <strong>Uncertainty Principle</strong></h3>
+<ul>
+<li>The Heisenberg Uncertainty Principle states that certain pairs of observables, like position and momentum, cannot both be precisely known simultaneously. This is intrinsic to the nature of quantum states and is mathematically expressed by the commutation relations between the corresponding operators.</li>
+</ul>
+<h3>11. <strong>Bloch Sphere (for Qubits)</strong></h3>
+<ul>
+<li>In the realm of quantum computing, the Bloch sphere is a geometrical representation of the pure state space of a two-level quantum system (qubit). Any point on the sphere represents a possible state of the qubit.</li>
+</ul>
+<p>Understanding quantum states is essential for delving into deeper quantum mechanics topics such as quantum entanglement, quantum computing, and quantum field theory.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:46:00 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

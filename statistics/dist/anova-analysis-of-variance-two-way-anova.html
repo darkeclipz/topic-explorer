@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Way ANOVA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>ANOVA (Analysis of Variance)</h1>
+<h2>Two-Way ANOVA</h2>
+<p>Two-Way ANOVA, or Two-Way Analysis of Variance, is a statistical technique used to examine the influence of two different categorical independent variables on one continuous dependent variable. Unlike One-Way ANOVA, which looks at one factor, Two-Way ANOVA allows for the analysis of interactions between the two factors as well. Here’s a detailed explanation:</p>
+<h3>Key Concepts and Objectives</h3>
+<ol>
+<li><p><strong>Factors and Levels</strong>: In Two-Way ANOVA, there are two factors (independent variables), each with multiple levels (categories or groups). For example, you might have two factors like &quot;teaching method&quot; (with levels: method A, method B, method C) and &quot;gender&quot; (with levels: male, female).</p>
+</li>
+<li><p><strong>Main Effects</strong>: These are the individual impacts of each independent variable on the dependent variable. In our example, we would investigate the main effect of teaching method and the main effect of gender on, say, students' test scores.</p>
+</li>
+<li><p><strong>Interaction Effect</strong>: This examines whether the effect of one independent variable on the dependent variable changes depending on the level of the other independent variable. In other words, it checks if there is a combined effect of teaching method and gender on test scores.</p>
+</li>
+</ol>
+<h3>Steps in Conducting Two-Way ANOVA</h3>
+<ol>
+<li><p><strong>Formulate Hypotheses</strong>:</p>
+<ul>
+<li><strong>For main effects</strong>:
+<ul>
+<li>Null Hypothesis (H0): There is no effect of Factor A on the dependent variable.</li>
+<li>Null Hypothesis (H0): There is no effect of Factor B on the dependent variable.</li>
+</ul>
+</li>
+<li><strong>For interaction effect</strong>:
+<ul>
+<li>Null Hypothesis (H0): There is no interaction effect between Factor A and Factor B on the dependent variable.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Calculate Sums of Squares</strong>:</p>
+<ul>
+<li>Total Sum of Squares (SS_total): Measures total variability in the data.</li>
+<li>Sum of Squares for Factor A (SS_A): Variability due to Factor A.</li>
+<li>Sum of Squares for Factor B (SS_B): Variability due to Factor B.</li>
+<li>Sum of Squares for Interaction (SS_AB): Variability due to the interaction between Factor A and Factor B.</li>
+<li>Sum of Squares for Error (SS_error): Variability within groups.</li>
+</ul>
+</li>
+<li><p><strong>Compute Mean Squares</strong> (MS):</p>
+<ul>
+<li>Mean Square for Factor A (MS_A): ( \text{MS}_A = \frac{\text{SS}_A}{\text{df}_A} )</li>
+<li>Mean Square for Factor B (MS_B): ( \text{MS}_B = \frac{\text{SS}_B}{\text{df}_B} )</li>
+<li>Mean Square for Interaction (MS_AB): ( \text{MS}<em>{AB} = \frac{\text{SS}</em>{AB}}{\text{df}_{AB}} )</li>
+<li>Mean Square for Error (MS_error): ( \text{MS}<em>{\text{error}} = \frac{\text{SS}</em>{\text{error}}}{\text{df}_{\text{error}}} )</li>
+</ul>
+</li>
+<li><p><strong>Calculate F-Ratios</strong>:</p>
+<ul>
+<li>( F_A = \frac{\text{MS}<em>A}{\text{MS}</em>{\text{error}}} )</li>
+<li>( F_B = \frac{\text{MS}<em>B}{\text{MS}</em>{\text{error}}} )</li>
+<li>( F_{AB} = \frac{\text{MS}<em>{AB}}{\text{MS}</em>{\text{error}}} )</li>
+</ul>
+</li>
+<li><p><strong>Determine Significance</strong>:</p>
+<ul>
+<li>Compare the calculated F-ratios to the critical F-values from the F-distribution table at a specific significance level (e.g., α = 0.05).</li>
+<li>If ( F_A ), ( F_B ), or ( F_{AB} ) is greater than the critical F-value, reject the corresponding null hypothesis.</li>
+</ul>
+</li>
+</ol>
+<h3>Interpretation</h3>
+<ul>
+<li><strong>Main Effects</strong>:
+<ul>
+<li>If Factor A is significant, it means there is a statistically significant difference in the dependent variable across the levels of Factor A.</li>
+<li>If Factor B is significant, it means there is a statistically significant difference in the dependent variable across the levels of Factor B.</li>
+</ul>
+</li>
+<li><strong>Interaction Effect</strong>:
+<ul>
+<li>If the interaction is significant, it suggests that the effect of one factor depends on the level of the other factor. A graphical interaction plot can help in the interpretation.</li>
+</ul>
+</li>
+</ul>
+<h3>Assumptions</h3>
+<ul>
+<li><strong>Normality</strong>: The data should be approximately normally distributed within groups.</li>
+<li><strong>Homogeneity of Variances</strong>: The variances within each group should be roughly equal (homoscedasticity).</li>
+<li><strong>Independent Observations</strong>: The observations should be independent of each other.</li>
+</ul>
+<h3>Example</h3>
+<p>Let’s say we want to study the effect of teaching method (Method A, B, and C) and gender (Male, Female) on test scores. We conduct a Two-Way ANOVA with these factors and find:</p>
+<ul>
+<li>The main effect of teaching method is significant (e.g., different teaching methods have significantly different effects on test scores).</li>
+<li>The main effect of gender is not significant (e.g., no significant difference in test scores between males and females).</li>
+<li>The interaction between teaching method and gender is significant (e.g., the effect of the teaching method on test scores is different for males and females).</li>
+</ul>
+<p>In conclusion, Two-Way ANOVA is a powerful tool for understanding the individual and combined effects of two categorical independent variables on a continuous dependent variable, helping researchers and analysts to make informed decisions based on their data.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eigenvalues and Eigenvectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Linear Algebra</h1>
+<h2>Eigenvalues and Eigenvectors</h2>
+<p>Eigenvalues and eigenvectors are fundamental concepts in linear algebra, playing a significant role in various applications including stability analysis, quantum mechanics, vibration analysis, facial recognition, and more. Here's a detailed explanation:</p>
+<h3>Eigenvectors:</h3>
+<p>An eigenvector of a square matrix ( A ) is a nonzero vector ( v ) such that when ( v ) is multiplied by ( A ), the resultant vector is a scalar multiple of ( v ). In mathematical terms, ( v ) is an eigenvector if:</p>
+<p>[ A \mathbf{v} = \lambda \mathbf{v} ]</p>
+<p>Here:</p>
+<ul>
+<li>( A ) is an ( n \times n ) matrix.</li>
+<li>( \mathbf{v} ) is the eigenvector.</li>
+<li>( \lambda ) is the eigenvalue corresponding to the eigenvector ( \mathbf{v} ).</li>
+</ul>
+<h3>Eigenvalues:</h3>
+<p>An eigenvalue ( \lambda ) of a matrix ( A ) is a scalar such that there exists a nonzero vector ( \mathbf{v} ) (the corresponding eigenvector) for which the above equation holds.</p>
+<h3>Finding Eigenvalues and Eigenvectors:</h3>
+<ol>
+<li><p><strong>Eigenvalues:</strong>
+To find the eigenvalues of a matrix ( A ), we solve the characteristic equation. This is done by following these steps:</p>
+<ul>
+<li>Compute the determinant of ( A - \lambda I ), where ( I ) is the identity matrix of the same dimension as ( A ).</li>
+</ul>
+<p>[ \text{det}(A - \lambda I) = 0 ]</p>
+<ul>
+<li>The values of ( \lambda ) that satisfy this equation are the eigenvalues of ( A ).</li>
+</ul>
+</li>
+<li><p><strong>Eigenvectors:</strong>
+Once the eigenvalues ( \lambda ) are found, the corresponding eigenvectors can be determined by solving the equation:</p>
+<p>[ (A - \lambda I) \mathbf{v} = 0 ]</p>
+<p>This involves finding the null space of the matrix ( A - \lambda I ). The nontrivial solutions to this homogeneous system are the eigenvectors corresponding to the eigenvalue ( \lambda ).</p>
+</li>
+</ol>
+<h3>Example:</h3>
+<p>Consider the matrix ( A ):
+[ A =
+\begin{pmatrix}
+4 &amp; 1 \
+2 &amp; 3
+\end{pmatrix}
+]</p>
+<ol>
+<li><p><strong>Finding the Eigenvalues:</strong>
+The characteristic equation is obtained by solving ( \text{det}(A - \lambda I) = 0 ):
+[ \text{det}
+\begin{pmatrix}
+4-\lambda &amp; 1 \
+2 &amp; 3-\lambda
+\end{pmatrix}
+= (4-\lambda)(3-\lambda) - (2 \cdot 1) = \lambda^2 - 7\lambda + 10 = 0
+]
+Solving this quadratic equation:
+[ \lambda^2 - 7\lambda + 10 = 0 ]
+[ (\lambda - 5)(\lambda - 2) = 0 ]
+Thus, the eigenvalues are ( \lambda_1 = 5 ) and ( \lambda_2 = 2 ).</p>
+</li>
+<li><p><strong>Finding the Eigenvectors:</strong>
+For ( \lambda_1 = 5 ):
+[
+(A - 5I) \mathbf{v} =
+\begin{pmatrix}
+4-5 &amp; 1 \
+2 &amp; 3-5
+\end{pmatrix}
+\mathbf{v} =
+\begin{pmatrix}
+-1 &amp; 1 \
+2 &amp; -2
+\end{pmatrix}
+\mathbf{v} = 0
+]
+Solving, we get:
+[ -v_1 + v_2 = 0 ]
+Therefore, ( v_2 = v_1 ), and one possible eigenvector is ( \mathbf{v}_1 = (1, 1)^T ).</p>
+<p>For ( \lambda_2 = 2 ):
+[
+(A - 2I) \mathbf{v} =
+\begin{pmatrix}
+4-2 &amp; 1 \
+2 &amp; 3-2
+\end{pmatrix}
+\mathbf{v} =
+\begin{pmatrix}
+2 &amp; 1 \
+2 &amp; 1
+\end{pmatrix}
+\mathbf{v} = 0
+]
+Solving, we find:
+[ 2v_1 + v_2 = 0 ]
+Therefore, ( v_2 = -2v_1 ), and one possible eigenvector is ( \mathbf{v}_2 = (1, -2)^T ).</p>
+</li>
+</ol>
+<p>In summary, eigenvalues and eigenvectors provide significant insights into the structure of linear transformations represented by matrices, helping to simplify complex systems and understanding their behavior in various applications.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

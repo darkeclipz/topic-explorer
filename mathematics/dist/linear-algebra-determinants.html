@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Linear Algebra</h1>
+<h2>Determinants</h2>
+<p>Determinants are a fundamental concept in linear algebra, associated with square matrices. A determinant is a scalar value that can be computed from the elements of a square matrix and encodes certain properties of the matrix. Here's an overview of the key aspects of determinants:</p>
+<h3>Properties of Determinants</h3>
+<ol>
+<li><strong>Uniqueness</strong>: The determinant of a matrix is a unique number associated with that matrix.</li>
+<li><strong>Linear Transformations</strong>: The determinant gives information about the effect of a linear transformation corresponding to the matrix, such as scaling or rotating a space.</li>
+<li><strong>Volume Scaling</strong>: For a matrix representing a transformation in n-dimensional space, the absolute value of the determinant represents the factor by which areas (in 2D) or volumes (in nD) are scaled.</li>
+<li><strong>Invertibility</strong>: A matrix is invertible (non-singular) if and only if its determinant is non-zero. If the determinant is zero, the matrix is singular and does not have an inverse.</li>
+</ol>
+<h3>Calculation of Determinants</h3>
+<p>The method used to calculate determinants depends on the size of the matrix.</p>
+<h4>1. Determinant of a 2x2 Matrix</h4>
+<p>For a 2x2 matrix ( A = \begin{bmatrix} a &amp; b \ c &amp; d \end{bmatrix} ), the determinant is calculated as:
+[ \text{det}(A) = ad - bc ]</p>
+<h4>2. Determinant of a 3x3 Matrix</h4>
+<p>For a 3x3 matrix ( A = \begin{bmatrix} a &amp; b &amp; c \ d &amp; e &amp; f \ g &amp; h &amp; i \end{bmatrix} ), the determinant is calculated using:
+[ \text{det}(A) = a(ei - fh) - b(di - fg) + c(dh - eg) ]</p>
+<h4>3. Determinant of a Larger Matrix</h4>
+<p>For larger matrices, determinants are typically calculated using techniques such as:</p>
+<ul>
+<li><strong>Cofactor Expansion (Laplace Expansion)</strong>: This method involves expanding the determinant along a row or column and recursively calculating the determinants of the smaller submatrices (minors).</li>
+<li><strong>Row Reduction</strong>: Utilizing row operations to convert the matrix into an upper triangular form, where the determinant is then the product of the diagonal elements, adjusted for any row swaps which flip the sign of the determinant.</li>
+<li><strong>LU Decomposition</strong>: Decomposing the matrix into a product of a lower triangular matrix and an upper triangular matrix and using these to find the determinant.</li>
+</ul>
+<h3>Example: 3x3 Determinant</h3>
+<p>Let's calculate the determinant of the following 3x3 matrix:
+[ A = \begin{bmatrix} 1 &amp; 2 &amp; 3 \ 4 &amp; 5 &amp; 6 \ 7 &amp; 8 &amp; 9 \end{bmatrix} ]
+Using the cofactor expansion along the first row, we get:
+[ \text{det}(A) = 1 \begin{vmatrix} 5 &amp; 6 \ 8 &amp; 9 \end{vmatrix} - 2 \begin{vmatrix} 4 &amp; 6 \ 7 &amp; 9 \end{vmatrix} + 3 \begin{vmatrix} 4 &amp; 5 \ 7 &amp; 8 \end{vmatrix} ]
+[ \text{det}(A) = 1 (5 \cdot 9 - 6 \cdot 8) - 2 (4 \cdot 9 - 6 \cdot 7) + 3 (4 \cdot 8 - 5 \cdot 7) ]
+[ \text{det}(A) = 1 (45 - 48) - 2 (36 - 42) + 3 (32 - 35) ]
+[ \text{det}(A) = 1 (-3) - 2 (-6) + 3 (-3) ]
+[ \text{det}(A) = -3 + 12 - 9 ]
+[ \text{det}(A) = 0 ]</p>
+<h3>Interpretation and Use</h3>
+<ol>
+<li><strong>Geometric Interpretation</strong>: The determinant of a square matrix can be interpreted geometrically as the scaling factor of the linear transformation represented by the matrix.</li>
+<li><strong>System of Linear Equations</strong>: In the context of systems of linear equations, if the determinant of the coefficient matrix is zero, the system either has no solution or infinitely many solutions.</li>
+<li><strong>Eigenvalues</strong>: The determinant is also related to the eigenvalues of the matrix. Specifically, the determinant of a matrix is the product of its eigenvalues.</li>
+</ol>
+<p>Understanding determinants is crucial for various applications in mathematics, including solving linear systems, analyzing linear transformations, and more complex topics like eigenvalues and eigenvectors.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

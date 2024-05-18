@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derivatives</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Calculus</h1>
+<h2>Derivatives</h2>
+<p>Derivatives are a fundamental concept in calculus that measure how a function changes as its input changes. In more practical terms, the derivative of a function at a specific point provides the rate at which the function's value changes as the input changes. This concept is crucial for understanding motion, growth, and other changes in various fields ranging from physics to economics.</p>
+<h3>Key Concepts:</h3>
+<ol>
+<li><p><strong>Definition</strong>:</p>
+<ul>
+<li>The derivative of a function ( f(x) ) at a point ( x = a ) is denoted as ( f'(a) ) or ( \frac{d}{dx} f(x) \bigg|<em>{x=a} ). It is defined as the limit:
+[
+f'(a) = \lim</em>{{h \to 0}} \frac{f(a+h) - f(a)}{h}
+]</li>
+<li>If this limit exists, the function is said to be differentiable at ( x = a ).</li>
+</ul>
+</li>
+<li><p><strong>Geometric Interpretation</strong>:</p>
+<ul>
+<li>Geometrically, the derivative at a point corresponds to the slope of the tangent line to the function's graph at that point.</li>
+</ul>
+</li>
+<li><p><strong>Notation</strong>:</p>
+<ul>
+<li>Common notations for the derivative include ( f'(x) ), ( \frac{df}{dx} ), ( Df ), and ( \frac{dy}{dx} ) when ( y = f(x) ).</li>
+</ul>
+</li>
+</ol>
+<h3>Basic Rules:</h3>
+<ol>
+<li><p><strong>Power Rule</strong>:</p>
+<ul>
+<li>If ( f(x) = x^n ), then ( f'(x) = n x^{n-1} ).</li>
+</ul>
+</li>
+<li><p><strong>Sum Rule</strong>:</p>
+<ul>
+<li>If ( f(x) = g(x) + h(x) ), then ( f'(x) = g'(x) + h'(x) ).</li>
+</ul>
+</li>
+<li><p><strong>Product Rule</strong>:</p>
+<ul>
+<li>If ( f(x) = g(x) \cdot h(x) ), then ( f'(x) = g'(x)h(x) + g(x)h'(x) ).</li>
+</ul>
+</li>
+<li><p><strong>Quotient Rule</strong>:</p>
+<ul>
+<li>If ( f(x) = \frac{g(x)}{h(x)} ), then ( f'(x) = \frac{g'(x)h(x) - g(x)h'(x)}{h(x)^2} ).</li>
+</ul>
+</li>
+<li><p><strong>Chain Rule</strong>:</p>
+<ul>
+<li>If ( y = f(u) ) and ( u = g(x) ), then ( \frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} ).</li>
+</ul>
+</li>
+</ol>
+<h3>Applications:</h3>
+<ol>
+<li><p><strong>Motion</strong>:</p>
+<ul>
+<li>The derivative of a position function with respect to time gives the velocity, and the derivative of the velocity function gives the acceleration.</li>
+</ul>
+</li>
+<li><p><strong>Optimization</strong>:</p>
+<ul>
+<li>Derivatives are used to find local maxima and minima of functions. Setting the derivative equal to zero and solving for ( x ) helps locate critical points.</li>
+</ul>
+</li>
+<li><p><strong>Tangent and Normal Lines</strong>:</p>
+<ul>
+<li>The equation of the tangent line to the curve ( y = f(x) ) at point ( (a, f(a)) ) can be found using the derivative: ( y - f(a) = f'(a)(x - a) ).</li>
+<li>The normal line is perpendicular to the tangent line and has a slope of ( -\frac{1}{f'(a)} ).</li>
+</ul>
+</li>
+<li><p><strong>Rates of Change</strong>:</p>
+<ul>
+<li>Derivatives are used in various disciplines to describe how one quantity changes in relation to another. For example, in economics, the rate of change of cost with respect to production level is the marginal cost.</li>
+</ul>
+</li>
+</ol>
+<h3>Higher Order Derivatives:</h3>
+<ul>
+<li>The second derivative, denoted as ( f''(x) ) or ( \frac{d^2 f}{dx^2} ), deals with the curvature of the function and helps determine concavity and points of inflection.</li>
+<li>Higher order derivatives are defined similarly and provide deeper insights into the function's behavior.</li>
+</ul>
+<p>Understanding derivatives and their properties is fundamental to advancing in calculus and exploring a wide range of real-world problems through mathematical modeling.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

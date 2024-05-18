@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assumptions and Diagnostics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Regression Analysis</h1>
+<h2>Assumptions and Diagnostics</h2>
+<p>Regression analysis is a powerful statistical method used to examine the relationship between one dependent variable and one or more independent variables. However, to ensure the reliability and validity of the results, certain assumptions must be met. Diagnosing whether these assumptions hold true is a crucial step in the regression process. Here are the key assumptions and the methods to diagnose them:</p>
+<h3>Assumptions of Regression Analysis</h3>
+<ol>
+<li><p><strong>Linearity</strong>:</p>
+<ul>
+<li><strong>Assumption</strong>: There is a linear relationship between the dependent and independent variables.</li>
+<li><strong>Diagnostic Methods</strong>:
+<ul>
+<li>Plot a scatterplot of the observed values versus predicted values.</li>
+<li>Use residual plots to check if the residuals (errors) display random scatter around the horizontal axis.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Independence of Errors</strong>:</p>
+<ul>
+<li><strong>Assumption</strong>: The residuals (errors) should be independent. There should be no correlation between consecutive residuals.</li>
+<li><strong>Diagnostic Methods</strong>:
+<ul>
+<li>Durbin-Watson test can be employed to detect the presence of autocorrelation.</li>
+<li>Residual plots can also help detect patterns that may suggest lack of independence.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Homoscedasticity (Constant Variance)</strong>:</p>
+<ul>
+<li><strong>Assumption</strong>: The residuals have constant variance at every level of the independent variables.</li>
+<li><strong>Diagnostic Methods</strong>:
+<ul>
+<li>Plot residuals versus predicted values to check for patterns. A funnel shape indicates heteroscedasticity (non-constant variance).</li>
+<li>Breusch-Pagan test or White test can be used to statistically test for heteroscedasticity.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Normality of Errors</strong>:</p>
+<ul>
+<li><strong>Assumption</strong>: The residuals should be approximately normally distributed.</li>
+<li><strong>Diagnostic Methods</strong>:
+<ul>
+<li>Q-Q (Quantile-Quantile) plot to assess if residuals follow a normal distribution.</li>
+<li>Shapiro-Wilk test or Kolmogorov-Smirnov test to statistically test for normality.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>No Multicollinearity (for Multiple Regression)</strong>:</p>
+<ul>
+<li><strong>Assumption</strong>: The independent variables should not be too highly correlated with each other.</li>
+<li><strong>Diagnostic Methods</strong>:
+<ul>
+<li>Calculate Variance Inflation Factor (VIF). A VIF value exceeding 10 may indicate multicollinearity.</li>
+<li>Tolerance should be greater than 0.2 to avoid multicollinearity issues.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3>Diagnostic Tools and Techniques</h3>
+<ul>
+<li><strong>Residual Plots</strong>: Plot residuals against predicted values and/or each independent variable to check for linearity, independence, and homoscedasticity.</li>
+<li><strong>Q-Q Plot</strong>: Used to check the normality of residuals.</li>
+<li><strong>VIF (Variance Inflation Factor)</strong>: Helps in diagnosing multicollinearity.</li>
+<li><strong>Statistical Tests</strong>: Such as Durbin-Watson for autocorrelation, Breusch-Pagan for heteroscedasticity, and Shapiro-Wilk for normality.</li>
+</ul>
+<h3>Addressing Violations of Assumptions</h3>
+<ul>
+<li><strong>Linearity</strong>: Transformations of variables (e.g., logarithmic, square root) or adding polynomials can help.</li>
+<li><strong>Independence</strong>: Consider using time-series models if autocorrelation is present.</li>
+<li><strong>Homoscedasticity</strong>: Transforming the dependent variable (e.g., log transformation) or using weighted least squares.</li>
+<li><strong>Normality</strong>: Transforming the dependent variable or using robust regression techniques.</li>
+<li><strong>Multicollinearity</strong>: Remove or combine correlated predictors, or use Principal Component Analysis (PCA) to reduce dimensionality.</li>
+</ul>
+<p>By understanding and diagnosing these assumptions, you can ensure that your regression model produces more reliable and valid results.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

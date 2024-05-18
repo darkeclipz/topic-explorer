@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequences and Series</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Calculus</h1>
+<h2>Sequences and Series</h2>
+<p>Sequences and series are fundamental concepts in calculus and higher mathematics. They are essential for understanding various mathematical phenomena and for the analysis of functions and structures. Here's a detailed explanation of each:</p>
+<h3>Sequences</h3>
+<h4>Definition</h4>
+<p>A sequence is an ordered list of numbers written in a definite order. These numbers are called the terms of the sequence, and they can follow various rules.</p>
+<h4>Types of Sequences</h4>
+<ol>
+<li><p><strong>Arithmetic Sequence</strong>:</p>
+<ul>
+<li>Each term after the first is obtained by adding a constant difference, (d), to the previous term.</li>
+<li>General form: (a_n = a_1 + (n-1)d), where (a_n) is the (n)-th term, and (a_1) is the first term.</li>
+</ul>
+</li>
+<li><p><strong>Geometric Sequence</strong>:</p>
+<ul>
+<li>Each term after the first is obtained by multiplying the previous term by a constant ratio, (r).</li>
+<li>General form: (a_n = a_1 \cdot r^{(n-1)})</li>
+</ul>
+</li>
+<li><p><strong>Fibonacci Sequence</strong>:</p>
+<ul>
+<li>Each term after the first two is the sum of the two preceding terms.</li>
+<li>(F_n = F_{n-1} + F_{n-2}) with initial terms usually (F_0 = 0) and (F_1 = 1).</li>
+</ul>
+</li>
+</ol>
+<h4>Convergence of Sequences</h4>
+<p>A sequence converges if the terms approach a specific value, called the limit, as (n) approaches infinity.</p>
+<ul>
+<li>A sequence ({a_n}) converges to (L) if, for every (\epsilon &gt; 0), there exists a natural number (N) such that for all (n \geq N), (|a_n - L| &lt; \epsilon).</li>
+</ul>
+<h3>Series</h3>
+<h4>Definition</h4>
+<p>A series is the sum of the terms of a sequence. More formally, if ({a_n}) is a sequence, then the series associated with it is expressed as:</p>
+<p>[ S = a_1 + a_2 + a_3 + \cdots + a_n + \cdots ]</p>
+<h4>Types of Series</h4>
+<ol>
+<li><p><strong>Arithmetic Series</strong>:</p>
+<ul>
+<li>The sum of the terms in an arithmetic sequence.</li>
+<li>Sum of the first (n) terms: (S_n = \frac{n}{2} (2a_1 + (n - 1)d))</li>
+</ul>
+</li>
+<li><p><strong>Geometric Series</strong>:</p>
+<ul>
+<li>The sum of the terms in a geometric sequence.</li>
+<li>Sum of the first (n) terms: (S_n = a_1 \frac{1 - r^n}{1 - r}) for (r \neq 1)</li>
+<li>Sum of an infinite geometric series (for (|r| &lt; 1): (S = \frac{a_1}{1 - r})</li>
+</ul>
+</li>
+</ol>
+<h4>Convergence of Series</h4>
+<p>A series converges if the sequence of its partial sums converges to a particular value.</p>
+<ul>
+<li>Partial sum of series: (S_n = \sum_{i=1}^{n} a_i)</li>
+<li>The series (\sum_{i=1}^{\infty} a_i) converges to (S) if the limit (\lim_{n \to \infty} S_n = S)</li>
+</ul>
+<h4>Tests for Convergence:</h4>
+<ol>
+<li><p><strong>n-th Term Test</strong>:</p>
+<ul>
+<li>If (\lim_{n \to \infty} a_n \neq 0), the series (\sum a_n) diverges.</li>
+</ul>
+</li>
+<li><p><strong>Integral Test</strong>:</p>
+<ul>
+<li>Relates the convergence of a series to an improper integral. If (\int_{1}^{\infty} f(x) dx) converges (or diverges), so does (\sum f(n)).</li>
+</ul>
+</li>
+<li><p><strong>Comparison Test</strong>:</p>
+<ul>
+<li>Compare (\sum a_n) with (\sum b_n). If (0 \leq a_n \leq b_n) and (\sum b_n) converges, then (\sum a_n) converges.</li>
+</ul>
+</li>
+<li><p><strong>Ratio Test</strong>:</p>
+<ul>
+<li>Evaluate (\lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = L):
+<ul>
+<li>(L &lt; 1), series converges.</li>
+<li>(L &gt; 1) or (L) is infinite, series diverges.</li>
+<li>(L = 1), test is inconclusive.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Root Test</strong>:</p>
+<ul>
+<li>Evaluate (\lim_{n \to \infty} \sqrt[n]{|a_n|} = L):
+<ul>
+<li>(L &lt; 1), series converges.</li>
+<li>(L &gt; 1) or (L) is infinite, series diverges.</li>
+<li>(L = 1), test is inconclusive.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4>Power Series</h4>
+<p>A power series is a series of the form:</p>
+<p>[ \sum_{n=0}^{\infty} c_n (x - a)^n ]</p>
+<p>where (c_n) are coefficients and (a) is the center of the series. The series converges within a certain radius (the radius of convergence).</p>
+<h3>Conclusion</h3>
+<p>Sequences and series are integral in advanced mathematics and calculus, forming the basis for further study in mathematical analysis, integration, and function approximation techniques. Understanding these concepts is crucial for a deeper grasp of many mathematical and scientific fields.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

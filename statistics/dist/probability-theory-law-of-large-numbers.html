@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law of Large Numbers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Probability Theory</h1>
+<h2>Law of Large Numbers</h2>
+<p>The Law of Large Numbers is a fundamental theorem in probability theory that describes how the average of a large number of independent and identically distributed random variables converges to the expected value as the sample size grows. It provides a formal basis for understanding why and how averages tend to stabilize and become more predictable as the number of observations increases.</p>
+<p>Here are the key points about the Law of Large Numbers:</p>
+<ol>
+<li><p><strong>Formal Definition</strong>:</p>
+<ul>
+<li><strong>Weak Law of Large Numbers</strong>: Given a sequence of independent and identically distributed (i.i.d.) random variables ( X_1, X_2, X_3, \ldots ) with mean ( \mu ) and variance ( \sigma^2 ), the sample average ( \overline{X}<em>n = \frac{1}{n} \sum</em>{i=1}^{n} X_i ) converges in probability to the expected value ( \mu ) as the number of observations ( n ) becomes large:
+[
+\lim_{n \to \infty} P(|\overline{X}_n - \mu| \ge \epsilon) = 0 \quad \text{for any } \epsilon &gt; 0.
+]</li>
+<li><strong>Strong Law of Large Numbers</strong>: The sample average ( \overline{X}<em>n ) converges almost surely to ( \mu ):
+[
+P\left(\lim</em>{n \to \infty} \overline{X}_n = \mu\right) = 1.
+]</li>
+</ul>
+</li>
+<li><p><strong>Intuitive Understanding</strong>:</p>
+<ul>
+<li>The Law of Large Numbers assures that the more trials or observations you make, the closer the average of those observations will be to the expected value. This means that unpredictability decreases as the number of trials increases.</li>
+<li>For example, consider flipping a fair coin. The expected probability of getting heads is 0.5. While individual flips are highly unpredictable, the proportion of heads will get closer to 0.5 as the number of flips increases.</li>
+</ul>
+</li>
+<li><p><strong>Implications</strong>:</p>
+<ul>
+<li><strong>Stability</strong>: As sample size increases, sample averages tend to stabilize around the true population mean.</li>
+<li><strong>Predictability</strong>: Large samples provide more reliable and predictable estimates of population parameters.</li>
+<li><strong>Practical Usage</strong>: The Law of Large Numbers justifies the use of large sample sizes in statistical experiments and surveys, as larger samples yield results that are more representative of the underlying population.</li>
+</ul>
+</li>
+<li><p><strong>Applications</strong>:</p>
+<ul>
+<li><strong>Gambling and Casinos</strong>: Casinos rely on the Law of Large Numbers to ensure that, over a large number of games, their earnings will stabilize around the expected house edge.</li>
+<li><strong>Insurance</strong>: Insurance companies use the Law of Large Numbers to predict losses and set premiums that are stable and sustainable over time.</li>
+<li><strong>Quality Control</strong>: Manufacturers use large batches of products to estimate defect rates and ensure quality standards.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, the Law of Large Numbers is essential in providing the guarantee that averages of large samples converge to expected values, making it one of the cornerstones of statistics and probability theory.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

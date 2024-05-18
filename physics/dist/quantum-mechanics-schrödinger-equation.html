@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schrödinger Equation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Quantum Mechanics</h1>
+<h2>Schrödinger Equation</h2>
+<p>The Schrödinger Equation is a fundamental equation in quantum mechanics that describes how the quantum state of a physical system changes over time. Named after the physicist Erwin Schrödinger, who formulated it in 1925, it is one of the key components of quantum theory and provides a way to predict the behavior of particles at the microscopic level.</p>
+<h3>Forms of the Schrödinger Equation</h3>
+<p>There are two main forms of the Schrödinger Equation: the time-dependent Schrödinger Equation and the time-independent Schrödinger Equation.</p>
+<h4>1. Time-Dependent Schrödinger Equation</h4>
+<p>The time-dependent Schrödinger Equation describes how the quantum state of a system evolves over time. It is given by:</p>
+<p>[ i\hbar \frac{\partial \psi(\mathbf{r}, t)}{\partial t} = \hat{H} \psi(\mathbf{r}, t) ]</p>
+<ul>
+<li>( i ) is the imaginary unit.</li>
+<li>( \hbar ) (h-bar) is the reduced Planck's constant.</li>
+<li>( \psi(\mathbf{r}, t) ) is the wave function of the system, which depends on position ( \mathbf{r} ) and time ( t ).</li>
+<li>( \hat{H} ) is the Hamiltonian operator, which represents the total energy of the system (the sum of kinetic and potential energies).</li>
+</ul>
+<h4>2. Time-Independent Schrödinger Equation</h4>
+<p>The time-independent Schrödinger Equation is used when the system's Hamiltonian does not depend on time. It is typically used to find the stationary states of a system (i.e., states with definite energy). It is given by:</p>
+<p>[ \hat{H} \psi(\mathbf{r}) = E \psi(\mathbf{r}) ]</p>
+<ul>
+<li>( E ) is the energy eigenvalue associated with the wave function ( \psi(\mathbf{r}) ).</li>
+</ul>
+<h3>Interpretation of the Wave Function</h3>
+<p>The wave function ( \psi(\mathbf{r}, t) ) contains all the information about the system's state. Its squared magnitude, ( |\psi(\mathbf{r}, t)|^2 ), represents the probability density of finding a particle at position ( \mathbf{r} ) at time ( t ).</p>
+<h3>Hamiltonian Operator</h3>
+<p>The Hamiltonian operator ( \hat{H} ) often includes kinetic and potential energy terms:</p>
+<p>[ \hat{H} = \hat{T} + \hat{V} ]</p>
+<ul>
+<li>( \hat{T} ) represents the kinetic energy part, which often takes the form ( -\frac{\hbar^2}{2m} \nabla^2 ).</li>
+<li>( \hat{V} ) represents the potential energy part, which depends on the specific problem.</li>
+</ul>
+<h3>Example: Particle in a Potential Well</h3>
+<p>For a simple one-dimensional potential well, the time-independent Schrödinger Equation might be written as:</p>
+<p>[ -\frac{\hbar^2}{2m} \frac{d^2 \psi(x)}{d x^2} + V(x) \psi(x) = E \psi(x) ]</p>
+<p>Where:</p>
+<ul>
+<li>( m ) is the mass of the particle.</li>
+<li>( \frac{d^2 \psi(x)}{d x^2} ) is the second derivative of the wave function with respect to position ( x ).</li>
+<li>( V(x) ) is the potential energy as a function of position.</li>
+</ul>
+<p>Solving the Schrödinger Equation allows physicists to determine the allowed energy levels of the system and the corresponding wave functions. These solutions provide deep insights into the behavior and properties of quantum systems, such as atoms, molecules, and subatomic particles.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:46:00 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

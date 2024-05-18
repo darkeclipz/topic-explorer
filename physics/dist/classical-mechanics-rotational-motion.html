@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotational Motion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Classical Mechanics</h1>
+<h2>Rotational Motion</h2>
+<p>Rotational Motion is a key topic within Classical Mechanics that deals with the behavior of objects that rotate about an axis. It includes the study of angular velocity, angular acceleration, torque, moment of inertia, and the dynamics of rotating bodies. Here are some essential components and concepts:</p>
+<h3>Angular Quantities</h3>
+<ol>
+<li><p><strong>Angular Displacement (θ)</strong>:</p>
+<ul>
+<li>The angle through which an object has rotated, typically measured in radians.</li>
+</ul>
+</li>
+<li><p><strong>Angular Velocity (ω)</strong>:</p>
+<ul>
+<li>The rate of change of angular displacement, often expressed in radians per second ((\text{rad/s})).</li>
+<li>(\omega = \frac{d\theta}{dt})</li>
+</ul>
+</li>
+<li><p><strong>Angular Acceleration (α)</strong>:</p>
+<ul>
+<li>The rate of change of angular velocity, measured in radians per second squared ((\text{rad/s}^2)).</li>
+<li>(\alpha = \frac{d\omega}{dt})</li>
+</ul>
+</li>
+</ol>
+<h3>Kinematic Equations (for rotational motion with constant angular acceleration)</h3>
+<ul>
+<li>(\theta = θ_0 + ω_0t + \frac{1}{2}αt^2)</li>
+<li>(\omega = ω_0 + αt)</li>
+<li>(\omega^2 = ω_0^2 + 2αθ)
+Where:
+<ul>
+<li>(θ_0): Initial angular displacement</li>
+<li>(ω_0): Initial angular velocity</li>
+<li>(t): Time</li>
+<li>(α): Angular acceleration</li>
+</ul>
+</li>
+</ul>
+<h3>Torque (τ)</h3>
+<ul>
+<li>A measure of the force that can cause an object to rotate about an axis.</li>
+<li>(\tau = r \times F \sin(θ))
+Where:
+<ul>
+<li>(r): Distance from the axis of rotation to the point where the force is applied</li>
+<li>(F): Magnitude of the force</li>
+<li>(θ): Angle between the force vector and the lever arm</li>
+</ul>
+</li>
+</ul>
+<h3>Moment of Inertia (I)</h3>
+<ul>
+<li>The rotational equivalent of mass for linear motion. It quantifies an object’s resistance to changes in its rotational motion.</li>
+<li>Depends on the mass distribution relative to the axis of rotation:
+<ul>
+<li>(I = Σ m_i r_i^2) for discrete masses</li>
+<li>(I = ∫ r^2 dm) for continuous mass distributions</li>
+</ul>
+</li>
+</ul>
+<h3>Newton's Second Law for Rotation</h3>
+<ul>
+<li>(\tau = Iα)</li>
+<li>The net torque acting on a body is equal to the product of its moment of inertia and its angular acceleration.</li>
+</ul>
+<h3>Rotational Kinetic Energy</h3>
+<ul>
+<li>The energy due to rotational motion:
+<ul>
+<li>(E_{rot} = \frac{1}{2} I \omega^2)</li>
+</ul>
+</li>
+</ul>
+<h3>Angular Momentum (L)</h3>
+<ul>
+<li>The rotational equivalent of linear momentum:
+<ul>
+<li>(L = Iω)</li>
+</ul>
+</li>
+<li>Angular momentum is conserved in the absence of external torques:
+<ul>
+<li>(τ_{net} = \frac{dL}{dt})</li>
+</ul>
+</li>
+</ul>
+<h3>Centripetal Force and Acceleration</h3>
+<ul>
+<li>When an object rotates, it experiences a centripetal force directed towards the center of its circular path:
+<ul>
+<li>Centripetal acceleration ((a_c)): (a_c = r\omega^2)</li>
+<li>Centripetal force ((F_c)):  (F_c = m a_c = m r \omega^2)</li>
+</ul>
+</li>
+</ul>
+<h3>Applications and Examples</h3>
+<ul>
+<li><strong>Gyroscopes</strong>: Devices that utilize the principles of rotational motion to maintain orientation.</li>
+<li><strong>Flywheels</strong>: Rotating mechanical devices that store rotational energy.</li>
+<li><strong>Rotating Celestial Bodies</strong>: Planets and stars demonstrate rotational motion around their axes.</li>
+<li><strong>Engineering</strong>: Applications in gears, engines, and various machinery components.</li>
+</ul>
+<p>Understanding rotational motion is crucial for analyzing systems involving spinning or rotating objects and is foundational for studies in both classical mechanics and applied physics fields.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:46:00 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

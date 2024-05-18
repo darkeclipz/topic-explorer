@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicate Logic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Mathematical Logic</h1>
+<h2>Predicate Logic</h2>
+<p>Predicate logic, also known as first-order logic, is a formal system in mathematical logic that deals with predicates and quantifiers, providing a more expressive framework than propositional logic. It allows reasoning about objects and their properties, relations between objects, and the analysis of statements involving variables.</p>
+<h3>Key Concepts in Predicate Logic:</h3>
+<ol>
+<li><p><strong>Predicates</strong>: Predicates are functions that return a truth value (true or false). They can take one or more arguments. For example, the predicate ( P(x) ) might denote &quot;x is a prime number.&quot;</p>
+</li>
+<li><p><strong>Quantifiers</strong>:</p>
+<ul>
+<li><strong>Universal Quantifier ((\forall))</strong>: It expresses that a statement is true for all possible values of a variable within a certain domain. For example, (\forall x P(x)) means &quot;P(x) is true for all x.&quot;</li>
+<li><strong>Existential Quantifier ((\exists))</strong>: It expresses that there is at least one value of a variable for which the statement is true. For example, (\exists x P(x)) means &quot;There exists an x such that P(x) is true.&quot;</li>
+</ul>
+</li>
+<li><p><strong>Variables</strong>: Symbols that represent objects in the domain of discourse. For example, ( x, y, z ).</p>
+</li>
+<li><p><strong>Functions</strong>: Mapping from tuples of objects to objects. For example, ( f(x) ) could be a function that maps ( x ) to ( x+1 ).</p>
+</li>
+<li><p><strong>Domains</strong>: The set of all possible values that variables can take.</p>
+</li>
+<li><p><strong>Logical Connectives</strong>: Similar to propositional logic, predicate logic uses logical connectives such as:</p>
+<ul>
+<li>( \land ) (and)</li>
+<li>( \lor ) (or)</li>
+<li>( \rightarrow ) (implies)</li>
+<li>( \neg ) (not)</li>
+</ul>
+</li>
+<li><p><strong>Formulas</strong>: Well-formed expressions in predicate logic that can be either true or false. These include:</p>
+<ul>
+<li>Atomic Formulas: Basic statements involving predicates and constants, like ( P(a) ).</li>
+<li>Compound Formulas: Built using logical connectives and quantifiers, like ( \forall x (P(x) \rightarrow Q(x)) ).</li>
+</ul>
+</li>
+</ol>
+<h3>Structure of Predicate Logic:</h3>
+<ul>
+<li><strong>Terms</strong>: Objects in the domain, which can be variables, constants, or functions applied to terms.</li>
+<li><strong>Atomic Formulas</strong>: Formulas consisting of a predicate applied to a tuple of terms. For example, ( P(x, y) ) where ( P ) is a predicate.</li>
+</ul>
+<h3>Example Statements:</h3>
+<ol>
+<li><p><strong>Universal Statement</strong>: (\forall x (x &gt; 0 \rightarrow P(x)))</p>
+<ul>
+<li>Meaning: For all ( x ), if ( x ) is greater than 0, then ( P(x) ) holds.</li>
+</ul>
+</li>
+<li><p><strong>Existential Statement</strong>: (\exists x (x &gt; 0 \land Q(x)))</p>
+<ul>
+<li>Meaning: There exists at least one ( x ) such that ( x ) is greater than 0 and ( Q(x) ) holds.</li>
+</ul>
+</li>
+</ol>
+<h3>Importance of Predicate Logic:</h3>
+<p>Predicate logic is foundational in various fields:</p>
+<ul>
+<li><strong>Mathematics</strong>: Used for formal proofs and defining mathematical structures.</li>
+<li><strong>Computer Science</strong>: Basis for databases, artificial intelligence, programming languages, and formal verification.</li>
+<li><strong>Linguistics</strong>: For modeling and analyzing natural language semantics.</li>
+</ul>
+<h3>Example Problem in Predicate Logic:</h3>
+<ol>
+<li><strong>Statement:</strong>
+<ul>
+<li><p>Given: &quot;Every human is mortal&quot; and &quot;Socrates is a human.&quot;</p>
+</li>
+<li><p>Represent using predicate logic:</p>
+<ul>
+<li>Let ( H(x) ) denote &quot;x is a human.&quot;</li>
+<li>Let ( M(x) ) denote &quot;x is mortal.&quot;</li>
+<li>Let ( soc ) represent Socrates.</li>
+</ul>
+</li>
+<li><p>The statements become:</p>
+<ul>
+<li>(\forall x (H(x) \rightarrow M(x)))</li>
+<li>( H(soc) )</li>
+</ul>
+</li>
+<li><p>Conclusion:</p>
+<ul>
+<li>From the given statements, we can deduce ( M(soc) ), meaning &quot;Socrates is mortal.&quot;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>Understanding predicate logic enables precise reasoning about complex statements and is essential for rigorous argumentative structure in advanced mathematics and computer science.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

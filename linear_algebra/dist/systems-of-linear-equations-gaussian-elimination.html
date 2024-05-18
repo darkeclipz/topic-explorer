@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaussian Elimination</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Systems of Linear Equations</h1>
+<h2>Gaussian Elimination</h2>
+<p>Gaussian Elimination is a systematic method used for solving systems of linear equations. It transforms the system into an upper triangular matrix form (Row Echelon Form), from which the solutions can be easily obtained through back substitution. Below are the key steps involved in Gaussian Elimination:</p>
+<h3>Step-by-Step Process</h3>
+<ol>
+<li><p><strong>Form the Augmented Matrix:</strong></p>
+<ul>
+<li>Combine the coefficients of the variables and the constants on the right-hand side of the equations into a single matrix.</li>
+</ul>
+<p>For a system of linear equations:</p>
+<p>[
+\begin{cases}
+a_{11}x + a_{12}y + a_{13}z = b_1 \
+a_{21}x + a_{22}y + a_{23}z = b_2 \
+a_{31}x + a_{32}y + a_{33}z = b_3 \
+\end{cases}
+]</p>
+<p>The augmented matrix is:</p>
+<p>[
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; | &amp; b_1 \
+a_{21} &amp; a_{22} &amp; a_{23} &amp; | &amp; b_2 \
+a_{31} &amp; a_{32} &amp; a_{33} &amp; | &amp; b_3 \
+\end{pmatrix}
+]</p>
+</li>
+<li><p><strong>Forward Elimination (Transform to Row Echelon Form):</strong></p>
+<ul>
+<li>Use elementary row operations to form zeros below the main diagonal of the matrix.
+<ol>
+<li><strong>Pivoting:</strong>
+<ul>
+<li>Swap rows, if necessary, to place the largest absolute value of the column at the diagonal position to reduce numerical errors (partial pivoting).</li>
+</ul>
+</li>
+<li><strong>Eliminate Elements Below Pivot:</strong>
+<ul>
+<li>For each row (i) from (1) to (n-1), for each row (j) from (i+1) to (n):
+<ul>
+<li>Subtract a multiple of row (i) from row (j) to make the element below the pivot (pivot element at position (a_{ii})) zero.</li>
+<li>The multiple is ( m_{ji} = \frac{a_{ji}}{a_{ii}} ).</li>
+<li>Update row (j): ( \text{Row}_j = \text{Row}<em>j - m</em>{ji} \times \text{Row}_i ).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>Back Substitution:</strong></p>
+<ul>
+<li>Once the matrix is in upper triangular form, solve for variables starting from the last row (equation) and moving upwards.</li>
+<li>For the (i)-th equation: ( a_{ii}x_i = b_i - \sum_{j=i+1}^{n} a_{ij}x_j ).</li>
+<li>( x_i = \frac{b_i - \sum_{j=i+1}^{n} a_{ij}x_j}{a_{ii}} ).</li>
+</ul>
+</li>
+</ol>
+<h3>Example</h3>
+<p>Solve the system of equations:</p>
+<p>[
+\begin{cases}
+2x + 3y + z = 1 \
+4x + y - 2z = -2 \
+-6x + 2y + z = 10 \
+\end{cases}
+]</p>
+<ol>
+<li>Form the Augmented Matrix:</li>
+</ol>
+<p>[
+\begin{pmatrix}
+2 &amp; 3 &amp; 1 &amp; | &amp; 1 \
+4 &amp; 1 &amp; -2 &amp; | &amp; -2 \
+-6 &amp; 2 &amp; 1 &amp; | &amp; 10 \
+\end{pmatrix}
+]</p>
+<ol start="2">
+<li>Use Forward Elimination:</li>
+</ol>
+<ul>
+<li>Make the element in the first column of the second row zero:</li>
+</ul>
+<p>[
+\text{Row}_2 = \text{Row}_2 - 2 \times \text{Row}_1 \rightarrow (4 - 4, 1 - 6, -2 - 2, -2 - 2) = (0, -5, -4, -4)
+]</p>
+<ul>
+<li>Make the element in the first column of the third row zero:</li>
+</ul>
+<p>[
+\text{Row}_3 = \text{Row}_3 + 3 \times \text{Row}_1 \rightarrow (-6 + 6, 2 + 9, 1 + 3, 10 + 3) = (0, 11, 4, 13)
+]</p>
+<p>The matrix becomes:</p>
+<p>[
+\begin{pmatrix}
+2 &amp; 3 &amp; 1 &amp; | &amp; 1 \
+0 &amp; -5 &amp; -4 &amp; | &amp; -4 \
+0 &amp; 11 &amp; 4 &amp; | &amp; 13 \
+\end{pmatrix}
+]</p>
+<ul>
+<li>Now, eliminate the element in the second column of the third row:</li>
+</ul>
+<p>[
+\text{Row}_3 = \text{Row}_3 + \frac{11}{-5} \times \text{Row}_2 \rightarrow (0, 0, \frac{-44}{-5} + 4, \frac{-44}{5} + 13) = (0, 0, \frac{20}{5}, \frac{21}{5})
+]</p>
+<p>The matrix becomes:</p>
+<p>[
+\begin{pmatrix}
+2 &amp; 3 &amp; 1 &amp; | &amp; 1 \
+0 &amp; -5 &amp; -4 &amp; | &amp; -4 \
+0 &amp; 0 &amp; 4.4 &amp; | &amp; 4.6 \
+\end{pmatrix}
+]</p>
+<ol start="3">
+<li>Perform Back Substitution:</li>
+</ol>
+<ul>
+<li>From the third row: ( 4.4z = 4.6 \rightarrow z = \frac{4.6}{4.4} \approx 1 )</li>
+<li>From the second row: ( -5y - 4z = -4 \rightarrow -5y - 4 \times 1 = -4 \rightarrow -5y - 4 = -4 \rightarrow y = 0 )</li>
+<li>From the first row: ( 2x + 3y + z = 1 \rightarrow 2x + 1 = 1 \rightarrow x = 0 )</li>
+</ul>
+<p>Therefore, ( x = 0 ), ( y = 0 ), ( z \approx 1 ).</p>
+<h3>Conclusion</h3>
+<p>Gaussian elimination, with its forward elimination and back substitution steps, systematically reduces a system of linear equations to a form that is easily solvable. The method, when combined with partial pivoting, is very robust and widely used for computational solutions of linear systems.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

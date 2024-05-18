@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Concepts of Ray Tracing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Introduction to Ray Tracing</h1>
+<h2>Basic Concepts of Ray Tracing</h2>
+<h3>Basic Concepts of Ray Tracing (Introduction to Ray Tracing)</h3>
+<p>Ray tracing is a rendering technique used to generate realistic images by simulating the physical behavior of light. It models the way rays of light interact with objects in a scene to create highly detailed images with accurate shadows, reflections, and refractions. Here are some key concepts:</p>
+<h4>1. <strong>Rays</strong></h4>
+<ul>
+<li><strong>Primary Rays</strong>: These are rays that originate from the camera (or the viewer's eye) and travel through each pixel on the view plane into the scene.</li>
+<li><strong>Shadow Rays</strong>: After hitting an object, shadow rays are cast toward the light sources to determine if the point is in shadow.</li>
+<li><strong>Reflection Rays</strong>: These rays simulate reflection by bouncing off reflective surfaces at angles according to the law of reflection.</li>
+<li><strong>Refraction Rays</strong>: These rays simulate transparency by bending as they pass through transparent materials according to Snell's law.</li>
+</ul>
+<h4>2. <strong>Ray-Sphere Intersection</strong></h4>
+<ul>
+<li>One of the simplest forms of ray-object intersection, where the algorithm determines if and where a ray intersects a sphere. This is done using geometric formulas or solving quadratic equations.</li>
+</ul>
+<h4>3. <strong>Ray-Polygon Intersection</strong></h4>
+<ul>
+<li>More generally, intersecting rays with polygons (such as triangles) is fundamental. This is typically done using techniques such as Möller-Trumbore algorithm or Barycentric coordinates.</li>
+</ul>
+<h4>4. <strong>Lighting Models</strong></h4>
+<ul>
+<li><strong>Phong Lighting Model</strong>: A simple and commonly used model that includes ambient, diffuse, and specular components.
+<ul>
+<li><strong>Ambient Lighting</strong>: Simulates indirect light.</li>
+<li><strong>Diffuse Lighting</strong>: Simulates light scattered equally in all directions.</li>
+<li><strong>Specular Reflection</strong>: Simulates the bright spots of light that appear on shiny objects.</li>
+</ul>
+</li>
+<li><strong>Blinn-Phong Model</strong>: An enhancement of the Phong model for more realistic highlights.</li>
+</ul>
+<h4>5. <strong>Shadows</strong></h4>
+<ul>
+<li>To determine the visibility of a light source from a given point, ray tracing checks if a shadow ray intersects any object between the point and the light source.</li>
+</ul>
+<h4>6. <strong>Reflections</strong></h4>
+<ul>
+<li>To create reflections, ray tracing calculates the direction in which a reflection ray would travel, then traces this ray to see what it hits.</li>
+</ul>
+<h4>7. <strong>Refractions</strong></h4>
+<ul>
+<li>Simulating the bending of light passing through transparent materials involves calculating the direction of the refracted ray using Snell's law.</li>
+</ul>
+<h4>8. <strong>Anti-Aliasing</strong></h4>
+<ul>
+<li>Techniques like super-sampling or adaptive sampling are used to smooth out the jagged edges (aliasing) by averaging the colors of multiple rays per pixel.</li>
+</ul>
+<h4>9. <strong>Recursive Ray Tracing</strong></h4>
+<ul>
+<li>Ray tracing is inherently recursive. When a ray hits a reflective or transparent surface, new rays are spawned (reflection and/or refraction rays), and these new rays might spawn additional rays themselves.</li>
+</ul>
+<h4>10. <strong>Global Illumination</strong></h4>
+<ul>
+<li>Extends ray tracing to account for indirect light bouncing around the scene, leading to more realistic rendering. Methods include path tracing, photon mapping, and radiosity.</li>
+</ul>
+<p>By mastering these basic concepts, you can understand how ray tracing produces realistic images and how to implement these techniques using GLSL or any other shading language. Ray tracing, thanks to its ability to realistically simulate the interplay of light with surfaces, remains a significant technique in computer graphics for generating strikingly realistic images.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

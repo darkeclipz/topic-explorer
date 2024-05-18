@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighting and Shading Models</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Ray Tracing Fundamentals</h1>
+<h2>Lighting and Shading Models</h2>
+<p>Lighting and shading are fundamental aspects of creating realistic images in ray tracing. Here’s a detailed explanation of the key concepts:</p>
+<h3>Lighting Models</h3>
+<ol>
+<li><p><strong>Ambient Lighting</strong>:</p>
+<ul>
+<li>Ambient lighting represents indirect lighting that is not from any specific direction. It provides a simple way to account for the light scattering around a scene.</li>
+<li>Formula:
+[
+I_{\text{ambient}} = k_{\text{ambient}} \cdot I_{\text{ambient_light}}
+]</li>
+<li>Where ( k_{\text{ambient}} ) is the ambient reflectance of the object, and ( I_{\text{ambient_light}} ) is the intensity of the ambient light.</li>
+</ul>
+</li>
+<li><p><strong>Point Lighting</strong>:</p>
+<ul>
+<li>A point light source emits light equally in all directions from a single point in space.</li>
+<li>Important factors include light position, intensity, and attenuation.</li>
+<li>Formula:
+[
+I = \frac{I_{\text{point}}}{a + b \cdot d + c \cdot d^2}
+]</li>
+<li>Where ( I_{\text{point}} ) is the intensity of the light, ( a, b, ) and ( c ) are attenuation coefficients, and ( d ) is the distance from the light source.</li>
+</ul>
+</li>
+<li><p><strong>Directional Lighting</strong>:</p>
+<ul>
+<li>A directional light simulates a light source that is infinitely far away, such as the sun.</li>
+<li>The light rays are parallel, and there is no attenuation over distance.</li>
+</ul>
+</li>
+<li><p><strong>Spot Lighting</strong>:</p>
+<ul>
+<li>A spot light emits light in a specific direction and within a cone of influence. Useful for effects like flashlights or stage lighting.</li>
+<li>Parameters include position, direction, cutoff angle, and intensity.</li>
+</ul>
+</li>
+</ol>
+<h3>Shading Models</h3>
+<ol>
+<li><p><strong>Lambertian Shading (Diffuse Shading)</strong>:</p>
+<ul>
+<li>Assumes that light is scattered equally in all directions from a surface.</li>
+<li>The brightness of the surface is proportional to the cosine of the angle between the light direction and the surface normal (<code>dot product</code>).</li>
+<li>Formula:
+[
+I_{\text{diffuse}} = k_{\text{diffuse}} \cdot I \cdot \left(N \cdot L\right)
+]</li>
+</ul>
+</li>
+<li><p><strong>Phong Shading (Specular Shading)</strong>:</p>
+<ul>
+<li>Adds specular highlights to the Lambertian model to capture shiny surfaces.</li>
+<li>Depends on the viewer's position and the reflection of the light direction.</li>
+<li>Formula:
+[
+I_{\text{specular}} = k_{\text{specular}} \cdot I \cdot (R \cdot V)^n
+]</li>
+<li>Where ( R ) is the reflection vector, ( V ) is the view vector, and ( n ) is the shininess exponent.</li>
+</ul>
+</li>
+<li><p><strong>Blinn-Phong Shading</strong>:</p>
+<ul>
+<li>A modification of Phong shading that uses the halfway vector between the light direction and the view direction for the specular calculation.</li>
+<li>Less computationally expensive and often produces similar results.</li>
+<li>Formula:
+[
+I_{\text{specular}} = k_{\text{specular}} \cdot I \cdot (N \cdot H)^n
+]</li>
+<li>Where ( H ) is the halfway vector of ( L ) and ( V ).</li>
+</ul>
+</li>
+</ol>
+<h3>Combined Lighting Model</h3>
+<p>In practice, the overall lighting ( I ) of a point on a surface combines ambient, diffuse, and specular components:</p>
+<p>[
+I_{\text{total}} = I_{\text{ambient}} + I_{\text{diffuse}} + I_{\text{specular}}
+]</p>
+<h3>Implementation in Ray Tracing with GLSL</h3>
+<ol>
+<li><p><strong>Calculating the Surface Normals</strong>:</p>
+<ul>
+<li>Normals are used to determine how light interacts with surfaces.</li>
+<li>For each point of intersection, compute or retrieve the normal.</li>
+</ul>
+</li>
+<li><p><strong>Ray-Surface Intersection</strong>:</p>
+<ul>
+<li>Determine the points where rays intersect objects in the scene.</li>
+</ul>
+</li>
+<li><p><strong>Computing Light Contributions</strong>:</p>
+<ul>
+<li>Calculate the light contributions from all relevant light sources (ambient, diffuse, specular).</li>
+</ul>
+</li>
+<li><p><strong>Shader Programs</strong>:</p>
+<ul>
+<li>Write GLSL shaders that perform these calculations. Vertex shaders typically pass data to fragment shaders, where the actual lighting calculations happen.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-glsl">// Example snippet of a GLSL fragment shader
+varying vec3 vNormal;
+varying vec3 vPosition;
+uniform vec3 lightPosition;
+uniform vec3 viewPosition;
+
+void main() {
+    vec3 N = normalize(vNormal);
+    vec3 L = normalize(lightPosition - vPosition);
+    vec3 V = normalize(viewPosition - vPosition);
+    vec3 R = reflect(-L, N);
+
+    // Ambient
+    vec3 ambient = vec3(0.1, 0.1, 0.1);
+
+    // Diffuse
+    float diff = max(dot(N, L), 0.0);
+    vec3 diffuse = diff * vec3(1.0, 1.0, 1.0);
+
+    // Specular
+    float spec = pow(max(dot(V, R), 0.0), 32.0);
+    vec3 specular = spec * vec3(1.0, 1.0, 1.0);
+    
+    // Combine
+    vec3 color = ambient + diffuse + specular;
+    gl_FragColor = vec4(color, 1.0);
+}
+</code></pre>
+<p>By understanding and implementing these models in GLSL, you can create realistic lighting effects in ray-traced scenes.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

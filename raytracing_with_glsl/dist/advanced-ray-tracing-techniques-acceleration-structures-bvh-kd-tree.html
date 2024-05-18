@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceleration Structures (BVH, KD-Tree)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Advanced Ray Tracing Techniques</h1>
+<h2>Acceleration Structures (BVH, KD-Tree)</h2>
+<p>Acceleration structures are critical components in ray tracing that help enhance performance by efficiently organizing and accessing geometric data. Two common types of acceleration structures are Bounding Volume Hierarchies (BVH) and KD-Trees. These structures are designed to reduce the number of ray-geometry intersection tests, thereby significantly speeding up the rendering process.</p>
+<h3>Bounding Volume Hierarchies (BVH)</h3>
+<h4>Concept:</h4>
+<ul>
+<li><strong>BVH</strong>: A tree structure where each node represents a bounding volume that encapsulates a subset of the scene's geometric primitives (like triangles or spheres).</li>
+<li><strong>Bounding Volumes</strong>: Typically simple geometric shapes such as Axis-Aligned Bounding Boxes (AABB) or Bounding Spheres.</li>
+</ul>
+<h4>Structure:</h4>
+<ul>
+<li><strong>Leaf Nodes</strong>: Contain actual geometric primitives.</li>
+<li><strong>Internal Nodes</strong>: Represent bounding volumes that encapsulate their child nodes.</li>
+</ul>
+<h4>Construction:</h4>
+<ol>
+<li><strong>Top-Down Approach</strong>: Start with a root node that encapsulates all primitives. Recursively split the primitives into subsets and create child nodes for each subset.</li>
+<li><strong>Bottom-Up Approach</strong>: Start with individual primitives, grouping them into bounding volumes, and recursively combine these groups to form higher-level nodes.</li>
+</ol>
+<h4>Traversal:</h4>
+<ul>
+<li>Begin at the root node.</li>
+<li>Perform intersection tests with the bounding volumes of child nodes.</li>
+<li>If a ray intersects a bounding volume, proceed to its child nodes.</li>
+<li>If a leaf node is reached, perform detailed intersection tests with the actual primitives it contains.</li>
+</ul>
+<h4>Advantages:</h4>
+<ul>
+<li><strong>Efficiency</strong>: Reduces the number of intersection tests by quickly discarding large portions of the scene that the ray does not intersect.</li>
+<li><strong>Adaptability</strong>: Can handle dynamic scenes where objects move, although this requires updating the hierarchy.</li>
+</ul>
+<h3>KD-Tree (K-Dimensional Tree)</h3>
+<h4>Concept:</h4>
+<ul>
+<li><strong>KD-Tree</strong>: A binary tree structure that organizes primitives by recursively splitting the space into two half-spaces along perpendicular axes.</li>
+<li><strong>Axis-Aligned Splits</strong>: Each split is perpendicular to one of the coordinate axes (X, Y, or Z).</li>
+</ul>
+<h4>Structure:</h4>
+<ul>
+<li><strong>Leaf Nodes</strong>: Contain primitives that fall within a small region of space.</li>
+<li><strong>Internal Nodes</strong>: Represent splits in space and contain references to their child nodes.</li>
+</ul>
+<h4>Construction:</h4>
+<ol>
+<li><strong>Choose a Split Plane</strong>: Typically based on the spatial median or the primitive distribution.</li>
+<li><strong>Partition Primitives</strong>: Into two groups based on their positions relative to the split plane.</li>
+<li><strong>Recursion</strong>: Apply the process recursively to each group to build the child nodes.</li>
+</ol>
+<h4>Traversal:</h4>
+<ul>
+<li>Begin at the root node.</li>
+<li>Determine which side of the plane the ray intersects first.</li>
+<li>Traverse the child node on the intersected side first.</li>
+<li>If the ray potentially intersects the other side, traverse the second child node as well.</li>
+</ul>
+<h4>Advantages:</h4>
+<ul>
+<li><strong>Precision</strong>: Can handle highly detailed scenes by effectively partitioning space.</li>
+<li><strong>Memory Efficiency</strong>: Typically requires less memory than BVH for scenes with spatially coherent primitives.</li>
+</ul>
+<h3>Comparison of BVH and KD-Tree</h3>
+<ul>
+<li><p><strong>BVH</strong>:</p>
+<ul>
+<li>Easier to construct and update, making it suitable for dynamic scenes.</li>
+<li>Useful for scenes with primitives of varying sizes.</li>
+</ul>
+</li>
+<li><p><strong>KD-Tree</strong>:</p>
+<ul>
+<li>More effective for static scenes and highly detailed environments.</li>
+<li>Can achieve faster traversal times due to precise spatial partitioning.</li>
+</ul>
+</li>
+</ul>
+<h3>Implementation in GLSL</h3>
+<p>Though GLSL is typically used for shader programming and real-time graphics, implementing acceleration structures like BVH or KD-Tree within GLSL involves:</p>
+<ol>
+<li><strong>Preprocessing</strong>: Constructing the acceleration structure on the CPU.</li>
+<li><strong>Data Transfer</strong>: Uploading the structure to GPU memory.</li>
+<li><strong>Shader Code</strong>: Writing GLSL code to traverse the structure during ray tracing, performing intersection tests within the shader.</li>
+</ol>
+<p>By using acceleration structures, ray tracing in GLSL can achieve real-time performance even for complex scenes. Understanding and implementing these structures is a crucial part of optimizing ray tracing algorithms.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

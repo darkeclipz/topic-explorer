@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regression Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Statistics</h1>
+<h2>Regression Analysis</h2>
+<p>Regression analysis is a set of statistical methods used for estimating the relationships among variables. It is particularly focused on the relationship between a dependent variable (also called the outcome or response variable) and one or more independent variables (also called predictors, input variables, or covariates). Here are some key points about regression analysis:</p>
+<h3>Types of Regression Analysis</h3>
+<ol>
+<li><p><strong>Simple Linear Regression</strong>: This involves a single independent variable and the relationship between the independent variable and the dependent variable is modeled as a linear relationship.</p>
+<ul>
+<li>Model: ( Y = \beta_0 + \beta_1X + \varepsilon )
+<ul>
+<li>( Y ): Dependent variable</li>
+<li>( \beta_0 ): Intercept</li>
+<li>( \beta_1 ): Slope</li>
+<li>( X ): Independent variable</li>
+<li>( \varepsilon ): Error term</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Multiple Linear Regression</strong>: This involves multiple independent variables.</p>
+<ul>
+<li>Model: ( Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + \cdots + \beta_nX_n + \varepsilon )
+<ul>
+<li>( X_1, X_2, \ldots, X_n ): Independent variables</li>
+<li>( \beta_1, \beta_2, \ldots, \beta_n ): Coefficients for each independent variable</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Polynomial Regression</strong>: The relationship between the dependent and one or more independent variables is modeled as an (n)-degree polynomial.</p>
+<ul>
+<li>Model: ( Y = \beta_0 + \beta_1X + \beta_2X^2 + \cdots + \beta_nX^n + \varepsilon )</li>
+</ul>
+</li>
+<li><p><strong>Logistic Regression</strong>: Used particularly when the dependent variable is categorical (e.g., binary outcomes like success/failure).</p>
+<ul>
+<li>Model: ( \log \left( \frac{p}{1-p} \right) = \beta_0 + \beta_1X_1 + \beta_2X_2 + \cdots + \beta_nX_n )
+<ul>
+<li>( p ): Probability of the event occurring</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3>Key Concepts and Steps in Regression Analysis</h3>
+<ol>
+<li><p><strong>Model Specification</strong>: Define the form of the relationship (linear, polynomial, etc.) and select the variables to include in the model.</p>
+</li>
+<li><p><strong>Estimation of Parameters</strong>: Use methods like Ordinary Least Squares (OLS) to estimate the coefficients ((\beta)) that minimize the sum of squared residuals.</p>
+<ul>
+<li>The OLS estimates are found by minimizing the sum of squared differences between the observed responses and the predicted responses.</li>
+</ul>
+</li>
+<li><p><strong>Assumptions</strong>: Linear regression models make several key assumptions:</p>
+<ul>
+<li>Linearity: The relationship between the independent and dependent variables is linear.</li>
+<li>Independence: Observations are independent of each other.</li>
+<li>Homoscedasticity: Constant variance of the residual errors.</li>
+<li>No multicollinearity: Independent variables are not too highly correlated.</li>
+<li>Normality of Errors: The residuals (errors) are normally distributed.</li>
+</ul>
+</li>
+<li><p><strong>Goodness of Fit</strong>: Evaluate how well the model fits the data using metrics such as:</p>
+<ul>
+<li>( R^2 ) (Coefficient of Determination): Proportion of the variance in the dependent variable that is predictable from the independent variables.</li>
+<li>Adjusted ( R^2 ): Adjusts ( R^2 ) for the number of predictors in the model.</li>
+<li>Root Mean Squared Error (RMSE): A measure of the differences between predicted and observed values.</li>
+</ul>
+</li>
+<li><p><strong>Model Diagnostics</strong>: Check the assumptions and validity of the model using various diagnostic plots and tests (e.g., residual plots, QQ plots, Durbin-Watson test for autocorrelation).</p>
+</li>
+<li><p><strong>Prediction and Interpretation</strong>: Use the regression model to make predictions and interpret the coefficients to understand the relationships between variables.</p>
+</li>
+</ol>
+<h3>Applications of Regression Analysis</h3>
+<ul>
+<li><strong>Economics</strong>: For forecasting economic indicators like GDP, inflation, or stock prices.</li>
+<li><strong>Medicine</strong>: To model the effect of risk factors on health outcomes.</li>
+<li><strong>Engineering</strong>: To predict the life span of a product based on various design parameters.</li>
+<li><strong>Business</strong>: For sales forecasting and customer behavior analysis.</li>
+</ul>
+<p>Regression analysis is a powerful tool but requires careful consideration of the underlying assumptions and potential limitations of the chosen model. Proper model selection, validation, and diagnostics are essential for producing reliable and interpretable results.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

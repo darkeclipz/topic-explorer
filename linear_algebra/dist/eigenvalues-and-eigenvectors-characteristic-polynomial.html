@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characteristic Polynomial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Eigenvalues and Eigenvectors</h1>
+<h2>Characteristic Polynomial</h2>
+<p>The characteristic polynomial is a crucial concept in the study of eigenvalues and eigenvectors in linear algebra. It is derived from a square matrix and is fundamental in determining the eigenvalues of that matrix. Here is a detailed explanation:</p>
+<h3>Definition</h3>
+<p>The characteristic polynomial of an ( n \times n ) matrix ( A ) is defined as the polynomial ( p(\lambda) ) given by the determinant of ( A - \lambda I ), where ( \lambda ) is a scalar (typically representing eigenvalues), and ( I ) is the identity matrix of the same dimension as ( A ). Mathematically, it is expressed as:</p>
+<p>[ p(\lambda) = \text{det}(A - \lambda I) ]</p>
+<h3>Steps to Find the Characteristic Polynomial</h3>
+<ol>
+<li><p><strong>Construct the Matrix ( A - \lambda I )</strong>:</p>
+<ul>
+<li>Subtract ( \lambda ) times the identity matrix ( I ) from the matrix ( A ). If ( A ) is a ( 3 \times 3 ) matrix, ( A - \lambda I ) would look like this:
+[
+A - \lambda I =
+\begin{pmatrix}
+a_{11} - \lambda &amp; a_{12} &amp; a_{13} \
+a_{21} &amp; a_{22} - \lambda &amp; a_{23} \
+a_{31} &amp; a_{32} &amp; a_{33} - \lambda
+\end{pmatrix}.
+]</li>
+</ul>
+</li>
+<li><p><strong>Compute the Determinant</strong>:</p>
+<ul>
+<li>Find the determinant of the resulting matrix ( A - \lambda I ). This step involves cofactor expansion, which can get computationally intense for larger matrices. For a ( 3 \times 3 ) matrix, the determinant is calculated as:
+[
+\text{det}(A - \lambda I) =
+\begin{vmatrix}
+a_{11} - \lambda &amp; a_{12} &amp; a_{13} \
+a_{21} &amp; a_{22} - \lambda &amp; a_{23} \
+a_{31} &amp; a_{32} &amp; a_{33} - \lambda
+\end{vmatrix}.
+]</li>
+</ul>
+</li>
+<li><p><strong>Form the Polynomial</strong>:</p>
+<ul>
+<li>The result is a polynomial in ( \lambda ). This polynomial is called the characteristic polynomial of ( A ).</li>
+</ul>
+</li>
+</ol>
+<h3>Eigenvalues</h3>
+<p>The eigenvalues of the matrix ( A ) are the solutions to the equation obtained by setting the characteristic polynomial equal to zero:</p>
+<p>[ \text{det}(A - \lambda I) = 0 ]</p>
+<p>Solving this equation gives the values of ( \lambda ) for which there are non-zero vectors ( \mathbf{v} ) such that:</p>
+<p>[ A \mathbf{v} = \lambda \mathbf{v} ]</p>
+<h3>Example</h3>
+<p>Consider a ( 2 \times 2 ) matrix:</p>
+<p>[ A = \begin{pmatrix} 4 &amp; 1 \ 2 &amp; 3 \end{pmatrix} ]</p>
+<ol>
+<li><p><strong>Construct ( A - \lambda I )</strong>:
+[
+A - \lambda I = \begin{pmatrix} 4 - \lambda &amp; 1 \ 2 &amp; 3 - \lambda \end{pmatrix}
+]</p>
+</li>
+<li><p><strong>Compute the Determinant</strong>:
+[
+\text{det}(A - \lambda I) = (4 - \lambda)(3 - \lambda) - (2 \cdot 1) = \lambda^2 - 7\lambda + 10
+]</p>
+</li>
+<li><p><strong>Form the Characteristic Polynomial</strong>:
+[
+p(\lambda) = \lambda^2 - 7\lambda + 10
+]</p>
+</li>
+</ol>
+<h3>Finding Eigenvalues</h3>
+<p>To find the eigenvalues, set the characteristic polynomial equal to zero and solve for ( \lambda ):</p>
+<p>[ \lambda^2 - 7\lambda + 10 = 0 ]</p>
+<p>This factors to:</p>
+<p>[ (\lambda - 5)(\lambda - 2) = 0 ]</p>
+<p>So, the eigenvalues are ( \lambda = 5 ) and ( \lambda = 2 ).</p>
+<p>Understanding characteristic polynomials and computing eigenvalues is fundamental in many applications of linear algebra, including systems of differential equations, stability analysis, and various fields of engineering and physics.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

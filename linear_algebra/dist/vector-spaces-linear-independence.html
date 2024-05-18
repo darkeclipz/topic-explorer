@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Independence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Vector Spaces</h1>
+<h2>Linear Independence</h2>
+<p>Linear independence is a fundamental concept in linear algebra, particularly within the context of vector spaces. It refers to a set of vectors that are not linearly dependent on each other. Here's a detailed explanation:</p>
+<h3>Definition:</h3>
+<p>A set of vectors ({v_1, v_2, \ldots, v_n}) in a vector space (V) is said to be <strong>linearly independent</strong> if the only solution to the equation</p>
+<p>[ c_1 v_1 + c_2 v_2 + \cdots + c_n v_n = 0 ]</p>
+<p>is (c_1 = c_2 = \cdots = c_n = 0), where (c_1, c_2, \ldots, c_n) are scalars (constants).</p>
+<p>Conversely, if there exists a non-trivial solution (at least one (c_i \neq 0)) to this equation, then the vectors are said to be <strong>linearly dependent</strong>.</p>
+<h3>Geometry Intuition:</h3>
+<ul>
+<li>In (\mathbb{R}^2) (2-dimensional space), two vectors are linearly independent if they do not lie on the same line through the origin. For example, the vectors (\begin{pmatrix} 1 \ 0 \end{pmatrix}) and (\begin{pmatrix} 0 \ 1 \end{pmatrix}) are linearly independent.</li>
+<li>In (\mathbb{R}^3) (3-dimensional space), three vectors are linearly independent if they do not lie in the same plane through the origin. For example, the vectors (\begin{pmatrix} 1 \ 0 \ 0 \end{pmatrix}), (\begin{pmatrix} 0 \ 1 \ 0 \end{pmatrix}), and (\begin{pmatrix} 0 \ 0 \ 1 \end{pmatrix}) are linearly independent.</li>
+</ul>
+<h3>Why It's Important:</h3>
+<ul>
+<li><strong>Basis:</strong> A basis for a vector space (V) is a maximal linearly independent set of vectors in (V). This is crucial because a basis provides a way to uniquely represent every vector in the space as a linear combination of basis vectors.</li>
+<li><strong>Dimension:</strong> The dimension of a vector space is the number of vectors in a basis for that space. For example, (\mathbb{R}^3) has dimension 3, meaning any basis of (\mathbb{R}^3) will consist of exactly three linearly independent vectors.</li>
+<li><strong>Span:</strong> The span of a set of vectors is the collection of all linear combinations of those vectors. If the vectors are linearly independent, they span the vector space without redundancy.</li>
+</ul>
+<h3>Example:</h3>
+<p>Consider the vectors (\mathbf{v}_1 = \begin{pmatrix} 1 \ 2 \ 3 \end{pmatrix}) and (\mathbf{v}_2 = \begin{pmatrix} 4 \ 5 \ 6 \end{pmatrix}) in (\mathbb{R}^3).</p>
+<p>To determine if they are linearly independent, set up the equation:
+[ c_1 \begin{pmatrix} 1 \ 2 \ 3 \end{pmatrix} + c_2 \begin{pmatrix} 4 \ 5 \ 6 \end{pmatrix} = \begin{pmatrix} 0 \ 0 \ 0 \end{pmatrix} ]</p>
+<p>This gives us the system of equations:
+[ c_1 + 4c_2 = 0 ]
+[ 2c_1 + 5c_2 = 0 ]
+[ 3c_1 + 6c_2 = 0 ]</p>
+<p>Solving this system, we find (c_1 = 0) and (c_2 = 0), indicating that the vectors are linearly independent.</p>
+<h3>Conclusion:</h3>
+<p>Understanding linear independence is crucial for many applications in linear algebra, including solving systems of linear equations, transforming matrices, and more advanced topics like eigenvalues and eigenvectors. It serves as a foundation for building and working with vector spaces.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

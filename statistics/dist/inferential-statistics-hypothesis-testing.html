@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypothesis Testing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Inferential Statistics</h1>
+<h2>Hypothesis Testing</h2>
+<p><strong>Hypothesis Testing in Inferential Statistics</strong></p>
+<p>Hypothesis testing is a fundamental concept in inferential statistics used to make inferences about a population based on sample data. It involves formulating a hypothesis, collecting data, and then determining whether the data supports the hypothesis or not. Here's an outline of key components in hypothesis testing:</p>
+<h3>Key Components:</h3>
+<ol>
+<li><p><strong>Null Hypothesis (H0):</strong></p>
+<ul>
+<li>The null hypothesis represents the status quo or default position. It assumes that there is no effect or no difference in the population.</li>
+<li>Example: H0: The mean of the population is equal to a specified value (µ = µ0).</li>
+</ul>
+</li>
+<li><p><strong>Alternative Hypothesis (H1 or Ha):</strong></p>
+<ul>
+<li>The alternative hypothesis represents what the researcher wants to prove. It suggests that there is an effect or a difference in the population.</li>
+<li>Example: H1: The mean of the population is not equal to a specified value (µ ≠ µ0).</li>
+</ul>
+</li>
+<li><p><strong>Test Statistic:</strong></p>
+<ul>
+<li>A test statistic is a standardized value calculated from sample data. It is used to determine the likelihood of the sample results under the null hypothesis.</li>
+<li>Common test statistics include t-scores, z-scores, and chi-square values.</li>
+</ul>
+</li>
+<li><p><strong>Significance Level (α):</strong></p>
+<ul>
+<li>The significance level is a threshold chosen by the researcher, typically set at 0.05 (5%). It represents the probability of rejecting the null hypothesis when it is true (Type I error).</li>
+<li>Example: α = 0.05.</li>
+</ul>
+</li>
+<li><p><strong>P-value:</strong></p>
+<ul>
+<li>The p-value measures the probability of obtaining a test statistic at least as extreme as the one observed, assuming the null hypothesis is true. It helps in decision-making by comparing it to the significance level.</li>
+<li>If the p-value ≤ α, the null hypothesis is rejected.</li>
+</ul>
+</li>
+<li><p><strong>Decision:</strong></p>
+<ul>
+<li>Based on the p-value and the significance level, a decision is made to either reject or fail to reject the null hypothesis.</li>
+<li>
+<ul>
+<li><strong>Reject H0:</strong> If the p-value is less than or equal to the significance level.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><strong>Fail to Reject H0:</strong> If the p-value is greater than the significance level.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3>Steps in Hypothesis Testing:</h3>
+<ol>
+<li><p><strong>Formulate Hypotheses:</strong></p>
+<ul>
+<li>State the null (H0) and alternative (H1) hypotheses clearly.</li>
+</ul>
+</li>
+<li><p><strong>Choose Significance Level (α):</strong></p>
+<ul>
+<li>Decide the significance level for the test (commonly 0.05).</li>
+</ul>
+</li>
+<li><p><strong>Collect Data:</strong></p>
+<ul>
+<li>Gather sample data through proper sampling methods.</li>
+</ul>
+</li>
+<li><p><strong>Calculate Test Statistic:</strong></p>
+<ul>
+<li>Compute the test statistic based on the sample data using the appropriate formula.</li>
+</ul>
+</li>
+<li><p><strong>Compute P-value:</strong></p>
+<ul>
+<li>Determine the p-value associated with the test statistic.</li>
+</ul>
+</li>
+<li><p><strong>Make a Decision:</strong></p>
+<ul>
+<li>Compare the p-value with the significance level and make a decision to either reject or fail to reject the null hypothesis.</li>
+</ul>
+</li>
+<li><p><strong>Draw Conclusions:</strong></p>
+<ul>
+<li>Interpret the results in the context of the research question and write a meaningful conclusion.</li>
+</ul>
+</li>
+</ol>
+<h3>Example:</h3>
+<p><strong>Research Question:</strong> Is the average weight of apples in a farm different from 150 grams?</p>
+<ul>
+<li>H0: µ = 150 grams (the mean weight of apples is 150 grams)</li>
+<li>H1: µ ≠ 150 grams (the mean weight of apples is not 150 grams)</li>
+<li>Significance Level: α = 0.05</li>
+</ul>
+<p>After collecting data and performing the necessary calculations, you obtain a p-value of 0.02.</p>
+<ul>
+<li>Since the p-value (0.02) is less than the significance level (0.05), you reject the null hypothesis.</li>
+</ul>
+<p><strong>Conclusion:</strong> There is sufficient evidence to suggest that the average weight of apples in the farm is different from 150 grams.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability Distributions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Probability Theory</h1>
+<h2>Probability Distributions</h2>
+<p>Probability distributions are essential concepts in probability theory and statistics, and they describe how the values of a random variable are distributed. They provide a function that gives the probabilities of occurrence of different possible outcomes in an experiment. Here are some key aspects to understand about probability distributions:</p>
+<h3>Types of Probability Distributions</h3>
+<ol>
+<li><p><strong>Discrete Probability Distributions</strong>:</p>
+<ul>
+<li>Applicable to discrete random variables (variables that take on a finite or countable number of values).</li>
+<li><strong>Examples</strong>:
+<ul>
+<li><strong>Binomial Distribution</strong>: Describes the number of successes in a fixed number of independent Bernoulli trials (e.g., flipping a coin a fixed number of times).</li>
+<li><strong>Poisson Distribution</strong>: Describes the number of events occurring within a fixed interval of time or space, provided these events happen with a known constant mean rate and independently of the time since the last event (e.g., number of emails received in an hour).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Continuous Probability Distributions</strong>:</p>
+<ul>
+<li>Applicable to continuous random variables (variables that take on an infinite number of possible values).</li>
+<li><strong>Examples</strong>:
+<ul>
+<li><strong>Normal Distribution</strong>: Often referred to as the bell curve due to its shape, it describes how the values of a variable are distributed around the mean. It is characterized by its mean (μ) and standard deviation (σ).</li>
+<li><strong>Exponential Distribution</strong>: Describes the time between events in a Poisson process (e.g., the time between arrivals of customers at a service point).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3>Key Characteristics and Functions</h3>
+<ol>
+<li><p><strong>Probability Mass Function (PMF)</strong> for Discrete Distributions:</p>
+<ul>
+<li>Defines the probability that a discrete random variable is exactly equal to some value.</li>
+<li><strong>Example (Binomial Distribution)</strong>:
+[
+P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} , \text{for} , k = 0, 1, 2, \ldots, n
+]
+where ( n ) is the number of trials, ( k ) is the number of successes, and ( p ) is the probability of success on a single trial.</li>
+</ul>
+</li>
+<li><p><strong>Probability Density Function (PDF)</strong> for Continuous Distributions:</p>
+<ul>
+<li>Describes the probability of the random variable falling within a particular range of values, as opposed to taking any one value.</li>
+<li><strong>Example (Normal Distribution)</strong>:
+[
+f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+]
+where ( \mu ) is the mean and ( \sigma ) is the standard deviation.</li>
+</ul>
+</li>
+<li><p><strong>Cumulative Distribution Function (CDF)</strong>:</p>
+<ul>
+<li>Describes the probability that a random variable will take a value less than or equal to a specific value.</li>
+<li>For a discrete random variable, it is the sum of the PMF values.</li>
+<li>For a continuous random variable, it is the integral of the PDF.</li>
+<li>CDF for any random variable ( X ), ( F(x) = P(X \leq x) ).</li>
+</ul>
+</li>
+</ol>
+<h3>Moments of Distributions</h3>
+<ol>
+<li><p><strong>Mean (Expected Value)</strong>:</p>
+<ul>
+<li>The average or central value of a set of values.</li>
+<li>Discrete: ( E(X) = \sum_{x} x \cdot P(X = x) )</li>
+<li>Continuous: ( E(X) = \int_{-\infty}^{\infty} x \cdot f(x) , dx )</li>
+</ul>
+</li>
+<li><p><strong>Variance</strong>:</p>
+<ul>
+<li>Measures the spread or dispersion of a set of values.</li>
+<li>Discrete: ( \text{Var}(X) = \sum_{x} (x - E(X))^2 \cdot P(X = x) )</li>
+<li>Continuous: ( \text{Var}(X) = \int_{-\infty}^{\infty} (x - E(X))^2 \cdot f(x) , dx )</li>
+</ul>
+</li>
+</ol>
+<h3>Importance and Applications</h3>
+<ul>
+<li>Probability distributions are used in a wide range of fields from finance and economics to engineering and the natural sciences. They provide the basis for statistical inference, allowing us to make predictions, conduct hypothesis tests, and estimate parameters.</li>
+</ul>
+<p>Understanding and working with different types of probability distributions allows statisticians and data scientists to model and interpret real-world phenomena effectively.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

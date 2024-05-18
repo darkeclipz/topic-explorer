@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic Equations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Algebra</h1>
+<h2>Quadratic Equations</h2>
+<p>A quadratic equation is a second-degree polynomial equation in a single variable ( x ), with the general form:</p>
+<p>[ ax^2 + bx + c = 0 ]</p>
+<p>where ( a ), ( b ), and ( c ) are constants, and ( a \neq 0 ) (if ( a = 0 ), the equation would be linear, not quadratic).</p>
+<h3>Key Concepts:</h3>
+<ol>
+<li><p><strong>Standard Form</strong>:
+The standard form of a quadratic equation is ( ax^2 + bx + c = 0 ).</p>
+</li>
+<li><p><strong>Solutions</strong>:
+The solutions to the quadratic equation are the values of ( x ) that satisfy the equation. These are called the roots of the equation.</p>
+</li>
+<li><p><strong>Factoring</strong>:
+Some quadratic equations can be factored into the form:
+[
+(px + q)(rx + s) = 0
+]
+The solutions are found by setting each factor equal to zero:
+[
+px + q = 0 \quad \text{and} \quad rx + s = 0
+]</p>
+</li>
+<li><p><strong>Quadratic Formula</strong>:
+For any quadratic equation ( ax^2 + bx + c = 0 ), the solutions can be found using the quadratic formula:
+[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+]
+Here, ( \pm ) indicates that there are generally two solutions.</p>
+</li>
+<li><p><strong>Discriminant</strong>:
+The expression under the square root in the quadratic formula, ( b^2 - 4ac ), is called the discriminant and is denoted by ( \Delta ). It indicates the nature of the roots:</p>
+<ul>
+<li>If ( \Delta &gt; 0 ): There are two distinct real roots.</li>
+<li>If ( \Delta = 0 ): There is exactly one real root (repeated root).</li>
+<li>If ( \Delta &lt; 0 ): There are no real roots (the roots are complex numbers).</li>
+</ul>
+</li>
+<li><p><strong>Completing the Square</strong>:
+This method involves rewriting the quadratic equation in the form:
+[
+(x - h)^2 = k
+]
+It is useful for understanding the derivation of the quadratic formula and for converting the equation into a form that reveals the vertex of the parabola.</p>
+</li>
+</ol>
+<h3>Example:</h3>
+<p>Consider the quadratic equation:</p>
+<p>[ 2x^2 - 4x - 6 = 0 ]</p>
+<ol>
+<li><strong>Using the Quadratic Formula</strong>:
+<ul>
+<li>Here, ( a = 2 ), ( b = -4 ), ( c = -6 ).</li>
+<li>Discriminant, ( \Delta = (-4)^2 - 4(2)(-6) = 16 + 48 = 64 ).</li>
+<li>Since ( \Delta = 64 ), which is greater than 0, there are two distinct real roots.</li>
+<li>Applying the quadratic formula:
+[
+x = \frac{-(-4) \pm \sqrt{64}}{2(2)} = \frac{4 \pm 8}{4}
+]
+[
+x = \frac{4 + 8}{4} = 3 \quad \text{or} \quad x = \frac{4 - 8}{4} = -1
+]</li>
+<li>Therefore, the solutions are ( x = 3 ) and ( x = -1 ).</li>
+</ul>
+</li>
+</ol>
+<p>Understanding quadratic equations not only equips one to solve a variety of mathematical problems but also provides a foundation for many topics in higher mathematics.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

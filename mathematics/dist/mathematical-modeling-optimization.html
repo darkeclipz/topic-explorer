@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Mathematical Modeling</h1>
+<h2>Optimization</h2>
+<p>Optimization in the context of mathematical modeling refers to the selection of the best elements (with regard to some criteria) from a set of available alternatives. It involves maximizing or minimizing a particular function (called the objective function) by systematically choosing input values from within an allowed set and computing the value of the function. Here are key components and concepts in optimization:</p>
+<h3>Key Components:</h3>
+<ol>
+<li><p><strong>Objective Function</strong>:</p>
+<ul>
+<li>This is the function that needs to be maximized or minimized. For example, in a business context, this could be profit that needs to be maximized or cost that needs to be minimized.</li>
+</ul>
+</li>
+<li><p><strong>Decision Variables</strong>:</p>
+<ul>
+<li>These are the variables that decision-makers will decide the values for in order to achieve the best outcome for the objective function. For example, the number of units of different products to produce.</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>:</p>
+<ul>
+<li>These are the restrictions or limitations on the decision variables. Constraints can be equalities or inequalities that represent real-world limitations like resource availability, time constraints, budget limits, etc.</li>
+</ul>
+</li>
+</ol>
+<h3>Types of Optimization Problems:</h3>
+<ol>
+<li><p><strong>Linear Optimization (Linear Programming)</strong>:</p>
+<ul>
+<li>Objective function and constraints are linear functions. For example, optimizing resource allocation under budget constraints.</li>
+</ul>
+</li>
+<li><p><strong>Nonlinear Optimization (Nonlinear Programming)</strong>:</p>
+<ul>
+<li>Objective function or constraints are nonlinear. For example, optimizing aerodynamic shapes in engineering.</li>
+</ul>
+</li>
+<li><p><strong>Integer Optimization (Integer Programming)</strong>:</p>
+<ul>
+<li>Decision variables are constrained to integer values. Commonly used in scheduling, routing, and allocation problems.</li>
+</ul>
+</li>
+<li><p><strong>Combinatorial Optimization</strong>:</p>
+<ul>
+<li>Problems where the objective is to find the best ordering or selection from a finite set of items, such as the traveling salesman problem or knapsack problem.</li>
+</ul>
+</li>
+</ol>
+<h3>Methods of Optimization:</h3>
+<ol>
+<li><p><strong>Analytical Methods</strong>:</p>
+<ul>
+<li>Derivative-based methods (using calculus to find where the first derivative is zero), such as gradient descent or the Newton-Raphson method.</li>
+</ul>
+</li>
+<li><p><strong>Numerical Methods</strong>:</p>
+<ul>
+<li>Methods like the simplex method for linear programming or iterative algorithms for more complex problems.</li>
+</ul>
+</li>
+<li><p><strong>Heuristic and Metaheuristic Methods</strong>:</p>
+<ul>
+<li>Approaches like genetic algorithms, simulated annealing, and particle swarm optimization, which are used especially when the solution space is large and complex.</li>
+</ul>
+</li>
+<li><p><strong>Machine Learning and AI-based Methods</strong>:</p>
+<ul>
+<li>Techniques such as reinforcement learning and neural networks can also be employed for optimization in dynamic and highly complex environments.</li>
+</ul>
+</li>
+</ol>
+<h3>Applications:</h3>
+<ul>
+<li><strong>Engineering</strong>: Structural optimization, design optimization.</li>
+<li><strong>Economics and Finance</strong>: Portfolio optimization, cost minimization.</li>
+<li><strong>Operations Research</strong>: Optimal resource allocation, logistics, scheduling.</li>
+<li><strong>Data Science</strong>: Feature selection, hyperparameter tuning in machine learning models.</li>
+</ul>
+<h3>Example of an Optimization Problem:</h3>
+<p>Suppose a factory produces two products, A and B. The profit from product A is $50 per unit, and the profit from product B is $40 per unit. The factory has a constraint on the production time available. To optimize the production line:</p>
+<ol>
+<li><p><strong>Objective function</strong>: Maximize the total profit.
+[
+\text{Profit} = 50x + 40y
+]
+where (x) is the number of units of product A, and (y) is the number of units of product B.</p>
+</li>
+<li><p><strong>Constraints</strong>:</p>
+<ul>
+<li>Time constraint: Suppose it takes 2 hours to produce one unit of A and 1 hour to produce one unit of B, and only 100 hours are available.
+[
+2x + y \leq 100
+]</li>
+<li>Non-negativity constraint:
+[
+x \geq 0, \quad y \geq 0
+]</li>
+</ul>
+</li>
+</ol>
+<p>The solution to this problem involves finding the values of (x) and (y) that maximize the profit while satisfying the constraints. This can be solved using linear programming techniques.</p>
+<p>In sum, optimization in mathematical modeling is a powerful tool for making the best possible decisions within a given set of constraints.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

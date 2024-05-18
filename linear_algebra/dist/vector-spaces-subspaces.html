@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subspaces</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Vector Spaces</h1>
+<h2>Subspaces</h2>
+<p>In linear algebra, a <strong>subspace</strong> is a subset of a vector space that is itself a vector space under the same addition and scalar multiplication operations. Understanding subspaces is fundamental when exploring the structure and properties of vector spaces.</p>
+<h3>Definition of a Subspace:</h3>
+<p>A subset ( W ) of a vector space ( V ) is called a subspace if it satisfies the following three conditions:</p>
+<ol>
+<li><strong>The Zero Vector</strong>: The zero vector of ( V ) is in ( W ).</li>
+<li><strong>Closed under Addition</strong>: For any vectors ( u, v \in W ), the sum ( u + v ) is also in ( W ).</li>
+<li><strong>Closed under Scalar Multiplication</strong>: For any vector ( u \in W ) and any scalar ( c ), the product ( c \cdot u ) is also in ( W ).</li>
+</ol>
+<p>These conditions ensure that the subset ( W ) inherits the structure of a vector space from ( V ).</p>
+<h3>Examples of Subspaces:</h3>
+<ol>
+<li><strong>The Zero Subspace</strong>: The set containing only the zero vector {0} is always a subspace.</li>
+<li><strong>The Entire Space</strong>: The vector space ( V ) itself is trivially a subspace of ( V ).</li>
+<li><strong>Lines through the Origin</strong>: In ( \mathbb{R}^2 ), any line passing through the origin is a subspace of ( \mathbb{R}^2 ).</li>
+<li><strong>Planes through the Origin</strong>: In ( \mathbb{R}^3 ), any plane passing through the origin is a subspace of ( \mathbb{R}^3 ).</li>
+</ol>
+<h3>Properties of Subspaces:</h3>
+<ul>
+<li><strong>Intersection of Subspaces</strong>: The intersection of two subspaces ( W_1 ) and ( W_2 ) of ( V ) is also a subspace of ( V ).</li>
+<li><strong>Span of a Set</strong>: Given a set of vectors in ( V ), the set of all linear combinations of these vectors forms a subspace, known as the <strong>span</strong> of the set.</li>
+<li><strong>Linear Independence and Basis</strong>: A set of vectors is called a basis of a subspace ( W ) if the set is linearly independent and spans ( W ). The number of vectors in the basis is called the <strong>dimension</strong> of the subspace.</li>
+</ul>
+<h3>Example Walkthrough:</h3>
+<p>Let's consider ( \mathbb{R}^3 ) and a subset ( W ) defined as ( W = { (x, y, z) \in \mathbb{R}^3 \mid x + y + z = 0 } ).</p>
+<ol>
+<li><strong>Zero Vector</strong>: The zero vector ( (0, 0, 0) ) satisfies ( x + y + z = 0 ), so it is in ( W ).</li>
+<li><strong>Closed under Addition</strong>: Take any two vectors ( u = (x_1, y_1, z_1) ) and ( v = (x_2, y_2, z_2) ) in ( W ). Then ( x_1 + y_1 + z_1 = 0 ) and ( x_2 + y_2 + z_2 = 0 ). Adding them gives ( (x_1 + x_2, y_1 + y_2, z_1 + z_2) ). The sum ( (x_1 + x_2) + (y_1 + y_2) + (z_1 + z_2) = (x_1 + y_1 + z_1) + (x_2 + y_2 + z_2) = 0 + 0 = 0 ). So, the sum is in ( W ).</li>
+<li><strong>Closed under Scalar Multiplication</strong>: For vector ( (x, y, z) \in W ) and scalar ( c ), ( x + y + z = 0 ) implies ( c \cdot (x + y + z) = c \cdot 0 = 0 ). So, the product ( c(x, y, z) = (cx, cy, cz) ) is in ( W ).</li>
+</ol>
+<p>Therefore, ( W ) is a subspace of ( \mathbb{R}^3 ).</p>
+<h3>Conclusion:</h3>
+<p>Subspaces are a crucial concept in linear algebra as they help reveal the structure and dimensions within vector spaces. They are used in solving systems of linear equations, understanding transformations, and many other areas in mathematics and applied sciences.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

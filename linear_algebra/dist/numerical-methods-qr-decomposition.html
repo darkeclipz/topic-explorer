@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Decomposition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Numerical Methods</h1>
+<h2>QR Decomposition</h2>
+<p>QR Decomposition, also known as QR Factorization, is a numerical method used in linear algebra to decompose a given matrix ( A ) into the product of two matrices: ( Q ) and ( R ).</p>
+<h3>Definition:</h3>
+<p>For an ( m \times n ) matrix ( A ) with ( m \geq n ), QR Decomposition expresses ( A ) as:
+[ A = QR ]
+where:</p>
+<ul>
+<li>( Q ) is an ( m \times n ) orthogonal (if ( A ) is square) or unitary matrix (if ( A ) has complex entries).</li>
+<li>( R ) is an ( n \times n ) upper triangular matrix.</li>
+</ul>
+<h3>Properties:</h3>
+<ul>
+<li>The columns of ( Q ) are orthonormal, meaning ( Q^T Q = I ) where ( I ) is the identity matrix.</li>
+<li>( R ) being upper triangular means all its elements below the main diagonal are zero.</li>
+</ul>
+<h3>Applications:</h3>
+<ul>
+<li><strong>Solving linear systems</strong>: Particularly useful for solving ( Ax = b ).</li>
+<li><strong>Computing eigenvalues</strong>: Used in iterative methods like the QR algorithm.</li>
+<li><strong>Least squares problems</strong>: Helps in finding the best fit solution to over-determined systems.</li>
+</ul>
+<h3>Methods for QR Decomposition:</h3>
+<p>QR Decomposition can be performed using several methods:</p>
+<ol>
+<li><p><strong>Gram-Schmidt Process</strong>:</p>
+<ul>
+<li>Applies the Gram-Schmidt orthogonalization to the columns of ( A ) to produce the orthogonal matrix ( Q ) and upper triangular matrix ( R ).</li>
+</ul>
+</li>
+<li><p><strong>Householder Reflections</strong>:</p>
+<ul>
+<li>Uses Householder transformations to zero out the sub-diagonal elements systematically, which is numerically stable and often preferred for practical implementations.</li>
+</ul>
+</li>
+<li><p><strong>Givens Rotations</strong>:</p>
+<ul>
+<li>Uses a series of rotations to introduce zeros below the diagonal, useful for sparse matrices.</li>
+</ul>
+</li>
+</ol>
+<h3>Example:</h3>
+<p>Given a matrix ( A ):</p>
+<p>[ A = \begin{pmatrix} 1 &amp; 1 &amp; 1 \ 1 &amp; 3 &amp; 3 \ 1 &amp; 3 &amp; 5 \end{pmatrix} ]</p>
+<p>We aim to find matrices ( Q ) and ( R ) such that ( A = QR ).</p>
+<p>Using the Gram-Schmidt process:</p>
+<ol>
+<li><p>Compute ( Q ):</p>
+<ul>
+<li>Normalize the first column: ( q_1 = a_1 / |a_1| )</li>
+<li>Orthogonalize the remaining columns with respect to ( q_1 ) and normalize, continue this process for each column.</li>
+</ul>
+</li>
+<li><p>Compute ( R ):</p>
+<ul>
+<li>( R = Q^T A )</li>
+</ul>
+</li>
+</ol>
+<p>The resulting ( Q ) and ( R ) are:</p>
+<p>[ Q = \begin{pmatrix}
+\frac{1}{\sqrt{3}} &amp; \frac{1}{\sqrt{6}} &amp; \frac{2}{\sqrt{2}} \
+\frac{1}{\sqrt{3}} &amp; \frac{1}{\sqrt{6}} &amp; -\frac{1}{\sqrt{2}} \
+\frac{1}{\sqrt{3}} &amp; -\frac{4}{\sqrt{6}} &amp; 0
+\end{pmatrix} ]</p>
+<p>[ R = \begin{pmatrix}
+\sqrt{3} &amp; \frac{5}{\sqrt{3}} &amp; \frac{9}{\sqrt{3}} \
+0 &amp; \sqrt{\frac{2}{3}} &amp; \frac{2\sqrt{6}}{3} \
+0 &amp; 0 &amp; \sqrt{2}
+\end{pmatrix} ]</p>
+<p>Therefore, ( A = QR ) where ( Q ) and ( R ) are constructed as shown above.</p>
+<h3>Summary:</h3>
+<p>QR Decomposition is a crucial tool in numerical linear algebra with applications that span solving linear systems, eigenvalue computations, and addressing least squares problems. The various methods for performing QR Decomposition, like Gram-Schmidt, Householder transformations, and Givens rotations, offer flexibility based on the structure and requirements of the problem at hand.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

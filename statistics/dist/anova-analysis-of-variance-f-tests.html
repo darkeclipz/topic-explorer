@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F-Tests</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>ANOVA (Analysis of Variance)</h1>
+<h2>F-Tests</h2>
+<p>F-tests are a fundamental component of ANOVA (Analysis of Variance), which is a statistical method used to compare the means of three or more groups to see if at least one group mean is different from the others. Here's a detailed explanation:</p>
+<h3>What is an F-Test?</h3>
+<p>The F-test in the context of ANOVA is used to determine whether there are any statistically significant differences between the means of several groups. It tests the null hypothesis that all group means are equal.</p>
+<h3>Key Concepts</h3>
+<ol>
+<li><p><strong>Null Hypothesis (H₀)</strong>: The null hypothesis states that all group means are equal, i.e., there is no significant difference among the groups.</p>
+</li>
+<li><p><strong>Alternative Hypothesis (H₁)</strong>: The alternative hypothesis states that at least one group mean is different from the others.</p>
+</li>
+<li><p><strong>Between-Group Variability</strong>: This measures how much the group means vary from the overall mean. Large variability indicates that the means are different, while small variability indicates that the means are similar.</p>
+</li>
+<li><p><strong>Within-Group Variability</strong>: This measures how much the observations within each group vary from their respective group mean.</p>
+</li>
+<li><p><strong>F-Ratio</strong>: The F-ratio is the test statistic for ANOVA and is calculated as:
+[
+F = \frac{\text{Between-Group Variability}}{\text{Within-Group Variability}}
+]
+A higher F-ratio indicates greater variability between group means compared to within groups, suggesting significant differences among the group means.</p>
+</li>
+</ol>
+<h3>Steps in ANOVA F-Test</h3>
+<ol>
+<li><p><strong>Calculate Group Means</strong>: Compute the mean for each group.</p>
+</li>
+<li><p><strong>Calculate the Overall Mean</strong>: Compute the mean of all the data points combined.</p>
+</li>
+<li><p><strong>Calculate Between-Group Variability (SSB)</strong>:
+[
+SSB = \sum_{i=1}^{k} n_i (\bar{X}_i - \bar{X})^2
+]
+where ( n_i ) is the number of observations in group ( i ), ( \bar{X}_i ) is the mean of group ( i ), and ( \bar{X} ) is the overall mean.</p>
+</li>
+<li><p><strong>Calculate Within-Group Variability (SSW)</strong>:
+[
+SSW = \sum_{i=1}^{k} \sum_{j=1}^{n_i} (X_{ij} - \bar{X}<em>i)^2
+]
+where ( X</em>{ij} ) is the ( j )-th observation in group ( i ).</p>
+</li>
+<li><p><strong>Calculate F-Ratio</strong>:
+[
+F = \frac{\text{MSB}}{\text{MSW}}
+]
+where Mean Square Between (MSB) = (\frac{SSB}{k-1}) and Mean Square Within (MSW) = (\frac{SSW}{N-k}), with ( k ) being the number of groups and ( N ) being the total number of observations.</p>
+</li>
+<li><p><strong>Compare F to Critical Value</strong>: Use an F-distribution table to find the critical value for the given degrees of freedom and significance level (α, usually 0.05). If the calculated F is greater than the critical value, reject the null hypothesis.</p>
+</li>
+</ol>
+<h3>Interpretation</h3>
+<ul>
+<li><strong>If F-value &gt; Critical Value</strong>: Reject the null hypothesis, indicating that there are significant differences between the group means.</li>
+<li><strong>If F-value ≤ Critical Value</strong>: Do not reject the null hypothesis, indicating that there is no significant difference between the group means.</li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li><strong>Independence</strong>: Observations are independent of each other.</li>
+<li><strong>Normality</strong>: The data in each group should be approximately normally distributed.</li>
+<li><strong>Homogeneity of Variances</strong>: The variances within each group should be approximately equal.</li>
+</ol>
+<h3>Applications</h3>
+<p>F-tests in ANOVA are widely used in various fields such as psychology, agriculture, biology, and economics to compare different treatment effects or group differences.</p>
+<h3>Types of ANOVA</h3>
+<ol>
+<li><strong>One-Way ANOVA</strong>: Used when comparing means of three or more independent (unrelated) groups.</li>
+<li><strong>Two-Way ANOVA</strong>: Used when comparing groups across two factors.</li>
+</ol>
+<p>By understanding and applying F-tests within ANOVA, researchers can determine whether observed differences among group means are statistically significant, providing critical insights into their data.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

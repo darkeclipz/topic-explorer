@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Limit Theorem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Probability Theory</h1>
+<h2>Central Limit Theorem</h2>
+<p>The Central Limit Theorem (CLT) is a fundamental theorem in probability theory and statistics. It states that, given a sufficiently large sample size, the sampling distribution of the sample mean will be normally distributed (i.e., it will approximate a normal distribution), regardless of the original distribution of the population from which the sample is drawn. Here are the key points to understand about the CLT:</p>
+<h3>Key Concepts</h3>
+<ol>
+<li><p><strong>Population and Sample</strong>:</p>
+<ul>
+<li><strong>Population</strong>: The entire set of possible observations.</li>
+<li><strong>Sample</strong>: A subset of observations drawn from the population.</li>
+</ul>
+</li>
+<li><p><strong>Sample Mean</strong>: The average value of the observations in the sample. It is a statistic used to estimate the population mean.</p>
+</li>
+<li><p><strong>Sampling Distribution</strong>: The probability distribution of a given statistic (e.g., the sample mean) based on a large number of samples drawn from the same population.</p>
+</li>
+</ol>
+<h3>Formal Statement</h3>
+<p>If ( X_1, X_2, ..., X_n ) are independent and identically distributed (i.i.d.) random variables drawn from any population with a finite mean ( \mu ) and finite variance ( \sigma^2 ), then the sampling distribution of the sample mean ( \bar{X} ) will approach a normal distribution as the sample size ( n ) becomes large. Mathematically, this can be expressed as:</p>
+<p>[ \bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i ]</p>
+<p>As ( n ) approaches infinity:</p>
+<p>[ \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \rightarrow N(0,1) ]</p>
+<p>Where ( N(0,1) ) denotes the standard normal distribution, with mean 0 and variance 1.</p>
+<h3>Implications</h3>
+<ol>
+<li><p><strong>Normal Approximation</strong>: For large sample sizes, the sample mean ( \bar{X} ) will be approximately normally distributed even if the underlying population is not normal.</p>
+</li>
+<li><p><strong>Estimations and Confidence Intervals</strong>: The CLT allows statisticians to make inferences about population parameters (such as the mean) using the normal distribution. This is particularly useful for constructing confidence intervals and conducting hypothesis tests.</p>
+</li>
+</ol>
+<h3>Conditions</h3>
+<ol>
+<li><p><strong>Sample Size</strong>: The sample size should be sufficiently large. In practice, a sample size of 30 or more is often considered adequate, although a larger sample size may be required if the population distribution is highly skewed or has heavy tails.</p>
+</li>
+<li><p><strong>Independence</strong>: The samples must be independent. This means that the selection of one observation should not influence the selection of another.</p>
+</li>
+<li><p><strong>Identical Distribution</strong>: The random variables should be identically distributed with the same mean and variance.</p>
+</li>
+</ol>
+<h3>Example</h3>
+<p>Suppose you want to estimate the average height of adult men in a city. You collect a random sample of 100 men and calculate the sample mean height. According to the CLT, if you repeat this process many times (drawing many samples of 100 men each time), the distribution of these sample means will approximate a normal distribution centered around the true population mean height, with a standard error ( \sigma / \sqrt{100} ).</p>
+<h3>Conclusion</h3>
+<p>The Central Limit Theorem is a powerful tool in statistics because it justifies the use of the normal distribution for making probabilistic and statistical inferences about population parameters, even when the underlying population distribution is not normal. This theorem underpins many statistical methods and is essential for understanding how sample statistics relate to population parameters.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

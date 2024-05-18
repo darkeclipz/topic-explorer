@@ -1,0 +1,14 @@
+{
+    "key_topics": [
+        {"topic": "Algebra", "subtopics": ["Linear Equations", "Quadratic Equations", "Polynomials", "Factorization", "Inequalities"]},
+        {"topic": "Geometry", "subtopics": ["Triangles", "Circles", "Polygons", "Angles", "Congruence and Similarity", "Coordinate Geometry"]},
+        {"topic": "Calculus", "subtopics": ["Limits", "Derivatives", "Integrals", "Differential Equations", "Sequences and Series"]},
+        {"topic": "Statistics", "subtopics": ["Descriptive Statistics", "Probability", "Distributions", "Hypothesis Testing", "Regression Analysis"]},
+        {"topic": "Number Theory", "subtopics": ["Prime Numbers", "Divisibility", "Modular Arithmetic", "Number Patterns", "Cryptography"]},
+        {"topic": "Discrete Mathematics", "subtopics": ["Logic", "Set Theory", "Graph Theory", "Combinatorics", "Algorithms"]},
+        {"topic": "Linear Algebra", "subtopics": ["Vectors", "Matrices", "Determinants", "Eigenvalues and Eigenvectors", "Linear Transformations"]},
+        {"topic": "Trigonometry", "subtopics": ["Sine, Cosine, Tangent", "Trigonometric Identities", "Laws of Sines and Cosines", "Angle Measures", "Unit Circle"]},
+        {"topic": "Mathematical Logic", "subtopics": ["Propositional Logic", "Predicate Logic", "Proof Techniques", "Set Theory", "Model Theory"]},
+        {"topic": "Mathematical Modeling", "subtopics": ["Differential Equations", "Optimization", "Dynamical Systems", "Stochastic Models", "Simulations"]}
+    ]
+}

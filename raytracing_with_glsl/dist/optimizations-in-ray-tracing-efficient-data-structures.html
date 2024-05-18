@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efficient Data Structures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Optimizations in Ray Tracing</h1>
+<h2>Efficient Data Structures</h2>
+<p>Efficient data structures are crucial for optimizing the performance of ray tracing algorithms. In ray tracing, one of the primary computational challenges is determining the intersections between rays and objects in a scene. Here are some key data structures used to accelerate this process:</p>
+<h3>1. Bounding Volume Hierarchies (BVH)</h3>
+<ul>
+<li><strong>Concept</strong>: BVH is a tree structure where each node is an axis-aligned bounding box (AABB) that encapsulates a subset of the scene's geometry.</li>
+<li><strong>Structure</strong>:
+<ul>
+<li><strong>Leaf nodes</strong> contain individual objects or small groups of objects.</li>
+<li><strong>Internal nodes</strong> contain child nodes and their corresponding bounding boxes.</li>
+</ul>
+</li>
+<li><strong>Benefits</strong>:
+<ul>
+<li>BVH helps to significantly reduce the number of ray-object intersection tests by quickly culling large portions of the scene that don't intersect with the ray.</li>
+<li>It is particularly effective for scenes with static geometry.</li>
+</ul>
+</li>
+</ul>
+<h3>2. K-D Trees (K-Dimensional Trees)</h3>
+<ul>
+<li><strong>Concept</strong>: A K-D Tree is a binary tree used for organizing points in a k-dimensional space. For ray tracing, typically, a 3-dimensional K-D Tree is used.</li>
+<li><strong>Structure</strong>:
+<ul>
+<li>Each node represents a splitting plane at a specific axis (x, y, or z).</li>
+<li><strong>Leaves</strong> contain references to geometric primitives.</li>
+<li><strong>Internal nodes</strong> store the split information and references to child nodes.</li>
+</ul>
+</li>
+<li><strong>Benefits</strong>:
+<ul>
+<li>K-D Trees efficiently split space and can quickly discard large volumes of space that do not intersect with the ray.</li>
+<li>They are effective in balancing the tree and minimizing the number of intersection checks.</li>
+</ul>
+</li>
+</ul>
+<h3>3. Grids</h3>
+<ul>
+<li><strong>Concept</strong>: A grid divides the space into a regular grid of cells, where each cell contains a list of objects partially or entirely inside it.</li>
+<li><strong>Structure</strong>:
+<ul>
+<li>The scene's bounding box is divided into a grid of cells.</li>
+<li>Each cell stores references to the objects within or partially overlapping the cell.</li>
+</ul>
+</li>
+<li><strong>Benefits</strong>:
+<ul>
+<li>Simple to implement and can be very effective for scenes where objects are uniformly distributed.</li>
+<li>Ray traversal through the grid is straightforward and typically implemented with algorithms like 3D-DDA (Digital Differential Analyzer).</li>
+</ul>
+</li>
+</ul>
+<h3>4. Octrees</h3>
+<ul>
+<li><strong>Concept</strong>: An octree is a tree structure where each node splits the space into eight child nodes (octants).</li>
+<li><strong>Structure</strong>:
+<ul>
+<li><strong>Leaf nodes</strong> contain either objects or further subdivide until a certain criteria are met (e.g., a maximum number of objects or minimum volume).</li>
+<li>Each octant recursively splits the space until the base level of the tree is reached.</li>
+</ul>
+</li>
+<li><strong>Benefits</strong>:
+<ul>
+<li>Effective for scenes with hierarchical and spatially-clustered data.</li>
+<li>Can adaptively subdivide space, making it efficient for both dense and sparse regions.</li>
+</ul>
+</li>
+</ul>
+<h3>5. Sparse Voxel Octrees (SVO)</h3>
+<ul>
+<li><strong>Concept</strong>: An SVO is an extension of the octree, specifically designed for voxel-based representations of scenes.</li>
+<li><strong>Structure</strong>:
+<ul>
+<li>Uses a sparse representation where only non-empty nodes are stored.</li>
+<li>Efficiently encodes large volumes with high detail levels using a hierarchical approach.</li>
+</ul>
+</li>
+<li><strong>Benefits</strong>:
+<ul>
+<li>Superior for representing and rendering highly detailed volumetric data.</li>
+<li>Reduces memory usage compared to regular voxel grids by storing only non-empty portions of the space.</li>
+</ul>
+</li>
+</ul>
+<h3>6. Scene Graphs</h3>
+<ul>
+<li><strong>Concept</strong>: A scene graph organizes the scene using a graph structure, where nodes represent objects, transformations, or groupings.</li>
+<li><strong>Structure</strong>:
+<ul>
+<li><strong>Nodes</strong>: Represent objects or transformations.</li>
+<li><strong>Edges</strong>: Represent relationships or hierarchies (e.g., a parent-child relationship indicating a group of objects).</li>
+</ul>
+</li>
+<li><strong>Benefits</strong>:
+<ul>
+<li>Useful for managing complex scenes with hierarchical relationships (e.g., nested objects).</li>
+<li>Can optimize culling operations by allowing whole subtrees to be quickly discarded.</li>
+</ul>
+</li>
+</ul>
+<h3>Implementation Considerations:</h3>
+<ul>
+<li><strong>Spatial Considerations</strong>: Choose a data structure based on the spatial distribution of the scene's geometries.</li>
+<li><strong>Static vs. Dynamic</strong>: For static scenes, precomputed acceleration structures like BVH or K-D Trees are highly effective. For dynamic scenes, it's important to use structures that can be efficiently updated, like grids or loosely-coupled BVHs.</li>
+<li><strong>Memory Usage vs. Speed</strong>: There's a trade-off between the memory usage and the speed of ray tracing. Efficient data structures balance these aspects to achieve optimal performance.</li>
+</ul>
+<h3>Conclusion</h3>
+<p>Implementing efficient data structures is essential for optimizing ray tracing algorithms. By reducing the number of ray-object intersection tests and leveraging hierarchical spatial information, these data structures can significantly enhance the speed and performance of ray tracing applications.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

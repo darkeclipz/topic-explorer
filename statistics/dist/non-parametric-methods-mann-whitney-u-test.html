@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mann-Whitney U Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Non-Parametric Methods</h1>
+<h2>Mann-Whitney U Test</h2>
+<p>The Mann-Whitney U Test, also known as the Wilcoxon rank-sum test, is a non-parametric test used to determine whether there is a significant difference between the distributions of two independent groups. Unlike parametric tests, it doesn't assume that the data comes from a particular distribution, such as the normal distribution, making it useful when dealing with non-normally distributed data or ordinal data.</p>
+<h3>Key Concepts and Steps in the Mann-Whitney U Test:</h3>
+<ol>
+<li><p><strong>Hypotheses:</strong></p>
+<ul>
+<li><strong>Null Hypothesis (H0):</strong> The distributions of the two groups are identical. This implies that the probabilities of observing any value from one group are equal to the probabilities of observing values from the other group.</li>
+<li><strong>Alternative Hypothesis (H1):</strong> The distributions of the two groups are not identical.</li>
+</ul>
+</li>
+<li><p><strong>Assumptions:</strong></p>
+<ul>
+<li>The observations are independent within and across groups.</li>
+<li>The measurement scale is at least ordinal.</li>
+</ul>
+</li>
+<li><p><strong>Procedure:</strong></p>
+<ol>
+<li><p><strong>Combine and Rank Data:</strong></p>
+<ul>
+<li>Combine data from both groups.</li>
+<li>Rank the combined data from smallest to largest. In case of ties, assign the average rank to tied values.</li>
+</ul>
+</li>
+<li><p><strong>Calculate U Values:</strong></p>
+<ul>
+<li>Calculate the sum of ranks for each group (( R1 ) and ( R2 )).</li>
+<li>Calculate the test statistic ( U ) for both groups:
+[ U1 = n1 \cdot n2 + \frac{n1(n1 + 1)}{2} - R1 ]
+[ U2 = n1 \cdot n2 + \frac{n2(n2 + 1)}{2} - R2 ]
+where ( n1 ) and ( n2 ) are the sample sizes for Group 1 and Group 2, respectively.</li>
+<li>The smaller value between ( U1 ) and ( U2 ) is the test statistic ( U ).</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>Determine Significance:</strong></p>
+<ul>
+<li>Compare the calculated ( U ) value with the critical value from the Mann-Whitney U distribution table at a chosen significance level (alpha, usually 0.05).</li>
+<li>Alternatively, compute the p-value (often available from statistical software) and compare it to the significance level.</li>
+</ul>
+</li>
+<li><p><strong>Conclusion:</strong></p>
+<ul>
+<li>If ( U ) is less than or equal to the critical value (or if the p-value is less than the significance level), reject the null hypothesis. This implies that there is a significant difference between the two groups.</li>
+<li>If ( U ) is greater than the critical value (or if the p-value is greater than the significance level), fail to reject the null hypothesis. This implies no significant difference between the two groups.</li>
+</ul>
+</li>
+</ol>
+<h3>Example:</h3>
+<p>Suppose we have two groups of students who took different teaching methods for learning math, and we want to compare their test scores.</p>
+<ul>
+<li><strong>Group A (Method 1):</strong> 85, 90, 88</li>
+<li><strong>Group B (Method 2):</strong> 78, 82, 85, 88</li>
+</ul>
+<ol>
+<li><p><strong>Rank the combined data:</strong></p>
+<ul>
+<li>Combined Scores: 78(1), 82(2), 85(3.5, 3.5), 85(3.5, 3.5), 88(6, 6), 90(7)</li>
+<li>(Here, 85 has tied ranks, and 88 has tied ranks, so average ranks are used).</li>
+</ul>
+</li>
+<li><p><strong>Sum of ranks:</strong></p>
+<ul>
+<li>Sum of ranks for Group A (( R1 )): 3.5 + 7 + 6 = 16.5</li>
+<li>Sum of ranks for Group B (( R2 )): 1 + 2 + 3.5 + 6 = 12.5</li>
+</ul>
+</li>
+<li><p><strong>Calculate U:</strong></p>
+<ul>
+<li>( n1 = 3 ) (Group A)</li>
+<li>( n2 = 4 ) (Group B)</li>
+<li>Calculate ( U ) values:
+[ U1 = 3 \cdot 4 + \frac{3(3 + 1)}{2} - 16.5 = 12 + 6 - 16.5 = 1.5 ]
+[ U2 = 3 \cdot 4 + \frac{4(4 + 1)}{2} - 12.5 = 12 + 10 - 12.5 = 9.5 ]</li>
+<li>The smaller U value is 1.5.</li>
+</ul>
+</li>
+<li><p><strong>Determine significance:</strong></p>
+<ul>
+<li>Check the U value in a Mann-Whitney U table or use statistical software to find the p-value.</li>
+<li>If the computed U (1.5) is less than the critical value at the chosen significance level, conclude that there is a significant difference between the groups.</li>
+</ul>
+</li>
+</ol>
+<p>The Mann-Whitney U test is an important tool for statistical analysis when the data does not meet the assumptions of parametric tests.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

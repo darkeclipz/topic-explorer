@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular Arithmetic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Number Theory</h1>
+<h2>Modular Arithmetic</h2>
+<p>Modular arithmetic is a system of arithmetic for integers, where numbers &quot;wrap around&quot; after reaching a certain value, called the modulus. It is a foundational concept in number theory and has many applications in computer science, cryptography, and coding theory.</p>
+<h3>Key Concepts in Modular Arithmetic:</h3>
+<ol>
+<li><p><strong>Modulus</strong>:</p>
+<ul>
+<li>The modulus is a positive integer ( n ) that defines the range of numbers. In modular arithmetic, when you reach ( n ), you wrap around back to 0.</li>
+<li>Example: In modulo 5 arithmetic, the numbers are 0, 1, 2, 3, and 4. After 4 comes 0 again.</li>
+</ul>
+</li>
+<li><p><strong>Congruence</strong>:</p>
+<ul>
+<li>Two integers ( a ) and ( b ) are said to be congruent modulo ( n ) if their difference ( a - b ) is divisible by ( n ).</li>
+<li>This is written as ( a \equiv b \ (\text{mod} \ n) ).</li>
+<li>Example: ( 17 \equiv 2 \ (\text{mod} \ 5) ) because ( 17 - 2 = 15 ) is divisible by 5.</li>
+</ul>
+</li>
+<li><p><strong>Addition, Subtraction, and Multiplication</strong>:</p>
+<ul>
+<li>The basic operations of addition, subtraction, and multiplication can be performed as usual and then the result is taken modulo ( n ).</li>
+<li>Example (mod 7):
+<ul>
+<li>Addition: ( 4 + 5 \equiv 9 \equiv 2 \ (\text{mod} \ 7) )</li>
+<li>Subtraction: ( 4 - 5 \equiv -1 \equiv 6 \ (\text{mod} \ 7) )</li>
+<li>Multiplication: ( 3 \times 5 \equiv 15 \equiv 1 \ (\text{mod} \ 7) )</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Inverse</strong>:</p>
+<ul>
+<li>An integer ( a ) has a multiplicative inverse modulo ( n ) if there exists an integer ( b ) such that ( a \times b \equiv 1 \ (\text{mod} \ n) ).</li>
+<li>The inverse exists if and only if ( a ) and ( n ) are coprime (i.e., ( \gcd(a, n) = 1 )).</li>
+<li>Example: The inverse of 3 modulo 7 is 5 because ( 3 \times 5 \equiv 15 \equiv 1 \ (\text{mod} \ 7) ).</li>
+</ul>
+</li>
+<li><p><strong>Division</strong>:</p>
+<ul>
+<li>Division in modular arithmetic is performed by multiplying by the modular multiplicative inverse.</li>
+<li>Example: To divide 3 by 2 modulo 7, first find the inverse of 2 modulo 7, which is 4, then compute ( 3 \times 4 \equiv 12 \equiv 5 \ (\text{mod} \ 7) ).</li>
+</ul>
+</li>
+</ol>
+<h3>Applications of Modular Arithmetic:</h3>
+<ol>
+<li><p><strong>Cryptography</strong>:</p>
+<ul>
+<li>Used in encryption algorithms like RSA, Diffie-Hellman key exchange, and elliptic curve cryptography.</li>
+</ul>
+</li>
+<li><p><strong>Computer Science</strong>:</p>
+<ul>
+<li>While working with cyclic data structures like circular buffers, hash tables, and for implementing random number generators.</li>
+</ul>
+</li>
+<li><p><strong>Algorithms</strong>:</p>
+<ul>
+<li>Used in algorithms for finding the greatest common divisor (Euclidean algorithm), solving linear congruences, and in modular exponentiation.</li>
+</ul>
+</li>
+<li><p><strong>Coding Theory</strong>:</p>
+<ul>
+<li>Essential in error detection and correction algorithms.</li>
+</ul>
+</li>
+</ol>
+<p>To summarize, modular arithmetic is a critical concept with widespread applications in various fields involving computations and helps in understanding the properties of integers under division, aiding in both theoretical and practical problems.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

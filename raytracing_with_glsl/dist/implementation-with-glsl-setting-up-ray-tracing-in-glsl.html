@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Up Ray Tracing in GLSL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Implementation with GLSL</h1>
+<h2>Setting Up Ray Tracing in GLSL</h2>
+<p>Setting up ray tracing in GLSL involves several steps, including initializing the necessary environment and writing the shaders that perform the ray tracing computation. Here's a comprehensive guide:</p>
+<h3>1. <strong>Initialize the OpenGL Environment</strong></h3>
+<p>Before you start with ray tracing, you need to set up an OpenGL context and GLSL environment. Typically, this involves setting up a window using a library like GLFW or GLUT and initializing GLEW (or a similar extension wrangler) if needed.</p>
+<ol>
+<li><strong>Create and Configure a Window:</strong>
+<ul>
+<li>Initialize the window using GLFW or any other preferred library.</li>
+<li>Set necessary OpenGL context hints.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-cpp">glfwInit();
+glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4); // OpenGL version 4.x
+glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
+glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+GLFWwindow* window = glfwCreateWindow(800, 600, &quot;Ray Tracing with GLSL&quot;, NULL, NULL);
+glfwMakeContextCurrent(window);
+</code></pre>
+<ol start="2">
+<li><strong>Initialize GLEW:</strong>
+<ul>
+<li>Load OpenGL functions using GLEW or another extension loader.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-cpp">glewExperimental = GL_TRUE;
+glewInit();
+</code></pre>
+<h3>2. <strong>Load and Compile Shaders</strong></h3>
+<p>You need two main shaders: a vertex shader and a fragment shader. The vertex shader will handle the usual transformation of vertices, while the fragment shader will perform the actual ray tracing.</p>
+<ol>
+<li><strong>Vertex Shader:</strong>
+<ul>
+<li>Typically a pass-through shader for ray tracing.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-glsl">#version 450 core
+layout(location = 0) in vec3 aPos; // Vertex position from a VBO
+
+void main() {
+    gl_Position = vec4(aPos, 1.0);
+}
+</code></pre>
+<ol start="2">
+<li><strong>Fragment Shader:</strong>
+<ul>
+<li>This shader will contain the ray tracing logic.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-glsl">#version 450 core
+out vec4 FragColor;
+uniform vec3 uCameraPos;
+uniform vec3 uCameraDir;
+
+void mainImage(out vec4 fragColor, in vec2 fragCoord) {
+    // Calculate ray direction
+    vec3 rayDir = normalize(vec3(fragCoord, -1.0) - uCameraPos);
+    
+    // Perform ray tracing (simple example, replace with actual logic)
+    vec3 col = vec3(0.0); // Background color
+    float t = 0.5 * (rayDir.y + 1.0);
+    col = mix(vec3(1.0, 1.0, 1.0), vec3(0.5, 0.7, 1.0), t);
+
+    fragColor = vec4(col, 1.0);
+}
+
+void main() {
+    mainImage(FragColor, gl_FragCoord.xy);
+}
+</code></pre>
+<ol start="3">
+<li><strong>Compile Shaders and Link Program:</strong></li>
+</ol>
+<pre><code class="language-cpp">GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+glShaderSource(vertexShader, 1, &amp;vertexSource, NULL);
+glCompileShader(vertexShader);
+
+GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+glShaderSource(fragmentShader, 1, &amp;fragmentSource, NULL);
+glCompileShader(fragmentShader);
+
+GLuint shaderProgram = glCreateProgram();
+glAttachShader(shaderProgram, vertexShader);
+glAttachShader(shaderProgram, fragmentShader);
+glLinkProgram(shaderProgram);
+glUseProgram(shaderProgram);
+</code></pre>
+<h3>3. <strong>Prepare Geometry</strong></h3>
+<p>You need to send some geometry to the GPU for the ray tracing algorithm to run on. This usually involves sending a full-screen quad.</p>
+<pre><code class="language-cpp">float vertices[] = {
+    // positions       
+    -1.0f,  1.0f, 0.0f,
+    -1.0f, -1.0f, 0.0f,
+     1.0f, -1.0f, 0.0f,
+     1.0f,  1.0f, 0.0f
+};
+unsigned int indices[] = {
+    0, 1, 2,
+    2, 3, 0
+};
+
+unsigned int VBO, VAO, EBO;
+glGenVertexArrays(1, &amp;VAO);
+glGenBuffers(1, &amp;VBO);
+glGenBuffers(1, &amp;EBO);
+
+glBindVertexArray(VAO);
+
+glBindBuffer(GL_ARRAY_BUFFER, VBO);
+glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+// position attribute
+glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+glEnableVertexAttribArray(0);
+
+glBindBuffer(GL_ARRAY_BUFFER, 0); 
+glBindVertexArray(0); 
+</code></pre>
+<h3>4. <strong>Rendering Loop</strong></h3>
+<p>Within the rendering loop, you need to update any uniform values like the camera position and direction, and draw the quad.</p>
+<pre><code class="language-cpp">while (!glfwWindowShouldClose(window)) {
+    // Update camera position and direction
+    glUniform3fv(glGetUniformLocation(shaderProgram, &quot;uCameraPos&quot;), 1, glm::value_ptr(cameraPos));
+    glUniform3fv(glGetUniformLocation(shaderProgram, &quot;uCameraDir&quot;), 1, glm::value_ptr(cameraDirection));
+
+    // Render the quad
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glBindVertexArray(VAO);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+    glfwSwapBuffers(window);
+    glfwPollEvents();
+}
+</code></pre>
+<h3>5. <strong>Clean Up</strong></h3>
+<p>Clean up resources once you are done.</p>
+<pre><code class="language-cpp">glDeleteVertexArrays(1, &amp;VAO);
+glDeleteBuffers(1, &amp;VBO);
+glDeleteBuffers(1, &amp;EBO);
+glfwTerminate();
+</code></pre>
+<h3>Summary</h3>
+<p>Setting up ray tracing in GLSL involves initializing the OpenGL context, loading and compiling vertex and fragment shaders, preparing a full-screen quad to render on, and implementing the rendering loop to update and render the scene. The fragment shader hosts the ray tracing logic, determining how rays interact with the scene to compute the final colors for each pixel.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

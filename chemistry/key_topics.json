@@ -1,0 +1,15 @@
+{
+    "key_topics": [
+        {"topic": "Atomic Structure", "subtopics": ["Atoms", "Isotopes", "Electron Configuration", "Atomic Orbitals"]},
+        {"topic": "Periodic Table", "subtopics": ["Periodic Trends", "Group and Period Classification", "Element Properties", "Metals, Nonmetals, and Metalloids"]},
+        {"topic": "Chemical Bonding", "subtopics": ["Ionic Bonds", "Covalent Bonds", "Metallic Bonds", "Intermolecular Forces", "Lewis Structures", "Bond Polarity"]},
+        {"topic": "Stoichiometry", "subtopics": ["Mole Concept", "Balancing Chemical Equations", "Limiting Reactants", "Percent Yield"]},
+        {"topic": "Thermochemistry", "subtopics": ["Enthalpy", "Entropy", "Gibbs Free Energy", "Heat Capacity", "Calorimetry"]},
+        {"topic": "Chemical Kinetics", "subtopics": ["Reaction Rates", "Rate Laws", "Activation Energy", "Catalysts"]},
+        {"topic": "Chemical Equilibrium", "subtopics": ["Le Chatelier's Principle", "Equilibrium Constants", "Reaction Quotient", "Applications of Equilibrium"]},
+        {"topic": "Acids and Bases", "subtopics": ["pH and pOH", "Acid-Base Titration", "Buffer Solutions", "Strong and Weak Acids/Bases"]},
+        {"topic": "Redox Reactions", "subtopics": ["Oxidation States", "Balancing Redox Reactions", "Electrochemical Cells", "Applications of Redox Reactions"]},
+        {"topic": "Organic Chemistry", "subtopics": ["Hydrocarbons", "Functional Groups", "Nomenclature", "Organic Synthesis", "Reaction Mechanisms"]},
+        {"topic": "Analytical Chemistry", "subtopics": ["Qualitative Analysis", "Quantitative Analysis", "Instrumental Methods", "Chromatography", "Spectroscopy"]}
+    ]
+}

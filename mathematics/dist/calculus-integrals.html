@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Calculus</h1>
+<h2>Integrals</h2>
+<p>Integrals are a fundamental concept in calculus, often used in various branches of mathematics, physics, engineering, and other sciences. Integrals are broadly classified into definite and indefinite integrals. Here’s an overview of each:</p>
+<h3>Indefinite Integrals</h3>
+<p><strong>Indefinite integral</strong>:</p>
+<ul>
+<li>The indefinite integral of a function represents a family of functions whose derivative is the given function.</li>
+<li>It is essentially the reverse process of differentiation.</li>
+<li>The notation for an indefinite integral is ∫f(x)dx, which is read as &quot;the integral of f of x with respect to x.&quot;</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<ul>
+<li>If f(x) = 2x, an indefinite integral of 2x with respect to x is ∫2x dx = x² + C, where C is the constant of integration.</li>
+</ul>
+<p><strong>Integration rules</strong>:</p>
+<ul>
+<li><strong>Constant Rule</strong>: ∫a dx = ax + C</li>
+<li><strong>Power Rule</strong>: ∫xn dx = (xn+1)/(n+1) + C (for n ≠ -1)</li>
+<li><strong>Sum Rule</strong>: ∫[f(x) + g(x)] dx = ∫f(x) dx + ∫g(x) dx</li>
+<li><strong>Difference Rule</strong>: ∫[f(x) - g(x)] dx = ∫f(x) dx - ∫g(x) dx</li>
+<li><strong>Substitution Rule</strong>: Used when integrating composite functions.</li>
+</ul>
+<h3>Definite Integrals</h3>
+<p><strong>Definite integral</strong>:</p>
+<ul>
+<li>The definite integral of a function over an interval [a, b] gives the net area under the curve of the function from x = a to x = b.</li>
+<li>It is represented by ∫[a, b] f(x) dx, where a and b are the limits of integration.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<ul>
+<li><p>If you want to find the area under the curve of f(x) = x² from x = 1 to x = 3, you calculate ∫[1, 3] x² dx.</p>
+<p>∫[1, 3] x² dx = [x³/3] from 1 to 3
+= [(3³/3) - (1³/3)]
+= (27/3) - (1/3)
+= 9 - 1/3
+= 8.67</p>
+</li>
+</ul>
+<h3>Fundamental Theorem of Calculus</h3>
+<p>The Fundamental Theorem of Calculus links the concept of differentiation and integration in two parts:</p>
+<ol>
+<li><p>If F is an antiderivative of f on an interval [a, b], then:
+∫[a, b] f(x) dx = F(b) - F(a)</p>
+</li>
+<li><p>If f is continuous on [a, b] and F is defined by F(x) = ∫[a, x] f(t) dt, then F is differentiable, and F'(x) = f(x).</p>
+</li>
+</ol>
+<h3>Applications of Integrals</h3>
+<ol>
+<li><strong>Area under a curve</strong>: Calculating the area between the x-axis and the curve of a function.</li>
+<li><strong>Volume</strong>: Determining the volume of solids of revolution using methods such as the disk, washer, and shell methods.</li>
+<li><strong>Work</strong>: Computing the work done when a force is applied over a distance.</li>
+<li><strong>Center of mass</strong>: Finding the center of mass of a system with continuous mass distribution.</li>
+<li><strong>Probability</strong>: In statistics, the integral of a probability density function over an interval represents the probability of the variable falling within that interval.</li>
+</ol>
+<p>Understanding integrals requires practice and familiarity with various techniques and rules of integration, but they are a powerful tool in solving many real-world problems.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

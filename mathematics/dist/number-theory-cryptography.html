@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptography</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Number Theory</h1>
+<h2>Cryptography</h2>
+<p>Cryptography is the study and practice of techniques for securing communication and data from unauthorized access, ensuring data integrity, confidentiality, and authenticity. Cryptography has a rich history and a profound impact on digital security in the modern world, particularly in areas like online banking, secure communications, and electronic transactions. In the context of number theory, cryptography leverages various properties of numbers and mathematical structures to create secure encryption methods. Here’s an overview of key concepts in cryptographic number theory:</p>
+<h3>1. <strong>Prime Numbers:</strong></h3>
+<ul>
+<li><strong>Definition:</strong> Prime numbers are natural numbers greater than 1 that have no positive divisors other than 1 and themselves.</li>
+<li><strong>Relevance:</strong> Many cryptographic algorithms rely on the properties of prime numbers. For instance, large prime numbers are used in RSA encryption because factoring the product of two large primes is computationally difficult.</li>
+</ul>
+<h3>2. <strong>Modular Arithmetic:</strong></h3>
+<ul>
+<li><strong>Definition:</strong> A system of arithmetic for integers, where numbers &quot;wrap around&quot; after reaching a certain value, the modulus.</li>
+<li><strong>Relevance:</strong> Modular arithmetic is a foundational element in many cryptographic algorithms. For example, in the RSA algorithm, calculations are performed modulo a product of two large primes.</li>
+</ul>
+<h3>3. <strong>Public Key Cryptography:</strong></h3>
+<ul>
+<li><strong>RSA Algorithm:</strong> One of the first and most widely used public-key cryptosystems that is based on the difficulty of factoring large integers. It uses a pair of keys: a public key for encryption and a private key for decryption.</li>
+<li><strong>Elliptic Curve Cryptography (ECC):</strong> Uses the mathematics of elliptic curves to create keys. ECC offers the same level of security as RSA but with smaller key sizes.</li>
+</ul>
+<h3>4. <strong>Cryptographic Protocols:</strong></h3>
+<ul>
+<li><strong>Diffie-Hellman Key Exchange:</strong> A method for two parties to securely exchange cryptographic keys over a public channel, relying on the difficulty of computing discrete logarithms.</li>
+<li><strong>Digital Signatures:</strong> Algorithms that verify the authenticity of a message or document. This often involves using hash functions and asymmetric encryption to ensure non-repudiation and integrity.</li>
+</ul>
+<h3>5. <strong>Hash Functions:</strong></h3>
+<ul>
+<li><strong>Definition:</strong> Functions that take an input (or 'message') and return a fixed-size string of bytes. The output is typically a 'digest' that uniquely represents the input data.</li>
+<li><strong>Relevance:</strong> Cryptographic hash functions are used in various applications like digital signatures, message authentication codes, and integrity checks.</li>
+</ul>
+<h3>6. <strong>Symmetric vs. Asymmetric Cryptography:</strong></h3>
+<ul>
+<li><strong>Symmetric Key Cryptography:</strong> Both the sender and receiver share the same key for both encryption and decryption (e.g., AES).</li>
+<li><strong>Asymmetric Key Cryptography:</strong> Utilizes a pair of keys, a public key for encryption and a private key for decryption (e.g., RSA).</li>
+</ul>
+<h3>7. <strong>Cryptographic Primitives:</strong></h3>
+<ul>
+<li><strong>Block Ciphers:</strong> Encrypts data in fixed-size blocks (e.g., AES).</li>
+<li><strong>Stream Ciphers:</strong> Encrypts data as a stream of bits or bytes (e.g., RC4).</li>
+</ul>
+<h3>Practical Applications:</h3>
+<ul>
+<li><strong>Secure Communications:</strong> Ensuring that messages are only readable by intended recipients (e.g., HTTPS).</li>
+<li><strong>Data Integrity:</strong> Verifying that data has not been altered (e.g., using hash functions).</li>
+<li><strong>Authentication:</strong> Ensuring that the parties involved in communication are who they claim to be (e.g., digital signatures).</li>
+</ul>
+<h3>Challenges and Considerations:</h3>
+<ul>
+<li><strong>Computational Complexity:</strong> Ensuring that encryption algorithms are secure enough to withstand attacks but are also efficient enough to be used in real-time applications.</li>
+<li><strong>Quantum Computing:</strong> Potential future advancements in quantum computing pose challenges to current cryptographic methods, leading to research in quantum-resistant algorithms.</li>
+</ul>
+<p>Cryptography, deeply rooted in number theory, underpins the security of our digital lives, making it a crucial area of study and development in both mathematics and computer science.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

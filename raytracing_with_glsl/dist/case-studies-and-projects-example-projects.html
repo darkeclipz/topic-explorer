@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Case Studies and Projects</h1>
+<h2>Example Projects</h2>
+<p>Certainly! Example projects in the context of ray tracing with GLSL (OpenGL Shading Language) provide practical applications of the concepts you've learned. They help bridge theory with real-world applications and can serve as valuable resources for understanding how to implement complex algorithms. Here's a more detailed look at some possible example projects and case studies:</p>
+<h3>1. Simple Ray Tracer</h3>
+<p><strong>Objective</strong>: Build a basic ray tracer that can handle simple geometric shapes like spheres, planes, and cubes.</p>
+<p><strong>Description</strong>:</p>
+<ul>
+<li>Implement basic ray generation in a GLSL fragment shader.</li>
+<li>Handle ray-sphere and ray-plane intersections.</li>
+<li>Implement simple lighting models, such as Phong shading.</li>
+<li>Render a scene that includes a few geometric shapes with basic materials and lighting.</li>
+</ul>
+<h3>2. Reflection and Refraction</h3>
+<p><strong>Objective</strong>: Implement reflections and refractions to create realistic scenes with shiny and transparent materials.</p>
+<p><strong>Description</strong>:</p>
+<ul>
+<li>Extend the basic ray tracer to include recursive ray tracing for reflections.</li>
+<li>Implement Snell's Law to simulate refractions through transparent materials.</li>
+<li>Combine these techniques to render scenes with glass objects, mirrors, and water surfaces.</li>
+</ul>
+<h3>3. Acceleration Structures</h3>
+<p><strong>Objective</strong>: Use acceleration structures to optimize ray tracing performance.</p>
+<p><strong>Description</strong>:</p>
+<ul>
+<li>Implement a Bounding Volume Hierarchy (BVH) or KD-Tree to speed up intersection tests.</li>
+<li>Build the acceleration structure in the CPU and pass the data to the GPU.</li>
+<li>Compare the performance of the ray tracer with and without the acceleration structures.</li>
+</ul>
+<h3>4. Global Illumination</h3>
+<p><strong>Objective</strong>: Implement global illumination techniques to achieve photorealistic rendering.</p>
+<p><strong>Description</strong>:</p>
+<ul>
+<li>Use Monte Carlo sampling to approximate light interactions in the scene.</li>
+<li>Implement techniques like Path Tracing to simulate global illumination.</li>
+<li>Handle complex lighting scenarios, including caustics and color bleeding.</li>
+</ul>
+<h3>5. Procedural Generation and Texturing</h3>
+<p><strong>Objective</strong>: Use procedural techniques to generate and texture complex scenes.</p>
+<p><strong>Description</strong>:</p>
+<ul>
+<li>Generate procedural textures in GLSL.</li>
+<li>Create procedural geometry, such as terrains or fractal landscapes.</li>
+<li>Use noise functions (e.g., Perlin noise) to create natural-looking materials and terrain.</li>
+</ul>
+<h3>6. Volume Rendering</h3>
+<p><strong>Objective</strong>: Implement volume rendering techniques to render data sets like medical scans or smoke simulations.</p>
+<p><strong>Description</strong>:</p>
+<ul>
+<li>Implement ray marching to traverse volumetric data.</li>
+<li>Use transfer functions to map voxel data to colors and opacities.</li>
+<li>Optimize performance for high-resolution volumetric data sets.</li>
+</ul>
+<h3>7. Interactive Ray Tracing in Real Time</h3>
+<p><strong>Objective</strong>: Develop an interactive ray tracing application that can dynamically update based on user input.</p>
+<p><strong>Description</strong>:</p>
+<ul>
+<li>Optimize the ray tracing algorithm to run in real time.</li>
+<li>Implement user interface elements allowing for interaction, such as moving the camera or objects.</li>
+<li>Use techniques like adaptive sampling to maintain high performance and visual quality.</li>
+</ul>
+<h3>8. Case Study: Recreating Famous Ray Tracing Scenes</h3>
+<p><strong>Objective</strong>: Recreate well-known scenes from computer graphics history using GLSL ray tracing.</p>
+<p><strong>Description</strong>:</p>
+<ul>
+<li>Choose a famous ray-traced image or scene (e.g., the Utah Teapot, Cornell Box).</li>
+<li>Analyze the original scene's elements, including geometry, materials, and lighting.</li>
+<li>Recreate the scene using your ray tracing engine, paying close attention to accuracy and detail.</li>
+</ul>
+<h3>9. Hybrid Rendering</h3>
+<p><strong>Objective</strong>: Combine rasterization and ray tracing to take advantage of the strengths of both techniques.</p>
+<p><strong>Description</strong>:</p>
+<ul>
+<li>Implement a hybrid rendering pipeline where primary rays are handled by rasterization, and secondary effects like reflections and shadows use ray tracing.</li>
+<li>Optimize data sharing between the rasterization and ray tracing stages.</li>
+<li>Render complex scenes efficiently by leveraging the strengths of both techniques.</li>
+</ul>
+<h3>10. Real-World Applications</h3>
+<p><strong>Objective</strong>: Apply ray tracing to a specific real-world problem.</p>
+<p><strong>Description</strong>:</p>
+<ul>
+<li>Choose an application domain, such as architectural visualization, special effects for films, or scientific visualization.</li>
+<li>Develop a ray tracing solution tailored to the specific requirements and challenges of the chosen domain.</li>
+<li>Present your results with a focus on practical impact and performance considerations.</li>
+</ul>
+<p>These example projects can serve as a roadmap for exploring and applying ray tracing techniques using GLSL. They provide hands-on experience and can significantly deep your understanding of the intricacies involved in producing high-quality, photorealistic images.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

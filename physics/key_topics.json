@@ -1,0 +1,12 @@
+{
+    "key_topics": [
+        {"topic": "Classical Mechanics", "subtopics": ["Newton's Laws of Motion", "Work and Energy", "Rotational Motion", "Gravitation"]},
+        {"topic": "Electromagnetism", "subtopics": ["Electrostatics", "Electric Circuits", "Magnetism", "Electromagnetic Waves"]},
+        {"topic": "Thermodynamics", "subtopics": ["Laws of Thermodynamics", "Heat Transfer", "Thermal Properties of Matter", "Entropy"]},
+        {"topic": "Quantum Mechanics", "subtopics": ["Wave-Particle Duality", "Schrödinger Equation", "Quantum States", "Uncertainty Principle"]},
+        {"topic": "Optics", "subtopics": ["Reflection and Refraction", "Lenses and Mirrors", "Interference and Diffraction", "Polarization"]},
+        {"topic": "Relativity", "subtopics": ["Special Relativity", "General Relativity", "Time Dilation", "Black Holes"]},
+        {"topic": "Nuclear Physics", "subtopics": ["Radioactivity", "Nuclear Reactions", "Nuclear Fission and Fusion", "Particle Physics"]},
+        {"topic": "Condensed Matter Physics", "subtopics": ["Crystal Structure", "Semiconductors", "Superconductivity", "Magnetic Properties of Matter"]}
+    ]
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Illumination</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Advanced Ray Tracing Techniques</h1>
+<h2>Global Illumination</h2>
+<p>Global Illumination (GI) is a comprehensive model that aims to simulate the complex interactions of light in a scene to achieve highly realistic rendering. Unlike direct illumination, which only considers light that travels directly from light sources to surfaces, global illumination accounts for all possible light paths, including those that involve multiple reflections, refractions, and scattering. Here are some key aspects of global illumination in the context of advanced ray tracing techniques:</p>
+<h3>Key Concepts of Global Illumination:</h3>
+<ol>
+<li><p><strong>Indirect Lighting:</strong></p>
+<ul>
+<li>Indirect lighting occurs when light reflects off surfaces and contributes to the illumination of other parts of the scene. This creates a more realistic rendering as light bounces multiple times, capturing subtle interactions.</li>
+</ul>
+</li>
+<li><p><strong>Color Bleeding:</strong></p>
+<ul>
+<li>As light bounces off colored surfaces, it can carry some of the surface's color to other parts of the scene. This phenomenon, known as color bleeding, adds to the realism of the rendered image.</li>
+</ul>
+</li>
+<li><p><strong>Caustics:</strong></p>
+<ul>
+<li>Caustics are bright patterns created when light is focused by reflective or refractive surfaces, such as water or glass. These patterns can be very complex and add significant visual detail to the rendering.</li>
+</ul>
+</li>
+<li><p><strong>Ambient Occlusion:</strong></p>
+<ul>
+<li>Ambient occlusion is a technique used to approximate how light radiates in an environment, particularly focusing on how objects occlude light in corners, creases, and areas where surfaces meet. This is a simplified form of GI and helps to enhance visual depth and realism without the extensive computation of full global illumination.</li>
+</ul>
+</li>
+</ol>
+<h3>Techniques to Achieve Global Illumination:</h3>
+<ol>
+<li><p><strong>Ray Tracing:</strong></p>
+<ul>
+<li>Standard ray tracing can be extended to compute global illumination by including rays for indirect lighting. These rays are cast from surfaces to estimate the incoming radiance from other parts of the scene.</li>
+</ul>
+</li>
+<li><p><strong>Path Tracing:</strong></p>
+<ul>
+<li>Path tracing is a method that simulates random paths of photons as they travel through the scene. It averages the contributions of many rays per pixel, capturing light paths including diffuse reflections, refractions, and caustics, which leads to more accurate and realistic lighting.</li>
+</ul>
+</li>
+<li><p><strong>Photon Mapping:</strong></p>
+<ul>
+<li>Photon mapping is a two-pass algorithm where photons are emitted from light sources and traced through the scene to build a photon map, which is then used to estimate indirect lighting during the rendering pass. This method can efficiently handle caustics and other complex lighting phenomena.</li>
+</ul>
+</li>
+<li><p><strong>Radiosity:</strong></p>
+<ul>
+<li>Radiosity focuses on simulating the diffuse reflection of light and is more suited for scenes where indirect lighting is primarily diffuse. It subdivides surfaces into smaller patches and computes the transfer of light between these patches iteratively.</li>
+</ul>
+</li>
+<li><p><strong>Bidirectional Path Tracing:</strong></p>
+<ul>
+<li>This technique combines both light tracing and eye tracing by sending paths from both the camera and light sources, connecting and validating them to improve the convergence and accuracy of the final image.</li>
+</ul>
+</li>
+</ol>
+<h3>Implementing Global Illumination in GLSL:</h3>
+<p>To achieve global illumination in GLSL, here are some high-level steps:</p>
+<ol>
+<li><p><strong>Setup Ray Tracing Framework:</strong></p>
+<ul>
+<li>Set up the basic ray tracing framework in GLSL, ensuring that rays can be cast, intersect with objects, and compute direct illumination.</li>
+</ul>
+</li>
+<li><p><strong>Implement Indirect Lighting:</strong></p>
+<ul>
+<li>Extend the shader to handle indirect illumination by casting secondary rays from surface points to simulate the scattered light. You might use a Monte Carlo integration method to approximate the incoming radiance from these secondary rays.</li>
+</ul>
+</li>
+<li><p><strong>Handling Caustics and Color Bleeding:</strong></p>
+<ul>
+<li>Include additional ray calculations for caustics and color bleeding by storing and fetching necessary data (like photon maps or color buffers) during rendering.</li>
+</ul>
+</li>
+<li><p><strong>Optimize Performance:</strong></p>
+<ul>
+<li>Due to the high computational cost, focus on optimization techniques such as importance sampling, stratified sampling, or using lower resolution buffers for certain calculations that are later upscaled.</li>
+</ul>
+</li>
+<li><p><strong>Debug and Fine-tune:</strong></p>
+<ul>
+<li>Continuously debug and profile the shader to identify and resolve performance bottlenecks and ensure visual correctness.</li>
+</ul>
+</li>
+</ol>
+<p>By integrating these techniques, global illumination can be effectively achieved for highly realistic and visually striking renderings in real-time or offline graphics applications.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

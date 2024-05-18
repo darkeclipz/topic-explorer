@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stochastic Models</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Mathematical Modeling</h1>
+<h2>Stochastic Models</h2>
+<p>Stochastic models are mathematical frameworks used to represent systems or processes that involve randomness or uncertainty. Unlike deterministic models, which predict a single outcome given a set of initial conditions, stochastic models incorporate random variables and probabilistic behavior. This makes them particularly useful for modeling real-world phenomena where uncertainty and variability are inherent.</p>
+<h3>Key Concepts in Stochastic Models:</h3>
+<ol>
+<li><p><strong>Random Variables</strong>:</p>
+<ul>
+<li>These are variables whose possible values are outcomes of a random phenomenon. They are essential in capturing the randomness in the model.</li>
+</ul>
+</li>
+<li><p><strong>Probability Distributions</strong>:</p>
+<ul>
+<li>These describe how probabilities are distributed over the values of the random variable. Common examples include the normal distribution, binomial distribution, and Poisson distribution.</li>
+</ul>
+</li>
+<li><p><strong>Stochastic Processes</strong>:</p>
+<ul>
+<li>A collection of random variables indexed by time or space. Common types include:
+<ul>
+<li><strong>Markov Chains</strong>: Processes where the future state depends only on the current state and not on the history (memory-less property).</li>
+<li><strong>Poisson Processes</strong>: Models events occurring randomly over a period of time, often used in queuing theory.</li>
+<li><strong>Brownian Motion</strong>: Used in financial models to represent the random movement of stock prices and other financial variables.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Expectation and Variance</strong>:</p>
+<ul>
+<li>Expected value (or mean) is the long-run average value of the random variable.</li>
+<li>Variance measures the dispersion of the random variable from its mean.</li>
+</ul>
+</li>
+<li><p><strong>Monte Carlo Simulations</strong>:</p>
+<ul>
+<li>A computational technique that uses random sampling to obtain numerical results, often used to estimate complex mathematical or physical systems.</li>
+</ul>
+</li>
+</ol>
+<h3>Applications of Stochastic Models:</h3>
+<ul>
+<li><p><strong>Finance</strong>:</p>
+<ul>
+<li>Stock price modeling, option pricing (e.g., Black-Scholes model), risk assessment, and portfolio optimization.</li>
+</ul>
+</li>
+<li><p><strong>Insurance</strong>:</p>
+<ul>
+<li>Modeling claim occurrences, pricing insurance products, and assessing risk.</li>
+</ul>
+</li>
+<li><p><strong>Queueing Theory</strong>:</p>
+<ul>
+<li>Analyzing systems like customer service, network data transmission, and manufacturing processes where entities queue up for service.</li>
+</ul>
+</li>
+<li><p><strong>Epidemiology</strong>:</p>
+<ul>
+<li>Modeling the spread of diseases, taking into account the random nature of contact and infection rates.</li>
+</ul>
+</li>
+<li><p><strong>Engineering</strong>:</p>
+<ul>
+<li>Reliability analysis of complex systems, performance evaluation of communication networks.</li>
+</ul>
+</li>
+</ul>
+<h3>Steps in Building a Stochastic Model:</h3>
+<ol>
+<li><p><strong>Define the System and Objectives</strong>:</p>
+<ul>
+<li>Identify the key elements and objectives of the system being modeled (e.g., predicting stock prices, estimating system reliability).</li>
+</ul>
+</li>
+<li><p><strong>Identify Random Variables and Processes</strong>:</p>
+<ul>
+<li>Determine the variables that exhibit randomness and choose appropriate stochastic processes to model them.</li>
+</ul>
+</li>
+<li><p><strong>Formulate the Model</strong>:</p>
+<ul>
+<li>Develop mathematical representations, including probability distributions and relationships among variables.</li>
+</ul>
+</li>
+<li><p><strong>Parameter Estimation</strong>:</p>
+<ul>
+<li>Use historical data or experiments to estimate the parameters of the model (e.g., mean, variance, transition probabilities).</li>
+</ul>
+</li>
+<li><p><strong>Simulation and Analysis</strong>:</p>
+<ul>
+<li>Use simulations (e.g., Monte Carlo) to analyze the behavior of the model and make predictions.</li>
+</ul>
+</li>
+<li><p><strong>Validation and Refinement</strong>:</p>
+<ul>
+<li>Compare model predictions with real-world data to validate accuracy. Refine the model as needed for better precision.</li>
+</ul>
+</li>
+</ol>
+<h3>Conclusion:</h3>
+<p>Stochastic models are powerful tools for understanding and predicting systems with inherent randomness. By incorporating probability distributions and random variables, these models provide more realistic and flexible representations of complex phenomena, making them invaluable in fields like finance, engineering, and epidemiology.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singular Value Decomposition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Numerical Methods</h1>
+<h2>Singular Value Decomposition</h2>
+<p>Singular Value Decomposition (SVD) is a powerful factorization method used in numerical linear algebra. It generalizes the eigendecomposition of a square matrix to any ( m \times n ) matrix. Here’s an in-depth explanation:</p>
+<h3>Definition:</h3>
+<p>Singular Value Decomposition decomposes a matrix ( A ) into three other matrices, ( U ), ( \Sigma ), and ( V^T ), such that:
+[ A = U \Sigma V^T ]
+where:</p>
+<ul>
+<li>( A ) is an ( m \times n ) matrix.</li>
+<li>( U ) is an ( m \times m ) orthogonal matrix (columns are orthonormal vectors, meaning (U^TU = I)).</li>
+<li>( \Sigma ) is an ( m \times n ) diagonal matrix with non-negative real numbers on the diagonal (these are the singular values).</li>
+<li>( V^T ) (the transpose of ( V )) is an ( n \times n ) orthogonal matrix (columns are orthonormal vectors, meaning ( V^TV = I )).</li>
+</ul>
+<h3>Steps to Calculate SVD:</h3>
+<ol>
+<li><p><strong>Compute Eigenvalues and Eigenvectors:</strong></p>
+<ul>
+<li>Compute the eigenvalues and eigenvectors of both ( A^T A ) and ( AA^T ).</li>
+<li>The eigenvalues of ( A^T A ) (or ( AA^T )) are the squares of the singular values of ( A ).</li>
+</ul>
+</li>
+<li><p><strong>Form Matrices ( U ) and ( V ):</strong></p>
+<ul>
+<li>The columns of ( V ) are the eigenvectors of ( A^T A ).</li>
+<li>The columns of ( U ) are the eigenvectors of ( AA^T ).</li>
+</ul>
+</li>
+<li><p><strong>Construct ( \Sigma ):</strong></p>
+<ul>
+<li>Place the square roots of the eigenvalues (the singular values) on the diagonal of ( \Sigma ).</li>
+<li>( \Sigma ) will be an ( m \times n ) matrix with non-negative real numbers in descending order along the diagonal and zeros elsewhere.</li>
+</ul>
+</li>
+</ol>
+<h3>Properties:</h3>
+<ul>
+<li>The singular values in ( \Sigma ) provide insight into the rank and stability of the matrix ( A ).</li>
+<li>If ( A ) is a square matrix, the singular values can also give information about the invertibility of ( A ).</li>
+<li>The columns of ( U ) are called the left singular vectors, and the columns of ( V ) are called the right singular vectors.</li>
+</ul>
+<h3>Applications:</h3>
+<ul>
+<li><strong>Dimensionality Reduction:</strong> In Principal Component Analysis (PCA) for reducing the number of variables in high-dimensional data.</li>
+<li><strong>Signal Processing:</strong> SVD is used to filter noise and improve signal quality.</li>
+<li><strong>Image Compression:</strong> Compressing image data by reducing the number of singular values used to reconstruct the image.</li>
+<li><strong>Solving Linear Systems:</strong> Especially useful for solving systems of linear equations that are ill-conditioned or singular.</li>
+</ul>
+<h3>Example:</h3>
+<p>Consider a ( 3 \times 2 ) matrix ( A ):
+[ A = \begin{pmatrix}
+3 &amp; 2 \
+2 &amp; 3 \
+1 &amp; 1
+\end{pmatrix} ]</p>
+<ol>
+<li><p><strong>Compute ( A^T A ):</strong>
+[ A^T A = \begin{pmatrix}
+3 &amp; 2 &amp; 1 \
+2 &amp; 3 &amp; 1
+\end{pmatrix}
+\begin{pmatrix}
+3 &amp; 2 \
+2 &amp; 3 \
+1 &amp; 1
+\end{pmatrix} = \begin{pmatrix}
+14 &amp; 11 \
+11 &amp; 14
+\end{pmatrix} ]</p>
+</li>
+<li><p><strong>Eigenvalues of ( A^T A ):</strong>
+[ \lambda_1 = 25, \quad \lambda_2 = 3 ]
+(Note: Eigenvalues ( \lambda_i ) are the squares of the singular values ( \sigma_i ))</p>
+</li>
+<li><p><strong>Singular Values:</strong>
+[ \sigma_1 = \sqrt{25} = 5, \quad \sigma_2 = \sqrt{3} \approx 1.73 ]</p>
+</li>
+<li><p><strong>Construct ( \Sigma ):</strong>
+[ \Sigma = \begin{pmatrix}
+5 &amp; 0 \
+0 &amp; 1.732 \
+0 &amp; 0
+\end{pmatrix} ]</p>
+</li>
+<li><p><strong>Find ( U ) and ( V ):</strong></p>
+<ul>
+<li>Eigenvectors of ( A^T A ) will form ( V ).</li>
+<li>Eigenvectors of ( AA^T ) will form ( U ).</li>
+</ul>
+</li>
+</ol>
+<p>Putting these pieces together yields the SVD of matrix ( A ).</p>
+<p>In practice, numerical software and libraries such as MATLAB, NumPy, and others provide algorithms to compute SVD efficiently, making it a widely used tool in various fields.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

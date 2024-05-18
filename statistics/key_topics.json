@@ -1,0 +1,68 @@
+{
+    "key_topics": [
+        {
+            "topic": "Descriptive Statistics",
+            "subtopics": [
+                "Measures of Central Tendency",
+                "Measures of Dispersion",
+                "Frequency Distributions",
+                "Data Visualization"
+            ]
+        },
+        {
+            "topic": "Inferential Statistics",
+            "subtopics": [
+                "Point Estimation",
+                "Confidence Intervals",
+                "Hypothesis Testing",
+                "P-values"
+            ]
+        },
+        {
+            "topic": "Probability Theory",
+            "subtopics": [
+                "Basic Probability",
+                "Probability Distributions",
+                "Random Variables",
+                "Law of Large Numbers",
+                "Central Limit Theorem"
+            ]
+        },
+        {
+            "topic": "Regression Analysis",
+            "subtopics": [
+                "Simple Linear Regression",
+                "Multiple Regression",
+                "Logistic Regression",
+                "Assumptions and Diagnostics"
+            ]
+        },
+        {
+            "topic": "ANOVA (Analysis of Variance)",
+            "subtopics": [
+                "One-Way ANOVA",
+                "Two-Way ANOVA",
+                "Repeated Measures ANOVA",
+                "F-Tests"
+            ]
+        },
+        {
+            "topic": "Non-Parametric Methods",
+            "subtopics": [
+                "Chi-Square Tests",
+                "Mann-Whitney U Test",
+                "Wilcoxon Signed-Rank Test",
+                "Kruskal-Wallis Test"
+            ]
+        },
+        {
+            "topic": "Time Series Analysis",
+            "subtopics": [
+                "Trend Analysis",
+                "Seasonal Variation",
+                "Autoregressive Models",
+                "Moving Averages"
+            ]
+        }
+    ]
+}

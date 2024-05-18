@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proof Techniques</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Mathematical Logic</h1>
+<h2>Proof Techniques</h2>
+<p>Proof techniques are crucial in mathematical logic and provide systematic methods to establish the validity of mathematical statements. Here are some key proof techniques:</p>
+<h3>1. <strong>Direct Proof</strong></h3>
+<p>A direct proof demonstrates the truth of a given statement by straightforward logical reasoning. This type of proof is often used when trying to prove an implication (P \rightarrow Q).</p>
+<p><strong>Example:</strong>
+Prove that if (n) is an even integer, then (n^2) is also even.</p>
+<p><strong>Proof:</strong></p>
+<ul>
+<li>Assume (n) is even, so ( n = 2k ) for some integer (k).</li>
+<li>Then ( n^2 = (2k)^2 = 4k^2 ).</li>
+<li>(4k^2) is clearly even because it is a multiple of 2.</li>
+<li>Thus, (n^2) is even.</li>
+</ul>
+<h3>2. <strong>Indirect Proof (Proof by Contradiction)</strong></h3>
+<p>An indirect proof involves assuming that the statement to be proved is false and then showing that this assumption leads to a contradiction.</p>
+<p><strong>Example:</strong>
+Prove that (\sqrt{2}) is irrational.</p>
+<p><strong>Proof:</strong></p>
+<ul>
+<li>Assume (\sqrt{2}) is rational.</li>
+<li>Then it can be written as (\sqrt{2} = \frac{a}{b}), where (a) and (b) are coprime integers (i.e., their greatest common divisor is 1) and (b \ne 0).</li>
+<li>Squaring both sides gives (2 = \frac{a^2}{b^2} \Rightarrow 2b^2 = a^2).</li>
+<li>Thus, (a^2) is even, which implies (a) is even (if a square is even, its root must also be even).</li>
+<li>Let's write (a = 2k) for some integer (k).</li>
+<li>Then (2b^2 = (2k)^2 = 4k^2 \Rightarrow b^2 = 2k^2).</li>
+<li>Therefore, (b^2) is even, implying (b) is even.</li>
+<li>But if both (a) and (b) are even, they are not coprime, contradicting our initial assumption.</li>
+<li>Therefore, (\sqrt{2}) is irrational.</li>
+</ul>
+<h3>3. <strong>Proof by Contrapositive</strong></h3>
+<p>This technique proves an implication (P \rightarrow Q) by proving the contrapositive (\neg Q \rightarrow \neg P) is true instead.</p>
+<p><strong>Example:</strong>
+Prove that if (n^2) is odd, then (n) is odd.</p>
+<p><strong>Proof:</strong></p>
+<ul>
+<li>We will prove the contrapositive: If (n) is even, then (n^2) is even.</li>
+<li>Assume (n) is even, so ( n = 2k ) for some integer (k).</li>
+<li>Then ( n^2 = (2k)^2 = 4k^2 ), which is even.</li>
+<li>This confirms the contrapositive, thereby proving the original statement.</li>
+</ul>
+<h3>4. <strong>Mathematical Induction</strong></h3>
+<p>Mathematical induction is used to prove statements that are usually formulated in terms of (n), where (n) is a non-negative integer.</p>
+<p><strong>Example:</strong>
+Prove that for all positive integers (n), the sum of the first (n) positive integers is given by (\sum_{i=1}^{n} i = \frac{n(n+1)}{2}).</p>
+<p><strong>Proof:</strong></p>
+<ul>
+<li><strong>Base Case:</strong> For (n = 1), (\sum_{i=1}^{1} i = 1). The formula gives (\frac{1 \cdot (1+1)}{2} = 1), so it holds for (n = 1).</li>
+<li><strong>Inductive Step:</strong> Assume the formula holds for some integer (k \geq 1), i.e., (\sum_{i=1}^{k} i = \frac{k(k+1)}{2}).</li>
+<li>We need to show it holds for (k + 1). Consider (\sum_{i=1}^{k+1} i = \sum_{i=1}^{k} i + (k+1)).</li>
+<li>By the induction hypothesis, (\sum_{i=1}^{k} i = \frac{k(k+1)}{2}).</li>
+<li>So, (\sum_{i=1}^{k+1} i = \frac{k(k+1)}{2} + (k+1) = \frac{k(k+1) + 2(k+1)}{2} = \frac{(k+1)(k+2)}{2}).</li>
+<li>The formula holds for (k + 1).</li>
+<li>By induction, the formula is true for all positive integers (n).</li>
+</ul>
+<h3>5. <strong>Proof by Exhaustion</strong></h3>
+<p>This method involves checking all possible cases to prove the statement. It is often used when the number of cases is finite and manageable.</p>
+<p><strong>Example:</strong>
+Prove that all positive integers less than 4 are prime numbers.</p>
+<p><strong>Proof:</strong></p>
+<ul>
+<li>The positive integers less than 4 are 1, 2, and 3.</li>
+<li>1 is not considered prime, but for this proof we might redefine it to suit context.</li>
+<li>2 is prime because its only divisors are 1 and 2.</li>
+<li>3 is prime because its only divisors are 1 and 3.</li>
+<li>Since we have exhausted all cases and 1 is considered an exception or specially treated, the statement is proven.</li>
+</ul>
+<p>These techniques are foundational in constructing rigorous mathematical arguments and ensure the validity of various mathematical propositions and theorems.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

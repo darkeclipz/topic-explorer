@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing and Compiling Shaders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>GLSL Basics</h1>
+<h2>Writing and Compiling Shaders</h2>
+<h3>Writing and Compiling Shaders (GLSL Basics)</h3>
+<h4>Introduction to Shaders</h4>
+<ul>
+<li><strong>Vertex Shaders</strong>: Process each vertex's properties (such as position, color, normal) to determine its screen position.</li>
+<li><strong>Fragment Shaders</strong>: Handle pixel-level data and determine the color of each pixel on the screen.</li>
+</ul>
+<h4>Writing Shaders</h4>
+<p>Shaders in GLSL are typically written in GLSL (OpenGL Shading Language). Here are the basic steps:</p>
+<ol>
+<li><strong>Shader Program Structure</strong>:
+<ul>
+<li>GLSL shaders start with a version declaration (e.g., <code>#version 330 core</code>).</li>
+<li>Variables are declared using specific GLSL data types.</li>
+<li>Main function (<code>void main()</code>) serves as the entry point.</li>
+</ul>
+</li>
+</ol>
+<p>Example Vertex Shader:</p>
+<pre><code class="language-glsl">#version 330 core
+
+layout(location = 0) in vec3 vertexPosition;
+layout(location = 1) in vec3 vertexColor;
+
+out vec3 fragColor;
+
+uniform mat4 modelMatrix;
+uniform mat4 viewMatrix;
+uniform mat4 projectionMatrix;
+
+void main() {
+    fragColor = vertexColor;
+    gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(vertexPosition, 1.0);
+}
+</code></pre>
+<p>Example Fragment Shader:</p>
+<pre><code class="language-glsl">#version 330 core
+
+in vec3 fragColor;
+out vec4 color;
+
+void main() {
+    color = vec4(fragColor, 1.0);
+}
+</code></pre>
+<h4>Compiling Shaders</h4>
+<ol>
+<li><p><strong>Creating Shader Objects</strong>:</p>
+<ul>
+<li>Use <code>glCreateShader(GL_VERTEX_SHADER)</code> for vertex shaders.</li>
+<li>Use <code>glCreateShader(GL_FRAGMENT_SHADER)</code> for fragment shaders.</li>
+</ul>
+</li>
+<li><p><strong>Shader Source Code</strong>:</p>
+<ul>
+<li>Attach the GLSL code to the shader object with <code>glShaderSource(shader, 1, &amp;shaderCode, NULL)</code>.</li>
+</ul>
+</li>
+<li><p><strong>Compiling Shaders</strong>:</p>
+<ul>
+<li>Compile the shader using <code>glCompileShader(shader)</code>.</li>
+<li>Check for compilation errors with <code>glGetShaderiv(shader, GL_COMPILE_STATUS, &amp;success)</code> and retrieve the log with <code>glGetShaderInfoLog(shader, logLength, NULL, log)</code>.</li>
+</ul>
+</li>
+</ol>
+<h4>Creating and Linking Shader Program</h4>
+<ol>
+<li><p><strong>Creating Program Object</strong>:</p>
+<ul>
+<li>Use <code>glCreateProgram()</code> to create the shader program object.</li>
+</ul>
+</li>
+<li><p><strong>Attaching Shaders</strong>:</p>
+<ul>
+<li>Attach the compiled vertex and fragment shaders using <code>glAttachShader(program, vertexShader)</code> and <code>glAttachShader(program, fragmentShader)</code>.</li>
+</ul>
+</li>
+<li><p><strong>Linking</strong>:</p>
+<ul>
+<li>Link the shader program with <code>glLinkProgram(program)</code>.</li>
+<li>Check the linking status with <code>glGetProgramiv(program, GL_LINK_STATUS, &amp;success)</code> and retrieve the log with <code>glGetProgramInfoLog(program, logLength, NULL, log)</code>.</li>
+</ul>
+</li>
+<li><p><strong>Using the Shader Program</strong>:</p>
+<ul>
+<li>Once the shader program is linked, it can be activated with <code>glUseProgram(program)</code>.</li>
+</ul>
+</li>
+</ol>
+<p>Example of Full Shader Compilation and Linking in OpenGL (C):</p>
+<pre><code class="language-c">GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+glShaderSource(vertexShader, 1, &amp;vertexShaderCode, NULL);
+glCompileShader(vertexShader);
+CheckCompileErrors(vertexShader, &quot;VERTEX&quot;);
+
+GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+glShaderSource(fragmentShader, 1, &amp;fragmentShaderCode, NULL);
+glCompileShader(fragmentShader);
+CheckCompileErrors(fragmentShader, &quot;FRAGMENT&quot;);
+
+GLuint shaderProgram = glCreateProgram();
+glAttachShader(shaderProgram, vertexShader);
+glAttachShader(shaderProgram, fragmentShader);
+glLinkProgram(shaderProgram);
+CheckLinkErrors(shaderProgram);
+
+glDeleteShader(vertexShader);
+glDeleteShader(fragmentShader);
+</code></pre>
+<h4>Best Practices for Writing Shaders</h4>
+<ul>
+<li><strong>Code Modularity</strong>: Use functions to modularize your shader code.</li>
+<li><strong>Precision Qualifiers</strong>: Utilize precision qualifiers (like <code>highp</code>, <code>mediump</code>, <code>lowp</code>) as needed.</li>
+<li><strong>Shader Version</strong>: Ensure that the GLSL version declared at the top matches the capabilities of your target hardware.</li>
+</ul>
+<h4>Conclusion</h4>
+<p>Understanding the basics of writing and compiling shaders is crucial for effectively using GLSL in graphics programming. This involves creating and managing shader objects, handling compilation, and linking them into a shader program that can be used for rendering in OpenGL.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ray-Surface Intersection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Ray Tracing Fundamentals</h1>
+<h2>Ray-Surface Intersection</h2>
+<p>Ray-surface intersection is a fundamental concept in ray tracing, which involves calculating the points at which rays (originating from a point, usually the camera, and traveling in a straight line) intersect with surfaces in a 3D scene. Determining these intersection points is crucial for rendering the scene accurately, as it forms the basis for shading, lighting, and visibility calculations.</p>
+<p>Here is a detailed explanation of ray-surface intersection for key geometries commonly used in ray tracing:</p>
+<h3>1. <strong>Ray-Plane Intersection</strong></h3>
+<p>A plane in 3D space can be defined by a point (\mathbf{P}) on the plane and a normal vector (\mathbf{N}). A ray can be defined by an origin (\mathbf{O}) and a direction (\mathbf{D}).</p>
+<ul>
+<li><strong>Equation of the plane</strong>: (\mathbf{(Q - P) \cdot N} = 0), where (\mathbf{Q}) is any point on the plane.</li>
+<li><strong>Ray equation</strong>: (\mathbf{R(t) = O + tD}), where (t) is a scalar parameter and (\mathbf{R(t)}) is a point along the ray.</li>
+</ul>
+<p>To find the intersection, substitute the ray equation into the plane equation:
+[ (\mathbf{R(t)} - \mathbf{P}) \cdot \mathbf{N} = 0 ]
+[ (\mathbf{O + tD - P}) \cdot \mathbf{N} = 0 ]
+[ (\mathbf{O - P}) \cdot \mathbf{N} + t (\mathbf{D} \cdot \mathbf{N}) = 0 ]</p>
+<p>Solving for (t):
+[ t = \frac{(\mathbf{P} - \mathbf{O}) \cdot \mathbf{N}}{\mathbf{D} \cdot \mathbf{N}} ]</p>
+<p>If (\mathbf{D} \cdot \mathbf{N} ≠ 0), compute (t), and if (t \ge 0), the intersection point (\mathbf{R(t)}) lies on the plane.</p>
+<h3>2. <strong>Ray-Sphere Intersection</strong></h3>
+<p>A sphere can be defined by its center (\mathbf{C}) and radius (r).</p>
+<ul>
+<li><strong>Equation of the sphere</strong>: ( | \mathbf{Q} - \mathbf{C} |^2 = r^2 )</li>
+<li><strong>Ray equation</strong>: (\mathbf{R(t) = O + tD}), where (\mathbf{R(t)}) is a point along the ray.</li>
+</ul>
+<p>Substitute the ray equation into the sphere equation:
+[ | (\mathbf{O + tD}) - \mathbf{C} |^2 = r^2 ]
+[ | \mathbf{(O - C) + tD} |^2 = r^2 ]</p>
+<p>This expands to a quadratic equation:
+[ (\mathbf{D \cdot D}) t^2 + 2 (\mathbf{(O - C) \cdot D}) t + (\mathbf{(O - C) \cdot (O - C)}) - r^2 = 0 ]</p>
+<p>Using the quadratic formula (ax^2 + bx + c = 0), solve for (t):
+[ t = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} ]
+where:
+[ a = \mathbf{D \cdot D} ]
+[ b = 2 (\mathbf{(O - C) \cdot D}) ]
+[ c = \mathbf{(O - C) \cdot (O - C)} - r^2 ]</p>
+<p>The discriminant (b^2 - 4ac) determines the nature of the intersection:</p>
+<ul>
+<li>If (b^2 - 4ac &lt; 0), there are no real intersections (the ray misses the sphere).</li>
+<li>If (b^2 - 4ac = 0), there is one intersection (the ray is tangent to the sphere).</li>
+<li>If (b^2 - 4ac &gt; 0), there are two intersections (the ray enters and exits the sphere).</li>
+</ul>
+<h3>3. <strong>Ray-Triangle Intersection</strong></h3>
+<p>Triangles are often used in mesh modeling due to their simplicity. A triangle can be defined by three vertices (\mathbf{V0, V1, V2}).</p>
+<ul>
+<li><strong>Ray equation</strong>: (\mathbf{R(t) = O + tD})</li>
+</ul>
+<p>One common method for ray-triangle intersection is the Möller-Trumbore algorithm:</p>
+<ol>
+<li><p>Compute edges of the triangle:
+[ \mathbf{E1} = \mathbf{V1} - \mathbf{V0} ]
+[ \mathbf{E2} = \mathbf{V2} - \mathbf{V0} ]</p>
+</li>
+<li><p>Compute the determinant and helpers:
+[ \mathbf{P} = \mathbf{D} \times \mathbf{E2} ]
+[ \text{det} = \mathbf{E1} \cdot \mathbf{P} ]</p>
+</li>
+</ol>
+<p>If (\text{det}) is close to 0, the ray lies in the plane of the triangle. Otherwise, continue:
+[ \mathbf{invDet} = 1 / \text{det} ]</p>
+<ol start="3">
+<li><p>Compute the distance from (\mathbf{V0}) to the ray origin:
+[ \mathbf{T} = \mathbf{O} - \mathbf{V0} ]</p>
+</li>
+<li><p>Compute barycentric coordinates (u) and (v):
+[ u = (\mathbf{T} \cdot \mathbf{P}) \times \mathbf{invDet} ]
+If (u &lt; 0) or (u &gt; 1), the intersection is outside the triangle.</p>
+</li>
+<li><p>Compute another helper:
+[ \mathbf{Q} = \mathbf{T} \times \mathbf{E1} ]</p>
+</li>
+<li><p>Compute the second barycentric coordinate (v):
+[ v = (\mathbf{D} \cdot \mathbf{Q}) \times \mathbf{invDet} ]
+If (v &lt; 0) or (u + v &gt; 1) the intersection is outside the triangle.</p>
+</li>
+<li><p>Finally, compute (t):
+[ t = (\mathbf{E2} \cdot \mathbf{Q}) \times \mathbf{invDet} ]
+If (t &gt; 0), the ray intersects the triangle at (\mathbf{R(t)} = \mathbf{O} + t\mathbf{D}).</p>
+</li>
+</ol>
+<p>These core intersection tests are the building blocks for more sophisticated ray tracing techniques, and they facilitate accurate rendering by determining where rays interact with the scene geometry.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

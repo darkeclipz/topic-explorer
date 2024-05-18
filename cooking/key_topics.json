@@ -1,0 +1,99 @@
+{
+    "key_topics": [
+        {
+            "topic": "Ingredients",
+            "subtopics": [
+                "Vegetables",
+                "Meats",
+                "Spices and Herbs",
+                "Dairy Products",
+                "Grains and Legumes"
+            ]
+        },
+        {
+            "topic": "Cooking Methods",
+            "subtopics": [
+                "Boiling",
+                "Frying",
+                "Grilling",
+                "Baking",
+                "Steaming",
+                "Roasting",
+                "Sautéing",
+                "Slow Cooking"
+            ]
+        },
+        {
+            "topic": "Cooking Techniques",
+            "subtopics": [
+                "Slicing and Dicing",
+                "Marinating",
+                "Seasoning",
+                "Kneading",
+                "Blanching",
+                "Poaching"
+            ]
+        },
+        {
+            "topic": "Cuisines",
+            "subtopics": [
+                "Italian",
+                "Chinese",
+                "Indian",
+                "Mexican",
+                "French",
+                "Japanese",
+                "Mediterranean"
+            ]
+        },
+        {
+            "topic": "Baking",
+            "subtopics": [
+                "Bread",
+                "Cakes",
+                "Cookies",
+                "Pastries",
+                "Pies",
+                "Tarts"
+            ]
+        },
+        {
+            "topic": "Nutrition and Diet",
+            "subtopics": [
+                "Calorie Counting",
+                "Macronutrients",
+                "Vitamins and Minerals",
+                "Special Diets (Gluten-Free, Vegan, etc.)"
+            ]
+        },
+        {
+            "topic": "Kitchen Equipment",
+            "subtopics": [
+                "Knives",
+                "Cookware",
+                "Bakeware",
+                "Blenders and Mixers",
+                "Ovens and Stoves",
+                "Utensils"
+            ]
+        },
+        {
+            "topic": "Food Safety",
+            "subtopics": [
+                "Proper Storage",
+                "Cleaning and Sanitizing",
+                "Avoiding Cross-Contamination",
+                "Safe Cooking Temperatures"
+            ]
+        },
+        {
+            "topic": "Meal Planning",
+            "subtopics": [
+                "Weekly Meal Prep",
+                "Budgeting",
+                "Grocery Shopping",
+                "Leftover Management"
+            ]
+        }
+    ]
+}

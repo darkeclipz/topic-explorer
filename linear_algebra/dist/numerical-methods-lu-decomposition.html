@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LU Decomposition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Numerical Methods</h1>
+<h2>LU Decomposition</h2>
+<p>LU Decomposition is a numerical method used to solve systems of linear equations, find the inverse of a matrix, and compute the determinant of a matrix. The key idea behind LU Decomposition is to factorize a given square matrix ( A ) into two simpler matrices: a lower triangular matrix ( L ) and an upper triangular matrix ( U ). This makes subsequent calculations more straightforward and computationally efficient.</p>
+<p>Here’s the basic breakdown of LU Decomposition:</p>
+<ol>
+<li><p><strong>Definition:</strong>
+Given a square matrix ( A ), LU Decomposition finds matrices ( L ) and ( U ) such that:
+[
+A = LU
+]
+where:</p>
+<ul>
+<li>( L ) is a lower triangular matrix (all elements above the diagonal are zero).</li>
+<li>( U ) is an upper triangular matrix (all elements below the diagonal are zero).</li>
+</ul>
+</li>
+<li><p><strong>Procedure:</strong>
+The process of LU Decomposition generally involves the following steps:</p>
+<ul>
+<li><strong>Forward Elimination:</strong> Transform the matrix ( A ) by eliminating elements below the diagonal to form the upper triangular matrix ( U ).</li>
+<li><strong>Forming ( L ):</strong> At the same time, record the multipliers used during the elimination process to form the lower triangular matrix ( L ).</li>
+</ul>
+</li>
+</ol>
+<p>To perform LU Decomposition, follow these steps:</p>
+<h3>Step-by-Step Example:</h3>
+<p>Consider a 3x3 matrix ( A ):
+[
+A = \begin{pmatrix}
+2 &amp; -1 &amp; -2 \
+-4 &amp; 6 &amp; 3 \
+-4 &amp; -2 &amp; 8
+\end{pmatrix}
+]</p>
+<ol>
+<li><p><strong>Initialize ( L ) and ( U ):</strong>
+[
+L = \begin{pmatrix}
+1 &amp; 0 &amp; 0 \
+0 &amp; 1 &amp; 0 \
+0 &amp; 0 &amp; 1
+\end{pmatrix},
+\quad
+U = \begin{pmatrix}
+2 &amp; -1 &amp; -2 \
+0 &amp; 0 &amp; 0 \
+0 &amp; 0 &amp; 0
+\end{pmatrix}
+]</p>
+</li>
+<li><p><strong>Eliminate elements below ( U_{11} ):</strong></p>
+<ul>
+<li>( L_{21} = \frac{-4}{2} = -2 )</li>
+<li>Multiply the first row of ( U ) by ( -2 ) and add to the second row:
+[
+U = \begin{pmatrix}
+2 &amp; -1 &amp; -2 \
+0 &amp; 4 &amp; -1 \
+0 &amp; 0 &amp; 0
+\end{pmatrix}
+]
+Update ( L ):
+[
+L = \begin{pmatrix}
+1 &amp; 0 &amp; 0 \
+-2 &amp; 1 &amp; 0 \
+0 &amp; 0 &amp; 1
+\end{pmatrix}
+]</li>
+</ul>
+</li>
+<li><p><strong>Eliminate elements below ( U_{22} ):</strong></p>
+<ul>
+<li>( L_{31} = \frac{-4}{2} = -2 )</li>
+<li>Multiply the first row of ( U ) by ( -2 ) and add to the third row:
+[
+U = \begin{pmatrix}
+2 &amp; -1 &amp; -2 \
+0 &amp; 4 &amp; -1 \
+0 &amp; 0 &amp; 4
+\end{pmatrix}
+]
+Update ( L ):
+[
+L = \begin{pmatrix}
+1 &amp; 0 &amp; 0 \
+-2 &amp; 1 &amp; 0 \
+-2 &amp; 5 &amp; 1
+\end{pmatrix}
+]</li>
+</ul>
+</li>
+<li><p><strong>Finalize:</strong></p>
+</li>
+</ol>
+<p>Now you have matrices:
+[
+L = \begin{pmatrix}
+1 &amp; 0 &amp; 0 \
+-2 &amp; 1 &amp; 0 \
+-2 &amp; 5 &amp; 1
+\end{pmatrix},
+\quad
+U = \begin{pmatrix}
+2 &amp; -1 &amp; -2 \
+0 &amp; 4 &amp; -1 \
+0 &amp; 0 &amp; 4
+\end{pmatrix}
+]</p>
+<h3>Applications:</h3>
+<ol>
+<li><p><strong>Solving Systems of Equations:</strong>
+To solve ( Ax = b ), where ( A = LU ):</p>
+<ul>
+<li>Solve ( Ly = b ) for ( y ) using forward substitution.</li>
+<li>Solve ( Ux = y ) for ( x ) using backward substitution.</li>
+</ul>
+</li>
+<li><p><strong>Finding the Inverse:</strong>
+If you need to find ( A^{-1} ), rewrite ( A = LU ) and solve ( Ax = I ) column by column.</p>
+</li>
+<li><p><strong>Computing Determinants:</strong>
+The determinant of ( A ) is the product of the diagonal elements of ( U ):
+[
+\text{det}(A) = \text{det}(L) \times \text{det}(U) = 1 \times \left(2 \times 4 \times 4 \right)
+]</p>
+</li>
+</ol>
+<p>LU Decomposition is particularly efficient for large matrices, making it a powerful tool in various numerical and engineering applications.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

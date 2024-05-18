@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Transformations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Linear Algebra</h1>
+<h2>Linear Transformations</h2>
+<p>Sure! Linear transformations are fundamental concepts in linear algebra. Let's break down the key points:</p>
+<h3>Definition:</h3>
+<p>A <strong>linear transformation</strong> is a function between two vector spaces that preserves the operations of vector addition and scalar multiplication. Mathematically, a function ( T: V \rightarrow W ) (where ( V ) and ( W ) are vector spaces) is a linear transformation if for any vectors ( \mathbf{u}, \mathbf{v} \in V ) and any scalar ( c ):</p>
+<ol>
+<li><strong>Additivity (or Superposition Principle)</strong>: ( T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v}) )</li>
+<li><strong>Homogeneity (or Scalar Multiplication)</strong>: ( T(c \mathbf{u}) = c T(\mathbf{u}) )</li>
+</ol>
+<h3>Examples:</h3>
+<ol>
+<li><strong>Scaling Transformation</strong>: ( T(\mathbf{x}) = k \mathbf{x} ), where ( k ) is a scalar.</li>
+<li><strong>Rotation Transformation</strong> (in 2D): If ( T(\mathbf{x}) ) represents a rotation of ( \theta ) degrees counterclockwise, then:
+[
+T\left( \begin{bmatrix} x \ y \end{bmatrix} \right) = \begin{bmatrix} \cos \theta &amp; -\sin \theta \ \sin \theta &amp; \cos \theta \end{bmatrix} \begin{bmatrix} x \ y \end{bmatrix}
+]</li>
+</ol>
+<h3>Matrix Representation:</h3>
+<p>Any linear transformation ( T: \mathbb{R}^n \rightarrow \mathbb{R}^m ) can be represented by a matrix. If ( A ) is an ( m \times n ) matrix, then the linear transformation ( T ) can be expressed as:
+[ T(\mathbf{x}) = A\mathbf{x} ]
+where ( \mathbf{x} ) is a vector in ( \mathbb{R}^n ).</p>
+<h3>Properties:</h3>
+<ol>
+<li><strong>Kernel (Null Space)</strong>: The set of vectors that map to the zero vector ( { \mathbf{v} \in V : T(\mathbf{v}) = \mathbf{0} } ). It provides insight into the solving of the homogeneous equation ( T(\mathbf{x}) = \mathbf{0} ).</li>
+<li><strong>Image (Range)</strong>: The set of all vectors that are the output of the transformation ( { \mathbf{w} \in W : \mathbf{w} = T(\mathbf{v}) \text{ for some } \mathbf{v} \in V } ). It indicates the span of the transformed vectors.</li>
+<li><strong>Rank-Nullity Theorem</strong>: Relates the dimensions of the kernel and image. If ( V ) is finite-dimensional, then ( \text{dim}(V) = \text{rank}(T) + \text{nullity}(T) ).</li>
+</ol>
+<h3>Applications:</h3>
+<ol>
+<li><strong>Computer Graphics</strong>: Scaling, rotating, and translating images.</li>
+<li><strong>Data Science</strong>: Principal Component Analysis (PCA), where data is transformed into a new coordinate system.</li>
+<li><strong>Engineering and Physics</strong>: Solving systems of differential equations, time-invariant linear systems, etc.</li>
+</ol>
+<h3>Visualization:</h3>
+<p>In 2D, imagine how transformations like rotations, scaling, and shearing can change the shape or orientation of vectors.</p>
+<p>If you have more specific questions or examples you'd like to explore, feel free to ask!</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

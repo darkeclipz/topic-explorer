@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoregressive Models</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Time Series Analysis</h1>
+<h2>Autoregressive Models</h2>
+<p>Autoregressive (AR) models are a type of statistical model used for analyzing and forecasting time series data. The basic idea behind AR models is that the value of a time series at a particular point in time can be predicted based on its previous values. These models are particularly useful when the data demonstrates a certain level of correlation among trailing values.</p>
+<h3>Key Concepts</h3>
+<ol>
+<li><p><strong>Lagged Values</strong>:</p>
+<ul>
+<li>An autoregressive model uses previous (lagged) values of the time series to make predictions. For example, an AR(1) model uses the immediately preceding value to predict the future value, while an AR(2) model uses the preceding two values.</li>
+</ul>
+</li>
+<li><p><strong>Order of the Model</strong>:</p>
+<ul>
+<li>The order of an AR model is denoted by &quot;p&quot;, which means the number of lagged values it uses. An AR(p) model would include terms up to the p-th lag in the model.</li>
+</ul>
+</li>
+<li><p><strong>Mathematical Representation</strong>:</p>
+<ul>
+<li>An AR model of order p, denoted as AR(p), can be mathematically expressed as:
+[
+X_t = c + \phi_1 X_{t-1} + \phi_2 X_{t-2} + ... + \phi_p X_{t-p} + \epsilon_t
+]
+where:
+<ul>
+<li>(X_t) is the value of the time series at time t.</li>
+<li>(c) is a constant.</li>
+<li>(\phi_1, \phi_2, ..., \phi_p) are the parameters (coefficients) of the model.</li>
+<li>(\epsilon_t) is white noise (error term) at time t, assumed to be normally distributed with a mean of zero and a constant variance.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Fitting the Model</strong>:</p>
+<ul>
+<li>Parameters (\phi) and the constant (c) are typically estimated using methods like least squares or maximum likelihood estimation.</li>
+</ul>
+</li>
+</ol>
+<h3>Steps to Build an AR Model</h3>
+<ol>
+<li><p><strong>Stationarity Check</strong>:</p>
+<ul>
+<li>Check if the time series is stationary, meaning its statistical properties do not change over time. This can be done using techniques like plotting the data, checking the autocorrelation function (ACF), and running statistical tests like the Augmented Dickey-Fuller (ADF) test.</li>
+</ul>
+</li>
+<li><p><strong>Order Selection</strong>:</p>
+<ul>
+<li>Determine the order (p) of the AR model. This can be done by examining the partial autocorrelation function (PACF) or using criteria like the Akaike Information Criterion (AIC) or Bayesian Information Criterion (BIC).</li>
+</ul>
+</li>
+<li><p><strong>Parameter Estimation</strong>:</p>
+<ul>
+<li>Estimate the parameters ( \phi ) and ( c ) using historical data.</li>
+</ul>
+</li>
+<li><p><strong>Model Diagnostics</strong>:</p>
+<ul>
+<li>Check the residuals of the model to ensure they resemble white noise, indicating a good fit. This may involve inspecting the residuals' ACF and performing tests for autocorrelation of residuals.</li>
+</ul>
+</li>
+</ol>
+<h3>Applications</h3>
+<ul>
+<li><strong>Economic Forecasting</strong>: Predicting future economic indicators like GDP, inflation, or stock prices.</li>
+<li><strong>Sales Trends</strong>: Forecasting future sales based on historical sales data.</li>
+<li><strong>Climate Modeling</strong>: Predicting future temperature or precipitation trends based on historical weather data.</li>
+</ul>
+<h3>Advantages</h3>
+<ul>
+<li>Simple to implement and interpret.</li>
+<li>Useful for data with clear autoregressive patterns.</li>
+<li>Can be extended to more complex models like ARIMA (Autoregressive Integrated Moving Average).</li>
+</ul>
+<h3>Limitations</h3>
+<ul>
+<li>Only captures linear relationships.</li>
+<li>Requires the time series to be stationary or transformed to be stationary.</li>
+<li>Performance can deteriorate for more complex or non-linear time series patterns.</li>
+</ul>
+<p>In summary, autoregressive models are powerful tools in time series analysis for forecasting future values based solely on past values. Understanding how to apply and diagnose these models is crucial for making accurate and reliable predictions.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

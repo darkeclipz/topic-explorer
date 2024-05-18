@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propositional Logic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Mathematical Logic</h1>
+<h2>Propositional Logic</h2>
+<p>Propositional logic, also known as propositional calculus or statement logic, is a branch of mathematical logic that deals with the manipulation and analysis of propositions—statements that can be either true or false. Here are the key aspects and concepts of propositional logic:</p>
+<h3>1. <strong>Propositions</strong></h3>
+<ul>
+<li>A proposition is a declarative statement that is either true (T) or false (F). For example:
+<ul>
+<li>&quot;The sky is blue.&quot; (can be true or false depending on context)</li>
+<li>&quot;2 + 2 = 4.&quot; (true)</li>
+<li>&quot;5 is less than 3.&quot; (false)</li>
+</ul>
+</li>
+</ul>
+<h3>2. <strong>Logical Connectives</strong></h3>
+<ul>
+<li><strong>AND (∧)</strong>: The conjunction of two propositions (P) and (Q) (written as (P ∧ Q)) is true if and only if both (P) and (Q) are true.</li>
+<li><strong>OR (∨)</strong>: The disjunction of two propositions (P) and (Q) (written as (P ∨ Q)) is true if at least one of (P) or (Q) is true.</li>
+<li><strong>NOT (¬)</strong>: The negation of a proposition (P) (written as ¬(P)) is true if (P) is false.</li>
+<li><strong>IMPLICATION (→)</strong>: The implication (P → Q) is true if (P) is false or (Q) is true (i.e., it is only false when (P) is true and (Q) is false).</li>
+<li><strong>BICONDITIONAL (↔)</strong>: The biconditional (P ↔ Q) is true if (P) and (Q) are both true or both false.</li>
+</ul>
+<h3>3. <strong>Truth Tables</strong></h3>
+<ul>
+<li>Truth tables list the possible truth values of propositions and their combinations:
+<ul>
+<li><p><strong>AND (∧) Truth Table:</strong>
+| P | Q | P ∧ Q |
+|---|---|-------|
+| T | T |   T   |
+| T | F |   F   |
+| F | T |   F   |
+| F | F |   F   |</p>
+</li>
+<li><p><strong>OR (∨) Truth Table:</strong>
+| P | Q | P ∨ Q |
+|---|---|-------|
+| T | T |   T   |
+| T | F |   T   |
+| F | T |   T   |
+| F | F |   F   |</p>
+</li>
+<li><p><strong>IMPLICATION (→) Truth Table:</strong>
+| P | Q | P → Q |
+|---|---|-------|
+| T | T |   T   |
+| T | F |   F   |
+| F | T |   T   |
+| F | F |   T   |</p>
+</li>
+<li><p><strong>NOT (¬) Truth Table:</strong>
+| P | ¬P |
+|---|----|
+| T |  F |
+| F |  T |</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>4. <strong>Logical Equivalences</strong></h3>
+<ul>
+<li>Equivalent propositions have the same truth value in all possible scenarios. Common logical equivalences include:
+<ul>
+<li><strong>De Morgan's Laws:</strong>
+<ul>
+<li>¬(P ∧ Q) ≡ ¬P ∨ ¬Q</li>
+<li>¬(P ∨ Q) ≡ ¬P ∧ ¬Q</li>
+</ul>
+</li>
+<li><strong>Double Negation:</strong>
+<ul>
+<li>¬(¬P) ≡ P</li>
+</ul>
+</li>
+<li><strong>Distributive Laws:</strong>
+<ul>
+<li>P ∧ (Q ∨ R) ≡ (P ∧ Q) ∨ (P ∧ R)</li>
+<li>P ∨ (Q ∧ R) ≡ (P ∨ Q) ∧ (P ∨ R)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>5. <strong>Tautologies and Contradictions</strong></h3>
+<ul>
+<li><strong>Tautology</strong>: A proposition that is true in every possible scenario (e.g., (P ∨ ¬P)).</li>
+<li><strong>Contradiction</strong>: A proposition that is false in every possible scenario (e.g., (P ∧ ¬P)).</li>
+</ul>
+<h3>6. <strong>Proof Techniques</strong></h3>
+<ul>
+<li><strong>Truth Table Method</strong>: Enumerating all possible truth values to show the truth value of complex propositions.</li>
+<li><strong>Algebraic Method</strong>: Using logical equivalences to transform propositions and prove statements.</li>
+<li><strong>Direct Proof</strong>: Showing that a proposition leads logically to a conclusion.</li>
+<li><strong>Indirect Proof</strong> (Contradiction): Assuming the opposite of what you want to prove and showing that this assumption leads to a contradiction.</li>
+</ul>
+<p>In summary, propositional logic is fundamental to mathematical logic, computer science, and many areas of philosophy. It provides the basic framework for reasoning about truth and constructs more complex logical systems.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

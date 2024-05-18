@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Matrix Theory</h1>
+<h2>Determinants</h2>
+<p>Determinants are a fundamental concept in matrix theory with important applications in solving systems of linear equations, finding eigenvalues, and more. Here's an overview of the key concepts related to determinants:</p>
+<h3>Definition:</h3>
+<p>The determinant is a scalar value that can be computed from a square matrix. It is often denoted as det(A) or |A| for a matrix A.</p>
+<h3>Properties of Determinants:</h3>
+<ol>
+<li><strong>Uniqueness</strong>: The determinant is uniquely determined for a given square matrix.</li>
+<li><strong>Determinant of Identity</strong>: The determinant of the identity matrix is 1.</li>
+<li><strong>Multiplicative Property</strong>: For square matrices A and B, det(AB) = det(A) * det(B).</li>
+<li><strong>Transpose Property</strong>: For any square matrix A, det(A) = det(A^T).</li>
+<li><strong>Effect of Row Operations</strong>:
+<ul>
+<li>Swapping two rows changes the sign of the determinant.</li>
+<li>Multiplying a row by a scalar multiplies the determinant by that scalar.</li>
+<li>Adding a multiple of one row to another row does not change the determinant.</li>
+</ul>
+</li>
+</ol>
+<h3>Calculation of Determinants:</h3>
+<ol>
+<li><p><strong>2x2 Matrix</strong>:
+For a 2x2 matrix A = [[a, b], [c, d]], the determinant is calculated as:
+[
+\text{det}(A) = ad - bc
+]</p>
+</li>
+<li><p><strong>3x3 Matrix</strong>:
+For a 3x3 matrix A = [[a, b, c], [d, e, f], [g, h, i]], the determinant is:
+[
+\text{det}(A) = a(ei - fh) - b(di - fg) + c(dh - eg)
+]</p>
+</li>
+<li><p><strong>General nxn Matrix</strong>:
+For larger matrices, determinants are often calculated using methods like:</p>
+<ul>
+<li><strong>Laplace Expansion (Cofactor Expansion)</strong>: Involves breaking the matrix into smaller matrices (minors) and calculating recursively.</li>
+<li><strong>Row Reduction</strong>: Using Gaussian elimination, transform the matrix into upper triangular form and then multiply the diagonal elements.</li>
+</ul>
+</li>
+</ol>
+<h3>Applications of Determinants:</h3>
+<ol>
+<li><strong>Solving Linear Systems</strong>: Using Cramer's rule, determinants can solve systems of linear equations.</li>
+<li><strong>Invertibility</strong>: A matrix is invertible if and only if its determinant is non-zero.</li>
+<li><strong>Eigenvalues</strong>: The eigenvalues of a matrix can be found by solving the characteristic equation det(A - λI) = 0, where I is the identity matrix.</li>
+</ol>
+<h3>Example:</h3>
+<p>For a 2x2 matrix A:
+[
+A = \begin{bmatrix}
+2 &amp; 3 \
+1 &amp; 4
+\end{bmatrix}
+]</p>
+<p>The determinant of A is:
+[
+\text{det}(A) = (2 \cdot 4) - (3 \cdot 1) = 8 - 3 = 5
+]</p>
+<p>Understanding determinants is crucial for many advanced topics in linear algebra and related fields.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

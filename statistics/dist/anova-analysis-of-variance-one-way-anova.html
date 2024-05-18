@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Way ANOVA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>ANOVA (Analysis of Variance)</h1>
+<h2>One-Way ANOVA</h2>
+<p>One-Way Analysis of Variance (ANOVA) is a statistical method used to compare the means of three or more independent groups to determine if there is a statistically significant difference among them. It helps to understand if the observed differences among group means are likely to have occurred by random chance or if there is an underlying effect caused by some factor.</p>
+<h3>Key Concepts:</h3>
+<ol>
+<li><strong>Null Hypothesis (H0):</strong> The means of all groups are equal (μ1 = μ2 = μ3 = ... = μk).</li>
+<li><strong>Alternative Hypothesis (H1):</strong> At least one group mean is different from the others.</li>
+<li><strong>Between-Group Variability:</strong> Variation due to the interaction between the samples. This measures how much the group means differ from the overall mean.</li>
+<li><strong>Within-Group Variability:</strong> Variation within each group. This measures how much individual observations within each group differ from their respective group means.</li>
+<li><strong>F-Statistic:</strong> Ratio of the between-group variability to the within-group variability. Higher values of the F-statistic indicate a greater likelihood that the null hypothesis can be rejected.</li>
+</ol>
+<h3>Steps for Performing One-Way ANOVA:</h3>
+<ol>
+<li><p><strong>Assumptions Check:</strong></p>
+<ul>
+<li><strong>Normality:</strong> Data in each group should be approximately normally distributed.</li>
+<li><strong>Homogeneity of Variances:</strong> Variances among groups should be approximately equal.</li>
+<li><strong>Independence:</strong> Observations should be independent of each other.</li>
+</ul>
+</li>
+<li><p><strong>Calculate Group Means:</strong></p>
+<ul>
+<li>Compute the mean for each group as well as the overall mean of all the data combined.</li>
+</ul>
+</li>
+<li><p><strong>Compute Sums of Squares:</strong></p>
+<ul>
+<li><strong>Total Sum of Squares (SST):</strong> Measures the total variation in the data.</li>
+<li><strong>Between-Group Sum of Squares (SSB):</strong> Measures the variation due to the interactions between the groups.</li>
+<li><strong>Within-Group Sum of Squares (SSW):</strong> Measures the variation within each group.</li>
+</ul>
+</li>
+<li><p><strong>Calculate Mean Squares:</strong></p>
+<ul>
+<li><strong>Mean Square Between (MSB):</strong> SSB divided by the degrees of freedom between the groups (k-1, where k is the number of groups).</li>
+<li><strong>Mean Square Within (MSW):</strong> SSW divided by the degrees of freedom within the groups (N-k, where N is the total number of observations).</li>
+</ul>
+</li>
+<li><p><strong>Compute the F-Statistic:</strong></p>
+<ul>
+<li>F = MSB / MSW</li>
+</ul>
+</li>
+<li><p><strong>Determine the P-value:</strong></p>
+<ul>
+<li>Compare the computed F-statistic against the F-distribution with appropriate degrees of freedom to find the p-value.</li>
+</ul>
+</li>
+<li><p><strong>Decision Rule:</strong></p>
+<ul>
+<li>If the p-value is less than the significance level (typically 0.05), reject the null hypothesis, indicating that at least one of the group means is significantly different from the others. Otherwise, fail to reject the null hypothesis.</li>
+</ul>
+</li>
+</ol>
+<h3>Example:</h3>
+<p>Suppose you have test scores from three different teaching methods and you want to see if there is a significant difference in the mean scores among these methods.</p>
+<ol>
+<li><strong>Group 1 (Method A):</strong> Scores = [85, 90, 88]</li>
+<li><strong>Group 2 (Method B):</strong> Scores = [78, 82, 80]</li>
+<li><strong>Group 3 (Method C):</strong> Scores = [92, 95, 93]</li>
+</ol>
+<p><strong>Step-by-Step Calculation:</strong></p>
+<ul>
+<li><strong>Means:</strong> Method A = 87.67, Method B = 80, Method C = 93.33</li>
+<li><strong>Overall Mean:</strong> (85 + 90 + 88 + 78 + 82 + 80 + 92 + 95 + 93) / 9 = 87</li>
+</ul>
+<p><strong>Sum of Squares Calculations:</strong></p>
+<ul>
+<li><strong>SSB</strong>: Sum of squared differences between the group means and the overall mean.</li>
+<li><strong>SSW</strong>: Sum of squared differences within each group.</li>
+</ul>
+<p><strong>ANOVA Table:</strong></p>
+<pre><code>Source    |  Sum of Squares  |  Degrees of Freedom  |  Mean Square  |  F
+Between   |        SSB       |         k-1          |     MSB       |  F = MSB/MSW
+Within    |        SSW       |         N-k          |     MSW       |
+Total     |        SST       |         N-1          |               |
+</code></pre>
+<p>If the p-value corresponding to the calculated F is less than 0.05, it indicates that the means of test scores from different teaching methods are statistically significantly different.</p>
+<p>One-Way ANOVA is robust, effective, and commonly used in various fields such as psychology, education, and business to compare more than two groups at the same time, providing a powerful tool for statistical analysis and decision-making.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measures of Dispersion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Descriptive Statistics</h1>
+<h2>Measures of Dispersion</h2>
+<p>Measures of dispersion are statistical tools that describe the spread, variability, or distribution of a dataset. These measures give insights into how much the data points differ from the central tendency (mean, median, or mode) of the dataset. Understanding the dispersion can help in interpreting the reliability and consistency of the data. Here are some common measures of dispersion:</p>
+<h3>1. <strong>Range</strong></h3>
+<ul>
+<li><strong>Definition</strong>: The difference between the highest and lowest values in a dataset.</li>
+<li><strong>Calculation</strong>: ( \text{Range} = \text{Maximum Value} - \text{Minimum Value} )</li>
+<li><strong>Advantages</strong>: Simple to calculate and understand.</li>
+<li><strong>Disadvantages</strong>: Does not provide information about the distribution of values between the extremes and can be affected by outliers.</li>
+</ul>
+<h3>2. <strong>Variance</strong></h3>
+<ul>
+<li><strong>Definition</strong>: A measure of how much each data point differs from the mean of the dataset.</li>
+<li><strong>Calculation</strong>:
+[
+\text{Variance} (\sigma^2) = \frac{\sum (x_i - \mu)^2}{N}
+]
+where ( x_i ) is each data point, ( \mu ) is the mean, and ( N ) is the number of data points.</li>
+<li><strong>Advantages</strong>: Takes all data points into account.</li>
+<li><strong>Disadvantages</strong>: Measures in squared units, which can make interpretation difficult with respect to the original data units.</li>
+</ul>
+<h3>3. <strong>Standard Deviation</strong></h3>
+<ul>
+<li><strong>Definition</strong>: The square root of the variance, providing a measure of dispersion in the same units as the data.</li>
+<li><strong>Calculation</strong>:
+[
+\text{Standard Deviation} (\sigma) = \sqrt{\frac{\sum (x_i - \mu)^2}{N}}
+]</li>
+<li><strong>Advantages</strong>: Easier to interpret compared to variance since it's in the same units as the data.</li>
+<li><strong>Disadvantages</strong>: Can still be influenced by outliers.</li>
+</ul>
+<h3>4. <strong>Interquartile Range (IQR)</strong></h3>
+<ul>
+<li><strong>Definition</strong>: The range between the first quartile (25th percentile) and the third quartile (75th percentile) of the dataset.</li>
+<li><strong>Calculation</strong>:
+[
+\text{IQR} = Q3 - Q1
+]</li>
+<li><strong>Advantages</strong>: Not influenced by outliers or extreme values since it focuses on the middle 50% of the data.</li>
+<li><strong>Disadvantages</strong>: Ignores data outside the interquartile range.</li>
+</ul>
+<h3>5. <strong>Mean Absolute Deviation (MAD)</strong></h3>
+<ul>
+<li><strong>Definition</strong>: Average of the absolute differences between each data point and the mean of the dataset.</li>
+<li><strong>Calculation</strong>:
+[
+\text{MAD} = \frac{\sum |x_i - \mu|}{N}
+]</li>
+<li><strong>Advantages</strong>: Easier to understand than variance since it measures dispersion in the same units as the data without squaring the differences.</li>
+<li><strong>Disadvantages</strong>: Less mathematically tractable compared to variance and standard deviation.</li>
+</ul>
+<h3>Conclusion</h3>
+<p>Measures of dispersion are crucial for understanding the variability within a dataset. Each measure has its own strengths and weaknesses, and the choice of which to use often depends on the specific characteristics of the data and the objectives of the analysis.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

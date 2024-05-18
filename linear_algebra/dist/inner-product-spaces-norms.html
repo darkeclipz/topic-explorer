@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Inner Product Spaces</h1>
+<h2>Norms</h2>
+<p>In the context of inner product spaces, norms are a way to measure the &quot;size&quot; or &quot;length&quot; of vectors. Essentially, norms provide a way to quantify the magnitude of a vector within an inner product space. Here's a detailed explanation:</p>
+<h3>Definition of Norms</h3>
+<p>A norm is a function (|\cdot|) that assigns a non-negative scalar to each vector in such a way that certain properties (axioms) are satisfied. For a vector space (V) over the field (\mathbb{R}) or (\mathbb{C}), a function (|\cdot| : V \rightarrow \mathbb{R}) is called a norm if it satisfies the following properties for all vectors ( \mathbf{u}, \mathbf{v} \in V ) and all scalars ( \alpha \in \mathbb{R} ) or ( \mathbb{C} ):</p>
+<ol>
+<li><strong>Non-negativity (Positivity)</strong>:
+[
+|\mathbf{v}| \geq 0 \quad \text{and} \quad |\mathbf{v}| = 0 \iff \mathbf{v} = \mathbf{0}
+]</li>
+<li><strong>Scalar Multiplication</strong>:
+[
+|\alpha \mathbf{v}| = |\alpha| |\mathbf{v}|
+]</li>
+<li><strong>Triangle Inequality</strong>:
+[
+|\mathbf{u} + \mathbf{v}| \leq |\mathbf{u}| + |\mathbf{v}|
+]</li>
+</ol>
+<h3>Norm Induced by an Inner Product</h3>
+<p>In inner product spaces, norms can be induced by an inner product. If ( \langle \cdot , \cdot \rangle ) denotes the inner product, the norm can be defined as:
+[
+|\mathbf{v}| = \sqrt{\langle \mathbf{v}, \mathbf{v} \rangle}
+]
+This definition satisfies the properties of a norm mentioned above. Let's ensure that these properties hold for this specific definition:</p>
+<ol>
+<li><p><strong>Non-negativity</strong>:
+Since ( \langle \mathbf{v}, \mathbf{v} \rangle ) is non-negative and equals zero if and only if ( \mathbf{v} ) is the zero vector, it follows that (|\mathbf{v}|) is non-negative and equals zero if and only if ( \mathbf{v} = \mathbf{0} ).</p>
+</li>
+<li><p><strong>Scalar Multiplication</strong>:
+For a scalar ( \alpha ):
+[
+|\alpha \mathbf{v}| = \sqrt{\langle \alpha \mathbf{v}, \alpha \mathbf{v} \rangle} = \sqrt{|\alpha|^2 \langle \mathbf{v}, \mathbf{v} \rangle} = |\alpha| \sqrt{\langle \mathbf{v}, \mathbf{v} \rangle} = |\alpha| |\mathbf{v}|
+]</p>
+</li>
+<li><p><strong>Triangle Inequality</strong>:
+This property can be derived from the Cauchy-Schwarz inequality:
+[
+|\mathbf{u} + \mathbf{v}|^2 = \langle \mathbf{u} + \mathbf{v}, \mathbf{u} + \mathbf{v} \rangle \leq \big(|\mathbf{u}| + |\mathbf{v}|\big)^2
+]
+Therefore, taking the square root of both sides yields:
+[
+|\mathbf{u} + \mathbf{v}| \leq |\mathbf{u}| + |\mathbf{v}|
+]</p>
+</li>
+</ol>
+<h3>Common Examples of Norms</h3>
+<ol>
+<li><p><strong>Euclidean Norm (L2 Norm)</strong>:
+[
+|\mathbf{v}|_2 = \sqrt{v_1^2 + v_2^2 + \ldots + v_n^2}
+]
+This is the most common norm, corresponding to the usual notion of distance in Euclidean space derived from the dot product.</p>
+</li>
+<li><p><strong>Manhattan Norm (L1 Norm)</strong>:
+[
+|\mathbf{v}|_1 = |v_1| + |v_2| + \ldots + |v_n|
+]</p>
+</li>
+<li><p><strong>Max Norm (L∞ Norm)</strong>:
+[
+|\mathbf{v}|_\infty = \max (|v_1|, |v_2|, \ldots, |v_n|)
+]</p>
+</li>
+</ol>
+<h3>Conclusion</h3>
+<p>Norms are crucial in both theoretical and applied mathematics as they provide a means to measure vector magnitudes, which is fundamental for convergences, optimizations, and numerical computations. In inner product spaces, norms induced by inner products provide an elegant and consistent way to measure vector lengths, harmonizing with the geometric intuition of distance and angle.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

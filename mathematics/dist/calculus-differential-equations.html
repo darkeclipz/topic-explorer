@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differential Equations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Calculus</h1>
+<h2>Differential Equations</h2>
+<p>Differential equations are mathematical equations that relate some function with its derivatives. In the realm of calculus, they are essential for modeling the behavior of various physical, biological, and economic systems over time. Here are the key concepts and types of differential equations you should know:</p>
+<h3>Key Concepts:</h3>
+<ol>
+<li><p><strong>Ordinary Differential Equations (ODEs):</strong></p>
+<ul>
+<li><strong>First-order ODEs:</strong> Equations involving the first derivative of the unknown function. Example: ( \frac{dy}{dx} = ky ) (exponential growth/decay).</li>
+<li><strong>Higher-order ODEs:</strong> Involving derivatives of order two or higher. Example: ( \frac{d^2y}{dx^2} + 3 \frac{dy}{dx} + 2y = 0 ).</li>
+</ul>
+</li>
+<li><p><strong>Partial Differential Equations (PDEs):</strong></p>
+<ul>
+<li>Equations involving partial derivatives of a function of several variables. Example: ( \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2} ) (heat equation).</li>
+</ul>
+</li>
+<li><p><strong>Linear vs. Nonlinear Differential Equations:</strong></p>
+<ul>
+<li><strong>Linear:</strong> The unknown function and its derivatives appear to the power of one (linearly). Example: ( y'' + 5y' + 6y = 0 ).</li>
+<li><strong>Nonlinear:</strong> The function or its derivatives appear with exponents other than one or are multiplied together. Example: ( y'' + y'^2 - 6y = 0 ).</li>
+</ul>
+</li>
+<li><p><strong>Homogeneous vs. Nonhomogeneous Differential Equations:</strong></p>
+<ul>
+<li><strong>Homogeneous:</strong> The equation is set to zero. Example: ( y'' + y = 0 ).</li>
+<li><strong>Nonhomogeneous:</strong> The equation is set to a non-zero function. Example: ( y'' + y = \sin(x) ).</li>
+</ul>
+</li>
+<li><p><strong>Initial and Boundary Conditions:</strong></p>
+<ul>
+<li><strong>Initial Conditions:</strong> Values of the function and/or its derivatives at a specific point, used to find a particular solution. Example: ( y(0) = 2, y'(0) = 3 ).</li>
+<li><strong>Boundary Conditions:</strong> Values of the function at the boundaries of the domain. Example for a PDE: ( u(0, t) = 0, u(L, t) = 0 ).</li>
+</ul>
+</li>
+</ol>
+<h3>Methods of Solution:</h3>
+<ol>
+<li><p><strong>Separation of Variables:</strong></p>
+<ul>
+<li>Used for simple first-order ODEs where the variables can be separated on either side of the equation. Example: For ( \frac{dy}{dx} = g(x)h(y) ), separate as ( \frac{1}{h(y)} dy = g(x)dx ).</li>
+</ul>
+</li>
+<li><p><strong>Integrating Factor:</strong></p>
+<ul>
+<li>Used for first-order linear ODEs. Multiply both sides by an integrating factor ( \mu(x) = e^{\int P(x) dx} ) to make the left side an exact derivative. Example: ( dy/dx + P(x)y = Q(x) ).</li>
+</ul>
+</li>
+<li><p><strong>Characteristic Equation:</strong></p>
+<ul>
+<li>Used for solving linear homogeneous second-order ODEs with constant coefficients. Convert the ODE to a characteristic polynomial. Example: For ( ay'' + by' + cy = 0 ), solve the quadratic ( ar^2 + br + c = 0 ).</li>
+</ul>
+</li>
+<li><p><strong>Laplace Transform:</strong></p>
+<ul>
+<li>Converts a differential equation into an algebraic equation in a new variable ( s ), which is easier to solve. Example: The Laplace transform of ( y'(t) ) is ( sY(s) - y(0) ).</li>
+</ul>
+</li>
+<li><p><strong>Numerical Methods:</strong></p>
+<ul>
+<li>Methods like Euler’s method, Runge-Kutta methods for approximating solutions of ODEs. Useful for complex or non-solvable ODEs analytically.</li>
+</ul>
+</li>
+</ol>
+<h3>Applications:</h3>
+<ul>
+<li><strong>Physics:</strong> Modeling motion (Newton’s second law), heat conduction (heat equation), wave propagation (wave equation).</li>
+<li><strong>Biology:</strong> Population dynamics (logistic growth), spread of diseases (SIR model).</li>
+<li><strong>Economics:</strong> Modeling economic growth, interest rates (Black-Scholes equation).</li>
+<li><strong>Engineering:</strong> Electrical circuits (Kirchhoff's laws), fluid dynamics (Navier-Stokes equations).</li>
+</ul>
+<p>Having a solid grasp of differential equations can be extremely useful in understanding and solving real-world problems that involve change and rates of change.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

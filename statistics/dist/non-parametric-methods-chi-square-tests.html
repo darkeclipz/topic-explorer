@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi-Square Tests</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Non-Parametric Methods</h1>
+<h2>Chi-Square Tests</h2>
+<p>Chi-Square tests are a set of non-parametric statistical tests that are used to determine if there is a significant association between categorical variables or if the observed frequencies of events differ significantly from expected frequencies. There are two main types of Chi-Square tests:</p>
+<h3>1. Chi-Square Test of Independence</h3>
+<p>The Chi-Square Test of Independence is used to determine whether there is a significant association between two categorical variables in a contingency table.</p>
+<p><strong>Steps for conducting Chi-Square Test of Independence:</strong></p>
+<ol>
+<li><p><strong>State the Hypotheses:</strong></p>
+<ul>
+<li>Null Hypothesis ((H_0)): The two variables are independent (no association).</li>
+<li>Alternative Hypothesis ((H_A)): The two variables are dependent (there is an association).</li>
+</ul>
+</li>
+<li><p><strong>Collect and Organize Data:</strong></p>
+<ul>
+<li>Construct a contingency table with the observed frequencies.</li>
+</ul>
+</li>
+<li><p><strong>Calculate the Expected Frequencies:</strong></p>
+<ul>
+<li>Use the formula: [
+E_{ij} = \frac{(Row , Total_i) \times (Column , Total_j)}{Grand , Total}
+]</li>
+</ul>
+</li>
+<li><p><strong>Compute the Chi-Square Statistic:</strong></p>
+<ul>
+<li>Use the formula: [
+\chi^2 = \sum \frac{(O_{ij} - E_{ij})^2}{E_{ij}}
+]
+where (O_{ij}) is the observed frequency and (E_{ij}) is the expected frequency.</li>
+</ul>
+</li>
+<li><p><strong>Determine the Degrees of Freedom (df):</strong></p>
+<ul>
+<li>Calculate the degrees of freedom using the formula: [
+df = (Number , of , Rows - 1) \times (Number , of , Columns - 1)
+]</li>
+</ul>
+</li>
+<li><p><strong>Compare to the Chi-Square Distribution:</strong></p>
+<ul>
+<li>Compare the Chi-Square statistic to the critical value from the Chi-Square distribution table at the desired significance level (e.g., 0.05) and check the corresponding p-value.</li>
+</ul>
+</li>
+<li><p><strong>Make a Decision:</strong></p>
+<ul>
+<li>If the Chi-Square statistic is greater than the critical value, or if the p-value is less than the significance level, reject the null hypothesis.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example Application:</strong>
+Suppose you want to see if there's an association between gender (male, female) and preference for a new product (like, dislike). You would collect data, put it into a contingency table, calculate the expected frequencies, compute the Chi-Square statistic, and compare against the Chi-Square distribution.</p>
+<h3>2. Chi-Square Goodness-of-Fit Test</h3>
+<p>The Chi-Square Goodness-of-Fit Test is used to determine if a sample data matches an expected distribution.</p>
+<p><strong>Steps for conducting Chi-Square Goodness-of-Fit Test:</strong></p>
+<ol>
+<li><p><strong>State the Hypotheses:</strong></p>
+<ul>
+<li>Null Hypothesis ((H_0)): The observed frequencies match the expected frequencies.</li>
+<li>Alternative Hypothesis ((H_A)): The observed frequencies do not match the expected frequencies.</li>
+</ul>
+</li>
+<li><p><strong>Collect and Organize Data:</strong></p>
+<ul>
+<li>List the observed frequencies for each category.</li>
+</ul>
+</li>
+<li><p><strong>Define the Expected Frequencies:</strong></p>
+<ul>
+<li>Specify the expected frequencies based on a given distribution or proportion.</li>
+</ul>
+</li>
+<li><p><strong>Compute the Chi-Square Statistic:</strong></p>
+<ul>
+<li>Use the same formula as above: [
+\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}
+]
+where (O_i) is the observed frequency and (E_i) is the expected frequency for each category.</li>
+</ul>
+</li>
+<li><p><strong>Determine the Degrees of Freedom (df):</strong></p>
+<ul>
+<li>Calculate the degrees of freedom using the formula: [
+df = (Number , of , Categories - 1)
+]</li>
+</ul>
+</li>
+<li><p><strong>Compare to the Chi-Square Distribution:</strong></p>
+<ul>
+<li>Compare the Chi-Square statistic to the critical value from the Chi-Square distribution table at the desired significance level and check the p-value.</li>
+</ul>
+</li>
+<li><p><strong>Make a Decision:</strong></p>
+<ul>
+<li>If the Chi-Square statistic is greater than the critical value, or if the p-value is less than the significance level, reject the null hypothesis.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example Application:</strong>
+Suppose you roll a six-sided die 60 times and want to test whether the die is fair. You would calculate the expected frequency (10 rolls per face if fair), compare to observed frequencies, compute the Chi-Square statistic, and compare it to the Chi-Square distribution.</p>
+<h3>Important Considerations:</h3>
+<ul>
+<li><strong>Data Requirements:</strong> Chi-Square tests require a sufficiently large sample size to ensure accurate results. Each expected frequency should ideally be 5 or more.</li>
+<li><strong>Assumptions:</strong> The Chi-Square test assumes that the data is a random sample and that the categories are mutually exclusive.</li>
+</ul>
+<p>Chi-Square tests are widely used in various fields such as biology, social sciences, economics, and marketing to analyze categorical data and test hypotheses.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:27 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

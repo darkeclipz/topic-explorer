@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflections and Refractions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Advanced Ray Tracing Techniques</h1>
+<h2>Reflections and Refractions</h2>
+<p>Reflections and refractions are two advanced techniques in ray tracing that enhance the realism of rendered scenes by simulating how light interacts with surfaces. Here’s an in-depth look at each:</p>
+<h3>Reflections</h3>
+<p>Reflections occur when a ray of light hits a surface and bounces off in a predictable manner. Simulating reflections in ray tracing involves tracing a secondary ray, known as the reflection ray, from the point of intersection on the surface. Key aspects include:</p>
+<ol>
+<li><p><strong>Reflection Vector Calculation</strong>:</p>
+<ul>
+<li>The reflection ray direction can be computed using the incident ray direction and the normal at the point of contact. The formula for the reflection vector, ( \vec{R} ), is:
+[
+\vec{R} = \vec{I} - 2 (\vec{N} \cdot \vec{I}) \vec{N}
+]
+where ( \vec{I} ) is the incident ray direction and ( \vec{N} ) is the normal at the intersection point.</li>
+</ul>
+</li>
+<li><p><strong>Recursive Ray Tracing</strong>:</p>
+<ul>
+<li>When a reflection ray is traced, it might intersect with other objects in the scene. This secondary intersection could generate more reflection rays, leading to recursive ray tracing. Typically, recursion depth is limited to improve performance.</li>
+</ul>
+</li>
+<li><p><strong>Phong Reflection Model</strong>:</p>
+<ul>
+<li>The Phong reflection model combines ambient, diffuse, and specular reflections to create realistic lighting effects. The specular component often simulates shiny surfaces where reflections are prominent.</li>
+</ul>
+</li>
+<li><p><strong>Environment Mapping</strong>:</p>
+<ul>
+<li>For distant environments, environment maps (such as cubemaps) can be used to provide background details in reflections without the need to trace rays to distant objects.</li>
+</ul>
+</li>
+</ol>
+<h3>Refractions</h3>
+<p>Refractions involve the bending or changing direction of light as it passes through a transparent material, governed by Snell's Law. Essential elements include:</p>
+<ol>
+<li><p><strong>Snell's Law</strong>:</p>
+<ul>
+<li>Snell's Law determines the direction of the refracted ray. It is given by:
+[
+n_1 \sin(\theta_1) = n_2 \sin(\theta_2)
+]
+where ( n_1 ) and ( n_2 ) are the refractive indices of the two media, and ( \theta_1 ) and ( \theta_2 ) are the angles of incidence and refraction, respectively.</li>
+</ul>
+</li>
+<li><p><strong>Refractive Index</strong>:</p>
+<ul>
+<li>The refractive index of a material describes how much the light bends. Common materials have known indices (e.g., air ~1.0, water ~1.33, glass ~1.5).</li>
+</ul>
+</li>
+<li><p><strong>Refraction Vector Calculation</strong>:</p>
+<ul>
+<li>The direction of the refracted ray can be calculated using the incident ray direction ( \vec{I} ), the surface normal ( \vec{N} ), and the refractive indices. The refraction direction ( \vec{T} ) can be derived as:
+[
+\vec{T} = \frac{n_1}{n_2} \vec{I} + \left( \frac{n_1}{n_2} \cos(\theta_1) - \cos(\theta_2) \right) \vec{N}
+]</li>
+</ul>
+</li>
+<li><p><strong>Total Internal Reflection</strong>:</p>
+<ul>
+<li>When light passes from a medium with a higher refractive index to one with a lower refractive index (e.g., from water to air), at a certain angle, no refraction occurs. Here, all light is reflected internally. This critical angle can be calculated and is important to handle properly in the shader logic.</li>
+</ul>
+</li>
+</ol>
+<h3>Implementing Reflections and Refractions in GLSL</h3>
+<ol>
+<li><p><strong>Reflection Shader</strong>:</p>
+<ul>
+<li>In GLSL, compute the reflection vector and cast reflection rays. Use texture maps or recursive ray tracing to determine the color contribution from the reflected rays.</li>
+</ul>
+</li>
+<li><p><strong>Refraction Shader</strong>:</p>
+<ul>
+<li>Implement Snell's Law to compute the refraction vector. Cast refraction rays and accumulate the color contribution, considering the transparency and attenuation through the material.</li>
+</ul>
+</li>
+<li><p><strong>Combining Reflection and Refraction</strong>:</p>
+<ul>
+<li>Fresnel equations can be used to blend reflection and refraction based on viewing angles. Implementing Fresnel terms ensures more realistic surface interactions.</li>
+</ul>
+</li>
+</ol>
+<p>Here's a brief outline of GLSL code for reflections and refractions:</p>
+<pre><code class="language-glsl">// Calculate Reflection Vector
+vec3 reflectionDir = reflect(-incidentRay, normal);
+
+// Calculate Refraction Vector
+float eta = refractiveIndex1 / refractiveIndex2;
+float cosi = dot(-incidentRay, normal);
+float sint2 = eta * eta * (1.0 - cosi * cosi);
+vec3 refractionDir = eta * incidentRay + (eta * cosi - sqrt(1.0 - sint2)) * normal;
+
+// Trace and shade object with reflection and refraction contributions
+vec4 reflectionColor = traceRay(reflectionDir);
+vec4 refractionColor = traceRay(refractionDir);
+
+// Combine based on Fresnel term
+float fresnelFactor = fresnel(cosi, eta);
+vec4 finalColor = mix(refractionColor, reflectionColor, fresnelFactor);
+</code></pre>
+<h3>Conclusion</h3>
+<p>Simulating reflections and refractions adds significant complexity but also tremendous realism to a scene. These effects require careful computation of vector directions, consideration of recursive ray tracing, and managing performance. As you implement these techniques in GLSL, leveraging the power of modern GPUs can provide efficient and visually stunning results.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:39:21 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

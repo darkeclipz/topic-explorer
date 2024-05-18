@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Transformations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Vector Spaces</h1>
+<h2>Linear Transformations</h2>
+<p>Linear transformations are a fundamental concept in linear algebra, especially within the study of vector spaces. Here's an explanation broken down into key components:</p>
+<h3>Definition</h3>
+<p>A <strong>linear transformation</strong> is a function ( T: V \to W ) between two vector spaces ( V ) and ( W ) that preserves the operations of vector addition and scalar multiplication. Formally, for all vectors ( \mathbf{u}, \mathbf{v} \in V ) and all scalars ( c \in \mathbb{R} ) (or ( \mathbb{C} ), if working in complex vector spaces), a transformation ( T ) is linear if the following two properties hold:</p>
+<ol>
+<li><p><strong>Additivity (or Superposition Principle):</strong>
+[
+T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
+]</p>
+</li>
+<li><p><strong>Homogeneity (or Scalar Multiplication Compatibility):</strong>
+[
+T(c \mathbf{u}) = c T(\mathbf{u})
+]</p>
+</li>
+</ol>
+<h3>Examples</h3>
+<ol>
+<li><p><strong>Identity Transformation:</strong>
+[
+T(\mathbf{x}) = \mathbf{x}
+]
+This transformation maps each vector to itself.</p>
+</li>
+<li><p><strong>Zero Transformation:</strong>
+[
+T(\mathbf{x}) = \mathbf{0}
+]
+This maps every vector to the zero vector.</p>
+</li>
+<li><p><strong>Scaling Transformation:</strong>
+[
+T(\mathbf{x}) = c \mathbf{x}
+]
+This scales all vectors by a constant ( c ).</p>
+</li>
+<li><p><strong>Rotation (in (\mathbb{R}^2)):</strong>
+[
+T(\begin{bmatrix} x \ y \end{bmatrix}) = \begin{bmatrix} \cos\theta &amp; -\sin\theta \ \sin\theta &amp; \cos\theta \end{bmatrix} \begin{bmatrix} x \ y \end{bmatrix}
+]
+This rotates vectors by an angle (\theta).</p>
+</li>
+<li><p><strong>Projection:</strong>
+[
+T(\begin{bmatrix} x \ y \ z \end{bmatrix}) = \begin{bmatrix} x \ y \ 0 \end{bmatrix}
+]
+This projects vectors onto a plane.</p>
+</li>
+</ol>
+<h3>Properties</h3>
+<ol>
+<li><p><strong>Kernel (or Null Space):</strong>
+The set of all vectors (\mathbf{v} \in V) such that (T(\mathbf{v}) = \mathbf{0}). It is a subspace of (V).
+[
+\text{Ker}(T) = { \mathbf{v} \in V , | , T(\mathbf{v}) = \mathbf{0} }
+]</p>
+</li>
+<li><p><strong>Image (or Range):</strong>
+The set of all vectors (\mathbf{w} \in W) such that ( \mathbf{w} = T(\mathbf{v}) ) for some (\mathbf{v} \in V). It is a subspace of (W).
+[
+\text{Im}(T) = { \mathbf{w} \in W , | , \mathbf{w} = T(\mathbf{v}) \text{ for some } \mathbf{v} \in V }
+]</p>
+</li>
+<li><p><strong>Rank-Nullity Theorem:</strong>
+States that for a linear transformation (T: V \to W),
+[
+\text{dim}(\text{Ker}(T)) + \text{dim}(\text{Im}(T)) = \text{dim}(V)
+]</p>
+</li>
+</ol>
+<h3>Matrix Representation</h3>
+<p>A linear transformation ( T: \mathbb{R}^n \to \mathbb{R}^m ) can be represented by an (m \times n) matrix ( A ) such that
+[
+T(\mathbf{x}) = A \mathbf{x}
+]
+For example, if ( T(\mathbf{x}) = A \mathbf{x} ) where ( \mathbf{x} \in \mathbb{R}^n ):</p>
+<ul>
+<li><strong>Input Vector</strong> (\mathbf{x}) has ( n ) components.</li>
+<li><strong>Output Vector</strong> (T(\mathbf{x})) (or ( A \mathbf{x} )) has ( m ) components.</li>
+<li><strong>Transformation Matrix</strong> ( A ) has ( m ) rows and ( n ) columns.</li>
+</ul>
+<h3>Basis and Coordinate Systems</h3>
+<p>To fully understand linear transformations, one often considers the action of (T) on the basis vectors of (V). If ( { \mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n } ) is a basis for ( V ), then:</p>
+<p>[
+T(\mathbf{e}<em>i) = \sum</em>{j=1}^{m} a_{ji} \mathbf{f}_j
+]</p>
+<p>Where ( { \mathbf{f}_1, \mathbf{f}_2, \ldots, \mathbf{f}<em>m } ) is a basis for ( W ), and the coefficients ( a</em>{ji} ) form the columns of the matrix representation of (T).</p>
+<h3>Conclusion</h3>
+<p>Linear transformations are essential in understanding the structure of vector spaces and their interactions. They provide the foundation for many advanced topics in linear algebra and its applications to diverse fields such as physics, computer science, and engineering.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:43 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

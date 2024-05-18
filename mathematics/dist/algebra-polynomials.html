@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polynomials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="index.html">Back to index</a></p>
+<hr />
+<h1>Algebra</h1>
+<h2>Polynomials</h2>
+<p>A polynomial is a mathematical expression involving a sum of powers in one or more variables multiplied by coefficients. Polynomials are a key concept in algebra and have widespread applications in various fields of mathematics and science.</p>
+<h3>Basic Structure</h3>
+<p>A polynomial in one variable (x) can be written in the general form:
+[ P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 ]
+where:</p>
+<ul>
+<li>(a_n, a_{n-1}, \ldots, a_1, a_0) are coefficients (which can be real or complex numbers).</li>
+<li>(x) is the variable (indeterminate).</li>
+<li>(n) is a non-negative integer representing the degree of the polynomial.</li>
+<li>(a_n \neq 0) (if (a_n = 0), then the highest power of (x) would change and (n) would not be the degree).</li>
+</ul>
+<h3>Key Concepts and Terms</h3>
+<ol>
+<li><p><strong>Degree</strong>: The degree of a polynomial is the highest power of the variable (x) in the expression. For example, in ( P(x) = 4x^3 + 3x^2 - 2x + 7 ), the degree is 3.</p>
+</li>
+<li><p><strong>Coefficients</strong>: These are the numerical factors multiplying the variables. In the polynomial ( 3x^4 - 5x^3 + x - 8 ), the coefficients are 3, -5, 1, and -8.</p>
+</li>
+<li><p><strong>Constant Term</strong>: The term that does not contain any variable, e.g., in ( 2x^3 - 3x^2 + 5 ), the constant term is 5.</p>
+</li>
+<li><p><strong>Monomials, Binomials, Trinomials</strong>:</p>
+<ul>
+<li><strong>Monomial</strong>: A polynomial with just one term, like ( 7x^2 ).</li>
+<li><strong>Binomial</strong>: A polynomial with two terms, like ( 3x - 5 ).</li>
+<li><strong>Trinomial</strong>: A polynomial with three terms, like ( 4x^2 - 3x + 2 ).</li>
+</ul>
+</li>
+<li><p><strong>Roots/Zeros</strong>: These are the values of (x) that make the polynomial equal to zero. For example, if ( P(x) = 2x^2 - 8 ), setting ( P(x) = 0 ) and solving ( 2x^2 - 8 = 0 ) gives ( x = \pm 2 ), so the roots are 2 and -2.</p>
+</li>
+</ol>
+<h3>Operations with Polynomials</h3>
+<ol>
+<li><p><strong>Addition</strong>: To add polynomials, simply combine like terms:
+[ (2x^3 - 4x + 1) + (x^3 + 2x^2 + 3) = 3x^3 + 2x^2 - 4x + 4 ]</p>
+</li>
+<li><p><strong>Subtraction</strong>: Subtracting polynomials also involves combining like terms:
+[ (3x^4 + x^2 - 7) - (2x^4 + 3x^2 + 2) = x^4 - 2x^2 - 9 ]</p>
+</li>
+<li><p><strong>Multiplication</strong>: Multiply each term in one polynomial by each term in the other polynomial:
+[ (x + 2)(x - 3) = x^2 - 3x + 2x - 6 = x^2 - x - 6 ]</p>
+</li>
+<li><p><strong>Division</strong>: Polynomial division can be done using long division or synthetic division. It involves dividing the polynomial by another polynomial, typically of lower or equal degree.</p>
+</li>
+</ol>
+<h3>Special Polynomials</h3>
+<ol>
+<li><strong>Linear Polynomials</strong>: Degree 1, of the form ( ax + b ).</li>
+<li><strong>Quadratic Polynomials</strong>: Degree 2, of the form ( ax^2 + bx + c ).</li>
+<li><strong>Cubic Polynomials</strong>: Degree 3, of the form ( ax^3 + bx^2 + cx + d ).</li>
+</ol>
+<h3>Factoring Polynomials</h3>
+<p>Factoring involves expressing a polynomial as a product of its factors. For example:
+[ x^2 - 5x + 6 = (x - 2)(x - 3) ]</p>
+<h3>Applications</h3>
+<p>Polynomials are used in a variety of fields and applications such as:</p>
+<ul>
+<li>Solving equations and inequalities.</li>
+<li>Modeling real-life situations using polynomial functions.</li>
+<li>Calculating areas and volumes in geometry.</li>
+<li>Describing motion and change in calculus through polynomial functions.</li>
+</ul>
+<p>Understanding polynomials and the operations that can be performed on them is fundamental to mastering algebra and progressing to more advanced mathematical concepts.</p>
+<hr />
+<p><a href="index.html">Back to index</a></p>
+
+
+    <hr />
+
+    <i>
+        <span>gpt-4o</span>
+        <br/>
+        <span>18/05/2024 18:45:20 +02:00</span>
+    </i>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['[', ']'], ['\\(', '\\)'], ['( ', ' )']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+    "key_topics": [
+        {
+            "topic": "Vectors",
+            "subtopics": ["Vector Operations", "Dot Product", "Cross Product", "Vector Spaces"]
+        },
+        {
+            "topic": "Matrix Theory",
+            "subtopics": ["Matrix Operations", "Determinants", "Inverse of a Matrix", "Rank"]
+        },
+        {
+            "topic": "Systems of Linear Equations",
+            "subtopics": ["Gaussian Elimination", "Cramer's Rule", "LU Decomposition"]
+        },
+        {
+            "topic": "Eigenvalues and Eigenvectors",
+            "subtopics": ["Characteristic Polynomial", "Diagonalization", "Spectral Theorem"]
+        },
+        {
+            "topic": "Vector Spaces",
+            "subtopics": ["Basis and Dimension", "Subspaces", "Linear Independence", "Linear Transformations"]
+        },
+        {
+            "topic": "Orthogonality",
+            "subtopics": ["Orthogonal Vectors", "Orthogonal Projections", "Gram-Schmidt Process"]
+        },
+        {
+            "topic": "Inner Product Spaces",
+            "subtopics": ["Inner Products", "Norms", "Orthogonal Complements"]
+        },
+        {
+            "topic": "Numerical Methods",
+            "subtopics": ["LU Decomposition", "QR Decomposition", "Singular Value Decomposition"]
+        }
+    ]
+}
